@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog | Hugo Academic CV Theme</title>
-    <link>http://localhost:1313/blog/</link>
-      <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <title>Blog | Your Data Science Mentor - Mohsen Davarynejad</title>
+    <link>https://dataqubed.io/blog/</link>
+      <atom:link href="https://dataqubed.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
+      <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
       <title>Blog</title>
-      <link>http://localhost:1313/blog/</link>
+      <link>https://dataqubed.io/blog/</link>
     </image>
     
     <item>
       <title>11 must-know Python Pandas tips and tricks for data scientists</title>
-      <link>http://localhost:1313/blog/pandas-tips-and-tricks-for-data-scientists/</link>
+      <link>https://dataqubed.io/blog/pandas-tips-and-tricks-for-data-scientists/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/pandas-tips-and-tricks-for-data-scientists/</guid>
+      <guid>https://dataqubed.io/blog/pandas-tips-and-tricks-for-data-scientists/</guid>
       <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/pandas-tips-and-tricks-for-data-scientists/&#34; /&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can have data without information, but you cannot have information without data.&lt;/p&gt;
@@ -156,25 +156,25 @@
     
     <item>
       <title>Pandas</title>
-      <link>http://localhost:1313/blog/pandas/</link>
+      <link>https://dataqubed.io/blog/pandas/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/pandas/</guid>
+      <guid>https://dataqubed.io/blog/pandas/</guid>
       <description>&lt;p&gt;Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>PyTorch</title>
-      <link>http://localhost:1313/blog/pytorch/</link>
+      <link>https://dataqubed.io/blog/pytorch/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/pytorch/</guid>
+      <guid>https://dataqubed.io/blog/pytorch/</guid>
       <description>&lt;p&gt;PyTorch is a Python package that provides tensor computation (like NumPy) with strong GPU acceleration.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>scikit-learn</title>
-      <link>http://localhost:1313/blog/scikit/</link>
+      <link>https://dataqubed.io/blog/scikit/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/scikit/</guid>
+      <guid>https://dataqubed.io/blog/scikit/</guid>
       <description>&lt;p&gt;scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.&lt;/p&gt;</description>
     </item>
     
