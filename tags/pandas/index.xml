@@ -14,10 +14,11 @@
     
     <item>
       <title>11 must-know Python Pandas tips and tricks for data scientists</title>
-      <link>http://localhost:1313/blog/pandas-tip/</link>
+      <link>http://localhost:1313/blog/pandas-tips-and-tricks-for-data-scientists/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/pandas-tip/</guid>
-      <description>&lt;blockquote&gt;
+      <guid>http://localhost:1313/blog/pandas-tips-and-tricks-for-data-scientists/</guid>
+      <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/pandas-tip/&#34; /&gt;
+&lt;blockquote&gt;
 &lt;p&gt;You can have data without information, but you cannot have information without data.&lt;/p&gt;
 &lt;p&gt;Daniel Keys Moran, science fiction writer&lt;/p&gt;
 &lt;/blockquote&gt;
