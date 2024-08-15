@@ -34,6 +34,53 @@
     </item>
     
     <item>
+      <title>Explainable boosting machine</title>
+      <link>https://dataqubed.io/blog/explainable-boosting-machine/</link>
+      <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/blog/explainable-boosting-machine/</guid>
+      <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/explainable-boosting-machine/&#34; /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can have data without information, but you cannot have information without data.&lt;/p&gt;
+&lt;p&gt;Daniel Keys Moran, science fiction writer&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The business impact of machine learning models is becoming increasingly significant whether it is in marketing campaign budget allocation or credit risk management. However, the lack of interpretability and explainability of many machine learning models makes them not only difficult to &lt;em&gt;trust&lt;/em&gt; but also difficult to &lt;em&gt;debug&lt;/em&gt;. When the end user can comprehend the decision-making process of a machine learning model, they are more likely to accept, trust, and adopt the model&amp;rsquo;s outputs, giving rise to reliable model-based decisions.&lt;/p&gt;
+&lt;p&gt;The easiest way to ensure interpretability is to use interpretable models. Consequently, there is a growing interest in the development and utilization of interpretable machine learning models.&lt;/p&gt;
+&lt;p&gt;Explainable Boosting Machine (EBM) originally developed at Microsoft Research is an inherently interpretable machine learning model that gained increasing popularity in a variety of business applications due to its predictive performance and low computational cost. It falls into a category of ML models known as &amp;ldquo;Glass box&amp;rdquo;. Not only it can capture non-linear relationships between dependent and independent variables, but it also has a built-in mechanism to capture interactions among independent variables. at its heart, it uses some of the well-known ML techniques like bagging and gradient boosting.&lt;/p&gt;
+&lt;p&gt;Explainable Boosting Machine is a special case of ensemble models, which involve training multiple very simple decision trees and combining their predictions to obtain a final prediction.&lt;/p&gt;
+&lt;p&gt;Imagine we are given a dataset with &lt;em&gt;n&lt;/em&gt; features. The first decision tree is trained only on the first feature. The residuals are then calculated and we continue by training another model but this time only using the second feature. The process continues until the last model is trained in a boosting fashion using the last feature. The order of the features will not impact the results since we ensure to keep the learning rate very small. Now we have the &lt;em&gt;first iteration&lt;/em&gt; completed. We continue the process for many many iterations, let&amp;rsquo;s say 10,000 iterations. At the end of the cycle, we have 10,000 small trees trained on feature 1 that can be summarized as a graph. We can extract a graph for all the features. These series of graphs with size &lt;em&gt;n&lt;/em&gt; construct our model.&lt;/p&gt;
+&lt;p&gt;The ability to model complex relationships and interactions while maintaining explainability makes the Explainable Boosting Machine a powerful tool for a wide range of predictive modeling tasks.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;dataqubed.io EBM Boosting machine&#34;
+           src=&#34;https://dataqubed.io/blog/explainable-boosting-machine/dataqubed_ebm_davarynejad.gif&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion:&lt;/h3&gt;
+&lt;p&gt;You probably heard about the trade-off between explainability and accuracy of machine learning models. The more accurate the model is, the more complex it is and less explainable. EBMs violate this trade-off. With EBMs you will get high accuracy while getting a highly explainable model with an added bonus of editability. This makes EBMs the perfect candidate of choice for many real-world applications that support model-based decisions.&lt;/p&gt;
+&lt;h3 id=&#34;inherently-interpretable-ml-models&#34;&gt;Inherently interpretable ML models&lt;/h3&gt;
+&lt;p&gt;Interested in this topic? Read more on &amp;ldquo;How to design inherently interpretable machine learning models&amp;rdquo; by Sudjianto and Zhang (2021)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In my next post, I should follow up on the fairness, weakness detection, reliability, robustness, and resilience of XAI.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Learn pyspark</title>
       <link>https://dataqubed.io/teaching/pyspark/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
@@ -537,7 +584,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-459678321&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-987346251&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -555,7 +602,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-459678321&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-987346251&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

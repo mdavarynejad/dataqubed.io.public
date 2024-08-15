@@ -10,6 +10,22 @@
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://dataqubed.io/blog/</loc>
+    <lastmod>2024-08-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/ebm/</loc>
+    <lastmod>2024-08-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/blog/explainable-boosting-machine/</loc>
+    <lastmod>2024-08-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/</loc>
+    <lastmod>2024-08-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://dataqubed.io/teaching/pyspark/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -18,19 +34,11 @@
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/</loc>
-    <lastmod>2024-08-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://dataqubed.io/teaching/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/pandas-tips-and-tricks-for-data-scientists/</loc>
-    <lastmod>2024-08-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/blog/</loc>
     <lastmod>2024-08-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
