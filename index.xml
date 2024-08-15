@@ -163,7 +163,7 @@ data.head()
       <link>http://localhost:1313/blog/pandas-tips-and-tricks-for-data-scientists/</link>
       <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blog/pandas-tips-and-tricks-for-data-scientists/</guid>
-      <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/pandas-tip/&#34; /&gt;
+      <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/pandas-tips-and-tricks-for-data-scientists/&#34; /&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can have data without information, but you cannot have information without data.&lt;/p&gt;
 &lt;p&gt;Daniel Keys Moran, science fiction writer&lt;/p&gt;
@@ -537,7 +537,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-236975481&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-364571829&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -555,7 +555,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-236975481&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-364571829&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
