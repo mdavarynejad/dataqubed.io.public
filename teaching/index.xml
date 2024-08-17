@@ -5,7 +5,7 @@
     <link>https://dataqubed.io/teaching/</link>
       <atom:link href="https://dataqubed.io/teaching/index.xml" rel="self" type="application/rss+xml" />
     <description>Teaching</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 03 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 17 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
       <title>Teaching</title>
@@ -13,197 +13,423 @@
     </image>
     
     <item>
-      <title>Learn pyspark</title>
-      <link>https://dataqubed.io/teaching/pyspark/</link>
-      <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
-&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;
-&lt;p&gt;Teach your course by sharing videos with your students. Choose from one of the following approaches:&lt;/p&gt;
+      <title>PySpark - Module 3</title>
+      <link>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</guid>
+      <description>&lt;p&gt;By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.&lt;/p&gt;
+&lt;p&gt;You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.&lt;/p&gt;
+&lt;p&gt;Today we will learn a bit on DataBricks, what does it have to offer to us and how we can open a community edition of DataBricks.&lt;/p&gt;
+&lt;h4 id=&#34;learning-outcomes&#34;&gt;Learning Outcomes&lt;/h4&gt;
+&lt;p&gt;By the end of this module, you will be able to:&lt;/p&gt;
+&lt;h4 id=&#34;module-3-dataframes-and-spark-sql&#34;&gt;Module 3: DataFrames and Spark SQL&lt;/h4&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Prep&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Before we dive into the detailed process of learning PySpark in the Databricks environment, I&amp;rsquo;d like you to watch this introductory video. It will provide you with a solid overview of what to expect and help you navigate the material more easily. Don&amp;rsquo;t worry about mastering everything in the video or practicing the content; it&amp;rsquo;s just a warm-up.&lt;/li&gt;
+&lt;/ul&gt;
 
+   
+       
+       &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+         &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/lcI1W2_KUPo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+         &gt;&lt;/iframe&gt;
+       &lt;/div&gt;
 
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/D2vj0WcvH5c?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;[Introduction to Databricks notebooks] (&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/&#34;&gt;https://learn.microsoft.com/en-us/azure/databricks/notebooks/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;[Manage notebooks] (&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebooks-manage&#34;&gt;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebooks-manage&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;[Develop code in Databricks notebooks] (&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebooks-code&#34;&gt;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebooks-code&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;[Databricks notebook interface and controls] (&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-ui&#34;&gt;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-ui&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-export-import&#34;&gt;Export and import Databricks notebooks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-outputs&#34;&gt;Notebook outputs and results&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/dashboards&#34;&gt;Dashboards in notebooks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/ipywidgets&#34;&gt;ipywidgets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-workflows&#34;&gt;Run a Databricks notebook from another notebook&lt;/a&gt;, and see the bellow youtube.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Youtube&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; youtube w7Ft2ymGmfc &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Bilibili&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; bilibili id=&amp;quot;BV1WV4y1r7DF&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Video file&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Videos may be added to a page by either placing them in your &lt;code&gt;assets/media/&lt;/code&gt; media library or in your &lt;a href=&#34;https://gohugo.io/content-management/page-bundles/&#34;&gt;page&amp;rsquo;s folder&lt;/a&gt;, and then embedding them with the &lt;em&gt;video&lt;/em&gt; shortcode:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; video src=&amp;quot;my_video.mp4&amp;quot; controls=&amp;quot;yes&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;podcast&#34;&gt;Podcast&lt;/h2&gt;
-&lt;p&gt;You can add a podcast or music to a page by placing the MP3 file in the page&amp;rsquo;s folder or the media library folder and then embedding the audio on your page with the &lt;em&gt;audio&lt;/em&gt; shortcode:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; audio src=&amp;quot;ambient-piano.mp3&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Try it out:&lt;/p&gt;
+   
+       
+       &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+         &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/Op_KZJm7_qc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+         &gt;&lt;/iframe&gt;
+       &lt;/div&gt;
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-&lt;audio controls &gt;
-  &lt;source src=&#34;https://dataqubed.io/teaching/pyspark/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
-&lt;/audio&gt;
-
-&lt;h2 id=&#34;test-students&#34;&gt;Test students&lt;/h2&gt;
-&lt;p&gt;Provide a simple yet fun self-assessment by revealing the solutions to challenges with the &lt;code&gt;spoiler&lt;/code&gt; shortcode:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;spoiler&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;👉 Click to view the solution&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You found me!
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;spoiler&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 Click to view the solution&lt;/summary&gt;
-  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
-    You found me 🎉
-  &lt;/div&gt;
-&lt;/details&gt;
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-&lt;p&gt;Hugo Blox Builder supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.yaml&lt;/code&gt; file.&lt;/p&gt;
-&lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;{{&amp;lt; math &amp;gt;}}$...${{&amp;lt; /math &amp;gt;}}&lt;/code&gt; or &lt;code&gt;{{&amp;lt; math &amp;gt;}}$$...$${{&amp;lt; /math &amp;gt;}}&lt;/code&gt;, respectively.&lt;/p&gt;
-&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
-&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
-  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
-&lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;We wrap the LaTeX math in the Hugo Blox &lt;em&gt;math&lt;/em&gt; shortcode to prevent Hugo rendering our math as Markdown.&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{{&lt;/span&gt;&amp;lt; math &amp;gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\gamma&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;_{n} &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\frac&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{ &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; | &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n} &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;^T &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x_{n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; |}{&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\left&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\|\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{x}_{n}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\nabla&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; F&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\mathbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{x}_{n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\right&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\|&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$$&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{{&lt;/span&gt;&amp;lt; /math &amp;gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-
-$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
-
-
-&lt;p&gt;Example &lt;strong&gt;inline math&lt;/strong&gt; &lt;code&gt;{{&amp;lt; math &amp;gt;}}$\nabla F(\mathbf{x}_{n})${{&amp;lt; /math &amp;gt;}}&lt;/code&gt; renders as $\nabla F(\mathbf{x}_{n})$
-.&lt;/p&gt;
-&lt;p&gt;Example &lt;strong&gt;multi-line math&lt;/strong&gt; using the math linebreak (&lt;code&gt;\\&lt;/code&gt;):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{{&lt;/span&gt;&amp;lt; math &amp;gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;$$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;k;p_{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{cases}p_{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{if }k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;p_{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;} &amp;amp; &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\text&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{if }k&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{cases}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$$&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{{&lt;/span&gt;&amp;lt; /math &amp;gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-
-
-$$
-f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp; \text{if }k=1, \\
-1-p_{0}^{*} &amp; \text{if }k=0.\end{cases}
-$$
-
-
-
-&lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
-&lt;p&gt;Hugo Blox Builder utilises Hugo&amp;rsquo;s Markdown extension for highlighting code syntax. The code theme can be selected in the &lt;code&gt;config/_default/params.yaml&lt;/code&gt; file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```python
-import pandas as pd
-data = pd.read_csv(&amp;quot;data.csv&amp;quot;)
-data.head()
-```
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;renders as&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pandas&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pd&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;data.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;inline-images&#34;&gt;Inline Images&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&amp;lt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;icon&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;python&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;}}&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Python&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-&lt;p&gt;
-  &lt;span class=&#34;inline-block  pr-1&#34;&gt;
-    &lt;svg style=&#34;height: 1em; transform: translateY(0.1em);&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;1em&#34; viewBox=&#34;0 0 448 512&#34; fill=&#34;currentColor&#34;&gt;&lt;path d=&#34;M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z&#34;/&gt;&lt;/svg&gt;
-  &lt;/span&gt; Python&lt;/p&gt;
-&lt;h2 id=&#34;did-you-find-this-page-helpful-consider-sharing-it-&#34;&gt;Did you find this page helpful? Consider sharing it 🙌&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/best-practices&#34;&gt;Software engineering best practices for notebooks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Now you know the essential procedures to work in DataBricks environment. Now head towards the &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256163/4682920752598681/latest.html&#34;&gt;00 - Test dev env&lt;/a&gt; notebook, clone it into your workspace and follow the steps. For consistency in the learning the materials and easy referencing rename the file to &lt;strong&gt;00 - Test the dev env&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256163/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; into your workspace. For consistency in the learning the materials and easy referencing rename the file to &lt;strong&gt;01 - Data Prep&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Introduction to DataFrames&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Difference between RDDs and DataFrames&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Creating DataFrames&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Schema inference and manual schema definition&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256187/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning the materials and easy referencing rename the file to ** 03 - Introduction to DataFrames**. Go through the material and try to make notes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DataFrame Operations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Selecting, filtering, and transforming data. Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1195017303654174/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning the materials and easy referencing rename the file to ** 04 - DataFrame Operations**.&lt;/li&gt;
+&lt;li&gt;Aggregations and Grouping&lt;/li&gt;
+&lt;li&gt;Joins and unions Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459116/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning the materials and easy referencing rename the file to ** 06 - Joins and Unions**.&lt;/li&gt;
+&lt;li&gt;Working with semi-structured data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Spark SQL&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL queries with Spark&lt;/li&gt;
+&lt;li&gt;Registering DataFrames as tables&lt;/li&gt;
+&lt;li&gt;Using SQL queries to manipulate DataFrames&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
     <item>
-      <title>Learn JavaScript</title>
-      <link>https://dataqubed.io/teaching/js/</link>
-      <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/js/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://hugoblox.com&#34;&gt;Hugo Blox Builder&lt;/a&gt; is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
-&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;
-&lt;p&gt;Teach your course by sharing videos with your students. Choose from one of the following approaches:&lt;/p&gt;
-
-
+      <title>PySpark - Module 0</title>
+      <link>https://dataqubed.io/teaching/pyspark-pyspark-fundamentals-and-advanced-topics/</link>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-pyspark-fundamentals-and-advanced-topics/</guid>
+      <description>&lt;h3 id=&#34;pyspark-fundamentals-and-advanced-topics&#34;&gt;PySpark Fundamentals and Advanced Topics&lt;/h3&gt;
+&lt;p&gt;Distributed computing is at the heart of all the recent advancements of Data science and AI models. We can now scale out as an alternative to scale up. And that makes it possible to retrieve data, prepare the data and train our models not only at a faster speed, but also cheaper.&lt;/p&gt;
+&lt;p&gt;One of the pioneer commercial players on the filed of distributed computing is DataBricks. This the company behind the open source Spark community.&lt;/p&gt;
+&lt;h4 id=&#34;course-objective&#34;&gt;Course Objective&lt;/h4&gt;
+&lt;p&gt;In today&amp;rsquo;s data-driven world, the volume of data generated is growing exponentially. Traditional data processing systems struggle to handle this deluge efficiently. Distributed computing frameworks like Apache Spark have emerged as powerful tools for processing large datasets quickly and efficiently. Understanding Spark and PySpark (the Python API for Spark) is crucial for data professionals who want to leverage the full potential of big data. This course is designed to equip you with the skills to process and analyse large datasets using Apache Spark and PySpark, emphasizing its importance in modern data science and machine learning workflows. By the end of this course, you will have a good understanding of how to process, analyze, and manipulate large datasets efficiently. You will also gain hands-on experience in building machine learning models and optimizing Spark queries for performance.&lt;/p&gt;
+&lt;p&gt;Over 32 hours of content is prepared that would help you develop a solid understanding of distributed computing, Spark&amp;rsquo;s architecture, and how to apply Spark for big data processing. The course includes a mix of theoretical concepts and hands-on exercises, leveraging free online resources.&lt;/p&gt;
+&lt;h4 id=&#34;course-highlights&#34;&gt;Course Highlights&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fundamentals of PySpark&lt;/strong&gt;: Learn the basics of PySpark, including its architecture, Resilient Distributed Datasets (RDDs), and DataFrames.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Processing and SQL&lt;/strong&gt;: Master the use of DataFrames and Spark SQL for data manipulation and querying.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Streaming and Real-Time Data&lt;/strong&gt;: Understand how to process real-time data using Spark Streaming.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;: Explore machine learning techniques and build models using Spark&amp;rsquo;s MLlib.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimization Techniques&lt;/strong&gt;: Learn how to optimize Spark applications for better performance and efficiency.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Capstone Project&lt;/strong&gt;: Apply your knowledge to a real-world project, demonstrating your ability to handle big data problems from start to finish.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;learning-outcomes&#34;&gt;Learning Outcomes&lt;/h4&gt;
+&lt;p&gt;By the end of this course, you will be able to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install and configure PySpark on a Linux environment.&lt;/li&gt;
+&lt;li&gt;Understand and explain the architecture and components of Apache Spark.&lt;/li&gt;
+&lt;li&gt;Work with RDDs and DataFrames for data processing and analysis.&lt;/li&gt;
+&lt;li&gt;Use Spark SQL to run queries and manipulate structured data.&lt;/li&gt;
+&lt;li&gt;Process streaming data with Spark Streaming.&lt;/li&gt;
+&lt;li&gt;Build and evaluate machine learning models using MLlib.&lt;/li&gt;
+&lt;li&gt;Optimize Spark applications for improved performance.&lt;/li&gt;
+&lt;li&gt;Apply your skills to a small capstone project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;key-questions-answered&#34;&gt;Key Questions Answered&lt;/h4&gt;
+&lt;p&gt;Throughout the course, you will be able to answer questions such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What are the key components of Apache Spark, and how do they interact?&lt;/li&gt;
+&lt;li&gt;How can you create and manipulate RDDs and DataFrames in PySpark?&lt;/li&gt;
+&lt;li&gt;How do you use Spark SQL to perform data queries and transformations?&lt;/li&gt;
+&lt;li&gt;What techniques are available for processing real-time data streams in Spark?&lt;/li&gt;
+&lt;li&gt;How can you build and deploy machine learning models using Spark&amp;rsquo;s MLlib?&lt;/li&gt;
+&lt;li&gt;What strategies can be employed to optimize Spark applications for performance?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;time-commitment&#34;&gt;Time Commitment&lt;/h4&gt;
+&lt;p&gt;This course is designed to be completed over approximately 32 hours of self-paced study. Here is a breakdown of the estimated time required for each module:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Module 1: Introduction to Big Data and Apache Spark&lt;/strong&gt;: 3 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 2: Spark Architecture and RDDs&lt;/strong&gt;: 5 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 3: DataFrames and Spark SQL&lt;/strong&gt;: 6 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 4: Data Sources and Sinks&lt;/strong&gt;: 4 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 5: Spark Streaming&lt;/strong&gt;: 4 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 6: Machine Learning with PySpark&lt;/strong&gt;: 6 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 7: Advanced Spark Techniques&lt;/strong&gt;: 4 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 8: Real-World Applications and Capstone Project&lt;/strong&gt;: 4 hours&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This structured approach ensures that you will have ample time to grasp each concept thoroughly, practice through hands-on exercises, and apply what you have learned to real-world scenarios.&lt;/p&gt;
+&lt;h4 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h4&gt;
+&lt;p&gt;To begin, make sure you can install and configure PySpark. Familiarize yourself with the course materials, including the recommended readings and online resources. Each module contains practical assignments and quizzes to reinforce your learning, so take your time to complete these exercises.&lt;/p&gt;
+&lt;h3 id=&#34;course-outline-pyspark-fundamentals-and-advanced-topics&#34;&gt;Course Outline: PySpark Fundamentals and Advanced Topics&lt;/h3&gt;
+&lt;h4 id=&#34;module-1-introduction-to-big-data-and-apache-spark&#34;&gt;Module 1: Introduction to Big Data and Apache Spark&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to Big Data&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;What is Big Data?&lt;/li&gt;
+&lt;li&gt;Challenges of Big Data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Overview of Apache Spark&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;History and evolution&lt;/li&gt;
+&lt;li&gt;Comparison with Hadoop MapReduce&lt;/li&gt;
+&lt;li&gt;Components of the Spark ecosystem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Installing PySpark&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;System requirements&lt;/li&gt;
+&lt;li&gt;Installing PySpark on a Linux environment&lt;/li&gt;
+&lt;li&gt;Configuring PySpark and Jupyter Notebook&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;module-2-spark-architecture-and-rdds&#34;&gt;Module 2: Spark Architecture and RDDs&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Spark Architecture&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Spark driver and executors&lt;/li&gt;
+&lt;li&gt;SparkContext and SparkSession&lt;/li&gt;
+&lt;li&gt;Cluster managers (Standalone, YARN, Mesos, Kubernetes)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resilient Distributed Datasets (RDDs)&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;What are RDDs?&lt;/li&gt;
+&lt;li&gt;Creating RDDs&lt;/li&gt;
+&lt;li&gt;Transformations and Actions&lt;/li&gt;
+&lt;li&gt;RDD Lineage and Persistence&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;module-3-dataframes-and-spark-sql&#34;&gt;Module 3: DataFrames and Spark SQL&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Introduction to DataFrames&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Difference between RDDs and DataFrames&lt;/li&gt;
+&lt;li&gt;Creating DataFrames&lt;/li&gt;
+&lt;li&gt;Schema inference and manual schema definition&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DataFrame Operations&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Selecting, filtering, and transforming data.&lt;/li&gt;
+&lt;li&gt;Aggregations and Grouping&lt;/li&gt;
+&lt;li&gt;Joins and unions&lt;/li&gt;
+&lt;li&gt;Working with semi-structured data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Spark SQL&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SQL queries with Spark&lt;/li&gt;
+&lt;li&gt;Registering DataFrames as tables&lt;/li&gt;
+&lt;li&gt;Using SQL queries to manipulate DataFrames&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;module-4-data-sources-and-sinks-4-hours&#34;&gt;Module 4: Data Sources and Sinks (4 hours)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Reading Data&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Reading from CSV, JSON, Parquet, and other formats&lt;/li&gt;
+&lt;li&gt;Reading from databases (JDBC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Writing Data&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Writing to CSV, JSON, Parquet, and other formats&lt;/li&gt;
+&lt;li&gt;Writing to databases (JDBC)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Sources API&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduction to the Data Sources API&lt;/li&gt;
+&lt;li&gt;Custom data sources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;module-5-spark-streaming-4-hours&#34;&gt;Module 5: Spark Streaming (4 hours)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to Spark Streaming&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;What is Spark Streaming?&lt;/li&gt;
+&lt;li&gt;DStreams and micro-batching&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Streaming Sources&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Reading from Kafka, Socket, and other sources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Streaming Operations&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Transformations on DStreams&lt;/li&gt;
+&lt;li&gt;Windowed operations and stateful computations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fault Tolerance and Checkpointing&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Handling fault tolerance in streaming applications&lt;/li&gt;
+&lt;li&gt;Checkpointing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;module-6-machine-learning-with-pyspark-6-hours&#34;&gt;Module 6: Machine Learning with PySpark (6 hours)&lt;/h4&gt;
+&lt;ol start=&#34;0&#34;&gt;
+&lt;li&gt;hyperparameter optimization framework designed for both single-machine and distributed setups: Optuna and Hyperopt&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to MLlib&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Overview of MLlib&lt;/li&gt;
+&lt;li&gt;Data preprocessing with MLlib&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Building Machine Learning Models&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Supervised learning algorithms (e.g., Linear Regression, Logistic Regression, Decision Trees)&lt;/li&gt;
+&lt;li&gt;Unsupervised learning algorithms (e.g., K-means clustering)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Model Evaluation and Hyperparameter Tuning&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Evaluating model performance&lt;/li&gt;
+&lt;li&gt;Cross-validation and hyperparameter tuning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pipeline API&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Building ML pipelines&lt;/li&gt;
+&lt;li&gt;Using feature transformers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Case study: Predictive modeling with MLlib&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;module-7-advanced-spark-techniques-4-hours&#34;&gt;Module 7: Advanced Spark Techniques (4 hours)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Optimizing Spark Applications&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Understanding Spark execution plan&lt;/li&gt;
+&lt;li&gt;Catalyst optimizer&lt;/li&gt;
+&lt;li&gt;Tungsten execution engine&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Performance Tuning&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Caching and persistence strategies&lt;/li&gt;
+&lt;li&gt;Memory management and garbage collection&lt;/li&gt;
+&lt;li&gt;Shuffle operations and optimization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Debugging and Monitoring&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Using Spark UI&lt;/li&gt;
+&lt;li&gt;Logging and metrics&lt;/li&gt;
+&lt;li&gt;Handling and avoiding common pitfalls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;module-8-real-world-applications-and-capstone-project-4-hours&#34;&gt;Module 8: Real-World Applications and Capstone Project (4 hours)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Case Studies and Real-World Applications&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Example projects using PySpark&lt;/li&gt;
+&lt;li&gt;Industry use cases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Capstone Project&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Define a problem statement&lt;/li&gt;
+&lt;li&gt;Design and implement a PySpark solution&lt;/li&gt;
+&lt;li&gt;Optimize and present findings&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;module-9-advanced-features&#34;&gt;Module 9: Advanced Features&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Working with GraphX for graph processing&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Using structured streaming for real-time analytics&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;learning-resources&#34;&gt;Learning Resources&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Documentation and Tutorials&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Apache Spark official documentation&lt;/li&gt;
+&lt;li&gt;PySpark API reference&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Books and Online Courses&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Learning PySpark&amp;rdquo; by Tomasz Drabas and Denny Lee&lt;/li&gt;
+&lt;li&gt;Online courses on platforms like Coursera, Udacity, and edX&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Community and Support&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub repositories for sample projects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;assessment&#34;&gt;Assessment&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Quizzes&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;You will be provided with quizzes to reinforce learning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Capstone Project&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Depending on your track (Data Science or Data Engineering) you will do a small project that requires max a day to complete and deliver.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Participation in quizzes is mandatory, and they contribute to your final score.&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;By the end of this material you will be able to provide answers to the questions bellow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Describe the PySpark architecture.&lt;/li&gt;
+&lt;li&gt;What are RDDs in PySpark?&lt;/li&gt;
+&lt;li&gt;Explain the concept of lazy evaluation in PySpark.&lt;/li&gt;
+&lt;li&gt;How does PySpark differ from Apache Hadoop?&lt;/li&gt;
+&lt;li&gt;What are DataFrames in PySpark?&lt;/li&gt;
+&lt;li&gt;How do you initialize a SparkSession?&lt;/li&gt;
+&lt;li&gt;What is the significance of the SparkContext?&lt;/li&gt;
+&lt;li&gt;Describe the types of transformations in PySpark.&lt;/li&gt;
+&lt;li&gt;How do you read a CSV file into a PySpark DataFrame?&lt;/li&gt;
+&lt;li&gt;What are actions in PySpark, and how do they differ from transformations?&lt;/li&gt;
+&lt;li&gt;How can you filter rows in a DataFrame?&lt;/li&gt;
+&lt;li&gt;Explain how to perform joins in PySpark.&lt;/li&gt;
+&lt;li&gt;How do you aggregate data in PySpark?&lt;/li&gt;
+&lt;li&gt;What are UDFs (User Defined Functions), and how are they used?&lt;/li&gt;
+&lt;li&gt;How can you handle missing or null values in PySpark?&lt;/li&gt;
+&lt;li&gt;How do you repartition a DataFrame, and why?&lt;/li&gt;
+&lt;li&gt;Describe how to cache a DataFrame. Why is it useful?&lt;/li&gt;
+&lt;li&gt;How do you save a DataFrame to a file?&lt;/li&gt;
+&lt;li&gt;What is the Catalyst Optimizer?&lt;/li&gt;
+&lt;li&gt;Explain the concept of partitioning in PySpark.&lt;/li&gt;
+&lt;li&gt;How can broadcast variables improve performance?&lt;/li&gt;
+&lt;li&gt;What are accumulators, and how are they used?&lt;/li&gt;
+&lt;li&gt;Describe strategies for optimizing PySpark jobs.&lt;/li&gt;
+&lt;li&gt;How does PySpark handle data skewness?&lt;/li&gt;
+&lt;li&gt;Explain how checkpointing works in PySpark.&lt;/li&gt;
+&lt;li&gt;What is delta lake&lt;/li&gt;
+&lt;li&gt;What is data lakehouse architecture.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/D2vj0WcvH5c?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Youtube&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; youtube w7Ft2ymGmfc &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Bilibili&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; bilibili id=&amp;quot;BV1WV4y1r7DF&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;Video file&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Videos may be added to a page by either placing them in your &lt;code&gt;assets/media/&lt;/code&gt; media library or in your &lt;a href=&#34;https://gohugo.io/content-management/page-bundles/&#34;&gt;page&amp;rsquo;s folder&lt;/a&gt;, and then embedding them with the &lt;em&gt;video&lt;/em&gt; shortcode:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; video src=&amp;quot;my_video.mp4&amp;quot; controls=&amp;quot;yes&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;podcast&#34;&gt;Podcast&lt;/h2&gt;
-&lt;p&gt;You can add a podcast or music to a page by placing the MP3 file in the page&amp;rsquo;s folder or the media library folder and then embedding the audio on your page with the &lt;em&gt;audio&lt;/em&gt; shortcode:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{&amp;lt; audio src=&amp;quot;ambient-piano.mp3&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Try it out:&lt;/p&gt;
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-&lt;audio controls &gt;
-  &lt;source src=&#34;https://dataqubed.io/teaching/js/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
-&lt;/audio&gt;
-
-&lt;h2 id=&#34;test-students&#34;&gt;Test students&lt;/h2&gt;
-&lt;p&gt;Provide a simple yet fun self-assessment by revealing the solutions to challenges with the &lt;code&gt;spoiler&lt;/code&gt; shortcode:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;spoiler&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;👉 Click to view the solution&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;You found me!
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;spoiler&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;}}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;renders as&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 Click to view the solution&lt;/summary&gt;
-  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
-    You found me 🎉
-  &lt;/div&gt;
-&lt;/details&gt;
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+    <item>
+      <title>Learn pyspark</title>
+      <link>https://dataqubed.io/teaching/pyspark/</link>
+      <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark/</guid>
+      <description>&lt;iframe style=&#34;border-radius:12px&#34; src=&#34;https://open.spotify.com/embed/episode/1B2NLib3h8733YbcX5ofNm/video?utm_source=generator&amp;theme=0&#34; width=&#34;100%&#34; frameBorder=&#34;0&#34; allowfullscreen=&#34;&#34; allow=&#34;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&#34; loading=&#34;lazy&#34;&gt;&lt;/iframe&gt;
 &lt;p&gt;Hugo Blox Builder supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the &lt;code&gt;math&lt;/code&gt; option in your &lt;code&gt;config/_default/params.yaml&lt;/code&gt; file.&lt;/p&gt;
 &lt;p&gt;To render &lt;em&gt;inline&lt;/em&gt; or &lt;em&gt;block&lt;/em&gt; math, wrap your LaTeX math with &lt;code&gt;{{&amp;lt; math &amp;gt;}}$...${{&amp;lt; /math &amp;gt;}}&lt;/code&gt; or &lt;code&gt;{{&amp;lt; math &amp;gt;}}$$...$${{&amp;lt; /math &amp;gt;}}&lt;/code&gt;, respectively.&lt;/p&gt;
 &lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;

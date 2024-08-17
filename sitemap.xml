@@ -10,6 +10,26 @@
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://dataqubed.io/tags/pyspark/</loc>
+    <lastmod>2024-08-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</loc>
+    <lastmod>2024-08-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/</loc>
+    <lastmod>2024-08-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/teaching/</loc>
+    <lastmod>2024-08-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/teaching/pyspark-pyspark-fundamentals-and-advanced-topics/</loc>
+    <lastmod>2024-08-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://dataqubed.io/blog/</loc>
     <lastmod>2024-08-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -22,19 +42,11 @@
     <lastmod>2024-08-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/</loc>
-    <lastmod>2024-08-05T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://dataqubed.io/teaching/pyspark/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/pyspark-databricks/</loc>
-    <lastmod>2024-08-03T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/teaching/</loc>
     <lastmod>2024-08-03T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -111,14 +123,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/hugo-blox-builder/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/javascript/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/teaching/js/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
