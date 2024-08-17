@@ -131,6 +131,23 @@
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/</guid>
       <description>&lt;h2 id=&#34;spark-architecture-and-rdds&#34;&gt;Spark Architecture and RDDs&lt;/h2&gt;
+&lt;h3 id=&#34;a-gentle-intro-to-spark-architecture&#34;&gt;A gentle intro to Spark Architecture&lt;/h3&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/vJ0eUZxF80s?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/fyTiJLKEzME?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
 &lt;h3 id=&#34;rdds&#34;&gt;RDDs&lt;/h3&gt;
 &lt;p&gt;The next important topic in Spark is RDDs. Go ahead and see the Youtube video bellow to get a bit of understanding of what RDDs are.&lt;/p&gt;
 
@@ -164,7 +181,7 @@
 &lt;p&gt;PySpark is the Python API for Apache Spark, an open-source, distributed computing system that provides an interface for programming entire clusters with implicit data parallelism and fault tolerance. Spark is widely used in big data processing due to its ability to perform in-memory computations and its support for a variety of data processing tasks, such as batch processing, stream processing, and machine learning.&lt;/p&gt;
 &lt;p&gt;This tutorial will guide you through the basics of Spark and Spark ecosystem.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-apache-spark&#34;&gt;What is Apache Spark?&lt;/h2&gt;
-&lt;p&gt;Before diving into this tutorial, I recommend watching the bellow YouTube video entitles &amp;ldquo;PAn Introduction to PySpark&amp;rdquo;. This video serves as an excellent introduction to the world of PySpark and distributed computing. It’s a compact guide that walks you through the basics of Apache Spark, comparing it with Pandas, positioning it in the distributed computing ecosystem, and how PySpark fits into the picture.&lt;/p&gt;
+&lt;p&gt;Before diving into this tutorial, I recommend watching the bellow YouTube video entitles &amp;ldquo;An Introduction to PySpark&amp;rdquo;. This video serves as an excellent introduction to the world of PySpark and distributed computing. It’s a compact guide that walks you through the basics of Apache Spark, comparing it with Pandas, positioning it in the distributed computing ecosystem, and how PySpark fits into the picture.&lt;/p&gt;
 &lt;p&gt;Don&amp;rsquo;t panic if you don’t grasp all the details right away, that’s perfectly okay! The goal is to give you a general sense of what Spark is, why it’s important, and how it can be used to process large datasets efficiently. This foundational knowledge will make the hands-on sections of this tutorial much more meaningful as you start applying what you’ve learned.&lt;/p&gt;
 &lt;p&gt;So, take some time to watch the video—absorb as much as you can—and then come back here to deepen your understanding. We will review a lot of this content again and again, not only in a different context but also from a various angels.&lt;/p&gt;
 &lt;h3 id=&#34;a-short-summary-of-what-the-video-covers&#34;&gt;A short summary of what the video covers:&lt;/h3&gt;
@@ -528,7 +545,7 @@
 &lt;li&gt;How can you filter rows in a DataFrame?&lt;/li&gt;
 &lt;li&gt;Explain how to perform joins in PySpark.&lt;/li&gt;
 &lt;li&gt;How do you aggregate data in PySpark?&lt;/li&gt;
-&lt;li&gt;What are UDFs (User Defined Functions), and how are they used?&lt;/li&gt;
+&lt;li&gt;What are UDFs (User Defined Functions), and how are they used? &lt;a href=&#34;https://www.youtube.com/watch?v=-U-_rq1zhiI&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=19&#34;&gt;https://www.youtube.com/watch?v=-U-_rq1zhiI&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=19&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;How can you handle missing or null values in PySpark?&lt;/li&gt;
 &lt;li&gt;How do you repartition a DataFrame, and why?&lt;/li&gt;
 &lt;li&gt;Describe how to cache a DataFrame. Why is it useful?&lt;/li&gt;
@@ -540,7 +557,7 @@
 &lt;li&gt;Describe strategies for optimizing PySpark jobs.&lt;/li&gt;
 &lt;li&gt;How does PySpark handle data skewness?&lt;/li&gt;
 &lt;li&gt;Explain how checkpointing works in PySpark.&lt;/li&gt;
-&lt;li&gt;What is delta lake&lt;/li&gt;
+&lt;li&gt;What is delta lake &lt;a href=&#34;https://www.youtube.com/watch?v=0GhFAzN4qs4&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=20&#34;&gt;https://www.youtube.com/watch?v=0GhFAzN4qs4&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=20&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/watch?v=xYtU6fpsS3M&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=21&#34;&gt;https://www.youtube.com/watch?v=xYtU6fpsS3M&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=21&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;What is data lakehouse architecture.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
@@ -1037,7 +1054,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-741826395&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-837246915&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1055,7 +1072,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-741826395&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-837246915&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
