@@ -472,6 +472,31 @@
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Participation in quizzes is mandatory, and they contribute to your final score.&lt;/span&gt;
 &lt;/div&gt;
+&lt;p&gt;You are offered the opportunity to earn extra credit through the following two deliverables, which are designed to reinforce and showcase your understanding of the material. Please pay close attention to the instructions and deadlines.&lt;/p&gt;
+&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;&lt;strong&gt;Deliverable 1:&lt;/strong&gt; Cheat Sheet on Material Covered Up to Module 5.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Objective:&lt;/strong&gt; Create a concise and well-organized cheat sheet that summarizes the key concepts, formulas, and methodologies you have learned up to and including Module 5.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Format:&lt;/strong&gt; You may submit your cheat sheet in one of the following formats:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Jupyter Notebook (.ipynb)&lt;/li&gt;
+&lt;li&gt;A Databricks Notebook&lt;/li&gt;
+&lt;li&gt;A well-structured PDF file (maximum of 2 pages).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you choose to submit a PDF, you must also include the original file format (e.g., the source Jupyter Notebook or Databricks Notebook from which the PDF was generated).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deadline:&lt;/strong&gt; Your cheat sheet must be submitted by October 11 at 23:59 CET. Please adhere strictly to this deadline.&lt;/p&gt;
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;&lt;strong&gt;Deliverable 2:&lt;/strong&gt; To Be Announced&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; The second deliverable will be announced shortly. I assure you that it will not require more than a full day of work for a single individual.&lt;/p&gt;
+&lt;/span&gt;
+&lt;/div&gt;
 &lt;p&gt;By the end of this material you will be able to provide answers to the questions bellow:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Describe the PySpark architecture.&lt;/li&gt;
@@ -996,7 +1021,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-894537612&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-832764951&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1014,7 +1039,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-894537612&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-832764951&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
