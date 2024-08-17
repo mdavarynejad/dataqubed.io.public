@@ -1199,6 +1199,7 @@
         <h1>PySpark - Module 2</h1>
         <h2 id="spark-architecture-and-rdds">Spark Architecture and RDDs</h2>
 <h3 id="a-gentle-intro-to-spark-architecture">A gentle intro to Spark Architecture</h3>
+<p>Look at the Youtube video bellow carefully.</p>
 
 
     
@@ -1207,6 +1208,8 @@
       ></iframe>
     </div>
 
+<p>the above video explores and explains the architecture of Apache Spark, emphasizing the roles of the <em>driver</em> and <em>executors</em> in both <em>local</em> and <em>cluster</em> mode applications. The driver manages the application and can run on the local machine or within a cluster. In client mode, the driver operates locally, while in cluster mode, it starts in the Application Master container, requesting containers from the cluster manager (like Apache YARN) to launch executors. The video explains how Spark can operate in local mode, where everything runs in a single JVM, or in cluster mode, where the driver and executors communicate via the Application Master, with resource allocation handled by the cluster manager. A demonstration shows starting a Spark application in cluster mode with specific executors and utilizing YARN&rsquo;s dynamic allocation feature to release idle executors.</p>
+<p>The video bellow covers how Spark breaks down and executes applications at the executors.</p>
 
 
     

@@ -133,6 +133,7 @@
       <guid>https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/</guid>
       <description>&lt;h2 id=&#34;spark-architecture-and-rdds&#34;&gt;Spark Architecture and RDDs&lt;/h2&gt;
 &lt;h3 id=&#34;a-gentle-intro-to-spark-architecture&#34;&gt;A gentle intro to Spark Architecture&lt;/h3&gt;
+&lt;p&gt;Look at the Youtube video bellow carefully.&lt;/p&gt;
 
 
     
@@ -141,6 +142,8 @@
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
+&lt;p&gt;the above video explores and explains the architecture of Apache Spark, emphasizing the roles of the &lt;em&gt;driver&lt;/em&gt; and &lt;em&gt;executors&lt;/em&gt; in both &lt;em&gt;local&lt;/em&gt; and &lt;em&gt;cluster&lt;/em&gt; mode applications. The driver manages the application and can run on the local machine or within a cluster. In client mode, the driver operates locally, while in cluster mode, it starts in the Application Master container, requesting containers from the cluster manager (like Apache YARN) to launch executors. The video explains how Spark can operate in local mode, where everything runs in a single JVM, or in cluster mode, where the driver and executors communicate via the Application Master, with resource allocation handled by the cluster manager. A demonstration shows starting a Spark application in cluster mode with specific executors and utilizing YARN&amp;rsquo;s dynamic allocation feature to release idle executors.&lt;/p&gt;
+&lt;p&gt;The video bellow covers how Spark breaks down and executes applications at the executors.&lt;/p&gt;
 
 
     
@@ -180,7 +183,28 @@
       <guid>https://dataqubed.io/teaching/pyspark-introduction-to-big-data-and-apache-spark/</guid>
       <description>&lt;h2 id=&#34;introduction-to-big-data-and-apache-spark&#34;&gt;Introduction to Big Data and Apache Spark&lt;/h2&gt;
 &lt;p&gt;PySpark is the Python API for Apache Spark, an open-source, distributed computing system that provides an interface for programming entire clusters with implicit data parallelism and fault tolerance. Spark is widely used in big data processing due to its ability to perform in-memory computations and its support for a variety of data processing tasks, such as batch processing, stream processing, and machine learning.&lt;/p&gt;
-&lt;p&gt;This tutorial will guide you through the basics of Spark and Spark ecosystem.&lt;/p&gt;
+&lt;p&gt;Before we start with the whole concept of PySpark and distributed computing let us begin by the understanding Big Data and how would we define it.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-big-data&#34;&gt;What is Big Data?&lt;/h2&gt;
+&lt;p&gt;See the video bellow:&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bAyrObl7TYE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;and also the one bellow:&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/WEqVfo6nJuU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;We discussed the five key categories of big data (&lt;strong&gt;Volume&lt;/strong&gt;, &lt;strong&gt;Velocity&lt;/strong&gt;, &lt;strong&gt;Variety&lt;/strong&gt;, &lt;strong&gt;Veracity&lt;/strong&gt;, and &lt;strong&gt;Value&lt;/strong&gt;) and provided some examples of how big data can be used in different ways. We also understood that big data is transforming industries across the board. Whether it&amp;rsquo;s improving patient care in healthcare, optimizing supply chains in retail, or enhancing fraud detection in banking, the impact of big data is undeniable.&lt;/p&gt;
+&lt;p&gt;Next we will continue to understand the basics of Spark and Spark ecosystem.&lt;/p&gt;
 &lt;h2 id=&#34;what-is-apache-spark&#34;&gt;What is Apache Spark?&lt;/h2&gt;
 &lt;p&gt;Before diving into this tutorial, I recommend watching the bellow YouTube video entitles &amp;ldquo;An Introduction to PySpark&amp;rdquo;. This video serves as an excellent introduction to the world of PySpark and distributed computing. It’s a compact guide that walks you through the basics of Apache Spark, comparing it with Pandas, positioning it in the distributed computing ecosystem, and how PySpark fits into the picture.&lt;/p&gt;
 &lt;p&gt;Don&amp;rsquo;t panic if you don’t grasp all the details right away, that’s perfectly okay! The goal is to give you a general sense of what Spark is, why it’s important, and how it can be used to process large datasets efficiently. This foundational knowledge will make the hands-on sections of this tutorial much more meaningful as you start applying what you’ve learned.&lt;/p&gt;
@@ -276,7 +300,7 @@
 &lt;p&gt;This structured approach ensures that you will have ample time to grasp each concept thoroughly, practice through hands-on exercises, and apply what you have learned to real-world scenarios.&lt;/p&gt;
 &lt;h4 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h4&gt;
 &lt;p&gt;To begin, make sure you can install and configure PySpark. Familiarize yourself with the course materials, including the recommended readings and online resources. Each module contains practical assignments and quizzes to reinforce your learning, so take your time to complete these exercises.&lt;/p&gt;
-&lt;h3 id=&#34;course-outline-pyspark-fundamentals-and-advanced-topicshttpsdataqubedioteachingpyspark-fundamentals-and-advanced-topics&#34;&gt;Course Outline: [PySpark Fundamentals and Advanced Topics}(https://dataqubed.io/teaching/pyspark-fundamentals-and-advanced-topics/)&lt;/h3&gt;
+&lt;h3 id=&#34;course-outline-pyspark-fundamentals-and-advanced-topicshttpsdataqubedioteachingpyspark-fundamentals-and-advanced-topics&#34;&gt;Course Outline: &lt;a href=&#34;https://dataqubed.io/teaching/pyspark-fundamentals-and-advanced-topics/&#34;&gt;PySpark Fundamentals and Advanced Topics&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;module-1-introduction-to-big-data-and-apache-sparkhttpsdataqubedioteachingpyspark-introduction-to-big-data-and-apache-spark&#34;&gt;&lt;a href=&#34;https://dataqubed.io/teaching/pyspark-introduction-to-big-data-and-apache-spark/&#34;&gt;Module 1: Introduction to Big Data and Apache Spark&lt;/a&gt;&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Introduction to Big Data&lt;/strong&gt;
@@ -1055,7 +1079,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-296438157&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-649872135&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1073,7 +1097,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-296438157&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-649872135&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
