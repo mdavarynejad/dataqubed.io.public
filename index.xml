@@ -196,7 +196,7 @@
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Do you know a simpler and better instruction? Please share your experience.&lt;/span&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;check-the-installation&#34;&gt;Check the installation&lt;/h3&gt;
-&lt;p&gt;Now lets check if your installation is complete. Open the file &lt;strong&gt;00-Check-your-spark-installation.ipynb&lt;/strong&gt; from &lt;a href=&#34;uploads/pyspark/00-Check-your-spark-installation.ipynb&#34;&gt;this link&lt;/a&gt; and follow the instruction. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.&lt;/p&gt;
+&lt;p&gt;Now lets check if your installation is complete. Download the file &lt;strong&gt;00-Check-your-spark-installation.ipynb&lt;/strong&gt; from &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/00-Check-your-spark-installation.ipynb&#34;&gt;this link&lt;/a&gt; and follow the instruction. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.&lt;/p&gt;
 </description>
     </item>
     
@@ -1036,7 +1036,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-143726859&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-623784915&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1054,7 +1054,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-143726859&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-623784915&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
