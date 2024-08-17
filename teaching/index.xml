@@ -176,6 +176,7 @@
 &lt;/div&gt;
 &lt;h3 id=&#34;check-the-installation&#34;&gt;Check the installation&lt;/h3&gt;
 &lt;p&gt;Now lets check if your installation is complete. Download the file &lt;strong&gt;00-Check-your-spark-installation.ipynb&lt;/strong&gt; from &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/00-Check-your-spark-installation.ipynb&#34;&gt;this link&lt;/a&gt; and follow the instruction. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.&lt;/p&gt;
+&lt;p&gt;The html version of the notebook is available here &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/00-Check-your-spark-installation.html&#34;&gt;online&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
