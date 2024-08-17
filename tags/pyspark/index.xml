@@ -105,6 +105,57 @@
     </item>
     
     <item>
+      <title>PySpark - Module 1</title>
+      <link>https://dataqubed.io/teaching/pyspark--introduction-to-big-data-and-apache-spark/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark--introduction-to-big-data-and-apache-spark/</guid>
+      <description>&lt;h2 id=&#34;introduction-to-big-data-and-apache-spark&#34;&gt;Introduction to Big Data and Apache Spark&lt;/h2&gt;
+&lt;p&gt;PySpark is the Python API for Apache Spark, an open-source, distributed computing system that provides an interface for programming entire clusters with implicit data parallelism and fault tolerance. Spark is widely used in big data processing due to its ability to perform in-memory computations and its support for a variety of data processing tasks, such as batch processing, stream processing, and machine learning.&lt;/p&gt;
+&lt;p&gt;This tutorial will guide you through the basics of Spark and Spark ecosystem.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-apache-spark&#34;&gt;What is Apache Spark?&lt;/h2&gt;
+&lt;p&gt;Before diving into this tutorial, I recommend watching the bellow YouTube video entitles &amp;ldquo;PAn Introduction to PySpark&amp;rdquo;. This video serves as an excellent introduction to the world of PySpark and distributed computing. It’s a compact guide that walks you through the basics of Apache Spark, comparing it with Pandas, positioning it in the distributed computing ecosystem, and how PySpark fits into the picture.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t panic if you don’t grasp all the details right away, that’s perfectly okay! The goal is to give you a general sense of what Spark is, why it’s important, and how it can be used to process large datasets efficiently. This foundational knowledge will make the hands-on sections of this tutorial much more meaningful as you start applying what you’ve learned.&lt;/p&gt;
+&lt;p&gt;So, take some time to watch the video—absorb as much as you can—and then come back here to deepen your understanding. We will review a lot of this content again and again, not only in a different context but also from a various angels.&lt;/p&gt;
+&lt;h3 id=&#34;a-short-summary-of-what-the-video-covers&#34;&gt;A short summary of what the video covers:&lt;/h3&gt;
+&lt;p&gt;The talk covers what PySpark is, its capabilities compared to Pandas, and when it’s necessary to use it. It highlights the benefits of PySpark for distributed data processing, explaining Spark&amp;rsquo;s map and reduce transformations and the advantages of lazy evaluation. The decision-making process for choosing between PySpark and other tools is also discussed, considering factors like data volume, existing codebases, team skills, and personal preferences. Throughout, code examples are provided, along with an emphasis on the usefulness of window functions and addressing concerns like the underlying Java in the Python library and potential errors during evaluation.&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/ZFLOMSuWHxg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h3 id=&#34;pyspark-installation-on-ubuntu-2004&#34;&gt;PySpark installation on Ubuntu 20.04&lt;/h3&gt;
+&lt;p&gt;After you are done with the video go ahead and install PySpark. This tutorial will give you the instruction on how to install PySpark on Ubuntu 20.04 but the process should remain almost the same when it comes to the installation on other OSs.&lt;/p&gt;
+&lt;p&gt;Visit here for a detailed instructions on how to install PySpark on different platforms. You will also learn how to configure your environment to work with PySpark effectively.&lt;/p&gt;
+&lt;h3 id=&#34;check-the-installation&#34;&gt;Check the installation&lt;/h3&gt;
+&lt;p&gt;Now lets check if your installation is complete. Open the file &lt;strong&gt;00.ipynb&lt;/strong&gt; and follow the instruction. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.&lt;/p&gt;
+&lt;h3 id=&#34;rdds&#34;&gt;RDDs&lt;/h3&gt;
+&lt;p&gt;The next important topic in Spark is RDDs. Go ahead and see the Youtube video bellow to get a bit of understanding of what RDDs are.&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/nH6C9vqtyYU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;This is the code of Spark architecture. RDDS are closely linked to the concepts of Lazy evaluation and resilience. Make sure to watch the video few times and then run the notebook &lt;strong&gt;01.ipynb&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Now continue watching the Youtube video bellow entitled &amp;ldquo;&amp;rdquo;. The video should give you a sample of various Transformations and Actions in spark.&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/5L0oyrwiNNE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;When you are done continue with &lt;strong&gt;02.ipynb&lt;/strong&gt; notebook and then the &lt;strong&gt;03.ipynb&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>PySpark - Module 0</title>
       <link>https://dataqubed.io/teaching/pyspark-pyspark-fundamentals-and-advanced-topics/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
