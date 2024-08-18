@@ -38,7 +38,69 @@
       <link>https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/</link>
       <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/</guid>
-      <description>&lt;h2 id=&#34;data-sources-and-sinks&#34;&gt;Data Sources and Sinks&lt;/h2&gt;
+      <description>&lt;p&gt;So far we have gained enough experience with running Spark locally. Is it now the time to move to DataBricks and gain a bit of experience on how with that platform? Lets do it.&lt;/p&gt;
+&lt;h2 id=&#34;why-databricks&#34;&gt;Why DataBricks?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloud-native: works on any major cloud provider&lt;/li&gt;
+&lt;li&gt;Data storage: store a broad range of data including structured, unstructured and streaming&lt;/li&gt;
+&lt;li&gt;Governance and management: in-built security controls and governance&lt;/li&gt;
+&lt;li&gt;Tools: wide range of production-ready data tooling from engineering to BI, AI and ML&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/whydb.png&#34; alt=&#34;Why DataBricks&#34;&gt;&lt;/p&gt;
+&lt;p&gt;With Databricks Community Edition, we would like to avoid installing new software and maintaining it. Also it gives us a ton of flexibility and features that we will see in the next sections.&lt;/p&gt;
+&lt;p&gt;A non comprehensive list of benefits of DataBricks:&lt;/p&gt;
+&lt;h4 id=&#34;1-scalability-and-performance&#34;&gt;1. Scalability and Performance&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Built on Apache Spark for efficient big data processing&lt;/li&gt;
+&lt;li&gt;Seamlessly scales from small to large clusters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-unified-analytics-platform&#34;&gt;2. Unified Analytics Platform&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Integrates data engineering, data science, and machine learning&lt;/li&gt;
+&lt;li&gt;Simplifies workflows and enhances team collaboration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3-ease-of-use&#34;&gt;3. Ease of Use&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Interactive workspace with collaborative notebooks&lt;/li&gt;
+&lt;li&gt;Supports multiple languages: Python, SQL, R, Scala&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;4-advanced-analytics-and-machine-learning&#34;&gt;4. Advanced Analytics and Machine Learning&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Robust support for machine learning and AI&lt;/li&gt;
+&lt;li&gt;Includes MLflow for experiment tracking and model management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;5-data-lake-integration&#34;&gt;5. Data Lake Integration&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Supports Delta Lake for reliable data lakes&lt;/li&gt;
+&lt;li&gt;Ensures ACID transactions and unifies batch and streaming data processing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;6-cloud-integration&#34;&gt;6. Cloud Integration&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Seamless integration with AWS, Azure, and Google Cloud&lt;/li&gt;
+&lt;li&gt;Leverages cloud-native features for security and cost efficiency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;7-real-time-data-processing&#34;&gt;7. Real-Time Data Processing&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Handles real-time data streams for timely insights&lt;/li&gt;
+&lt;li&gt;Essential for real-time analytics, monitoring, and fraud detection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;8-security-and-compliance&#34;&gt;8. Security and Compliance&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Robust security features including data encryption and role-based access control&lt;/li&gt;
+&lt;li&gt;Compliance with various industry standards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;9-cost-efficiency&#34;&gt;9. Cost Efficiency&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Auto-scaling and optimized cluster management&lt;/li&gt;
+&lt;li&gt;Efficient resource management reduces costs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;10-community-and-ecosystem&#34;&gt;10. Community and Ecosystem&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Large and active community with strong support&lt;/li&gt;
+&lt;li&gt;Extensive documentation and third-party integrations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now that we are aware of some of the benefits of running spark on DataBricks env lets go ahead and open our first Databricks Community Edition account.&lt;/p&gt;
+&lt;h2 id=&#34;data-sources-and-sinks&#34;&gt;Data Sources and Sinks&lt;/h2&gt;
 &lt;p&gt;By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.&lt;/p&gt;
 &lt;p&gt;You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.&lt;/p&gt;
 &lt;p&gt;Also we did have a look into DataBricks environment, what does it have to offer to us and how we can open a community edition of DataBricks next to coding and practice a bit of PySpark. In this module we will study how to read and write from/into CSV, JSON, Parquet, and other formats. We will then continue by making jdbc connection for reading from / writing to databases.&lt;/p&gt;
@@ -1117,7 +1179,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-863974521&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-253846197&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1135,7 +1197,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-863974521&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-253846197&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
