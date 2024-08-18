@@ -10,10 +10,6 @@
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/teaching/</loc>
-    <lastmod>2024-08-19T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://dataqubed.io/tags/pyspark/</loc>
     <lastmod>2024-08-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -22,7 +18,15 @@
     <lastmod>2024-08-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://dataqubed.io/teaching/pyspark-spark-streaming/</loc>
+    <lastmod>2024-08-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://dataqubed.io/tags/</loc>
+    <lastmod>2024-08-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/teaching/</loc>
     <lastmod>2024-08-18T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
