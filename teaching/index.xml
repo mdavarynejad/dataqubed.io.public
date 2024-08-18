@@ -18,7 +18,51 @@
       <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/</guid>
       <description>&lt;p&gt;So far we have gained enough experience with running Spark locally. Is it now the time to move to DataBricks and gain a bit of experience on how with that platform? Lets do it.&lt;/p&gt;
-&lt;h2 id=&#34;why-databricks&#34;&gt;Why DataBricks?&lt;/h2&gt;
+&lt;h2 id=&#34;data-sources-and-sinks&#34;&gt;Data Sources and Sinks&lt;/h2&gt;
+&lt;p&gt;By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.&lt;/p&gt;
+&lt;p&gt;You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.&lt;/p&gt;
+&lt;p&gt;Also we did have a look into DataBricks environment, what does it have to offer to us and how we can open a community edition of DataBricks next to coding and practice a bit of PySpark. In this module we will study how to read and write from/into CSV, JSON, Parquet, and other formats. We will then continue by making jdbc connection for reading from / writing to databases.&lt;/p&gt;
+&lt;h2 id=&#34;reading-and-writing-frominto-csv-json-parquet-and-other-formats&#34;&gt;Reading and writing from/into CSV, JSON, Parquet, and other formats&lt;/h2&gt;
+&lt;p&gt;First watch this video bellow.&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/ZBI1UFbEM4c?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459134/4682920752598681/latest.html&#34;&gt;this Databricks notebook&lt;/a&gt; into your workspace. Call it &lt;strong&gt;07 - Working with Semi-Structured Data&lt;/strong&gt; for consistency reasons. Follow the steps and cells. The material should be self explanatory.&lt;/p&gt;
+&lt;h2 id=&#34;reading-form-and-writing-into-databases-using-jdbc&#34;&gt;Reading form and Writing into databases using JDBC&lt;/h2&gt;
+&lt;p&gt;Watch the Youtube video bellow.&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/oLIagnUAN2E?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;TODO: What then?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PySpark - Module 3</title>
+      <link>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</guid>
+      <description>&lt;h2 id=&#34;module-3-dataframes-and-spark-sql-in-databricks&#34;&gt;Module 3: DataFrames and Spark SQL (in Databricks)&lt;/h2&gt;
+&lt;p&gt;By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.&lt;/p&gt;
+&lt;p&gt;You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.&lt;/p&gt;
+&lt;p&gt;Today we will learn a bit on DataBricks, what does it have to offer to us and how we can open a community edition of DataBricks. Next we wil run few notebooks and will make Spark Dataframes and will query them using Spark SQL.&lt;/p&gt;
+&lt;h3 id=&#34;learning-outcomes&#34;&gt;Learning Outcomes&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Understanding DataBricks:&lt;/strong&gt; Gain an overview of what DataBricks is, including its features and benefits.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Accessing DataBricks Community Edition:&lt;/strong&gt; Learn how to access and set up the Community Edition of DataBricks for hands-on practice.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Working with Notebooks in DataBricks:&lt;/strong&gt; Learn how to create and run notebooks in DataBricks, which are essential for executing code and managing workflows.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Creating Spark DataFrames:&lt;/strong&gt; Understand how to create Spark DataFrames, a core component of working with data in Spark.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Querying Data with Spark SQL:&lt;/strong&gt; Learn how to query data using Spark SQL, leveraging SQL-like syntax for data manipulation within Spark DataFrames.&lt;/p&gt;
+&lt;h3 id=&#34;why-databricks&#34;&gt;Why DataBricks?&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Cloud-native: works on any major cloud provider&lt;/li&gt;
 &lt;li&gt;Data storage: store a broad range of data including structured, unstructured and streaming&lt;/li&gt;
@@ -78,48 +122,8 @@
 &lt;li&gt;Large and active community with strong support&lt;/li&gt;
 &lt;li&gt;Extensive documentation and third-party integrations&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Now that we are aware of some of the benefits of running spark on DataBricks env lets go ahead and open our first Databricks Community Edition account.&lt;/p&gt;
-&lt;h2 id=&#34;data-sources-and-sinks&#34;&gt;Data Sources and Sinks&lt;/h2&gt;
-&lt;p&gt;By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.&lt;/p&gt;
-&lt;p&gt;You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.&lt;/p&gt;
-&lt;p&gt;Also we did have a look into DataBricks environment, what does it have to offer to us and how we can open a community edition of DataBricks next to coding and practice a bit of PySpark. In this module we will study how to read and write from/into CSV, JSON, Parquet, and other formats. We will then continue by making jdbc connection for reading from / writing to databases.&lt;/p&gt;
-&lt;h4 id=&#34;reading-and-writing-frominto-csv-json-parquet-and-other-formats&#34;&gt;Reading and writing from/into CSV, JSON, Parquet, and other formats&lt;/h4&gt;
-&lt;p&gt;First watch this video bellow.&lt;/p&gt;
-
-
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/ZBI1UFbEM4c?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459134/4682920752598681/latest.html&#34;&gt;this Databricks notebook&lt;/a&gt; into your workspace. Call it &lt;strong&gt;07 - Working with Semi-Structured Data&lt;/strong&gt; for consistency reasons. Follow the steps and cell. The material should be self explanatory.&lt;/p&gt;
-&lt;h2 id=&#34;reading-form-and-writing-into-databases-using-jdbc&#34;&gt;Reading form and Writing into databases using JDBC&lt;/h2&gt;
-&lt;p&gt;Watch the Youtube video bellow.&lt;/p&gt;
-
-
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/oLIagnUAN2E?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;TODO: What then?&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>PySpark - Module 3</title>
-      <link>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</link>
-      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</guid>
-      <description>&lt;h2 id=&#34;module-3-dataframes-and-spark-sql&#34;&gt;Module 3: DataFrames and Spark SQL&lt;/h2&gt;
-&lt;p&gt;By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.&lt;/p&gt;
-&lt;p&gt;You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.&lt;/p&gt;
-&lt;p&gt;Today we will learn a bit on DataBricks, what does it have to offer to us and how we can open a community edition of DataBricks.&lt;/p&gt;
-&lt;h3 id=&#34;learning-outcomes&#34;&gt;Learning Outcomes&lt;/h3&gt;
-&lt;p&gt;By the end of this module, you will be able to: TODO:&lt;/p&gt;
 &lt;h3 id=&#34;dataframes-and-spark-sql&#34;&gt;DataFrames and Spark SQL&lt;/h3&gt;
+&lt;p&gt;Now that we are aware of some of the benefits of running spark on DataBricks env lets go ahead and open our first Databricks Community Edition account. To learn how to create your Databricks Community Edition account and activate it see section &lt;strong&gt;0. Prep&lt;/strong&gt; bellow.&lt;/p&gt;
 &lt;ol start=&#34;0&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Prep&lt;/strong&gt;&lt;/p&gt;
@@ -159,38 +163,40 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;Now you know the essential procedures to work in DataBricks environment. Now head towards the &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256163/4682920752598681/latest.html&#34;&gt;00 - Test dev env&lt;/a&gt; notebook, clone it into your workspace and follow the steps. For consistency in the learning the materials and easy referencing rename the file to &lt;strong&gt;00 - Test the dev env&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256163/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; into your workspace. For consistency in the learning the materials and easy referencing rename the file to &lt;strong&gt;01 - Data Prep&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Now you know the essential procedures to work in DataBricks environment. Now head towards the &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256163/4682920752598681/latest.html&#34;&gt;00 - Test dev env&lt;/a&gt; notebook, clone it into your workspace and follow the steps. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;00 - Test the dev env&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256208/4682920752598681/latest.html&#34;&gt;01 - Data Prep&lt;/a&gt; into your workspace. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;01 - Data Prep&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: As you already know a good practice in programming is to modularize your code. Following the best practices here I have created a notebook called &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256172/4682920752598681/latest.html&#34;&gt;02 - Functions&lt;/a&gt;. Clone that into you workspace, rename it to &lt;strong&gt;02 - Functions&lt;/strong&gt;, try to read through it, and make adjustments as needed.&lt;/p&gt;
+&lt;p&gt;Next, we will explore the fundamentals of DataFrames in Databricks. We’ll cover how to create and manipulate DataFrames, perform basic operations, and leverage DataFrames for data analysis. This session will guide you through using Spark SQL for querying and transforming data, demonstrating practical examples of DataFrame operations.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Introduction to DataFrames&lt;/strong&gt;&lt;/p&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to DataFrames&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Difference between RDDs and DataFrames&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Creating DataFrames&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Schema inference and manual schema definition&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256187/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning the materials and easy referencing rename the file to ** 03 - Introduction to DataFrames**. Go through the material and try to make notes.&lt;/p&gt;
+&lt;p&gt;Clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256187/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. Rename the file to &lt;strong&gt;03 - Introduction to DataFrames&lt;/strong&gt;. Go through the material and try to make notes. The notebook covers few topics including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Difference between RDDs and DataFrames&lt;/li&gt;
+&lt;li&gt;Creating DataFrames&lt;/li&gt;
+&lt;li&gt;Schema inference and manual schema definition&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Next we learned how to perform basic DataFrame operations including selecting, filtering, and transforming data using PySpark. These operations are fundamental for data manipulation and analysis. We will then learn how to perform aggregations and group data using PySpark. We covered how to group by single and multiple columns, apply multiple aggregate functions, and filter results after grouping.&lt;/p&gt;
+&lt;p&gt;We will then dive into working with joins and unions in Spark using Databricks. We&amp;rsquo;ll explore how to combine data from multiple DataFrames using different types of joins, including inner, left, right, and full outer joins. Additionally, we&amp;rsquo;ll cover how to use unions to append data from one DataFrame to another. These operations are fundamental for integrating and manipulating datasets in Spark, making them essential skills for any data engineer or analyst working in a distributed data environment.&lt;/p&gt;
+&lt;p&gt;Finally, in this module, we will learn few tips and tricks on how to work with semi-structured data. The focus is on handling JSON data, including how to read, write, and manipulate JSON files using PySpark. You will learn techniques to efficiently process semi-structured data, including using Spark&amp;rsquo;s &lt;code&gt;explode&lt;/code&gt; function to flatten nested data and leveraging &lt;code&gt;schema inference&lt;/code&gt; to automatically detect data structures. The module provides practical examples and exercises to solidify your understanding, ensuring you can effectively manage complex data formats in your projects.&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;DataFrame Operations&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Selecting, filtering, and transforming data. Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1195017303654174/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning the materials and easy referencing rename the file to ** 04 - DataFrame Operations**.&lt;/li&gt;
-&lt;li&gt;Aggregations and Grouping&lt;/li&gt;
-&lt;li&gt;Joins and unions Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459116/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning the materials and easy referencing rename the file to ** 06 - Joins and Unions**.&lt;/li&gt;
-&lt;li&gt;Working with semi-structured data&lt;/li&gt;
+&lt;li&gt;Selecting, filtering, and transforming data: Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1195017303654174/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. Referencing rename the file to &lt;strong&gt;04 - DataFrame Operations&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Aggregations and Grouping: Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1195017303654195/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;05 - Aggregations and Grouping&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Joins and unions: Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459116/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;06 - Joins and Unions&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Working with Semi-Structured Data: Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459134/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;07 - Working with semi-structured data&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Spark SQL&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Spark SQL&lt;/strong&gt; (todo: coming soon)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SQL queries with Spark&lt;/li&gt;
 &lt;li&gt;Registering DataFrames as tables&lt;/li&gt;
@@ -198,6 +204,16 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;&lt;strong&gt;Assignment: Visualizations in Databricks notebooks&lt;/strong&gt; Databricks has built-in support for charts and visualizations in both Databricks SQL and in notebooks. Based on the data prepared in &lt;strong&gt;01 - Data Prep&lt;/strong&gt; make few visualizations.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt;: I will provide you with a git repo and you will be tasked place your notebook there. The repo will not accept new entries after the deadline. Please deliver both the Databricks &lt;strong&gt;.dbc&lt;/strong&gt; archive file format and &lt;strong&gt;.HTML&lt;/strong&gt; format. Make sure to give them identical filenames. Also make sure to put the name of the team and team members in the first cell of the notebook.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deadline:&lt;/strong&gt;: Your notebook must be submitted by Sep 29 at 23:59 CET. Please adhere strictly to this deadline.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reading material&lt;/strong&gt;: Need some reading materials? Visit &lt;a href=&#34;https://docs.databricks.com/en/visualizations/index.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/span&gt;
+&lt;/div&gt;
 </description>
     </item>
     

@@ -1243,7 +1243,7 @@
       <div class="article-header article-container featured-image-wrapper mt-4 mb-16" style="max-width: 720px; max-height: 480px;">
         <div style="position: relative">
           <img src="/post/data-visualization/featured_hu15046892941476069000.webp" width="720" height="480" alt="" class="featured-image">
-          <span class="article-header-caption">Image credit:</span>
+          <span class="article-header-caption">Image credit: <a href="https://unsplash.com" target="_blank" rel="noopener"><strong>Unsplash</strong></a></span>
         </div>
       </div>
       
@@ -1262,7 +1262,7 @@
 
 
 
-<div id="chart-892743615" class="chart"></div>
+<div id="chart-468579231" class="chart"></div>
 <script>
   async function fetchChartJSON() {
     console.debug('Hugo Blox fetching chart JSON...')
@@ -1280,7 +1280,7 @@
 
       fetchChartJSON().then(chart => {
         console.debug('Plotting chart...')
-        window.Plotly.newPlot('chart-892743615', chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot('chart-468579231', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

@@ -898,15 +898,15 @@
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#why-databricks"
-                class="hb-docs-link"
-              >Why DataBricks?</a>
-            </li>
-          <li>
-              <a
                 href="#data-sources-and-sinks"
                 class="hb-docs-link"
               >Data Sources and Sinks</a>
+            </li>
+          <li>
+              <a
+                href="#reading-and-writing-frominto-csv-json-parquet-and-other-formats"
+                class="hb-docs-link"
+              >Reading and writing from/into CSV, JSON, Parquet, and other formats</a>
             </li>
           <li>
               <a
@@ -1181,43 +1181,10 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#why-databricks">Why DataBricks?</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#1-scalability-and-performance">1. Scalability and Performance</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#2-unified-analytics-platform">2. Unified Analytics Platform</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#3-ease-of-use">3. Ease of Use</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#4-advanced-analytics-and-machine-learning">4. Advanced Analytics and Machine Learning</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#5-data-lake-integration">5. Data Lake Integration</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#6-cloud-integration">6. Cloud Integration</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#7-real-time-data-processing">7. Real-Time Data Processing</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#8-security-and-compliance">8. Security and Compliance</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#9-cost-efficiency">9. Cost Efficiency</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#10-community-and-ecosystem">10. Community and Ecosystem</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#data-sources-and-sinks">Data Sources and Sinks</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#reading-and-writing-frominto-csv-json-parquet-and-other-formats">Reading and writing from/into CSV, JSON, Parquet, and other formats</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#reading-and-writing-frominto-csv-json-parquet-and-other-formats">Reading and writing from/into CSV, JSON, Parquet, and other formats</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#reading-form-and-writing-into-databases-using-jdbc">Reading form and Writing into databases using JDBC</a>
@@ -1259,92 +1226,11 @@
       <div class="content text-base">
         <h1>PySpark - Module 4</h1>
         <p>So far we have gained enough experience with running Spark locally. Is it now the time to move to DataBricks and gain a bit of experience on how with that platform? Lets do it.</p>
-<h2 id="why-databricks">Why DataBricks?</h2>
-<ul>
-<li>Cloud-native: works on any major cloud provider</li>
-<li>Data storage: store a broad range of data including structured, unstructured and streaming</li>
-<li>Governance and management: in-built security controls and governance</li>
-<li>Tools: wide range of production-ready data tooling from engineering to BI, AI and ML</li>
-</ul>
-<p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="flex justify-center	">
-    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/whydb.png" alt="Why DataBricks" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<p>With Databricks Community Edition, we would like to avoid installing new software and maintaining it. Also it gives us a ton of flexibility and features that we will see in the next sections.</p>
-<p>A non comprehensive list of benefits of DataBricks:</p>
-<h4 id="1-scalability-and-performance">1. Scalability and Performance</h4>
-<ul>
-<li>Built on Apache Spark for efficient big data processing</li>
-<li>Seamlessly scales from small to large clusters</li>
-</ul>
-<h4 id="2-unified-analytics-platform">2. Unified Analytics Platform</h4>
-<ul>
-<li>Integrates data engineering, data science, and machine learning</li>
-<li>Simplifies workflows and enhances team collaboration</li>
-</ul>
-<h4 id="3-ease-of-use">3. Ease of Use</h4>
-<ul>
-<li>Interactive workspace with collaborative notebooks</li>
-<li>Supports multiple languages: Python, SQL, R, Scala</li>
-</ul>
-<h4 id="4-advanced-analytics-and-machine-learning">4. Advanced Analytics and Machine Learning</h4>
-<ul>
-<li>Robust support for machine learning and AI</li>
-<li>Includes MLflow for experiment tracking and model management</li>
-</ul>
-<h4 id="5-data-lake-integration">5. Data Lake Integration</h4>
-<ul>
-<li>Supports Delta Lake for reliable data lakes</li>
-<li>Ensures ACID transactions and unifies batch and streaming data processing</li>
-</ul>
-<h4 id="6-cloud-integration">6. Cloud Integration</h4>
-<ul>
-<li>Seamless integration with AWS, Azure, and Google Cloud</li>
-<li>Leverages cloud-native features for security and cost efficiency</li>
-</ul>
-<h4 id="7-real-time-data-processing">7. Real-Time Data Processing</h4>
-<ul>
-<li>Handles real-time data streams for timely insights</li>
-<li>Essential for real-time analytics, monitoring, and fraud detection</li>
-</ul>
-<h4 id="8-security-and-compliance">8. Security and Compliance</h4>
-<ul>
-<li>Robust security features including data encryption and role-based access control</li>
-<li>Compliance with various industry standards</li>
-</ul>
-<h4 id="9-cost-efficiency">9. Cost Efficiency</h4>
-<ul>
-<li>Auto-scaling and optimized cluster management</li>
-<li>Efficient resource management reduces costs</li>
-</ul>
-<h4 id="10-community-and-ecosystem">10. Community and Ecosystem</h4>
-<ul>
-<li>Large and active community with strong support</li>
-<li>Extensive documentation and third-party integrations</li>
-</ul>
-<p>Now that we are aware of some of the benefits of running spark on DataBricks env lets go ahead and open our first Databricks Community Edition account.</p>
 <h2 id="data-sources-and-sinks">Data Sources and Sinks</h2>
 <p>By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.</p>
 <p>You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.</p>
 <p>Also we did have a look into DataBricks environment, what does it have to offer to us and how we can open a community edition of DataBricks next to coding and practice a bit of PySpark. In this module we will study how to read and write from/into CSV, JSON, Parquet, and other formats. We will then continue by making jdbc connection for reading from / writing to databases.</p>
-<h4 id="reading-and-writing-frominto-csv-json-parquet-and-other-formats">Reading and writing from/into CSV, JSON, Parquet, and other formats</h4>
+<h2 id="reading-and-writing-frominto-csv-json-parquet-and-other-formats">Reading and writing from/into CSV, JSON, Parquet, and other formats</h2>
 <p>First watch this video bellow.</p>
 
 
@@ -1354,7 +1240,7 @@
       ></iframe>
     </div>
 
-<p>Now clone <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459134/4682920752598681/latest.html" target="_blank" rel="noopener">this Databricks notebook</a> into your workspace. Call it <strong>07 - Working with Semi-Structured Data</strong> for consistency reasons. Follow the steps and cell. The material should be self explanatory.</p>
+<p>Now clone <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459134/4682920752598681/latest.html" target="_blank" rel="noopener">this Databricks notebook</a> into your workspace. Call it <strong>07 - Working with Semi-Structured Data</strong> for consistency reasons. Follow the steps and cells. The material should be self explanatory.</p>
 <h2 id="reading-form-and-writing-into-databases-using-jdbc">Reading form and Writing into databases using JDBC</h2>
 <p>Watch the Youtube video bellow.</p>
 

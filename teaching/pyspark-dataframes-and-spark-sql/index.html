@@ -906,9 +906,9 @@
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#module-3-dataframes-and-spark-sql"
+                href="#module-3-dataframes-and-spark-sql-in-databricks"
                 class="hb-docs-link"
-              >Module 3: DataFrames and Spark SQL</a>
+              >Module 3: DataFrames and Spark SQL (in Databricks)</a>
             </li>
           </ul>
   
@@ -1169,10 +1169,43 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#module-3-dataframes-and-spark-sql">Module 3: DataFrames and Spark SQL</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#module-3-dataframes-and-spark-sql-in-databricks">Module 3: DataFrames and Spark SQL (in Databricks)</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#learning-outcomes">Learning Outcomes</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#why-databricks">Why DataBricks?</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#1-scalability-and-performance">1. Scalability and Performance</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#2-unified-analytics-platform">2. Unified Analytics Platform</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#3-ease-of-use">3. Ease of Use</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#4-advanced-analytics-and-machine-learning">4. Advanced Analytics and Machine Learning</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#5-data-lake-integration">5. Data Lake Integration</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#6-cloud-integration">6. Cloud Integration</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#7-real-time-data-processing">7. Real-Time Data Processing</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#8-security-and-compliance">8. Security and Compliance</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#9-cost-efficiency">9. Cost Efficiency</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#10-community-and-ecosystem">10. Community and Ecosystem</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#dataframes-and-spark-sql">DataFrames and Spark SQL</a>
@@ -1213,13 +1246,98 @@
 
       <div class="content text-base">
         <h1>PySpark - Module 3</h1>
-        <h2 id="module-3-dataframes-and-spark-sql">Module 3: DataFrames and Spark SQL</h2>
+        <h2 id="module-3-dataframes-and-spark-sql-in-databricks">Module 3: DataFrames and Spark SQL (in Databricks)</h2>
 <p>By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.</p>
 <p>You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.</p>
-<p>Today we will learn a bit on DataBricks, what does it have to offer to us and how we can open a community edition of DataBricks.</p>
+<p>Today we will learn a bit on DataBricks, what does it have to offer to us and how we can open a community edition of DataBricks. Next we wil run few notebooks and will make Spark Dataframes and will query them using Spark SQL.</p>
 <h3 id="learning-outcomes">Learning Outcomes</h3>
-<p>By the end of this module, you will be able to: TODO:</p>
+<p><strong>Understanding DataBricks:</strong> Gain an overview of what DataBricks is, including its features and benefits.</p>
+<p><strong>Accessing DataBricks Community Edition:</strong> Learn how to access and set up the Community Edition of DataBricks for hands-on practice.</p>
+<p><strong>Working with Notebooks in DataBricks:</strong> Learn how to create and run notebooks in DataBricks, which are essential for executing code and managing workflows.</p>
+<p><strong>Creating Spark DataFrames:</strong> Understand how to create Spark DataFrames, a core component of working with data in Spark.</p>
+<p><strong>Querying Data with Spark SQL:</strong> Learn how to query data using Spark SQL, leveraging SQL-like syntax for data manipulation within Spark DataFrames.</p>
+<h3 id="why-databricks">Why DataBricks?</h3>
+<ul>
+<li>Cloud-native: works on any major cloud provider</li>
+<li>Data storage: store a broad range of data including structured, unstructured and streaming</li>
+<li>Governance and management: in-built security controls and governance</li>
+<li>Tools: wide range of production-ready data tooling from engineering to BI, AI and ML</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/whydb.png" alt="Why DataBricks" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>With Databricks Community Edition, we would like to avoid installing new software and maintaining it. Also it gives us a ton of flexibility and features that we will see in the next sections.</p>
+<p>A non comprehensive list of benefits of DataBricks:</p>
+<h4 id="1-scalability-and-performance">1. Scalability and Performance</h4>
+<ul>
+<li>Built on Apache Spark for efficient big data processing</li>
+<li>Seamlessly scales from small to large clusters</li>
+</ul>
+<h4 id="2-unified-analytics-platform">2. Unified Analytics Platform</h4>
+<ul>
+<li>Integrates data engineering, data science, and machine learning</li>
+<li>Simplifies workflows and enhances team collaboration</li>
+</ul>
+<h4 id="3-ease-of-use">3. Ease of Use</h4>
+<ul>
+<li>Interactive workspace with collaborative notebooks</li>
+<li>Supports multiple languages: Python, SQL, R, Scala</li>
+</ul>
+<h4 id="4-advanced-analytics-and-machine-learning">4. Advanced Analytics and Machine Learning</h4>
+<ul>
+<li>Robust support for machine learning and AI</li>
+<li>Includes MLflow for experiment tracking and model management</li>
+</ul>
+<h4 id="5-data-lake-integration">5. Data Lake Integration</h4>
+<ul>
+<li>Supports Delta Lake for reliable data lakes</li>
+<li>Ensures ACID transactions and unifies batch and streaming data processing</li>
+</ul>
+<h4 id="6-cloud-integration">6. Cloud Integration</h4>
+<ul>
+<li>Seamless integration with AWS, Azure, and Google Cloud</li>
+<li>Leverages cloud-native features for security and cost efficiency</li>
+</ul>
+<h4 id="7-real-time-data-processing">7. Real-Time Data Processing</h4>
+<ul>
+<li>Handles real-time data streams for timely insights</li>
+<li>Essential for real-time analytics, monitoring, and fraud detection</li>
+</ul>
+<h4 id="8-security-and-compliance">8. Security and Compliance</h4>
+<ul>
+<li>Robust security features including data encryption and role-based access control</li>
+<li>Compliance with various industry standards</li>
+</ul>
+<h4 id="9-cost-efficiency">9. Cost Efficiency</h4>
+<ul>
+<li>Auto-scaling and optimized cluster management</li>
+<li>Efficient resource management reduces costs</li>
+</ul>
+<h4 id="10-community-and-ecosystem">10. Community and Ecosystem</h4>
+<ul>
+<li>Large and active community with strong support</li>
+<li>Extensive documentation and third-party integrations</li>
+</ul>
 <h3 id="dataframes-and-spark-sql">DataFrames and Spark SQL</h3>
+<p>Now that we are aware of some of the benefits of running spark on DataBricks env lets go ahead and open our first Databricks Community Edition account. To learn how to create your Databricks Community Edition account and activate it see section <strong>0. Prep</strong> bellow.</p>
 <ol start="0">
 <li>
 <p><strong>Prep</strong></p>
@@ -1259,38 +1377,40 @@
 </li>
 </ol>
 <ul>
-<li>Now you know the essential procedures to work in DataBricks environment. Now head towards the <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256163/4682920752598681/latest.html" target="_blank" rel="noopener">00 - Test dev env</a> notebook, clone it into your workspace and follow the steps. For consistency in the learning the materials and easy referencing rename the file to <strong>00 - Test the dev env</strong>.</li>
-<li>Now clone <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256163/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a> into your workspace. For consistency in the learning the materials and easy referencing rename the file to <strong>01 - Data Prep</strong>.</li>
+<li>Now you know the essential procedures to work in DataBricks environment. Now head towards the <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256163/4682920752598681/latest.html" target="_blank" rel="noopener">00 - Test dev env</a> notebook, clone it into your workspace and follow the steps. For consistency in the learning material and easy referencing rename the file to <strong>00 - Test the dev env</strong>.</li>
+<li>Now clone <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256208/4682920752598681/latest.html" target="_blank" rel="noopener">01 - Data Prep</a> into your workspace. For consistency in the learning material and easy referencing rename the file to <strong>01 - Data Prep</strong>.</li>
 </ul>
+<p><strong>Note</strong>: As you already know a good practice in programming is to modularize your code. Following the best practices here I have created a notebook called <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256172/4682920752598681/latest.html" target="_blank" rel="noopener">02 - Functions</a>. Clone that into you workspace, rename it to <strong>02 - Functions</strong>, try to read through it, and make adjustments as needed.</p>
+<p>Next, we will explore the fundamentals of DataFrames in Databricks. We’ll cover how to create and manipulate DataFrames, perform basic operations, and leverage DataFrames for data analysis. This session will guide you through using Spark SQL for querying and transforming data, demonstrating practical examples of DataFrame operations.</p>
 <ol>
-<li>
-<p><strong>Introduction to DataFrames</strong></p>
+<li><strong>Introduction to DataFrames</strong>
 <ul>
 <li>
-<p>Difference between RDDs and DataFrames</p>
-</li>
-<li>
-<p>Creating DataFrames</p>
-</li>
-<li>
-<p>Schema inference and manual schema definition</p>
-</li>
-<li>
-<p>Clone <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256187/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>. For consistency in the learning the materials and easy referencing rename the file to ** 03 - Introduction to DataFrames**. Go through the material and try to make notes.</p>
+<p>Clone <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256187/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>. Rename the file to <strong>03 - Introduction to DataFrames</strong>. Go through the material and try to make notes. The notebook covers few topics including:</p>
+<ul>
+<li>Difference between RDDs and DataFrames</li>
+<li>Creating DataFrames</li>
+<li>Schema inference and manual schema definition</li>
+</ul>
 </li>
 </ul>
 </li>
+</ol>
+<p>Next we learned how to perform basic DataFrame operations including selecting, filtering, and transforming data using PySpark. These operations are fundamental for data manipulation and analysis. We will then learn how to perform aggregations and group data using PySpark. We covered how to group by single and multiple columns, apply multiple aggregate functions, and filter results after grouping.</p>
+<p>We will then dive into working with joins and unions in Spark using Databricks. We&rsquo;ll explore how to combine data from multiple DataFrames using different types of joins, including inner, left, right, and full outer joins. Additionally, we&rsquo;ll cover how to use unions to append data from one DataFrame to another. These operations are fundamental for integrating and manipulating datasets in Spark, making them essential skills for any data engineer or analyst working in a distributed data environment.</p>
+<p>Finally, in this module, we will learn few tips and tricks on how to work with semi-structured data. The focus is on handling JSON data, including how to read, write, and manipulate JSON files using PySpark. You will learn techniques to efficiently process semi-structured data, including using Spark&rsquo;s <code>explode</code> function to flatten nested data and leveraging <code>schema inference</code> to automatically detect data structures. The module provides practical examples and exercises to solidify your understanding, ensuring you can effectively manage complex data formats in your projects.</p>
+<ol start="2">
 <li>
 <p><strong>DataFrame Operations</strong></p>
 <ul>
-<li>Selecting, filtering, and transforming data. Follow <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1195017303654174/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>. For consistency in the learning the materials and easy referencing rename the file to ** 04 - DataFrame Operations**.</li>
-<li>Aggregations and Grouping</li>
-<li>Joins and unions Follow <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459116/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>. For consistency in the learning the materials and easy referencing rename the file to ** 06 - Joins and Unions**.</li>
-<li>Working with semi-structured data</li>
+<li>Selecting, filtering, and transforming data: Follow <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1195017303654174/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>. Referencing rename the file to <strong>04 - DataFrame Operations</strong>.</li>
+<li>Aggregations and Grouping: Follow <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1195017303654195/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>. For consistency in the learning material and easy referencing rename the file to <strong>05 - Aggregations and Grouping</strong>.</li>
+<li>Joins and unions: Follow <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459116/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>. For consistency in the learning material and easy referencing rename the file to <strong>06 - Joins and Unions</strong>.</li>
+<li>Working with Semi-Structured Data: Follow <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459134/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>. For consistency in the learning material and easy referencing rename the file to <strong>07 - Working with semi-structured data</strong>.</li>
 </ul>
 </li>
 <li>
-<p><strong>Spark SQL</strong></p>
+<p><strong>Spark SQL</strong> (todo: coming soon)</p>
 <ul>
 <li>SQL queries with Spark</li>
 <li>Registering DataFrames as tables</li>
@@ -1298,6 +1418,16 @@
 </ul>
 </li>
 </ol>
+<div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300"><p><strong>Assignment: Visualizations in Databricks notebooks</strong> Databricks has built-in support for charts and visualizations in both Databricks SQL and in notebooks. Based on the data prepared in <strong>01 - Data Prep</strong> make few visualizations.</p>
+<p><strong>Details:</strong>: I will provide you with a git repo and you will be tasked place your notebook there. The repo will not accept new entries after the deadline. Please deliver both the Databricks <strong>.dbc</strong> archive file format and <strong>.HTML</strong> format. Make sure to give them identical filenames. Also make sure to put the name of the team and team members in the first cell of the notebook.</p>
+<p><strong>Deadline:</strong>: Your notebook must be submitted by Sep 29 at 23:59 CET. Please adhere strictly to this deadline.</p>
+<p><strong>Reading material</strong>: Need some reading materials? Visit <a href="https://docs.databricks.com/en/visualizations/index.html" target="_blank" rel="noopener">here</a>.</p>
+</span>
+</div>
 
       </div>
 
