@@ -34,6 +34,40 @@
     </item>
     
     <item>
+      <title>PySpark - Module 4</title>
+      <link>https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/</link>
+      <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/</guid>
+      <description>&lt;h2 id=&#34;data-sources-and-sinks&#34;&gt;Data Sources and Sinks&lt;/h2&gt;
+&lt;p&gt;By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.&lt;/p&gt;
+&lt;p&gt;You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.&lt;/p&gt;
+&lt;p&gt;Also we did have a look into DataBricks environment, what does it have to offer to us and how we can open a community edition of DataBricks next to coding and practice a bit of PySpark. In this module we will study how to read and write from/into CSV, JSON, Parquet, and other formats. We will then continue by making jdbc connection for reading from / writing to databases.&lt;/p&gt;
+&lt;h4 id=&#34;reading-and-writing-frominto-csv-json-parquet-and-other-formats&#34;&gt;Reading and writing from/into CSV, JSON, Parquet, and other formats&lt;/h4&gt;
+&lt;p&gt;First watch this video bellow.&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/ZBI1UFbEM4c?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459134/4682920752598681/latest.html&#34;&gt;this Databricks notebook&lt;/a&gt; into your workspace. Call it &lt;strong&gt;07 - Working with Semi-Structured Data&lt;/strong&gt; for consistency reasons. Follow the steps and cell. The material should be self explanatory.&lt;/p&gt;
+&lt;h2 id=&#34;reading-form-and-writing-into-databases-using-jdbc&#34;&gt;Reading form and Writing into databases using JDBC&lt;/h2&gt;
+&lt;p&gt;Watch the Youtube video bellow.&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/oLIagnUAN2E?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;TODO: What then?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>PySpark - Module 3</title>
       <link>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
@@ -143,7 +177,8 @@
     &lt;/div&gt;
 
 &lt;p&gt;the above video explores and explains the architecture of Apache Spark, emphasizing the roles of the &lt;em&gt;driver&lt;/em&gt; and &lt;em&gt;executors&lt;/em&gt; in both &lt;em&gt;local&lt;/em&gt; and &lt;em&gt;cluster&lt;/em&gt; mode applications. The driver manages the application and can run on the local machine or within a cluster. In client mode, the driver operates locally, while in cluster mode, it starts in the Application Master container, requesting containers from the cluster manager (like Apache YARN) to launch executors. The video explains how Spark can operate in local mode, where everything runs in a single JVM, or in cluster mode, where the driver and executors communicate via the Application Master, with resource allocation handled by the cluster manager. A demonstration shows starting a Spark application in cluster mode with specific executors and utilizing YARN&amp;rsquo;s dynamic allocation feature to release idle executors.&lt;/p&gt;
-&lt;p&gt;The video bellow covers how Spark breaks down and executes applications at the executors.&lt;/p&gt;
+&lt;p&gt;The video bellow covers how Spark breaks down and executes applications at the executors. It covers the internal workings of Apache Spark, focusing on how it processes code in parallel. The video covers how Spark reads data, processes it, and writes results back to a destination. Three key data structures in Spark namely &lt;em&gt;DataFrames&lt;/em&gt;, &lt;em&gt;Datasets&lt;/em&gt;, and &lt;em&gt;RDDs&lt;/em&gt; (Resilient Distributed Datasets) are presented. Although the emphasis is on DataFrames and Datasets, RDDs are crucial as they form the underlying structure to which DataFrames and Datasets are compiled. RDDs are &lt;strong&gt;resilient&lt;/strong&gt;, &lt;strong&gt;partitioned&lt;/strong&gt;, &lt;strong&gt;distributed&lt;/strong&gt;, and &lt;strong&gt;immutable collections&lt;/strong&gt; of data that can be created from a source or transformed from another RDD.&lt;/p&gt;
+&lt;p&gt;The video demonstrates how to create an RDD from a file and control the number of partitions. It explains the difference between transformations and actions in Spark—transformations are lazy operations that create new distributed datasets without sending results back to the driver, while actions are non-lazy and send results back to the driver. It also touches on topics such as Spark&amp;rsquo;s way of handling grouping and counting operations on distributed data, which involves repartitioning the data and triggering shuffle and sort activities. The number of parallel tasks in Spark is influenced by the number of partitions and available executors. Concept of functional programming in Spark is briefly touched on as well.&lt;/p&gt;
 
 
     
@@ -153,7 +188,7 @@
     &lt;/div&gt;
 
 &lt;h3 id=&#34;rdds&#34;&gt;RDDs&lt;/h3&gt;
-&lt;p&gt;The next important topic in Spark is RDDs. Go ahead and see the Youtube video bellow to get a bit of understanding of what RDDs are.&lt;/p&gt;
+&lt;p&gt;We have seen the RDDs and their properties. If you need a refresher go ahead and see the Youtube video bellow.&lt;/p&gt;
 
 
     
@@ -162,8 +197,11 @@
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
-&lt;p&gt;This is the code of Spark architecture. RDDS are closely linked to the concepts of Lazy evaluation and resilience. Make sure to watch the video few times and then run the notebook &lt;strong&gt;01.ipynb&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Now continue watching the Youtube video bellow entitled &amp;ldquo;&amp;rdquo;. The video should give you a sample of various Transformations and Actions in spark.&lt;/p&gt;
+&lt;p&gt;As we have seen RDDS are closely linked to the concepts of Lazy evaluation and resilience. When you are done download &lt;strong&gt;01-Creating-RDDs.ipynb&lt;/strong&gt; from &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/01-Creating-RDDs.ipynb&#34;&gt;this link&lt;/a&gt; and follow the instruction and run it locally. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.&lt;/p&gt;
+&lt;p&gt;The html version of the notebook is available here &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/01-Creating-RDDs.html&#34;&gt;online&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Afterwards download &lt;strong&gt;02-RDD-Lineage-n-Persistence.ipynb&lt;/strong&gt; from &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/02-RDD-Lineage-n-Persistence.ipynb&#34;&gt;this link&lt;/a&gt; and run it locally. The html version of the notebook is available here &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/02-RDD-Lineage-n-Persistence.html&#34;&gt;online&lt;/a&gt; for immediate access.&lt;/p&gt;
+&lt;h3 id=&#34;transformations-and-actions-in-spark&#34;&gt;Transformations and Actions in spark&lt;/h3&gt;
+&lt;p&gt;Now continue watching the Youtube video bellow entitled &amp;ldquo;Spark RDD Transformations and Actions&amp;rdquo;. The video should give you a sample of various Transformations and Actions in spark.&lt;/p&gt;
 
 
     
@@ -172,7 +210,7 @@
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
-&lt;p&gt;When you are done continue with &lt;strong&gt;02.ipynb&lt;/strong&gt; notebook and then the &lt;strong&gt;03.ipynb&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Download &lt;strong&gt;03-Transformations-n-Actions.ipynb&lt;/strong&gt; from &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/03-Transformations-n-Actions.ipynb&#34;&gt;this link&lt;/a&gt; and run it locally. The html version of the notebook is available here &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/03-Transformations-n-Actions.html&#34;&gt;online&lt;/a&gt; for immediate access.&lt;/p&gt;
 </description>
     </item>
     
@@ -1079,7 +1117,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-649872135&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-863974521&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1097,7 +1135,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-649872135&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-863974521&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
