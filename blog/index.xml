@@ -5,12 +5,88 @@
     <link>https://dataqubed.io/blog/</link>
       <atom:link href="https://dataqubed.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 05 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 19 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
       <title>Blog</title>
       <link>https://dataqubed.io/blog/</link>
     </image>
+    
+    <item>
+      <title>How to Deploy Your Hugo Site to GitHub Pages - A Simple Step-by-Step Guide</title>
+      <link>https://dataqubed.io/blog/hugo-how-to/</link>
+      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/blog/hugo-how-to/</guid>
+      <description>&lt;h1 id=&#34;how-to-deploy-your-hugo-site-to-github-pages-a-simple-step-by-step-guide&#34;&gt;How to Deploy Your Hugo Site to GitHub Pages: A Simple Step-by-Step Guide&lt;/h1&gt;
+&lt;p&gt;Many guides online, including the Hugo documentation, tend to complicate the process of deploying a Hugo site to GitHub Pages. They often suggest creating multiple repositories or using submodules, which can be unnecessary. This guide aims to simplify the process, making it as straightforward as possible.&lt;/p&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
+&lt;p&gt;Before you begin, ensure the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You have a GitHub account.&lt;/li&gt;
+&lt;li&gt;You have a text editor installed.&lt;/li&gt;
+&lt;li&gt;You have a fully functioning local Hugo site. This means you can run your site locally by using &lt;code&gt;hugo serve -D&lt;/code&gt; in your command prompt while in the Hugo site folder. This guide specifically covers hosting a local, working site on GitHub Pages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;step-1-creating-the-github-repository&#34;&gt;Step 1: Creating the GitHub Repository&lt;/h3&gt;
+&lt;p&gt;First, your local Hugo folder needs a place on GitHub.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to your GitHub profile page and navigate to &lt;strong&gt;Repositories &amp;gt; New&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;Repository name&lt;/strong&gt;, enter the exact name of your Hugo site folder and click &lt;strong&gt;Create Repository&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;You’ll be directed to a page with an HTML link; copy this link.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;step-2-preparing-your-hugo-folder&#34;&gt;Step 2: Preparing Your Hugo Folder&lt;/h3&gt;
+&lt;p&gt;Next, we need to adjust your local Hugo folder for web deployment.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open your Hugo site folder in your preferred text editor.&lt;/li&gt;
+&lt;li&gt;In the &lt;code&gt;config.toml&lt;/code&gt; file, add the following line at the top:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;publishDir&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;docs&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Find the line that says &lt;code&gt;baseURL = &amp;quot;https://example.org&amp;quot;&lt;/code&gt; and replace the URL with:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;baseURL&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://yourgithubname.github.io/yourgithubproject/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;Make sure the URL follows this format exactly.&lt;/li&gt;
+&lt;li&gt;Save the file.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;step-3-connecting-your-hugo-folder-to-the-github-repository&#34;&gt;Step 3: Connecting Your Hugo Folder to the GitHub Repository&lt;/h3&gt;
+&lt;p&gt;Now it’s time to push your files to the GitHub repository.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open Command Prompt and navigate to your Hugo site folder.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;hugo serve&lt;/code&gt; to generate the &lt;code&gt;docs&lt;/code&gt; folder we configured earlier.&lt;/li&gt;
+&lt;li&gt;Initialize an empty Git repository by entering &lt;code&gt;git init&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Add your GitHub repository as the remote origin with:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote add origin &amp;lt;paste the link you copied from the &lt;span class=&#34;s2&#34;&gt;&amp;#34;Creating the GitHub Repo&amp;#34;&lt;/span&gt; step&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Check the status of your files with &lt;code&gt;git status&lt;/code&gt;—you should see uncommitted items in red.&lt;/li&gt;
+&lt;li&gt;Stage all your files with &lt;code&gt;git add --all&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Commit the files with:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;initial commit&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Push your files to GitHub with:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;step-4-enabling-github-pages&#34;&gt;Step 4: Enabling GitHub Pages&lt;/h3&gt;
+&lt;p&gt;Finally, let’s set up GitHub Pages to host your website.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In your GitHub repository, go to &lt;strong&gt;Settings&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Scroll down to &lt;strong&gt;GitHub Pages&lt;/strong&gt; and under &lt;strong&gt;Source&lt;/strong&gt;, select &lt;strong&gt;master branch /docs folder&lt;/strong&gt; and click &lt;strong&gt;Save&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Refresh the page and scroll back down to GitHub Pages—you should see a link to your new website!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And that’s it! Your Hugo site is now live on GitHub Pages.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Useful links</title>
+      <link>https://dataqubed.io/blog/useful-links/</link>
+      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/blog/useful-links/</guid>
+      <description>&lt;h2 id=&#34;useful-links&#34;&gt;useful links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://davarynejad.com/&#34;&gt;Prof.dr. Davarynejad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forghany.com/&#34;&gt;Zary Forghany&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miriam-hacker.com/&#34;&gt;Miriam Hacker, Research Program Manager at The Water Research Foundation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Explainable boosting machine</title>

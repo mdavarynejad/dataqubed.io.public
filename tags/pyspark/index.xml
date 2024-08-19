@@ -5,12 +5,26 @@
     <link>https://dataqubed.io/tags/pyspark/</link>
       <atom:link href="https://dataqubed.io/tags/pyspark/index.xml" rel="self" type="application/rss+xml" />
     <description>Pyspark</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 18 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 19 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
       <title>Pyspark</title>
       <link>https://dataqubed.io/tags/pyspark/</link>
     </image>
+    
+    <item>
+      <title>PySpark - Module 5</title>
+      <link>https://dataqubed.io/teaching/pyspark-spark-streaming/</link>
+      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming/</guid>
+      <description>&lt;h2 id=&#34;spark-streaming&#34;&gt;Spark Streaming&lt;/h2&gt;
+&lt;p&gt;By now, you should have a&lt;/p&gt;
+&lt;p&gt;In this module&lt;/p&gt;
+&lt;h3 id=&#34;spark-streaming-1&#34;&gt;Spark Streaming&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://chicagodatascience.github.io/MLOps/lecture7/&#34;&gt;Spark Streaming&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.vultr.com/promo/try250?service=try250&amp;amp;utm_source=google-emea-brand&amp;amp;utm_medium=paidmedia&amp;amp;obility_id=42460259722&amp;amp;utm_campaign=EMEA_-_Europe_-_Search_-_Vultr_Branded_-_1009&amp;amp;utm_term=vultr&amp;amp;utm_content=666137198295&amp;amp;gad_source=1&amp;amp;gclid=Cj0KCQjwt4a2BhD6ARIsALgH7DqX16YqnQlfNQKakcddYG4o6Yg22Np1eQdAus75NWsCtITlfGSoG-4aAmr3EALw_wcB&#34;&gt;vultr&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>PySpark - Module 4</title>
@@ -42,20 +56,6 @@
     &lt;/div&gt;
 
 &lt;p&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/2183498494824196/4682920752598681/latest.html&#34;&gt;this Databricks notebook&lt;/a&gt; into your workspace. Rename the file it into &lt;strong&gt;02 - JDBC connector&lt;/strong&gt; for consistency reasons. Follow the steps and cells. The material should be self explanatory.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>PySpark - Module 5</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming/</link>
-      <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming/</guid>
-      <description>&lt;h2 id=&#34;spark-streaming&#34;&gt;Spark Streaming&lt;/h2&gt;
-&lt;p&gt;By now, you should have a&lt;/p&gt;
-&lt;p&gt;In this module&lt;/p&gt;
-&lt;h3 id=&#34;spark-streaming-1&#34;&gt;Spark Streaming&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://chicagodatascience.github.io/MLOps/lecture7/&#34;&gt;https://chicagodatascience.github.io/MLOps/lecture7/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.vultr.com/promo/try250?service=try250&amp;amp;utm_source=google-emea-brand&amp;amp;utm_medium=paidmedia&amp;amp;obility_id=42460259722&amp;amp;utm_campaign=EMEA_-_Europe_-_Search_-_Vultr_Branded_-_1009&amp;amp;utm_term=vultr&amp;amp;utm_content=666137198295&amp;amp;gad_source=1&amp;amp;gclid=Cj0KCQjwt4a2BhD6ARIsALgH7DqX16YqnQlfNQKakcddYG4o6Yg22Np1eQdAus75NWsCtITlfGSoG-4aAmr3EALw_wcB&#34;&gt;https://www.vultr.com/promo/try250?service=try250&amp;amp;utm_source=google-emea-brand&amp;amp;utm_medium=paidmedia&amp;amp;obility_id=42460259722&amp;amp;utm_campaign=EMEA_-_Europe_-_Search_-_Vultr_Branded_-_1009&amp;amp;utm_term=vultr&amp;amp;utm_content=666137198295&amp;amp;gad_source=1&amp;amp;gclid=Cj0KCQjwt4a2BhD6ARIsALgH7DqX16YqnQlfNQKakcddYG4o6Yg22Np1eQdAus75NWsCtITlfGSoG-4aAmr3EALw_wcB&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
