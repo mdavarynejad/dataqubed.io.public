@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="Learn pyspark, Spark Architecture and RDDs" />
+  <meta name="description" content="Learn pyspark, Spark Streaming" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/" />
+  <link rel="alternate" hreflang="en-us" href="https://dataqubed.io/teaching/pyspark-spark-streaming-part0/" />
 
   
   
@@ -161,7 +161,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu3247630877640252165.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4166356570829923896.png" />
 
-  <link rel="canonical" href="https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/" />
+  <link rel="canonical" href="https://dataqubed.io/teaching/pyspark-spark-streaming-part0/" />
 
   
   
@@ -186,18 +186,18 @@
     <meta property="twitter:creator" content="@GetResearchDev" />
   
   <meta property="og:site_name" content="Your Data Science Mentor - Mohsen Davarynejad" />
-  <meta property="og:url" content="https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/" />
-  <meta property="og:title" content="PySpark - Module 2 | Your Data Science Mentor - Mohsen Davarynejad" />
-  <meta property="og:description" content="Learn pyspark, Spark Architecture and RDDs" /><meta property="og:image" content="https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/featured.jpg" />
-    <meta property="twitter:image" content="https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/featured.jpg" /><meta property="og:locale" content="en-us" />
+  <meta property="og:url" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part0/" />
+  <meta property="og:title" content="PySpark - Module 5.0 | Your Data Science Mentor - Mohsen Davarynejad" />
+  <meta property="og:description" content="Learn pyspark, Spark Streaming" /><meta property="og:image" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part0/featured.jpg" />
+    <meta property="twitter:image" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part0/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2024-08-16T00:00:00&#43;00:00"
+        content="2024-08-20T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2024-08-16T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2024-08-20T00:00:00&#43;00:00">
   
 
   
@@ -207,7 +207,7 @@
   
 
 
-  <title>PySpark - Module 2 | Your Data Science Mentor - Mohsen Davarynejad</title>
+  <title>PySpark - Module 5.0 | Your Data Science Mentor - Mohsen Davarynejad</title>
 
   
   
@@ -914,13 +914,22 @@
   >PySpark - Module 5.1
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/teaching/pyspark-spark-streaming-part0/"
     
   >PySpark - Module 5.0
     </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#spark-streaming"
+                class="hb-docs-link"
+              >Spark Streaming</a>
+            </li>
+          </ul>
+  
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -938,22 +947,13 @@
   >PySpark - Module 3
     </a>
               
-            </li><li class="flex flex-col open"><a
+            </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/teaching/pyspark-spark-architecture-and-rdds/"
     
   >PySpark - Module 2
     </a>
-  
-    <ul class="hb-sidebar-mobile-toc"><li>
-              <a
-                href="#spark-architecture-and-rdds"
-                class="hb-docs-link"
-              >Spark Architecture and RDDs</a>
-            </li>
-          </ul>
-  
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -1162,9 +1162,9 @@
     
   >PySpark - Module 5.1
     </a></li>
-        <li class=""><a
+        <li class="open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/teaching/pyspark-spark-streaming-part0/"
     
   >PySpark - Module 5.0
@@ -1183,9 +1183,9 @@
     
   >PySpark - Module 3
     </a></li>
-        <li class="open"><a
+        <li class=""><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/teaching/pyspark-spark-architecture-and-rdds/"
     
   >PySpark - Module 2
@@ -1233,16 +1233,16 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spark-architecture-and-rdds">Spark Architecture and RDDs</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#spark-streaming">Spark Streaming</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#a-gentle-intro-to-spark-architecture">A gentle intro to Spark Architecture</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#why-stream-processing">Why stream processing?</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#rdds">RDDs</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#the-dance-of-data-producers-and-consumers">The Dance of Data: Producers and Consumers</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#transformations-and-actions-in-spark">Transformations and Actions in spark</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#milestones-on-our-streaming-journey">Milestones on Our Streaming Journey</a>
       </li></ul>
 
   
@@ -1273,66 +1273,54 @@
         <div class="mt-1.5 flex items-center gap-1 overflow-hidden text-sm text-gray-500 dark:text-gray-400">
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://dataqubed.io/teaching/">Teaching</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">PySpark - Module 2</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">PySpark - Module 5.0</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>PySpark - Module 2</h1>
-        <h2 id="spark-architecture-and-rdds">Spark Architecture and RDDs</h2>
-<h3 id="a-gentle-intro-to-spark-architecture">A gentle intro to Spark Architecture</h3>
-<p>Look at the Youtube video bellow carefully.</p>
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/vJ0eUZxF80s?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-<p>the above video explores and explains the architecture of Apache Spark, emphasizing the roles of the <em>driver</em> and <em>executors</em> in both <em>local</em> and <em>cluster</em> mode applications. The driver manages the application and can run on the local machine or within a cluster. In client mode, the driver operates locally, while in cluster mode, it starts in the Application Master container, requesting containers from the cluster manager (like Apache YARN) to launch executors. The video explains how Spark can operate in local mode, where everything runs in a single JVM, or in cluster mode, where the driver and executors communicate via the Application Master, with resource allocation handled by the cluster manager. A demonstration shows starting a Spark application in cluster mode with specific executors and utilizing YARN&rsquo;s dynamic allocation feature to release idle executors.</p>
-<p>The video bellow covers how Spark breaks down and executes applications at the executors. It covers the internal workings of Apache Spark, focusing on how it processes code in parallel. The video covers how Spark reads data, processes it, and writes results back to a destination. Three key data structures in Spark namely <em>DataFrames</em>, <em>Datasets</em>, and <em>RDDs</em> (Resilient Distributed Datasets) are presented. Although the emphasis is on DataFrames and Datasets, RDDs are crucial as they form the underlying structure to which DataFrames and Datasets are compiled. RDDs are <strong>resilient</strong>, <strong>partitioned</strong>, <strong>distributed</strong>, and <strong>immutable collections</strong> of data that can be created from a source or transformed from another RDD.</p>
-<p>The video demonstrates how to create an RDD from a file and control the number of partitions. It explains the difference between transformations and actions in Spark—transformations are lazy operations that create new distributed datasets without sending results back to the driver, while actions are non-lazy and send results back to the driver. It also touches on topics such as Spark&rsquo;s way of handling grouping and counting operations on distributed data, which involves repartitioning the data and triggering shuffle and sort activities. The number of parallel tasks in Spark is influenced by the number of partitions and available executors. Concept of functional programming in Spark is briefly touched on as well.</p>
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/fyTiJLKEzME?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-<h3 id="rdds">RDDs</h3>
-<p>We have seen the RDDs and their properties. If you need a refresher go ahead and see the Youtube video bellow.</p>
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/nH6C9vqtyYU?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-<p>As we have seen RDDS are closely linked to the concepts of Lazy evaluation and resilience. When you are done download <strong>01-Creating-RDDs.ipynb</strong> from <a href="https://dataqubed.io/uploads/pyspark/01-Creating-RDDs.ipynb" target="_blank" rel="noopener">this link</a> and follow the instruction and run it locally. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.</p>
-<p>The html version of the notebook is available here <a href="https://dataqubed.io/uploads/pyspark/01-Creating-RDDs.html" target="_blank" rel="noopener">online</a>.</p>
-<p>Afterwards download <strong>02-RDD-Lineage-n-Persistence.ipynb</strong> from <a href="https://dataqubed.io/uploads/pyspark/02-RDD-Lineage-n-Persistence.ipynb" target="_blank" rel="noopener">this link</a> and run it locally. The html version of the notebook is available here <a href="https://dataqubed.io/uploads/pyspark/02-RDD-Lineage-n-Persistence.html" target="_blank" rel="noopener">online</a> for immediate access.</p>
-<h3 id="transformations-and-actions-in-spark">Transformations and Actions in spark</h3>
-<p>Now continue watching the Youtube video bellow entitled &ldquo;Spark RDD Transformations and Actions&rdquo;. The video should give you a sample of various Transformations and Actions in spark.</p>
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5L0oyrwiNNE?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-<p>Download <strong>03-Transformations-n-Actions.ipynb</strong> from <a href="https://dataqubed.io/uploads/pyspark/03-Transformations-n-Actions.ipynb" target="_blank" rel="noopener">this link</a> and run it locally. The html version of the notebook is available here <a href="https://dataqubed.io/uploads/pyspark/03-Transformations-n-Actions.html" target="_blank" rel="noopener">online</a> for immediate access.</p>
+        <h1>PySpark - Module 5.0</h1>
+        <h2 id="spark-streaming">Spark Streaming</h2>
+<p>So far, we&rsquo;ve covered the fundamentals of PySpark:</p>
+<ul>
+<li><strong>Big Data &amp; Apache Spark:</strong> Introduction to handling large datasets using Spark.</li>
+<li><strong>Spark Architecture &amp; RDDs:</strong> Understanding Spark&rsquo;s core structure and Resilient Distributed Datasets (RDDs) for parallel processing.</li>
+<li><strong>DataFrames &amp; Spark SQL:</strong> Using DataFrames for structured data and Spark SQL for querying.</li>
+<li><strong>Data Sources &amp; Sinks:</strong> Connecting to and saving data across various formats.</li>
+</ul>
+<p>These topics form the backbone of using PySpark for efficient, large-scale data processing.</p>
+<p>In this module, we will jump into real-time data processing and message brokering. We&rsquo;ll explore streaming in Apache Spark, focusing on how to handle continuous data flows for real-time analytics. Additionally, we&rsquo;ll cover Apache Kafka, a distributed messaging system that plays a crucial role in building robust data pipelines, enabling efficient data ingestion and real-time processing across various systems. These topics will help us manage and process data <code>in motion</code>, a key aspect of modern data stack.</p>
+<h3 id="why-stream-processing">Why stream processing?</h3>
+<p>Stream processing is a powerful technique that enables real-time data handling and analytics. At its core, stream processing exploits <code>parallelism</code>, allowing multiple data streams to be processed simultaneously. This reduces the need for <code>synchronization between components</code>, making systems more efficient and scalable. As data is constantly in motion across cloud systems, stream processing ensures that insights can be derived in real-time, whether it’s for <code>real-time recommendations</code>, <code>predictive maintenance</code>, or other applications.</p>
+<p>However, stream processing isn’t without its challenges. Building <code>fault tolerance</code> and <code>buffering mechanisms</code> into software is crucial to ensure data reliability and smooth operations. Apache Kafka stands out as a leading platform for stream processing, offering robust capabilities for handling real-time data pipelines. Alongside Kafka, other solutions like <code>Apache Flume</code>, <code>Apache Apex</code>, and <code>Apache Storm</code> provide diverse tools to tackle various streaming needs.</p>
+<h3 id="the-dance-of-data-producers-and-consumers">The Dance of Data: Producers and Consumers</h3>
+<p>In the world of stream processing, data flows like a continuous river, with <code>producers</code> generating messages and <code>consumers</code> retrieving them. Producers are the origin points, creating and sending data to various systems. On the other end, consumers actively listen, process, and utilize this data to drive decisions and actions. This dynamic interaction between producers and consumers is the heartbeat of real-time systems, enabling everything from real-time analytics to instantaneous user experiences.</p>
+<h3 id="milestones-on-our-streaming-journey">Milestones on Our Streaming Journey</h3>
+<ol>
+<li>
+<p><strong>Deploying Apache Kafka on a Single Node</strong> (Module 5.1)<br>
+Learn how to set up a Kafka streaming platform, the backbone of our real-time data processing.</p>
+</li>
+<li>
+<p><strong>Creating Python-Based Producers and Consumers</strong> (Module 5.2)<br>
+Implement Python processes to produce and consume messages, simulating real-world data flows.</p>
+</li>
+<li>
+<p><strong>Integrating PySpark Streaming in Databricks</strong> (Module 5.3)<br>
+Set up and run PySpark streaming tasks within Databricks, processing and analyzing streaming data in real time.</p>
+</li>
+</ol>
+<div style="border:1px solid black; padding:10px;">
+  <mark>Note:</mark> You can skip `Module 5.1` and `Module 5.2` and jump straight to `Module 5.3` if you desire to skip installing and configuring a Kafka service, though it is not recommended at all. 
+</div>
+<p><a href="https://leetcode.com/discuss/interview-question/system-design/3133672/New-Book-by-Alex-Xu-or-Machine-Learning-System-Design-My-Solutions" target="_blank" rel="noopener">Machine Learning System Design - My Solutions</a></p>
 
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-08-16T00:00:00.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-08-20T00:00:00.000Z">
     <span>Last updated on</span>
-    Aug 16, 2024</time>
+    Aug 20, 2024</time>
       
       
   
@@ -1347,17 +1335,17 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/teaching/pyspark-dataframes-and-spark-sql/">
+        <a class="group flex no-underline" href="/teaching/pyspark-spark-streaming-part1/">
           <span
             class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
           ><span class="ltr:inline rtl:hidden">&larr;</span></span>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >PySpark - Module 3</span>
+            >PySpark - Module 5.1</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Aug 17, 2024
+                Aug 21, 2024
               
             </span>
           </span>
@@ -1366,15 +1354,15 @@
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/teaching/pyspark-introduction-to-big-data-and-apache-spark/">
+        <a class="group flex text-right no-underline" href="/teaching/pyspark-data-sources-and-sinks/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >PySpark - Module 1</span
+            >PySpark - Module 4</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Aug 15, 2024
+                Aug 18, 2024
               
             </span>
           </span>

@@ -5,7 +5,7 @@
     <link>https://dataqubed.io/teaching/</link>
       <atom:link href="https://dataqubed.io/teaching/index.xml" rel="self" type="application/rss+xml" />
     <description>Teaching</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 19 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 21 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
       <title>Teaching</title>
@@ -13,16 +13,180 @@
     </image>
     
     <item>
-      <title>PySpark - Module 5</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming/</link>
-      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming/</guid>
+      <title>PySpark - Module 5.1</title>
+      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</guid>
+      <description>&lt;h2 id=&#34;apache-kafka&#34;&gt;Apache Kafka&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;open-source software streaming solution ()&lt;/li&gt;
+&lt;li&gt;events are stored in durable and fault-tolerant&lt;/li&gt;
+&lt;li&gt;messages streamed to and from various end-points.&lt;/li&gt;
+&lt;li&gt;youtube videos about it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;setup-a-kafka-on-vultr&#34;&gt;Setup a kafka on vultr&lt;/h3&gt;
+&lt;p&gt;what is vultr and why we will use it?&lt;/p&gt;
+&lt;h3 id=&#34;a-cost-efitiont-solution&#34;&gt;A cost efitiont solution&lt;/h3&gt;
+&lt;p&gt;Vultr VPS
+Choose for share CPU
+Choose a location
+Choose Ubuntu (I did go for the latest version 24.04, becouse why not)
+Choose for AMD High performace machine with name &amp;ldquo;25 GB NVMe&amp;rdquo; with no aditional features, (I do not need autobackup plan)
+Generate an SSH key and upload it when creating the VPS (Makes the login life much much easier)&lt;/p&gt;
+&lt;p&gt;see some images:&lt;/p&gt;
+&lt;p&gt;vultr-additional-features.png
+vultr-deploy.png
+vultr-ubuntu-image-deployd.png&lt;/p&gt;
+&lt;p&gt;For the installation process we will mostlly follwo the instruction provided in &lt;a href=&#34;https://kafka.apache.org/quickstart&#34;&gt;&lt;/a&gt; and will follow the Kafka with ZooKeeper. start all services in the correct order and make configurations when needed.&lt;/p&gt;
+&lt;h3 id=&#34;installation-steps-come-up-with-a-better-name&#34;&gt;Installation Steps (come up with a better name):&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Start by SSHing into a machine:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh root@45.63.34.218
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;install Java&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Start the ZooKeeper service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install openjdk-8-jre-headless
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;java -version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Download Kafka version 2.13, unzip it and cd into the directory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Start the ZooKeeper service&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://archive.apache.org/dist/kafka/2.6.0/kafka_2.13-2.6.0.tgz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -xzf kafka_2.13-2.6.0.tgz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; kafka_2.13-2.6.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;We next need to start a service called zookeeper. zookeeper is&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/zookeeper-server-start.sh config/zookeeper.properties
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Start the Kafka broker service. For that we need to open another terminal session and run:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-server-start.sh config/server.properties
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Paraphraze: Once all services have successfully launched, you will have a basic Kafka environment running and ready to use.&lt;/p&gt;
+&lt;h3 id=&#34;create-a-topic&#34;&gt;Create a topic&lt;/h3&gt;
+&lt;p&gt;Ww already know well that lets one read, write, store, and process events (also called records or messages in the documentation) across many machines. The events are organized and stored in topics. You may consider topics are like folder in a filesystem, and the events are the files in that folder.&lt;/p&gt;
+&lt;p&gt;So before you can write your first events, you must create a topic. Open another terminal session and run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-topics.sh --create --topic buas-data-n-ai-events --bootstrap-server localhost:9092
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;command breakdown:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;bin/kafka-topics.sh&amp;rsquo;: The kafka-topics.sh script is an executable and is used to manage Kafka topics. The file is located in the bin directory of your Kafka installation.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;&amp;ndash;create&amp;rsquo;: This flag tells Kafka to create a new topic.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;&amp;ndash;topic buas-data-n-ai-events&amp;rsquo;: This specifies the name of the topic you want to create. In this case, the topic is named buas-data-n-ai-events.&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;&amp;ndash;bootstrap-server localhost:9092&amp;rsquo;: Specifies the &amp;lsquo;Kafka server&amp;rsquo; to connect to in order to create the topic. localhost:9092 refers to a Kafka broker running on your local machine on port 9092. So now the client (which is executing the command) would connect to the &amp;lsquo;Kafka broker&amp;rsquo; running on local machine.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;reading-and-writing-frominto-a-specific-topic&#34;&gt;Reading and Writing from/into a specific topic&lt;/h3&gt;
+&lt;p&gt;A Kafka client communicates with the Kafka brokers (via the network) for reading or writing events.&lt;/p&gt;
+&lt;p&gt;To write events into the topic run the following line in a new shell&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-console-producer.sh --topic buas-data-n-ai-events --bootstrap-server localhost:9092
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;Spark machine is killed 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;gt;Frank to the rescue 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;from another terminal read the events:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-console-consumer.sh --topic buas-data-n-ai-events --from-beginning --bootstrap-server localhost:9092
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Spark machine is killed
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Frank to the rescue
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-the-kafka-broker-accessible-externally&#34;&gt;Make the Kafka broker accessible externally&lt;/h3&gt;
+&lt;p&gt;To make the Kafka broker accessible externally we first need to edit the Kafka config file located at &amp;lsquo;config/server.properties&amp;rsquo;. For that first kill the process that runs the ZooKeeper service by using the &amp;lsquo;Ctrl + C&amp;rsquo; and then edit the server.properties:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim config/server.properties
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 Click to learn how to use wim&lt;/summary&gt;
+  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
+    Google to learn!
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;Navigate to line 36, uncomment and replace &amp;lsquo;your.host.name&amp;rsquo; with &amp;lsquo;your host name&amp;rsquo;: For my case it will be &amp;lsquo;advertised.listeners=PLAINTEXT://155.138.192.245:9092&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;Then we need to make port 9092 accessible externally.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow &lt;span class=&#34;m&#34;&gt;9092&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# And check the status &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw status verbose
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the same window restart the ZooKeeper service again&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/zookeeper-server-start.sh config/zookeeper.properties
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Also kill the Kafka process and restart it again. This ensures that any changes made to the Kafka configuration or environment are properly loaded and active.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-server-start.sh config/server.properties
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;testing-streaming-in-databricks-pythonic&#34;&gt;Testing Streaming in Databricks (Pythonic)&lt;/h3&gt;
+&lt;p&gt;bin/kafka-server-start.sh config/server.properties
+bin/kafka-console-producer.sh &amp;ndash;topic quickstart-events &amp;ndash;bootstrap-server localhost:9092
+bin/kafka-console-consumer.sh &amp;ndash;topic quickstart-events &amp;ndash;from-beginning &amp;ndash;bootstrap-server localhost:9092&lt;/p&gt;
+&lt;p&gt;Now change the config of the kafka and make it accesible from outside
+make the port open
+ufw allow 9092
+Check if the port is open
+ufw status verbose&lt;/p&gt;
+&lt;p&gt;I did change the config of the kafka&lt;/p&gt;
+&lt;p&gt;Now I need to start the Kafka process as before.&lt;/p&gt;
+&lt;p&gt;ssh -N -f -L localhost:9999:localhost:8888 &lt;a href=&#34;mailto:root@45.32.228.110&#34;&gt;root@45.32.228.110&lt;/a&gt;&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka server?&lt;/summary&gt;
+  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
+    Kafka server
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka broker?&lt;/summary&gt;
+  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
+    Kafka broker
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
+  &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka client?&lt;/summary&gt;
+  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
+    Kafka client
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;p&gt;Congratulations!
+You have successfully finished the Apache Kafka installation, &amp;hellip;.&lt;/p&gt;
+&lt;p&gt;To learn more, we suggest the following next steps:&lt;/p&gt;
+&lt;p&gt;Paraphraze: Read through the &lt;a href=&#34;https://kafka.apache.org/intro&#34;&gt;brief Introduction to learn how Kafka works at a high level&lt;/a&gt;, its main concepts, and how it compares to other technologies. To understand Kafka in more detail, head over to the Documentation.&lt;/p&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;kafka wiki link&lt;/li&gt;
+&lt;li&gt;kafka git hub link&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/downloads&#34;&gt;apache kafka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/quickstart&#34;&gt;https://kafka.apache.org/quickstart&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PySpark - Module 5.0</title>
+      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part0/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part0/</guid>
       <description>&lt;h2 id=&#34;spark-streaming&#34;&gt;Spark Streaming&lt;/h2&gt;
-&lt;p&gt;By now, you should have a&lt;/p&gt;
-&lt;p&gt;In this module&lt;/p&gt;
-&lt;h3 id=&#34;spark-streaming-1&#34;&gt;Spark Streaming&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://chicagodatascience.github.io/MLOps/lecture7/&#34;&gt;Spark Streaming&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.vultr.com/promo/try250?service=try250&amp;amp;utm_source=google-emea-brand&amp;amp;utm_medium=paidmedia&amp;amp;obility_id=42460259722&amp;amp;utm_campaign=EMEA_-_Europe_-_Search_-_Vultr_Branded_-_1009&amp;amp;utm_term=vultr&amp;amp;utm_content=666137198295&amp;amp;gad_source=1&amp;amp;gclid=Cj0KCQjwt4a2BhD6ARIsALgH7DqX16YqnQlfNQKakcddYG4o6Yg22Np1eQdAus75NWsCtITlfGSoG-4aAmr3EALw_wcB&#34;&gt;vultr&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So far, we&amp;rsquo;ve covered the fundamentals of PySpark:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Big Data &amp;amp; Apache Spark:&lt;/strong&gt; Introduction to handling large datasets using Spark.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spark Architecture &amp;amp; RDDs:&lt;/strong&gt; Understanding Spark&amp;rsquo;s core structure and Resilient Distributed Datasets (RDDs) for parallel processing.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DataFrames &amp;amp; Spark SQL:&lt;/strong&gt; Using DataFrames for structured data and Spark SQL for querying.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Sources &amp;amp; Sinks:&lt;/strong&gt; Connecting to and saving data across various formats.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These topics form the backbone of using PySpark for efficient, large-scale data processing.&lt;/p&gt;
+&lt;p&gt;In this module, we will jump into real-time data processing and message brokering. We&amp;rsquo;ll explore streaming in Apache Spark, focusing on how to handle continuous data flows for real-time analytics. Additionally, we&amp;rsquo;ll cover Apache Kafka, a distributed messaging system that plays a crucial role in building robust data pipelines, enabling efficient data ingestion and real-time processing across various systems. These topics will help us manage and process data &lt;code&gt;in motion&lt;/code&gt;, a key aspect of modern data stack.&lt;/p&gt;
+&lt;h3 id=&#34;why-stream-processing&#34;&gt;Why stream processing?&lt;/h3&gt;
+&lt;p&gt;Stream processing is a powerful technique that enables real-time data handling and analytics. At its core, stream processing exploits &lt;code&gt;parallelism&lt;/code&gt;, allowing multiple data streams to be processed simultaneously. This reduces the need for &lt;code&gt;synchronization between components&lt;/code&gt;, making systems more efficient and scalable. As data is constantly in motion across cloud systems, stream processing ensures that insights can be derived in real-time, whether it’s for &lt;code&gt;real-time recommendations&lt;/code&gt;, &lt;code&gt;predictive maintenance&lt;/code&gt;, or other applications.&lt;/p&gt;
+&lt;p&gt;However, stream processing isn’t without its challenges. Building &lt;code&gt;fault tolerance&lt;/code&gt; and &lt;code&gt;buffering mechanisms&lt;/code&gt; into software is crucial to ensure data reliability and smooth operations. Apache Kafka stands out as a leading platform for stream processing, offering robust capabilities for handling real-time data pipelines. Alongside Kafka, other solutions like &lt;code&gt;Apache Flume&lt;/code&gt;, &lt;code&gt;Apache Apex&lt;/code&gt;, and &lt;code&gt;Apache Storm&lt;/code&gt; provide diverse tools to tackle various streaming needs.&lt;/p&gt;
+&lt;h3 id=&#34;the-dance-of-data-producers-and-consumers&#34;&gt;The Dance of Data: Producers and Consumers&lt;/h3&gt;
+&lt;p&gt;In the world of stream processing, data flows like a continuous river, with &lt;code&gt;producers&lt;/code&gt; generating messages and &lt;code&gt;consumers&lt;/code&gt; retrieving them. Producers are the origin points, creating and sending data to various systems. On the other end, consumers actively listen, process, and utilize this data to drive decisions and actions. This dynamic interaction between producers and consumers is the heartbeat of real-time systems, enabling everything from real-time analytics to instantaneous user experiences.&lt;/p&gt;
+&lt;h3 id=&#34;milestones-on-our-streaming-journey&#34;&gt;Milestones on Our Streaming Journey&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Deploying Apache Kafka on a Single Node&lt;/strong&gt; (Module 5.1)&lt;br&gt;
+Learn how to set up a Kafka streaming platform, the backbone of our real-time data processing.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Creating Python-Based Producers and Consumers&lt;/strong&gt; (Module 5.2)&lt;br&gt;
+Implement Python processes to produce and consume messages, simulating real-world data flows.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Integrating PySpark Streaming in Databricks&lt;/strong&gt; (Module 5.3)&lt;br&gt;
+Set up and run PySpark streaming tasks within Databricks, processing and analyzing streaming data in real time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;border:1px solid black; padding:10px;&#34;&gt;
+  &lt;mark&gt;Note:&lt;/mark&gt; You can skip `Module 5.1` and `Module 5.2` and jump straight to `Module 5.3` if you desire to skip installing and configuring a Kafka service, though it is not recommended at all. 
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://leetcode.com/discuss/interview-question/system-design/3133672/New-Book-by-Alex-Xu-or-Machine-Learning-System-Design-My-Solutions&#34;&gt;Machine Learning System Design - My Solutions&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
