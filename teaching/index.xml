@@ -18,27 +18,66 @@
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</guid>
       <description>&lt;h2 id=&#34;apache-kafka&#34;&gt;Apache Kafka&lt;/h2&gt;
+&lt;p&gt;Apache Kafka is an open-source software streaming solution designed for handling real-time data feeds. It ensures events are stored in a durable, fault-tolerant manner, making it reliable for critical applications. Kafka enables the seamless streaming of messages to and from various endpoints, including databases, cloud services, and analytics platforms.&lt;/p&gt;
+&lt;h3 id=&#34;key-features&#34;&gt;Key Features:&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;open-source software streaming solution ()&lt;/li&gt;
-&lt;li&gt;events are stored in durable and fault-tolerant&lt;/li&gt;
-&lt;li&gt;messages streamed to and from various end-points.&lt;/li&gt;
-&lt;li&gt;youtube videos about it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Durability&lt;/strong&gt;: Events are stored reliably for future use.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fault Tolerance&lt;/strong&gt;: Designed to handle failures without data loss.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scalability&lt;/strong&gt;: Can manage large volumes of data across distributed systems.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;setup-a-kafka-on-vultr&#34;&gt;Setup a kafka on vultr&lt;/h3&gt;
-&lt;p&gt;what is vultr and why we will use it?&lt;/p&gt;
-&lt;h3 id=&#34;a-cost-efitiont-solution&#34;&gt;A cost efitiont solution&lt;/h3&gt;
-&lt;p&gt;Vultr VPS
-Choose for share CPU
-Choose a location
-Choose Ubuntu (I did go for the latest version 24.04, becouse why not)
-Choose for AMD High performace machine with name &amp;ldquo;25 GB NVMe&amp;rdquo; with no aditional features, (I do not need autobackup plan)
-Generate an SSH key and upload it when creating the VPS (Makes the login life much much easier)&lt;/p&gt;
-&lt;p&gt;see some images:&lt;/p&gt;
-&lt;p&gt;vultr-additional-features.png
-vultr-deploy.png
-vultr-ubuntu-image-deployd.png&lt;/p&gt;
-&lt;p&gt;For the installation process we will mostlly follwo the instruction provided in &lt;a href=&#34;https://kafka.apache.org/quickstart&#34;&gt;&lt;/a&gt; and will follow the Kafka with ZooKeeper. start all services in the correct order and make configurations when needed.&lt;/p&gt;
-&lt;h3 id=&#34;installation-steps-come-up-with-a-better-name&#34;&gt;Installation Steps (come up with a better name):&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/Kafka1.png&#34; alt=&#34;Kafka&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For more insights, check out the YouTube video below.
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/06iRM1Ghr1k?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;setting-up-apache-kafka-on-vultr&#34;&gt;Setting Up Apache Kafka on Vultr&lt;/h3&gt;
+&lt;p&gt;To set up Apache Kafka on a Vultr instance, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Deploy a Vultr Server&lt;/strong&gt;: Choose a suitable server size and region, then deploy a Linux instance (preferably Ubuntu).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Install Java&lt;/strong&gt;: Kafka requires Java to run, so install the latest version of OpenJDK.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Download and Install Kafka&lt;/strong&gt;: Download Kafka from the official Apache Kafka website and extract the files to your desired directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Configure Kafka&lt;/strong&gt;: Modify the server properties (&lt;code&gt;server.properties&lt;/code&gt;) to match your setup. Set the broker ID, log directories, and Zookeeper address.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Start Kafka and Zookeeper&lt;/strong&gt;: Start the Zookeeper service first, followed by the Kafka server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Test Kafka&lt;/strong&gt;: Use the provided Kafka tools to create topics, send messages, and consume them to ensure everything is working.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Before diving into the technical setup, it&amp;rsquo;s essential to understand why Vultr is a great choice for deploying Kafka.&lt;/p&gt;
+&lt;h3 id=&#34;why-vultr&#34;&gt;Why Vultr?&lt;/h3&gt;
+&lt;p&gt;Vultr offers high-performance cloud instances with SSD storage, low latency, and a global network of data centers, making it ideal for running distributed systems like Kafka. Additionally, Vultr&amp;rsquo;s flexible pricing, easy scalability, and user-friendly interface allow you to quickly deploy and manage your Kafka infrastructure, ensuring you have the resources you need as your data processing demands grow.&lt;/p&gt;
+&lt;p&gt;While Vultr is an excellent choice for deploying Kafka, other cloud platforms like AWS, Google Cloud, and Azure also offer robust environments for running Kafka. These platforms provide managed services, such as Amazon MSK (Managed Streaming for Apache Kafka), that simplify Kafka deployment and management. Each platform has its strengths, such as extensive integration options, advanced networking, and security features. The choice ultimately depends on your specific needs, budget, and existing cloud infrastructure.&lt;/p&gt;
+&lt;p&gt;In these series we will go ahead and implement a cost-effective Kafka deployment on Vultr. As your needs grow, Vultr&amp;rsquo;s easy scalability allows you to upgrade your instance or add more servers to your cluster. Additionally, using Vultr&amp;rsquo;s block storage for Kafka&amp;rsquo;s logs can provide both cost savings and performance improvements. Always monitor your resource usage to optimize costs effectively.&lt;/p&gt;
+&lt;h3 id=&#34;a-cost-efficient-solution-on-vultr&#34;&gt;A Cost-Efficient Solution on Vultr&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Vultr VPS&lt;/strong&gt;: Start with a Vultr Virtual Private Server.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shared CPU&lt;/strong&gt;: Opt for a shared CPU plan to keep costs low.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Location&lt;/strong&gt;: Choose a data center location close to your target users for better latency.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Operating System&lt;/strong&gt;: Select Ubuntu 24.04 (latest version) for its up-to-date features and stability.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Instance Type&lt;/strong&gt;: Choose the &amp;ldquo;25 GB NVMe&amp;rdquo; AMD High-Performance machine without additional features like auto-backup, to minimize costs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SSH Key&lt;/strong&gt;: Generate and upload an SSH key during VPS creation for secure and easy access.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This setup provides a balance of performance and cost, making it ideal for small to medium Kafka deployments.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-choose-plan.png&#34; alt=&#34;Kafka&#34;&gt;
+&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-additional-features.png&#34; alt=&#34;Kafka&#34;&gt;
+&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-deploy.png&#34; alt=&#34;Kafka&#34;&gt;
+&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-ubuntu-image-deployd.png&#34; alt=&#34;Kafka&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For the installation process, we&amp;rsquo;ll largely follow the guidelines provided in the &lt;a href=&#34;https://kafka.apache.org/quickstart&#34;&gt;Kafka Quickstart&lt;/a&gt;. This includes setting up Kafka with ZooKeeper, ensuring all services are started in the correct order, and making necessary configurations as needed.&lt;/p&gt;
+&lt;h3 id=&#34;step-by-step-installation-guide&#34;&gt;Step-by-Step Installation Guide&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Start by SSHing into a machine:&lt;/li&gt;
 &lt;/ul&gt;
@@ -46,8 +85,7 @@ vultr-ubuntu-image-deployd.png&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;install Java&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Start the ZooKeeper service&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install openjdk-8-jre-headless
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install openjdk-8-jre-headless
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;java -version
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;Download Kafka version 2.13, unzip it and cd into the directory&lt;/li&gt;
@@ -89,7 +127,7 @@ vultr-ubuntu-image-deployd.png&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-the-kafka-broker-accessible-externally&#34;&gt;Make the Kafka broker accessible externally&lt;/h3&gt;
 &lt;p&gt;To make the Kafka broker accessible externally we first need to edit the Kafka config file located at &amp;lsquo;config/server.properties&amp;rsquo;. For that first kill the process that runs the ZooKeeper service by using the &amp;lsquo;Ctrl + C&amp;rsquo; and then edit the server.properties:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim config/server.properties
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
   &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 Click to learn how to use wim&lt;/summary&gt;
   &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
     Google to learn!
@@ -116,19 +154,19 @@ ufw status verbose&lt;/p&gt;
 &lt;p&gt;I did change the config of the kafka&lt;/p&gt;
 &lt;p&gt;Now I need to start the Kafka process as before.&lt;/p&gt;
 &lt;p&gt;ssh -N -f -L localhost:9999:localhost:8888 &lt;a href=&#34;mailto:root@45.32.228.110&#34;&gt;root@45.32.228.110&lt;/a&gt;&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
   &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka server?&lt;/summary&gt;
   &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
     Kafka server
   &lt;/div&gt;
 &lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
   &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka broker?&lt;/summary&gt;
   &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
     Kafka broker
   &lt;/div&gt;
 &lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-4&#34;&gt;
   &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka client?&lt;/summary&gt;
   &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
     Kafka client

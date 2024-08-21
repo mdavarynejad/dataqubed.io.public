@@ -1236,13 +1236,19 @@
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#apache-kafka">Apache Kafka</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#setup-a-kafka-on-vultr">Setup a kafka on vultr</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#key-features">Key Features:</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#a-cost-efitiont-solution">A cost efitiont solution</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#setting-up-apache-kafka-on-vultr">Setting Up Apache Kafka on Vultr</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#installation-steps-come-up-with-a-better-name">Installation Steps (come up with a better name):</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#why-vultr">Why Vultr?</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#a-cost-efficient-solution-on-vultr">A Cost-Efficient Solution on Vultr</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#step-by-step-installation-guide">Step-by-Step Installation Guide</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#create-a-topic">Create a topic</a>
@@ -1296,27 +1302,166 @@
       <div class="content text-base">
         <h1>PySpark - Module 5.1</h1>
         <h2 id="apache-kafka">Apache Kafka</h2>
+<p>Apache Kafka is an open-source software streaming solution designed for handling real-time data feeds. It ensures events are stored in a durable, fault-tolerant manner, making it reliable for critical applications. Kafka enables the seamless streaming of messages to and from various endpoints, including databases, cloud services, and analytics platforms.</p>
+<h3 id="key-features">Key Features:</h3>
 <ul>
-<li>open-source software streaming solution ()</li>
-<li>events are stored in durable and fault-tolerant</li>
-<li>messages streamed to and from various end-points.</li>
-<li>youtube videos about it</li>
+<li><strong>Durability</strong>: Events are stored reliably for future use.</li>
+<li><strong>Fault Tolerance</strong>: Designed to handle failures without data loss.</li>
+<li><strong>Scalability</strong>: Can manage large volumes of data across distributed systems.</li>
 </ul>
-<h3 id="setup-a-kafka-on-vultr">Setup a kafka on vultr</h3>
-<p>what is vultr and why we will use it?</p>
-<h3 id="a-cost-efitiont-solution">A cost efitiont solution</h3>
-<p>Vultr VPS
-Choose for share CPU
-Choose a location
-Choose Ubuntu (I did go for the latest version 24.04, becouse why not)
-Choose for AMD High performace machine with name &ldquo;25 GB NVMe&rdquo; with no aditional features, (I do not need autobackup plan)
-Generate an SSH key and upload it when creating the VPS (Makes the login life much much easier)</p>
-<p>see some images:</p>
-<p>vultr-additional-features.png
-vultr-deploy.png
-vultr-ubuntu-image-deployd.png</p>
-<p>For the installation process we will mostlly follwo the instruction provided in <a href="https://kafka.apache.org/quickstart" target="_blank" rel="noopener"></a> and will follow the Kafka with ZooKeeper. start all services in the correct order and make configurations when needed.</p>
-<h3 id="installation-steps-come-up-with-a-better-name">Installation Steps (come up with a better name):</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/Kafka1.png" alt="Kafka" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>For more insights, check out the YouTube video below.
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/06iRM1Ghr1k?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+</p>
+<h3 id="setting-up-apache-kafka-on-vultr">Setting Up Apache Kafka on Vultr</h3>
+<p>To set up Apache Kafka on a Vultr instance, follow these steps:</p>
+<ol>
+<li>
+<p><strong>Deploy a Vultr Server</strong>: Choose a suitable server size and region, then deploy a Linux instance (preferably Ubuntu).</p>
+</li>
+<li>
+<p><strong>Install Java</strong>: Kafka requires Java to run, so install the latest version of OpenJDK.</p>
+</li>
+<li>
+<p><strong>Download and Install Kafka</strong>: Download Kafka from the official Apache Kafka website and extract the files to your desired directory.</p>
+</li>
+<li>
+<p><strong>Configure Kafka</strong>: Modify the server properties (<code>server.properties</code>) to match your setup. Set the broker ID, log directories, and Zookeeper address.</p>
+</li>
+<li>
+<p><strong>Start Kafka and Zookeeper</strong>: Start the Zookeeper service first, followed by the Kafka server.</p>
+</li>
+<li>
+<p><strong>Test Kafka</strong>: Use the provided Kafka tools to create topics, send messages, and consume them to ensure everything is working.</p>
+</li>
+</ol>
+<p>Before diving into the technical setup, it&rsquo;s essential to understand why Vultr is a great choice for deploying Kafka.</p>
+<h3 id="why-vultr">Why Vultr?</h3>
+<p>Vultr offers high-performance cloud instances with SSD storage, low latency, and a global network of data centers, making it ideal for running distributed systems like Kafka. Additionally, Vultr&rsquo;s flexible pricing, easy scalability, and user-friendly interface allow you to quickly deploy and manage your Kafka infrastructure, ensuring you have the resources you need as your data processing demands grow.</p>
+<p>While Vultr is an excellent choice for deploying Kafka, other cloud platforms like AWS, Google Cloud, and Azure also offer robust environments for running Kafka. These platforms provide managed services, such as Amazon MSK (Managed Streaming for Apache Kafka), that simplify Kafka deployment and management. Each platform has its strengths, such as extensive integration options, advanced networking, and security features. The choice ultimately depends on your specific needs, budget, and existing cloud infrastructure.</p>
+<p>In these series we will go ahead and implement a cost-effective Kafka deployment on Vultr. As your needs grow, Vultr&rsquo;s easy scalability allows you to upgrade your instance or add more servers to your cluster. Additionally, using Vultr&rsquo;s block storage for Kafka&rsquo;s logs can provide both cost savings and performance improvements. Always monitor your resource usage to optimize costs effectively.</p>
+<h3 id="a-cost-efficient-solution-on-vultr">A Cost-Efficient Solution on Vultr</h3>
+<ol>
+<li><strong>Vultr VPS</strong>: Start with a Vultr Virtual Private Server.</li>
+<li><strong>Shared CPU</strong>: Opt for a shared CPU plan to keep costs low.</li>
+<li><strong>Location</strong>: Choose a data center location close to your target users for better latency.</li>
+<li><strong>Operating System</strong>: Select Ubuntu 24.04 (latest version) for its up-to-date features and stability.</li>
+<li><strong>Instance Type</strong>: Choose the &ldquo;25 GB NVMe&rdquo; AMD High-Performance machine without additional features like auto-backup, to minimize costs.</li>
+<li><strong>SSH Key</strong>: Generate and upload an SSH key during VPS creation for secure and easy access.</li>
+</ol>
+<p>This setup provides a balance of performance and cost, making it ideal for small to medium Kafka deployments.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/vultr-choose-plan.png" alt="Kafka" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/vultr-additional-features.png" alt="Kafka" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/vultr-deploy.png" alt="Kafka" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/vultr-ubuntu-image-deployd.png" alt="Kafka" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>For the installation process, we&rsquo;ll largely follow the guidelines provided in the <a href="https://kafka.apache.org/quickstart" target="_blank" rel="noopener">Kafka Quickstart</a>. This includes setting up Kafka with ZooKeeper, ensuring all services are started in the correct order, and making necessary configurations as needed.</p>
+<h3 id="step-by-step-installation-guide">Step-by-Step Installation Guide</h3>
 <ul>
 <li>Start by SSHing into a machine:</li>
 </ul>
@@ -1324,8 +1469,7 @@ vultr-ubuntu-image-deployd.png</p>
 </span></span></code></pre></div><ul>
 <li>install Java</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Start the ZooKeeper service</span>
-</span></span><span class="line"><span class="cl">apt install openjdk-8-jre-headless
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">apt install openjdk-8-jre-headless
 </span></span><span class="line"><span class="cl">java -version
 </span></span></code></pre></div><ul>
 <li>Download Kafka version 2.13, unzip it and cd into the directory</li>
@@ -1367,7 +1511,7 @@ vultr-ubuntu-image-deployd.png</p>
 </span></span></code></pre></div><h3 id="make-the-kafka-broker-accessible-externally">Make the Kafka broker accessible externally</h3>
 <p>To make the Kafka broker accessible externally we first need to edit the Kafka config file located at &lsquo;config/server.properties&rsquo;. For that first kill the process that runs the ZooKeeper service by using the &lsquo;Ctrl + C&rsquo; and then edit the server.properties:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim config/server.properties
-</span></span></code></pre></div><details class="spoiler "  id="spoiler-0">
+</span></span></code></pre></div><details class="spoiler "  id="spoiler-1">
   <summary class="cursor-pointer">👉 Click to learn how to use wim</summary>
   <div class="rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2">
     Google to learn!
@@ -1394,19 +1538,19 @@ ufw status verbose</p>
 <p>I did change the config of the kafka</p>
 <p>Now I need to start the Kafka process as before.</p>
 <p>ssh -N -f -L localhost:9999:localhost:8888 <a href="mailto:root@45.32.228.110">root@45.32.228.110</a></p>
-<details class="spoiler "  id="spoiler-1">
+<details class="spoiler "  id="spoiler-2">
   <summary class="cursor-pointer">👉 What is a Kafka server?</summary>
   <div class="rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2">
     Kafka server
   </div>
 </details>
-<details class="spoiler "  id="spoiler-2">
+<details class="spoiler "  id="spoiler-3">
   <summary class="cursor-pointer">👉 What is a Kafka broker?</summary>
   <div class="rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2">
     Kafka broker
   </div>
 </details>
-<details class="spoiler "  id="spoiler-3">
+<details class="spoiler "  id="spoiler-4">
   <summary class="cursor-pointer">👉 What is a Kafka client?</summary>
   <div class="rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2">
     Kafka client
