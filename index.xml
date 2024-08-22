@@ -821,16 +821,16 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;li&gt;What strategies can be employed to optimize Spark applications for performance?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;time-commitment&#34;&gt;Time Commitment&lt;/h4&gt;
-&lt;p&gt;This course is designed to be completed over approximately 32 hours of self-paced study. Here is a breakdown of the estimated time required for each module:&lt;/p&gt;
+&lt;p&gt;This course is designed to be completed over approximately 30 hours of self-paced study. Here is a breakdown of the estimated time required for each module:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Module 1: Introduction to Big Data and Apache Spark&lt;/strong&gt;: 3 hours&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Module 2: Spark Architecture and RDDs&lt;/strong&gt;: 5 hours&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Module 3: DataFrames and Spark SQL&lt;/strong&gt;: 6 hours&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Module 4: Data Sources and Sinks&lt;/strong&gt;: 4 hours&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Module 5: Spark Streaming&lt;/strong&gt;: 4 hours&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Module 6: Machine Learning with PySpark&lt;/strong&gt;: 6 hours&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Module 7: Advanced Spark Techniques&lt;/strong&gt;: 4 hours&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Module 8: Real-World Applications and Capstone Project&lt;/strong&gt;: 4 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 5: Spark Streaming&lt;/strong&gt;: 12 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 6: Machine Learning with PySpark&lt;/strong&gt;: 0 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 7: Advanced Spark Techniques&lt;/strong&gt;: 0 hours&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Module 8: Real-World Applications and Capstone Project&lt;/strong&gt;: 0 hours&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This structured approach ensures that you will have ample time to grasp each concept thoroughly, practice through hands-on exercises, and apply what you have learned to real-world scenarios.&lt;/p&gt;
 &lt;h4 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h4&gt;
@@ -926,7 +926,7 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;module-5-spark-streaming-4-hours&#34;&gt;Module 5: Spark Streaming (4 hours)&lt;/h4&gt;
+&lt;h4 id=&#34;module-5-spark-streaming&#34;&gt;Module 5: Spark Streaming&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Introduction to Spark Streaming&lt;/strong&gt;
 &lt;ul&gt;
@@ -952,7 +952,7 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;module-6-machine-learning-with-pyspark-6-hours&#34;&gt;Module 6: Machine Learning with PySpark (6 hours)&lt;/h4&gt;
+&lt;h4 id=&#34;module-6-machine-learning-with-pyspark-0-hours&#34;&gt;Module 6: Machine Learning with PySpark (0 hours)&lt;/h4&gt;
 &lt;ol start=&#34;0&#34;&gt;
 &lt;li&gt;hyperparameter optimization framework designed for both single-machine and distributed setups: Optuna and Hyperopt&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Introduction to MLlib&lt;/strong&gt;
@@ -981,7 +981,7 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Case study: Predictive modeling with MLlib&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;module-7-advanced-spark-techniques-4-hours&#34;&gt;Module 7: Advanced Spark Techniques (4 hours)&lt;/h4&gt;
+&lt;h4 id=&#34;module-7-advanced-spark-techniques-0-hours&#34;&gt;Module 7: Advanced Spark Techniques (0 hours)&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Optimizing Spark Applications&lt;/strong&gt;
 &lt;ul&gt;
@@ -1005,7 +1005,7 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;module-8-real-world-applications-and-capstone-project-4-hours&#34;&gt;Module 8: Real-World Applications and Capstone Project (4 hours)&lt;/h4&gt;
+&lt;h4 id=&#34;module-8-real-world-applications-and-capstone-project-0-hours&#34;&gt;Module 8: Real-World Applications and Capstone Project (0 hours)&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Case Studies and Real-World Applications&lt;/strong&gt;
 &lt;ul&gt;
@@ -1105,19 +1105,17 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;li&gt;How can you filter rows in a DataFrame?&lt;/li&gt;
 &lt;li&gt;Explain how to perform joins in PySpark.&lt;/li&gt;
 &lt;li&gt;How do you aggregate data in PySpark?&lt;/li&gt;
-&lt;li&gt;What are UDFs (User Defined Functions), and how are they used? &lt;a href=&#34;https://www.youtube.com/watch?v=-U-_rq1zhiI&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=19&#34;&gt;https://www.youtube.com/watch?v=-U-_rq1zhiI&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=-U-_rq1zhiI&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=19&#34;&gt;What are UDFs (User Defined Functions), and how are they used?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;How can you handle missing or null values in PySpark?&lt;/li&gt;
 &lt;li&gt;How do you repartition a DataFrame, and why?&lt;/li&gt;
 &lt;li&gt;Describe how to cache a DataFrame. Why is it useful?&lt;/li&gt;
 &lt;li&gt;How do you save a DataFrame to a file?&lt;/li&gt;
-&lt;li&gt;What is the Catalyst Optimizer?&lt;/li&gt;
 &lt;li&gt;Explain the concept of partitioning in PySpark.&lt;/li&gt;
 &lt;li&gt;How can broadcast variables improve performance?&lt;/li&gt;
 &lt;li&gt;What are accumulators, and how are they used?&lt;/li&gt;
-&lt;li&gt;Describe strategies for optimizing PySpark jobs.&lt;/li&gt;
 &lt;li&gt;How does PySpark handle data skewness?&lt;/li&gt;
 &lt;li&gt;Explain how checkpointing works in PySpark.&lt;/li&gt;
-&lt;li&gt;What is delta lake &lt;a href=&#34;https://www.youtube.com/watch?v=0GhFAzN4qs4&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=20&#34;&gt;https://www.youtube.com/watch?v=0GhFAzN4qs4&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=20&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/watch?v=xYtU6fpsS3M&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=21&#34;&gt;https://www.youtube.com/watch?v=xYtU6fpsS3M&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=21&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;What is delta lake? Look at &lt;a href=&#34;https://www.youtube.com/watch?v=0GhFAzN4qs4&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=20&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/watch?v=xYtU6fpsS3M&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=21&#34;&gt;here&lt;/a&gt;!&lt;/li&gt;
 &lt;li&gt;What is data lakehouse architecture.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
@@ -1614,7 +1612,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-826357914&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-596348127&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1632,7 +1630,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-826357914&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-596348127&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
