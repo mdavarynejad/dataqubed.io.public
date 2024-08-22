@@ -194,10 +194,10 @@
     
       <meta
         property="article:published_time"
-        content="2024-08-22T00:00:00&#43;00:00"
+        content="2024-08-21T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2024-08-22T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2024-08-21T00:00:00&#43;00:00">
   
 
   
@@ -264,26 +264,26 @@
     
   
   
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
   
   
   
@@ -1268,7 +1268,13 @@
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#integration-of-kafka-with-apache-spark-structured-streaming">Integration of Kafka with Apache Spark Structured Streaming:</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#best-practices-for-kafka-in-databricks">Best Practices for Kafka in Databricks:</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#reading-data-from-kafka-in-spark-using-pyspark-for-streaming">Reading Data from Kafka in Spark: Using PySpark for Streaming</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#windowed-aggregations-performing-windowed-aggregations-on-streaming-data-from-kafka-using-pyspark">Windowed Aggregations: Performing windowed aggregations on streaming data from Kafka using PySpark</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#assignment">Assignment</a>
       </li></ul>
 
   
@@ -1306,22 +1312,39 @@
 
       <div class="content text-base">
         <h1>PySpark - Module 5.3</h1>
-        <p>Our Apache Kafka service is now accessible to the external world, and we&rsquo;ve successfully conducted basic tests to ensure its functionality. The next step is to access Kafka programmatically, specifically using 
-  <span class="inline-block  pr-1">
-    <svg style="height: 1em; transform: translateY(0.1em);" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="currentColor"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
-  </span> Python. We&rsquo;ll utilize the Databricks Community Edition for this purpose, just as we have done in previous examples. However, it&rsquo;s important to note that this approach is not limited to Databricks—you should be able to replicate these steps on other platforms (Google Colab, Amazon Sagemarker, Deepnote), ensuring flexibility and adaptability in various environments.</p>
+        <p>While we experimented with setting up a Kafka service and accessing it programmatically, the solution provided in Module 5.2 does not leverage the capabilities of Spark and distributed computing as it focuses primarily on Python-based producers and consumers, without integrating Spark&rsquo;s distributed computing power.</p>
 <h2 id="integration-of-kafka-with-apache-spark-structured-streaming">Integration of Kafka with Apache Spark Structured Streaming:</h2>
-<p>Reading Data from Kafka in Spark: How to use PySpark to read data from Kafka topics in a streaming fashion.
-Writing Data to Kafka from Spark: How to write processed data back to Kafka topics using PySpark.
-Windowed Aggregations: Performing windowed aggregations on streaming data from Kafka using PySpark.</p>
-<h3 id="best-practices-for-kafka-in-databricks">Best Practices for Kafka in Databricks:</h3>
+<h3 id="reading-data-from-kafka-in-spark-using-pyspark-for-streaming">Reading Data from Kafka in Spark: Using PySpark for Streaming</h3>
+<ul>
+<li>
+<p>Configure Kafka Consumer: Use PySpark&rsquo;s spark.readStream method to configure a Kafka consumer. Specify the Kafka bootstrap servers and the topic you want to read from.</p>
+</li>
+<li>
+<p>Stream Data Processing: Define the schema for the incoming data and apply any necessary transformations using PySpark DataFrame operations.</p>
+</li>
+<li>
+<p>Start Streaming: Use writeStream to output the results to a desired sink, like console, HDFS, or another Kafka topic, and start the streaming process.</p>
+</li>
+</ul>
+<p>Import <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1975282697838214/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a> to the same folder, rename it to <code>Kafka-to-Delta Streaming Pipeline</code>, and follow the instructions.</p>
+<details class="spoiler "  id="spoiler-0">
+  <summary class="cursor-pointer">Writing Data to Kafka from Spark!</summary>
+  <div class="rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2">
+    How to write processed data back to Kafka topics using PySpark? This is a topic that I encourage motivated students to study it by themselves.
+  </div>
+</details>
+<h3 id="windowed-aggregations-performing-windowed-aggregations-on-streaming-data-from-kafka-using-pyspark">Windowed Aggregations: Performing windowed aggregations on streaming data from Kafka using PySpark</h3>
+<p>Import <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065282/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a> to the same folder and rename in to <code>Windowed Aggregations on Streaming Data</code>. Follow the content and try to understand what is going on there.</p>
+<h3 id="assignment">Assignment</h3>
+<p>Import <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065276/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a> to the same folder and look into the results. Can you explain what is the results you see in table <code>windowed_aggregations</code>?</p>
+<p><strong>Whats next?</strong> Module 5.4 (for year 2025-2026) will be dedicated to the best practices for kafka in databricks! Do you absolutely want to have it this year? Write Mohsen and email.</p>
 
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-08-22T00:00:00.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-08-21T00:00:00.000Z">
     <span>Last updated on</span>
-    Aug 22, 2024</time>
+    Aug 21, 2024</time>
       
       
   
@@ -1346,7 +1369,7 @@ Windowed Aggregations: Performing windowed aggregations on streaming data from K
             >PySpark - Module 5.2</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Aug 22, 2024
+                Aug 21, 2024
               
             </span>
           </span>
@@ -1363,7 +1386,7 @@ Windowed Aggregations: Performing windowed aggregations on streaming data from K
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Aug 21, 2024
+                Aug 20, 2024
               
             </span>
           </span>
