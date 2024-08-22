@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="Apache Kafka, Spark Streaming" />
+  <meta name="description" content="Apache Spark Structured Streaming" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dataqubed.io/teaching/pyspark-spark-streaming-part2/" />
+  <link rel="alternate" hreflang="en-us" href="https://dataqubed.io/teaching/pyspark-spark-streaming-part3/" />
 
   
   
@@ -161,7 +161,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu3247630877640252165.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4166356570829923896.png" />
 
-  <link rel="canonical" href="https://dataqubed.io/teaching/pyspark-spark-streaming-part2/" />
+  <link rel="canonical" href="https://dataqubed.io/teaching/pyspark-spark-streaming-part3/" />
 
   
   
@@ -186,10 +186,10 @@
     <meta property="twitter:creator" content="@GetResearchDev" />
   
   <meta property="og:site_name" content="Your Data Science Mentor - Mohsen Davarynejad" />
-  <meta property="og:url" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part2/" />
-  <meta property="og:title" content="PySpark - Module 5.2 | Your Data Science Mentor - Mohsen Davarynejad" />
-  <meta property="og:description" content="Apache Kafka, Spark Streaming" /><meta property="og:image" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part2/featured.jpg" />
-    <meta property="twitter:image" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part2/featured.jpg" /><meta property="og:locale" content="en-us" />
+  <meta property="og:url" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part3/" />
+  <meta property="og:title" content="PySpark - Module 5.3 | Your Data Science Mentor - Mohsen Davarynejad" />
+  <meta property="og:description" content="Apache Spark Structured Streaming" /><meta property="og:image" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part3/featured.jpg" />
+    <meta property="twitter:image" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part3/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -207,7 +207,7 @@
   
 
 
-  <title>PySpark - Module 5.2 | Your Data Science Mentor - Mohsen Davarynejad</title>
+  <title>PySpark - Module 5.3 | Your Data Science Mentor - Mohsen Davarynejad</title>
 
   
   
@@ -908,30 +908,30 @@
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
         </span>
     </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col open"><a
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/teaching/pyspark-spark-streaming-part2/"
     
   >PySpark - Module 5.2
     </a>
-  
-    <ul class="hb-sidebar-mobile-toc"><li>
-              <a
-                href="#python-based-producers-and-consumers"
-                class="hb-docs-link"
-              >Python-Based Producers and Consumers</a>
-            </li>
-          </ul>
-  
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/teaching/pyspark-spark-streaming-part3/"
     
   >PySpark - Module 5.3
     </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#integration-of-kafka-with-apache-spark-structured-streaming"
+                class="hb-docs-link"
+              >Integration of Kafka with Apache Spark Structured Streaming:</a>
+            </li>
+          </ul>
+  
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -1173,16 +1173,16 @@
 
     <ul class="flex flex-col gap-1 max-lg:hidden">
         
-        <li class="open"><a
+        <li class=""><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/teaching/pyspark-spark-streaming-part2/"
     
   >PySpark - Module 5.2
     </a></li>
-        <li class=""><a
+        <li class="open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/teaching/pyspark-spark-streaming-part3/"
     
   >PySpark - Module 5.3
@@ -1265,25 +1265,10 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#python-based-producers-and-consumers">Python-Based Producers and Consumers</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#integration-of-kafka-with-apache-spark-structured-streaming">Integration of Kafka with Apache Spark Structured Streaming:</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#reading-and-writing-frominto-a-specific-topic">Reading and Writing from/into a specific topic</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#kafka-producer-expects-json-serializable-data">Kafka Producer Expects JSON-Serializable Data:</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#sending-an-integer-value">Sending an integer value</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#or-sending-type-information-as-a-string">Or sending type information as a string</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#or-sending-a-json-object-with-type-information-and-value">Or sending a JSON object with type information and value</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#create-a-topic">Create a topic</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#best-practices-for-kafka-in-databricks">Best Practices for Kafka in Databricks:</a>
       </li></ul>
 
   
@@ -1314,87 +1299,22 @@
         <div class="mt-1.5 flex items-center gap-1 overflow-hidden text-sm text-gray-500 dark:text-gray-400">
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://dataqubed.io/teaching/">Teaching</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">PySpark - Module 5.2</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">PySpark - Module 5.3</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>PySpark - Module 5.2</h1>
-        <h2 id="python-based-producers-and-consumers">Python-Based Producers and Consumers</h2>
-<p>Our Apache Kafka service is now accessible to the external world, and we&rsquo;ve successfully conducted basic tests to ensure its functionality. The next step is to access Kafka programmatically, specifically using 
+        <h1>PySpark - Module 5.3</h1>
+        <p>Our Apache Kafka service is now accessible to the external world, and we&rsquo;ve successfully conducted basic tests to ensure its functionality. The next step is to access Kafka programmatically, specifically using 
   <span class="inline-block  pr-1">
     <svg style="height: 1em; transform: translateY(0.1em);" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="currentColor"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg>
   </span> Python. We&rsquo;ll utilize the Databricks Community Edition for this purpose, just as we have done in previous examples. However, it&rsquo;s important to note that this approach is not limited to Databricks—you should be able to replicate these steps on other platforms (Google Colab, Amazon Sagemarker, Deepnote), ensuring flexibility and adaptability in various environments.</p>
-<h3 id="reading-and-writing-frominto-a-specific-topic">Reading and Writing from/into a specific topic</h3>
-<p>To spin up a cluster with the default configuration, follow these steps:</p>
-<ol>
-<li>
-<p><strong>Spin Up the Cluster</strong>: Launch a cluster using your platform&rsquo;s default settings. Ensure it meets the requirements for your tasks.</p>
-</li>
-<li>
-<p><strong>Create a Folder in Databricks</strong>: In your Databricks environment, navigate to the workspace and create a new folder named &ldquo;Mod 5&rdquo;. This will be the designated space for all the resources and scripts related to Module 5.</p>
-</li>
-</ol>
-<p>These steps will prepare your environment for further development and organization as you proceed with the tasks in Module 5.</p>
-<p>Import <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/2453801694937611/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>, rename it to Producer, and follow the instructions.</p>
-<p>In a new window in the same folder import <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/2453801694937607/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a>, rename it to Consumer, and follow the instructions.</p>
-<p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="flex justify-center	">
-    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/kafka-db-cluster.png" alt="Kafka" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<p>Explain what is going on here. Why the Consumer has an entry (The botom right screen of the image bellow)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="flex justify-center	">
-    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/kafka-4-screens-3.png" alt="4 shell for 4 services" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<h3 id="kafka-producer-expects-json-serializable-data">Kafka Producer Expects JSON-Serializable Data:</h3>
-<p>The Kafka producer takes as input JSON-serializable data, which can lead to errors if the provided data cannot be serialized properly. Below you will see a few examples of data type that the Kafka producer expects, along with explanations on how to correctly format and serialize this data to avoid common errors.</p>
-<h4 id="sending-an-integer-value">Sending an integer value</h4>
-<p>producer.send(&lsquo;buas-data-n-ai-events&rsquo;, value=12)</p>
-<h4 id="or-sending-type-information-as-a-string">Or sending type information as a string</h4>
-<p>producer.send(&lsquo;buas-data-n-ai-events&rsquo;, value=str(type(12)))</p>
-<h4 id="or-sending-a-json-object-with-type-information-and-value">Or sending a JSON object with type information and value</h4>
-<p>producer.send(
-&lsquo;buas-data-n-ai-events&rsquo;,
-value={&ldquo;type&rdquo;: str(type(12)), &ldquo;value&rdquo;: 12}
-)</p>
-<h3 id="create-a-topic">Create a topic</h3>
-<p>Import <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/875042492617895/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a> tot he same folder, rename it to <code>Topic Management and Verification in Databricks</code>, and follow the instructions.</p>
+<h2 id="integration-of-kafka-with-apache-spark-structured-streaming">Integration of Kafka with Apache Spark Structured Streaming:</h2>
+<p>Reading Data from Kafka in Spark: How to use PySpark to read data from Kafka topics in a streaming fashion.
+Writing Data to Kafka from Spark: How to write processed data back to Kafka topics using PySpark.
+Windowed Aggregations: Performing windowed aggregations on streaming data from Kafka using PySpark.</p>
+<h3 id="best-practices-for-kafka-in-databricks">Best Practices for Kafka in Databricks:</h3>
 
       </div>
 
@@ -1416,18 +1336,34 @@ value={&ldquo;type&rdquo;: str(type(12)), &ldquo;value&rdquo;: 12}
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-    </div>
-    <div class="">
-      
-        <a class="group flex text-right no-underline" href="/teaching/pyspark-spark-streaming-part3/">
+        <a class="group flex no-underline" href="/teaching/pyspark-spark-streaming-part2/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >PySpark - Module 5.3</span
-            >
+            >PySpark - Module 5.2</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
                 Aug 22, 2024
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+        <a class="group flex text-right no-underline" href="/teaching/pyspark-spark-streaming-part1/">
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >PySpark - Module 5.1</span
+            >
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Aug 21, 2024
               
             </span>
           </span>

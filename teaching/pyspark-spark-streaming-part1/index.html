@@ -242,6 +242,7 @@
   
   
   
+  
     
       
       
@@ -915,6 +916,14 @@
   >PySpark - Module 5.2
     </a>
               
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark-spark-streaming-part3/"
+    
+  >PySpark - Module 5.3
+    </a>
+              
             </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
@@ -1176,6 +1185,13 @@
     href="/teaching/pyspark-spark-streaming-part2/"
     
   >PySpark - Module 5.2
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark-spark-streaming-part3/"
+    
+  >PySpark - Module 5.3
     </a></li>
         <li class="open"><a
     class="hb-sidebar-custom-link
@@ -1618,6 +1634,7 @@
     <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/kafka-4-screens-3.png" alt="4 shell for 4 services" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
+<p><strong>Extra reading material:</strong> Read through the <a href="https://kafka.apache.org/intro" target="_blank" rel="noopener">brief introduction to learn how Kafka works at a high level</a>. The article covers the main concepts of Kafka and compares it to other technologies. For a more detailed understanding of Kafka, refer to the official documentation.</p>
 <details class="spoiler "  id="spoiler-2">
   <summary class="cursor-pointer">👉 What is a Kafka server?</summary>
   <div class="rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2">
@@ -1636,7 +1653,61 @@
     Kafka client
   </div>
 </details>
-<p>Read through the <a href="https://kafka.apache.org/intro" target="_blank" rel="noopener">brief introduction to learn how Kafka works at a high level</a>, covering its main concepts and comparing it to other technologies. For a more detailed understanding of Kafka, refer to the official documentation.</p>
+<details class="spoiler "  id="spoiler-5">
+  <summary class="cursor-pointer">👉 How to ensure stability and reliability of running Kafka in the background?</summary>
+  <div class="rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2">
+    <p>Using <code>systemd</code> (or another init system like init.d) to manage Kafka as a service is generally the most stable and robust option. <code>Systemd</code> is designed to manage system services, ensuring that services like Kafka start automatically on boot, restart on failure, and remain running independently of any user session.</p>
+<p>What we did in this tutorial runs Kafka in the foreground within the SSH session. If you close the SSH connection (e.g., by exiting the terminal or using Ctrl+C), the Kafka process will be terminated.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">systemctl start kafka   <span class="c1"># Start Kafka Service</span>
+</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> kafka  <span class="c1"># Ensures Kafka starts on boot</span>
+</span></span><span class="line"><span class="cl">systemctl status kafka  <span class="c1"># Check the status of Kafka</span>
+</span></span></code></pre></div><p>To be able to use <code>systemd</code> you first need to create a kafka service file and configure it. Then you need to reload systemd daemon to recognize the new service.</p>
+<p>To create a systemd service file for Kafka use vim and place the file at <code>/etc/systemd/system/kafka.service</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /etc/systemd/system/kafka.service
+</span></span></code></pre></div><p>In the file, add the following content. Make sure to adjust paths to match the Kafka installation directory:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>Apache Kafka Server
+</span></span><span class="line"><span class="cl"><span class="nv">Documentation</span><span class="o">=</span>https://kafka.apache.org/documentation/
+</span></span><span class="line"><span class="cl"><span class="nv">Requires</span><span class="o">=</span>zookeeper.service
+</span></span><span class="line"><span class="cl"><span class="nv">After</span><span class="o">=</span>zookeeper.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">User</span><span class="o">=</span>kafka
+</span></span><span class="line"><span class="cl"><span class="nv">Group</span><span class="o">=</span>kafka
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/root/kafka_2.13-2.6.0/bin/kafka-server-start.sh /root/kafka_2.13-2.6.0/config/server.properties
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStop</span><span class="o">=</span>/root/kafka_2.13-2.6.0/bin/kafka-server-stop.sh
+</span></span><span class="line"><span class="cl"><span class="nv">Restart</span><span class="o">=</span>on-failure
+</span></span><span class="line"><span class="cl"><span class="nv">RestartSec</span><span class="o">=</span><span class="m">10</span>
+</span></span><span class="line"><span class="cl"><span class="nv">TimeoutSec</span><span class="o">=</span><span class="m">180</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span></code></pre></div><p>Then reload systemd daemon before starting kafka service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span></code></pre></div><p>We need to create a Zookeeper service file just like what we did for kafka server.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wim /etc/systemd/system/zookeeper.service
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>Unit<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Description</span><span class="o">=</span>Apache Zookeeper Service
+</span></span><span class="line"><span class="cl"><span class="nv">Documentation</span><span class="o">=</span>https://zookeeper.apache.org/
+</span></span><span class="line"><span class="cl"><span class="nv">After</span><span class="o">=</span>network.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Service<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">Type</span><span class="o">=</span>simple
+</span></span><span class="line"><span class="cl"><span class="nv">User</span><span class="o">=</span>root
+</span></span><span class="line"><span class="cl"><span class="nv">Group</span><span class="o">=</span>root
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStart</span><span class="o">=</span>/root/kafka_2.13-2.6.0/bin/zookeeper-server-start.sh /root/kafka_2.13-2.6.0/config/zookeeper.properties
+</span></span><span class="line"><span class="cl"><span class="nv">ExecStop</span><span class="o">=</span>/root/kafka_2.13-2.6.0/bin/zookeeper-server-stop.sh
+</span></span><span class="line"><span class="cl"><span class="nv">Restart</span><span class="o">=</span>on-failure
+</span></span><span class="line"><span class="cl"><span class="nv">RestartSec</span><span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>Install<span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo systemctl start zookeeper
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> zookeeper
+</span></span></code></pre></div>
+  </div>
+</details>
 <p>Congratulations!
 You have successfully finished the Apache Kafka installation. Now, your Kafka broker is up and running, ready to handle real-time data streams. This marks a significant milestone in setting up your data processing pipeline. Next, you can start creating topics, producing and consuming messages, and exploring Kafka’s powerful features to build scalable and resilient data systems. If you encounter any issues or need to expand your setup, consult the Kafka documentation or explore advanced configurations to optimize your deployment.</p>
 <h3 id="references">References</h3>
@@ -1667,14 +1738,14 @@ You have successfully finished the Apache Kafka installation. Now, your Kafka br
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/teaching/pyspark-spark-streaming-part2/">
+        <a class="group flex no-underline" href="/teaching/pyspark-spark-streaming-part3/">
           <span
             class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
           ><span class="ltr:inline rtl:hidden">&larr;</span></span>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >PySpark - Module 5.2</span>
+            >PySpark - Module 5.3</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
                 Aug 22, 2024
