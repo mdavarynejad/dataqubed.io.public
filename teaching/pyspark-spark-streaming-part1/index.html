@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: August 21, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: August 22, 2024 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="Apache Kafka, Spark Streaming" />
+  <meta name="description" content="Deploying Apache Kafka on a Single Node" />
 
   
   <link rel="alternate" hreflang="en-us" href="https://dataqubed.io/teaching/pyspark-spark-streaming-part1/" />
@@ -188,7 +188,7 @@
   <meta property="og:site_name" content="Your Data Science Mentor - Mohsen Davarynejad" />
   <meta property="og:url" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part1/" />
   <meta property="og:title" content="PySpark - Module 5.1 | Your Data Science Mentor - Mohsen Davarynejad" />
-  <meta property="og:description" content="Apache Kafka, Spark Streaming" /><meta property="og:image" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part1/featured.jpg" />
+  <meta property="og:description" content="Deploying Apache Kafka on a Single Node" /><meta property="og:image" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part1/featured.jpg" />
     <meta property="twitter:image" content="https://dataqubed.io/teaching/pyspark-spark-streaming-part1/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
@@ -242,26 +242,26 @@
   
   
   
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
   
   
     
@@ -907,7 +907,15 @@
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
         </span>
     </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col open"><a
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark-spark-streaming-part2/"
+    
+  >PySpark - Module 5.2
+    </a>
+              
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/teaching/pyspark-spark-streaming-part1/"
@@ -917,20 +925,18 @@
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
+                href="#deploying-apache-kafka-on-a-single-node"
+                class="hb-docs-link"
+              >Deploying Apache Kafka on a Single Node</a>
+            </li>
+          <li>
+              <a
                 href="#apache-kafka"
                 class="hb-docs-link"
               >Apache Kafka</a>
             </li>
           </ul>
   
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/teaching/pyspark-spark-streaming-part2/"
-    
-  >PySpark - Module 5.2
-    </a>
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -1164,19 +1170,19 @@
 
     <ul class="flex flex-col gap-1 max-lg:hidden">
         
-        <li class="open"><a
-    class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
-    href="/teaching/pyspark-spark-streaming-part1/"
-    
-  >PySpark - Module 5.1
-    </a></li>
         <li class=""><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/teaching/pyspark-spark-streaming-part2/"
     
   >PySpark - Module 5.2
+    </a></li>
+        <li class="open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/teaching/pyspark-spark-streaming-part1/"
+    
+  >PySpark - Module 5.1
     </a></li>
         <li class=""><a
     class="hb-sidebar-custom-link
@@ -1249,6 +1255,9 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#deploying-apache-kafka-on-a-single-node">Deploying Apache Kafka on a Single Node</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#apache-kafka">Apache Kafka</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -1314,7 +1323,7 @@
 
       <div class="content text-base">
         <h1>PySpark - Module 5.1</h1>
-        <h1 id="deploying-apache-kafka-on-a-single-node">Deploying Apache Kafka on a Single Node</h1>
+        <h2 id="deploying-apache-kafka-on-a-single-node">Deploying Apache Kafka on a Single Node</h2>
 <p>Deploying Kafka on a single node is a great way to get started with understanding its core functionalities. This setup involves configuring a Kafka broker along with Zookeeper, which manages the broker&rsquo;s metadata. In this guide, you&rsquo;ll learn how to install, configure, and run Apache Kafka on a single node, making it accessible for testing and small-scale applications. This foundational setup will prepare you for more complex, distributed deployments.</p>
 <h2 id="apache-kafka">Apache Kafka</h2>
 <p>Apache Kafka is an open-source software streaming solution designed for handling real-time data feeds. It ensures events are stored in a durable, fault-tolerant manner, making it reliable for critical applications. Kafka enables the seamless streaming of messages to and from various endpoints, including databases, cloud services, and analytics platforms.</p>
@@ -1386,7 +1395,7 @@
 <li><strong>Vultr VPS</strong>: Start with a Vultr Virtual Private Server.</li>
 <li><strong>Shared CPU</strong>: Opt for a shared CPU plan to keep costs low.</li>
 <li><strong>Location</strong>: Choose a data center location close to your target users for better latency.</li>
-<li><strong>Operating System</strong>: Select Ubuntu 22.04 for its up-to-date features and stability.</li>
+<li><strong>Operating System</strong>: Select Ubuntu 22.04 for its up-to-date features and stability. (In case you tried a another version of Ubuntu and followed the same process I would like to know if it worked or not!)</li>
 <li><strong>Instance Type</strong>: Choose the &ldquo;25 GB NVMe&rdquo; AMD High-Performance machine without additional features like auto-backup, to minimize costs.</li>
 <li><strong>SSH Key</strong>: Generate and upload an SSH key during VPS creation for secure and easy access.</li>
 </ol>
@@ -1523,9 +1532,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bin/kafka-console-consumer.sh --topic buas-data-n-ai-events --from-beginning --bootstrap-server localhost:9092
 </span></span><span class="line"><span class="cl">Spark machine is killed
 </span></span><span class="line"><span class="cl">Frank to the rescue
-</span></span></code></pre></div><h3 id="make-the-kafka-broker-accessible-externally">Make the Kafka broker accessible externally</h3>
-<p>By now, you should have four shell windows open. To stop the running processes, press Ctrl + C and shutdown the services in a reverse order, starting from the last shell. This ensures that any changes made to the Kafka configuration or environment are properly loaded and active. We will then use the first shell (the one that we run the ZooKeeper service) to configure the broker to be accessible externally.</p>
-<p>
+</span></span></code></pre></div><p>
 
 
 
@@ -1546,6 +1553,8 @@
     <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/kafka-4-screens.png" alt="4 shell for 4 services" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
+<h3 id="make-the-kafka-broker-accessible-externally">Make the Kafka broker accessible externally</h3>
+<p>By now, you should have four shell windows open. To stop the running processes, press Ctrl + C and shutdown the services in a reverse order, starting from the last shell. This ensures that any changes made to the Kafka configuration or environment are properly loaded and active. We will then use the first shell (the one that we run the ZooKeeper service) to configure the broker to be accessible externally.</p>
 <p>To make the Kafka broker accessible externally we first need to edit the Kafka config file located at &lsquo;config/server.properties&rsquo;. ZooKeeper service by using the &lsquo;Ctrl + C&rsquo; and then edit the server.properties:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim config/server.properties
 </span></span></code></pre></div><details class="spoiler "  id="spoiler-1">
@@ -1559,16 +1568,57 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ufw allow <span class="m">9092</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># And check the status </span>
 </span></span><span class="line"><span class="cl">ufw status verbose
-</span></span></code></pre></div><p>Now activate the services in the same order as before,</p>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/kafka-4-screens-2.png" alt="4 shell for 4 services" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Now activate the services in the same order as before,</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1 - Restart the ZooKeeper service again.</span>
 </span></span><span class="line"><span class="cl">bin/zookeeper-server-start.sh config/zookeeper.properties
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 2 - Restart the kafka server again. </span>
 </span></span><span class="line"><span class="cl">bin/kafka-server-start.sh config/server.properties
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 2 - Restart the kafka server again. </span>
-</span></span><span class="line"><span class="cl">bin/kafka-server-start.sh config/server.properties
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 2 - Restart the kafka server again. </span>
-</span></span><span class="line"><span class="cl">bin/kafka-server-start.sh config/server.properties
-</span></span></code></pre></div><details class="spoiler "  id="spoiler-2">
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bin/kafka-console-producer.sh --topic buas-data-n-ai-events --bootstrap-server localhost:9092
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 4 - Restart the kafka server again. </span>
+</span></span><span class="line"><span class="cl">bin/kafka-console-consumer.sh --topic buas-data-n-ai-events --from-beginning --bootstrap-server localhost:9092
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img src="https://dataqubed.io/uploads/pyspark/kafka-4-screens-3.png" alt="4 shell for 4 services" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<details class="spoiler "  id="spoiler-2">
   <summary class="cursor-pointer">👉 What is a Kafka server?</summary>
   <div class="rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2">
     Kafka server
@@ -1586,16 +1636,15 @@
     Kafka client
   </div>
 </details>
+<p>Read through the <a href="https://kafka.apache.org/intro" target="_blank" rel="noopener">brief introduction to learn how Kafka works at a high level</a>, covering its main concepts and comparing it to other technologies. For a more detailed understanding of Kafka, refer to the official documentation.</p>
 <p>Congratulations!
-You have successfully finished the Apache Kafka installation, &hellip;.</p>
-<p>To learn more, we suggest the following next steps:</p>
-<p>Paraphraze: Read through the <a href="https://kafka.apache.org/intro" target="_blank" rel="noopener">brief Introduction to learn how Kafka works at a high level</a>, its main concepts, and how it compares to other technologies. To understand Kafka in more detail, head over to the Documentation.</p>
+You have successfully finished the Apache Kafka installation. Now, your Kafka broker is up and running, ready to handle real-time data streams. This marks a significant milestone in setting up your data processing pipeline. Next, you can start creating topics, producing and consuming messages, and exploring Kafka’s powerful features to build scalable and resilient data systems. If you encounter any issues or need to expand your setup, consult the Kafka documentation or explore advanced configurations to optimize your deployment.</p>
 <h3 id="references">References</h3>
 <ul>
-<li>kafka wiki link</li>
-<li>kafka git hub link</li>
-<li><a href="https://kafka.apache.org/downloads" target="_blank" rel="noopener">apache kafka</a></li>
-<li><a href="https://kafka.apache.org/quickstart" target="_blank" rel="noopener">https://kafka.apache.org/quickstart</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Apache_Kafka" target="_blank" rel="noopener">Apache Kafka Wiki page</a></li>
+<li><a href="https://github.com/apache/kafka" target="_blank" rel="noopener">Apache Kafka on git</a></li>
+<li><a href="https://kafka.apache.org/downloads" target="_blank" rel="noopener">Apache Kafka</a></li>
+<li><a href="https://kafka.apache.org/quickstart" target="_blank" rel="noopener">Apache Kafka quickstart</a></li>
 </ul>
 
       </div>
@@ -1618,18 +1667,34 @@ You have successfully finished the Apache Kafka installation, &hellip;.</p>
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-    </div>
-    <div class="">
-      
-        <a class="group flex text-right no-underline" href="/teaching/pyspark-spark-streaming-part2/">
+        <a class="group flex no-underline" href="/teaching/pyspark-spark-streaming-part2/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >PySpark - Module 5.2</span
+            >PySpark - Module 5.2</span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Aug 22, 2024
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+        <a class="group flex text-right no-underline" href="/teaching/pyspark-spark-streaming-part0/">
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >PySpark - Module 5.0</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Aug 21, 2024
+                Aug 20, 2024
               
             </span>
           </span>

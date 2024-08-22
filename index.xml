@@ -34,11 +34,47 @@
     </item>
     
     <item>
+      <title>PySpark - Module 5.2</title>
+      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part2/</link>
+      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part2/</guid>
+      <description>&lt;h2 id=&#34;python-based-producers-and-consumers&#34;&gt;Python-Based Producers and Consumers&lt;/h2&gt;
+&lt;p&gt;Our Apache Kafka service is now accessible to the external world, and we&amp;rsquo;ve successfully conducted basic tests to ensure its functionality. The next step is to access Kafka programmatically, specifically using 
+  &lt;span class=&#34;inline-block  pr-1&#34;&gt;
+    &lt;svg style=&#34;height: 1em; transform: translateY(0.1em);&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; height=&#34;1em&#34; viewBox=&#34;0 0 448 512&#34; fill=&#34;currentColor&#34;&gt;&lt;path d=&#34;M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z&#34;/&gt;&lt;/svg&gt;
+  &lt;/span&gt; Python Python. We&amp;rsquo;ll utilize the Databricks Community Edition for this purpose, just as we have done in previous examples. However, it&amp;rsquo;s important to note that this approach is not limited to Databricks—you should be able to replicate these steps on other platforms (Google Colab, Amazon Sagemarker, Deepnote), ensuring flexibility and adaptability in various environments.&lt;/p&gt;
+&lt;h3 id=&#34;reading-and-writing-frominto-a-specific-topic&#34;&gt;Reading and Writing from/into a specific topic&lt;/h3&gt;
+&lt;p&gt;To spin up a cluster with the default configuration, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Spin Up the Cluster&lt;/strong&gt;: Launch a cluster using your platform&amp;rsquo;s default settings. Ensure it meets the requirements for your tasks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Create a Folder in Databricks&lt;/strong&gt;: In your Databricks environment, navigate to the workspace and create a new folder named &amp;ldquo;Mod 5&amp;rdquo;. This will be the designated space for all the resources and scripts related to Module 5.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These steps will prepare your environment for further development and organization as you proceed with the tasks in Module 5.&lt;/p&gt;
+&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/2453801694937611/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;, rename it to Producer, and follow the instructions.&lt;/p&gt;
+&lt;p&gt;In a new window in the same folder import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/2453801694937607/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;, rename it to Consumer, and follow the instructions.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-db-cluster.png&#34; alt=&#34;Kafka&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Explain what is going on here. Why the Consumer has an entry (The botom right screen of the image bellow)
+&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens-3.png&#34; alt=&#34;4 shell for 4 services&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;create-a-topic&#34;&gt;Create a topic&lt;/h3&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
+  &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka client?&lt;/summary&gt;
+  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
+    Kafka client
+  &lt;/div&gt;
+&lt;/details&gt;
+</description>
+    </item>
+    
+    <item>
       <title>PySpark - Module 5.1</title>
       <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</guid>
-      <description>&lt;h1 id=&#34;deploying-apache-kafka-on-a-single-node&#34;&gt;Deploying Apache Kafka on a Single Node&lt;/h1&gt;
+      <description>&lt;h2 id=&#34;deploying-apache-kafka-on-a-single-node&#34;&gt;Deploying Apache Kafka on a Single Node&lt;/h2&gt;
 &lt;p&gt;Deploying Kafka on a single node is a great way to get started with understanding its core functionalities. This setup involves configuring a Kafka broker along with Zookeeper, which manages the broker&amp;rsquo;s metadata. In this guide, you&amp;rsquo;ll learn how to install, configure, and run Apache Kafka on a single node, making it accessible for testing and small-scale applications. This foundational setup will prepare you for more complex, distributed deployments.&lt;/p&gt;
 &lt;h2 id=&#34;apache-kafka&#34;&gt;Apache Kafka&lt;/h2&gt;
 &lt;p&gt;Apache Kafka is an open-source software streaming solution designed for handling real-time data feeds. It ensures events are stored in a durable, fault-tolerant manner, making it reliable for critical applications. Kafka enables the seamless streaming of messages to and from various endpoints, including databases, cloud services, and analytics platforms.&lt;/p&gt;
@@ -90,7 +126,7 @@
 &lt;li&gt;&lt;strong&gt;Vultr VPS&lt;/strong&gt;: Start with a Vultr Virtual Private Server.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Shared CPU&lt;/strong&gt;: Opt for a shared CPU plan to keep costs low.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Location&lt;/strong&gt;: Choose a data center location close to your target users for better latency.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Operating System&lt;/strong&gt;: Select Ubuntu 22.04 for its up-to-date features and stability.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Operating System&lt;/strong&gt;: Select Ubuntu 22.04 for its up-to-date features and stability. (In case you tried a another version of Ubuntu and followed the same process I would like to know if it worked or not!)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Instance Type&lt;/strong&gt;: Choose the &amp;ldquo;25 GB NVMe&amp;rdquo; AMD High-Performance machine without additional features like auto-backup, to minimize costs.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;SSH Key&lt;/strong&gt;: Generate and upload an SSH key during VPS creation for secure and easy access.&lt;/li&gt;
 &lt;/ol&gt;
@@ -147,9 +183,9 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-console-consumer.sh --topic buas-data-n-ai-events --from-beginning --bootstrap-server localhost:9092
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Spark machine is killed
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Frank to the rescue
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;make-the-kafka-broker-accessible-externally&#34;&gt;Make the Kafka broker accessible externally&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens.png&#34; alt=&#34;4 shell for 4 services&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;make-the-kafka-broker-accessible-externally&#34;&gt;Make the Kafka broker accessible externally&lt;/h3&gt;
 &lt;p&gt;By now, you should have four shell windows open. To stop the running processes, press Ctrl + C and shutdown the services in a reverse order, starting from the last shell. This ensures that any changes made to the Kafka configuration or environment are properly loaded and active. We will then use the first shell (the one that we run the ZooKeeper service) to configure the broker to be accessible externally.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens.png&#34; alt=&#34;4 shell for 4 services&#34;&gt;&lt;/p&gt;
 &lt;p&gt;To make the Kafka broker accessible externally we first need to edit the Kafka config file located at &amp;lsquo;config/server.properties&amp;rsquo;. ZooKeeper service by using the &amp;lsquo;Ctrl + C&amp;rsquo; and then edit the server.properties:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vim config/server.properties
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-1&#34;&gt;
@@ -163,16 +199,17 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow &lt;span class=&#34;m&#34;&gt;9092&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# And check the status &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw status verbose
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now activate the services in the same order as before,&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens-2.png&#34; alt=&#34;4 shell for 4 services&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now activate the services in the same order as before,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1 - Restart the ZooKeeper service again.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/zookeeper-server-start.sh config/zookeeper.properties
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2 - Restart the kafka server again. &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-server-start.sh config/server.properties
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2 - Restart the kafka server again. &lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-server-start.sh config/server.properties
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2 - Restart the kafka server again. &lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-server-start.sh config/server.properties
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-console-producer.sh --topic buas-data-n-ai-events --bootstrap-server localhost:9092
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4 - Restart the kafka server again. &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-console-consumer.sh --topic buas-data-n-ai-events --from-beginning --bootstrap-server localhost:9092
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens-3.png&#34; alt=&#34;4 shell for 4 services&#34;&gt;&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
   &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka server?&lt;/summary&gt;
   &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
     Kafka server
@@ -190,37 +227,16 @@
     Kafka client
   &lt;/div&gt;
 &lt;/details&gt;
+&lt;p&gt;Read through the &lt;a href=&#34;https://kafka.apache.org/intro&#34;&gt;brief introduction to learn how Kafka works at a high level&lt;/a&gt;, covering its main concepts and comparing it to other technologies. For a more detailed understanding of Kafka, refer to the official documentation.&lt;/p&gt;
 &lt;p&gt;Congratulations!
-You have successfully finished the Apache Kafka installation, &amp;hellip;.&lt;/p&gt;
-&lt;p&gt;To learn more, we suggest the following next steps:&lt;/p&gt;
-&lt;p&gt;Paraphraze: Read through the &lt;a href=&#34;https://kafka.apache.org/intro&#34;&gt;brief Introduction to learn how Kafka works at a high level&lt;/a&gt;, its main concepts, and how it compares to other technologies. To understand Kafka in more detail, head over to the Documentation.&lt;/p&gt;
+You have successfully finished the Apache Kafka installation. Now, your Kafka broker is up and running, ready to handle real-time data streams. This marks a significant milestone in setting up your data processing pipeline. Next, you can start creating topics, producing and consuming messages, and exploring Kafka’s powerful features to build scalable and resilient data systems. If you encounter any issues or need to expand your setup, consult the Kafka documentation or explore advanced configurations to optimize your deployment.&lt;/p&gt;
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;kafka wiki link&lt;/li&gt;
-&lt;li&gt;kafka git hub link&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/downloads&#34;&gt;apache kafka&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/quickstart&#34;&gt;https://kafka.apache.org/quickstart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Apache_Kafka&#34;&gt;Apache Kafka Wiki page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/apache/kafka&#34;&gt;Apache Kafka on git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/downloads&#34;&gt;Apache Kafka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/quickstart&#34;&gt;Apache Kafka quickstart&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>PySpark - Module 5.2</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part2/</link>
-      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part2/</guid>
-      <description>&lt;h1 id=&#34;python-based-producers-and-consumers&#34;&gt;Python-Based Producers and Consumers&lt;/h1&gt;
-&lt;h3 id=&#34;create-a-topic&#34;&gt;Create a topic&lt;/h3&gt;
-&lt;h3 id=&#34;reading-and-writing-frominto-a-specific-topic&#34;&gt;Reading and Writing from/into a specific topic&lt;/h3&gt;
-&lt;h3 id=&#34;testing-streaming-in-databricks-pythonic&#34;&gt;Testing Streaming in Databricks (Pythonic)&lt;/h3&gt;
-&lt;p&gt;ssh -N -f -L localhost:9999:localhost:8888 &lt;a href=&#34;mailto:root@45.32.228.110&#34;&gt;root@45.32.228.110&lt;/a&gt;&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
-  &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka client?&lt;/summary&gt;
-  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
-    Kafka client
-  &lt;/div&gt;
-&lt;/details&gt;
-&lt;p&gt;Paraphraze: Read through the &lt;a href=&#34;https://kafka.apache.org/intro&#34;&gt;brief Introduction to learn how Kafka works at a high level&lt;/a&gt;, its main concepts, and how it compares to other technologies. To understand Kafka in more detail, head over to the Documentation.&lt;/p&gt;
 </description>
     </item>
     
@@ -1503,7 +1519,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-342187659&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-861245397&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1521,7 +1537,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-342187659&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-861245397&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
