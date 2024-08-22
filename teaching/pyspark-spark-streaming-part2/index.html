@@ -1385,15 +1385,15 @@
 <h3 id="kafka-producer-expects-json-serializable-data">Kafka Producer Expects JSON-Serializable Data:</h3>
 <p>The Kafka producer takes as input JSON-serializable data, which can lead to errors if the provided data cannot be serialized properly. Below you will see a few examples of data type that the Kafka producer expects, along with explanations on how to correctly format and serialize this data to avoid common errors.</p>
 <h4 id="sending-an-integer-value">Sending an integer value</h4>
-<p>producer.send(&lsquo;buas-data-n-ai-events&rsquo;, value=12)</p>
-<h4 id="or-sending-type-information-as-a-string">Or sending type information as a string</h4>
-<p>producer.send(&lsquo;buas-data-n-ai-events&rsquo;, value=str(type(12)))</p>
-<h4 id="or-sending-a-json-object-with-type-information-and-value">Or sending a JSON object with type information and value</h4>
-<p>producer.send(
-&lsquo;buas-data-n-ai-events&rsquo;,
-value={&ldquo;type&rdquo;: str(type(12)), &ldquo;value&rdquo;: 12}
-)</p>
-<h3 id="create-a-topic">Create a topic</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">producer</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">&#39;buas-data-n-ai-events&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+</span></span></code></pre></div><h4 id="or-sending-type-information-as-a-string">Or sending type information as a string</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">producer</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">&#39;buas-data-n-ai-events&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">12</span><span class="p">)))</span>
+</span></span></code></pre></div><h4 id="or-sending-a-json-object-with-type-information-and-value">Or sending a JSON object with type information and value</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">producer</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;buas-data-n-ai-events&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">value</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;type&#34;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">12</span><span class="p">)),</span> <span class="s2">&#34;value&#34;</span><span class="p">:</span> <span class="mi">12</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><h3 id="create-a-topic">Create a topic</h3>
 <p>Import <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/875042492617895/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook</a> tot he same folder, rename it to <code>Topic Management and Verification in Databricks</code>, and follow the instructions.</p>
 
       </div>
