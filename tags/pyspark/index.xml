@@ -5,12 +5,46 @@
     <link>https://dataqubed.io/tags/pyspark/</link>
       <atom:link href="https://dataqubed.io/tags/pyspark/index.xml" rel="self" type="application/rss+xml" />
     <description>Pyspark</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 21 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
       <title>Pyspark</title>
       <link>https://dataqubed.io/tags/pyspark/</link>
     </image>
+    
+    <item>
+      <title>PySpark - Module 5.3</title>
+      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part3/</link>
+      <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part3/</guid>
+      <description>&lt;p&gt;While we experimented with setting up a Kafka service and accessing it programmatically, the solution provided in Module 5.2 does not leverage the capabilities of Spark and distributed computing as it focuses primarily on Python-based producers and consumers, without integrating Spark&amp;rsquo;s distributed computing power.&lt;/p&gt;
+&lt;h2 id=&#34;integration-of-kafka-with-apache-spark-structured-streaming&#34;&gt;Integration of Kafka with Apache Spark Structured Streaming:&lt;/h2&gt;
+&lt;h3 id=&#34;reading-data-from-kafka-in-spark-using-pyspark-for-streaming&#34;&gt;Reading Data from Kafka in Spark: Using PySpark for Streaming&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Configure Kafka Consumer: Use PySpark&amp;rsquo;s spark.readStream method to configure a Kafka consumer. Specify the Kafka bootstrap servers and the topic you want to read from.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Stream Data Processing: Define the schema for the incoming data and apply any necessary transformations using PySpark DataFrame operations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Start Streaming: Use writeStream to output the results to a desired sink, like console, HDFS, or another Kafka topic, and start the streaming process.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1975282697838214/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; to the same folder, rename it to &lt;code&gt;Kafka-to-Delta Streaming Pipeline&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary class=&#34;cursor-pointer&#34;&gt;Writing Data to Kafka from Spark!&lt;/summary&gt;
+  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
+    How to write processed data back to Kafka topics using PySpark? This is a topic that I encourage motivated students to study it by themselves.
+  &lt;/div&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;windowed-aggregations-performing-windowed-aggregations-on-streaming-data-from-kafka-using-pyspark&#34;&gt;Windowed Aggregations: Performing windowed aggregations on streaming data from Kafka using PySpark&lt;/h3&gt;
+&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065282/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; to the same folder and rename in to &lt;code&gt;Windowed Aggregations on Streaming Data&lt;/code&gt;. Follow the content and try to understand what is going on there.&lt;/p&gt;
+&lt;h3 id=&#34;assignment&#34;&gt;Assignment&lt;/h3&gt;
+&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065276/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; to the same folder and look into the results. Can you explain what is the results you see in table &lt;code&gt;windowed_aggregations&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Whats next?&lt;/strong&gt; Module 5.4 (for year 2025-2026) will be dedicated to the best practices for kafka in databricks! Do you absolutely want to have it this year? Write Mohsen and email.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>PySpark - Module 5.2</title>
@@ -51,40 +85,6 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-a-topic&#34;&gt;Create a topic&lt;/h3&gt;
 &lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/875042492617895/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; tot he same folder, rename it to &lt;code&gt;Topic Management and Verification in Databricks&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>PySpark - Module 5.3</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part3/</link>
-      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part3/</guid>
-      <description>&lt;p&gt;While we experimented with setting up a Kafka service and accessing it programmatically, the solution provided in Module 5.2 does not leverage the capabilities of Spark and distributed computing as it focuses primarily on Python-based producers and consumers, without integrating Spark&amp;rsquo;s distributed computing power.&lt;/p&gt;
-&lt;h2 id=&#34;integration-of-kafka-with-apache-spark-structured-streaming&#34;&gt;Integration of Kafka with Apache Spark Structured Streaming:&lt;/h2&gt;
-&lt;h3 id=&#34;reading-data-from-kafka-in-spark-using-pyspark-for-streaming&#34;&gt;Reading Data from Kafka in Spark: Using PySpark for Streaming&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Configure Kafka Consumer: Use PySpark&amp;rsquo;s spark.readStream method to configure a Kafka consumer. Specify the Kafka bootstrap servers and the topic you want to read from.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Stream Data Processing: Define the schema for the incoming data and apply any necessary transformations using PySpark DataFrame operations.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Start Streaming: Use writeStream to output the results to a desired sink, like console, HDFS, or another Kafka topic, and start the streaming process.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1975282697838214/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; to the same folder, rename it to &lt;code&gt;Kafka-to-Delta Streaming Pipeline&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
-  &lt;summary class=&#34;cursor-pointer&#34;&gt;Writing Data to Kafka from Spark!&lt;/summary&gt;
-  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
-    How to write processed data back to Kafka topics using PySpark? This is a topic that I encourage motivated students to study it by themselves.
-  &lt;/div&gt;
-&lt;/details&gt;
-&lt;h3 id=&#34;windowed-aggregations-performing-windowed-aggregations-on-streaming-data-from-kafka-using-pyspark&#34;&gt;Windowed Aggregations: Performing windowed aggregations on streaming data from Kafka using PySpark&lt;/h3&gt;
-&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065282/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; to the same folder and rename in to &lt;code&gt;Windowed Aggregations on Streaming Data&lt;/code&gt;. Follow the content and try to understand what is going on there.&lt;/p&gt;
-&lt;h3 id=&#34;assignment&#34;&gt;Assignment&lt;/h3&gt;
-&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065276/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; to the same folder and look into the results. Can you explain what is the results you see in table &lt;code&gt;windowed_aggregations&lt;/code&gt;?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Whats next?&lt;/strong&gt; Module 5.4 (for year 2025-2026) will be dedicated to the best practices for kafka in databricks! Do you absolutely want to have it this year? Write Mohsen and email.&lt;/p&gt;
 </description>
     </item>
     
