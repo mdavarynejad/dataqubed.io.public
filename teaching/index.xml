@@ -5,12 +5,121 @@
     <link>https://dataqubed.io/teaching/</link>
       <atom:link href="https://dataqubed.io/teaching/index.xml" rel="self" type="application/rss+xml" />
     <description>Teaching</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 23 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
       <title>Teaching</title>
       <link>https://dataqubed.io/teaching/</link>
     </image>
+    
+    <item>
+      <title>BRD for Successful Project Execution</title>
+      <link>https://dataqubed.io/teaching/business-requirement-document-brd/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/business-requirement-document-brd/</guid>
+      <description>&lt;h2 id=&#34;importance-of-a-business-requirement-document-brd-for-successful-project-execution&#34;&gt;Importance of a Business Requirement Document (BRD) for Successful Project Execution&lt;/h2&gt;
+&lt;p&gt;When working on data-heavy projects that involve developing machine learning models and directly interacting with key stakeholders, having a well-defined Business Requirement Document (BRD) is crucial. A BRD acts as a blueprint for the project, ensuring that all team members and stakeholders are aligned on the goals, scope, and deliverables. Without a BRD, projects can easily suffer from scope creep, miscommunication, and a lack of clear direction. This post will serve as a guideline for students on how to approach their projects using a BRD, which will be a critical tool throughout the year.&lt;/p&gt;
+&lt;h2 id=&#34;why-a-brd-is-essential&#34;&gt;Why a BRD is Essential&lt;/h2&gt;
+&lt;h3 id=&#34;1-reduces-scope-creep&#34;&gt;1. &lt;strong&gt;Reduces Scope Creep&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A BRD helps to clearly define what is and isn&amp;rsquo;t part of the project. This clarity prevents additional, unplanned tasks from creeping into the project scope, which can derail timelines and resources.&lt;/p&gt;
+&lt;h3 id=&#34;2-aligns-project-goals&#34;&gt;2. &lt;strong&gt;Aligns Project Goals&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;By outlining the project goals and getting sign-off from all stakeholders, the BRD ensures that everyone involved has the same understanding of the project&amp;rsquo;s objectives. This alignment is crucial for the project&amp;rsquo;s success.&lt;/p&gt;
+&lt;h3 id=&#34;3-formalizes-project-efforts&#34;&gt;3. &lt;strong&gt;Formalizes Project Efforts&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;A BRD serves as a formal document that tracks the progress of the project. It provides a reference point for what has been agreed upon, making it easier to track milestones and hold team members accountable.&lt;/p&gt;
+&lt;h2 id=&#34;steps-to-create-a-brd&#34;&gt;Steps to Create a BRD&lt;/h2&gt;
+&lt;h3 id=&#34;1-sign-off-grid&#34;&gt;1. &lt;strong&gt;Sign-off Grid&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; To document agreement from all team members on the project goals and timeline.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action:&lt;/strong&gt; List each team member&amp;rsquo;s name, email, and the date they signed off on the BRD. This ensures that everyone is on the same page from the start.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-problem-statement&#34;&gt;2. &lt;strong&gt;Problem Statement&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; To clearly define the focus of the project.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action:&lt;/strong&gt; Write a concise statement that outlines the problem the project aims to solve.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-background--context&#34;&gt;3. &lt;strong&gt;Background &amp;amp; Context&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; To provide the necessary background information and define the scope of the project.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action:&lt;/strong&gt; Describe the context of the project, including what is in scope and what is not. This section should give all stakeholders a clear understanding of the project’s environment and limitations.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-business-impact-metrics&#34;&gt;4. &lt;strong&gt;Business Impact Metrics&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; To set benchmarks and KPIs that will measure the project&amp;rsquo;s success.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action:&lt;/strong&gt; Define the metrics that will be used to assess the project&amp;rsquo;s impact. These should be quantifiable and directly linked to the project&amp;rsquo;s goals.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-business-requirements&#34;&gt;5. &lt;strong&gt;Business Requirements&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; To list all the features and deliverables that the project will produce.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action:&lt;/strong&gt; Document the key business requirements, prioritizing them based on their importance to the project&amp;rsquo;s success. Each requirement should have a clear description and rationale.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-key-dates&#34;&gt;6. &lt;strong&gt;Key Dates&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; To establish a timeline for the project.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action:&lt;/strong&gt; Define the key phases of the project and the dates by which deliverables are expected. This timeline will help manage expectations and keep the project on track.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7-resources&#34;&gt;7. &lt;strong&gt;Resources&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Purpose:&lt;/strong&gt; To list any additional materials or references that are relevant to the project.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action:&lt;/strong&gt; Include links to documents, code files, or other resources that team members may need throughout the project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;suggested-template-for-your-brd&#34;&gt;Suggested Template for Your BRD&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# Business Requirement Document (BRD)
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Project Name:**&lt;/span&gt; [Insert Project Name]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Status:**&lt;/span&gt; [Draft/Final]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Last Updated:**&lt;/span&gt; [Insert Date]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Authors:**&lt;/span&gt; [Insert Author Names]  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gs&#34;&gt;**Collaborators:**&lt;/span&gt; [Insert Collaborator Names]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Table of Contents
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;1.&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Sign-off Grid&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#sign-off-grid&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;2.&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Problem Statement&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#problem-statement&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;3.&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Background &amp;amp; Context&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#background--context&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;4.&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Business Impact Metrics&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#business-impact-metrics&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;5.&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Business Requirements&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#business-requirements&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;6.&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Key Dates&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#key-dates&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;7.&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Resources&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;#resources&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Sign-off Grid
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| Team Member | Role | Date |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| ----------- | ---- | ---- |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| [Name] | [Role] | [Date] |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| [Name] | [Role] | [Date] |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Problem Statement
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Insert Problem Statement]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Background &amp;amp; Context
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Insert Background &lt;span class=&#34;err&#34;&gt;&amp;amp;&lt;/span&gt; Context]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Business Impact Metrics
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Insert Business Impact Metrics]
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Business Requirements
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| Requirements | Priority | Notes |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| ------------ | -------- | ----- |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| [Requirement 1] | [P0/P1] | [Notes] |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| [Requirement 2] | [P0/P1] | [Notes] |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Key Dates
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| Phase | Artifact | Date | Owner | Status |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| ----- | -------- | ---- | ------ | ------ |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| [Phase 1] | [Artifact] | [Date] | [Owner] | [Status] |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| [Phase 2] | [Artifact] | [Date] | [Owner] | [Status] |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## Resources
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Insert Links to Resources]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;By following this guideline and using the provided template, students can ensure that their projects are well-structured and have a clear path to success. The BRD is not just a formality but a strategic tool that helps to drive the project forward with clarity and purpose.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>PySpark - Module 5.3</title>
@@ -1026,9 +1135,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>Unlocking Entrepreneurial Success</title>
-      <link>https://dataqubed.io/teaching/hugo-how-to/</link>
+      <link>https://dataqubed.io/teaching/unlocking-entrepreneurial-success/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/hugo-how-to/</guid>
+      <guid>https://dataqubed.io/teaching/unlocking-entrepreneurial-success/</guid>
       <description>&lt;p&gt;As you prepare to have a head start in your third year, where you&amp;rsquo;ll dive into exciting projects with real companies, there&amp;rsquo;s no better time to get inspired by someone who&amp;rsquo;s mastered the art of entrepreneurship. Steven Bartlett’s podcast on Spotify features a conversation with Marc Randolph, the former CEO of Netflix, and it&amp;rsquo;s packed with insights that could reshape how you approach your own projects.&lt;/p&gt;
 &lt;p&gt;Marc Randolph has been through the highs and lows of building a business from the ground up. In this podcast, he shares his journey and the tough lessons he’s learned along the way. One of his core beliefs? Every idea is bad—until you prove otherwise. This mindset is not just about being skeptical; it’s about understanding that success comes from testing, refining, and relentlessly improving your ideas.&lt;/p&gt;
 &lt;p&gt;Listening to this podcast will give you a fresh perspective on how to tackle the challenges you&amp;rsquo;ll face this year. It’s a must-hear for anyone serious about turning ideas into reality. Get ready to learn from one of the best, and start your year with the motivation to make your projects truly exceptional.&lt;/p&gt;
