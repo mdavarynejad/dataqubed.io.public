@@ -35,9 +35,9 @@
     
     <item>
       <title>Shaping Your Success and Impact</title>
-      <link>https://dataqubed.io/teaching/business-requirement-document-brd---copy/</link>
+      <link>https://dataqubed.io/teaching/practicing-civility-can-enhance-your-leadership/</link>
       <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/business-requirement-document-brd---copy/</guid>
+      <guid>https://dataqubed.io/teaching/practicing-civility-can-enhance-your-leadership/</guid>
       <description>&lt;h2 id=&#34;the-power-of-civility-shaping-your-success-and-impact&#34;&gt;The Power of Civility: Shaping Your Success and Impact&lt;/h2&gt;
 &lt;p&gt;As you prepare to step into the professional world and take on real projects with companies, there&amp;rsquo;s one question that will shape your success more than any other: Who do you want to be? This isn&amp;rsquo;t just about your skills or knowledge—it&amp;rsquo;s rather more about &lt;code&gt;how you choose to show up every day&lt;/code&gt;, &lt;code&gt;how you treat the people around you&lt;/code&gt;, and &lt;code&gt;the environment you help create&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Watch to bellow TedTalk and remind yourselves of the powerful impact of civility—or the lack of it—on everything from &lt;code&gt;team performance&lt;/code&gt; to &lt;code&gt;personal well-being&lt;/code&gt;. You&amp;rsquo;ll hear compelling research and real-world stories that reveal just how critical it is to be mindful of our interactions. In the workplace and within your small study group, incivility isn’t just unpleasant; &lt;code&gt;it’s a productivity killer&lt;/code&gt;. It drains motivation, diminishes creativity, and even puts lives at risk in critical situations. But the good news is that civility pays off—in your &lt;code&gt;relationships&lt;/code&gt;, your &lt;code&gt;work&lt;/code&gt;, and your &lt;code&gt;overall success&lt;/code&gt;.&lt;/p&gt;
@@ -60,7 +60,7 @@
       <link>https://dataqubed.io/teaching/business-requirement-document-brd/</link>
       <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/teaching/business-requirement-document-brd/</guid>
-      <description>&lt;p&gt;Why I never say &lt;code&gt;Yes&lt;/code&gt; to a project without a BRD. I either drop it, and we have to agree to make one.&lt;/p&gt;
+      <description>&lt;p&gt;Why I never say &lt;code&gt;Yes&lt;/code&gt; to a project without a BRD. I either drop it, or we have to agree to make one.&lt;/p&gt;
 &lt;h2 id=&#34;importance-of-a-business-requirement-document-brd-for-successful-project-execution&#34;&gt;Importance of a Business Requirement Document (BRD) for Successful Project Execution&lt;/h2&gt;
 &lt;p&gt;When working on data-heavy projects that involve developing machine learning models and directly interacting with key stakeholders, having a well-defined Business Requirement Document (BRD) is crucial. A BRD acts as a blueprint for the project, ensuring that all team members and stakeholders are aligned on the goals, scope, and deliverables. Without a BRD, projects can easily suffer from scope creep, miscommunication, and a lack of clear direction. This post will serve as a guideline for students on how to approach their projects using a BRD, which will be a critical tool throughout the year.&lt;/p&gt;
 &lt;h2 id=&#34;why-a-brd-is-essential&#34;&gt;Why a BRD is Essential&lt;/h2&gt;
@@ -1806,7 +1806,7 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 
 
 
-&lt;div id=&#34;chart-231946758&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-253198674&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1824,7 +1824,7 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-231946758&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-253198674&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
