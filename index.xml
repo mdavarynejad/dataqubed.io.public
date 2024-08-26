@@ -34,7 +34,7 @@
     </item>
     
     <item>
-      <title>Applying Conway&#39;s Law - A Blueprint for Successful Student Projects</title>
+      <title>Applying Conway&#39;s Law - A Blueprint for Successful Projects</title>
       <link>https://dataqubed.io/blog/a-blueprint-for-successful-student-projects/</link>
       <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/blog/a-blueprint-for-successful-student-projects/</guid>
@@ -42,22 +42,22 @@
 &lt;h3 id=&#34;what-is-conways-law&#34;&gt;What is Conway&amp;rsquo;s Law?&lt;/h3&gt;
 &lt;p&gt;Conway&amp;rsquo;s Law is a concept that was first introduced by Melvin Conway in 1968. It states:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations.&amp;rdquo;&lt;br&gt;
-— Melvin Conway&lt;/p&gt;
+&lt;p&gt;Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations.
+— Melvin E. Conway, How Do Committees Invent?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;In simpler terms, the way our team communicates and is organized will directly influence the design and outcome of the project we&amp;rsquo;re working on. If we have clear, efficient communication, our project is likely to be well-structured and cohesive. On the other hand, if our communication is disjointed or fragmented, that might reflect in the final product.&lt;/p&gt;
 &lt;h3 id=&#34;why-should-you-care-about-conways-law&#34;&gt;Why Should You Care About Conway&amp;rsquo;s Law?&lt;/h3&gt;
 &lt;p&gt;As students, you&amp;rsquo;re stepping into a project that has real-world implications and business impact. Our client is counting on us to deliver something valuable and functional. Understanding Conway&amp;rsquo;s Law can help us ensure that we meet (and hopefully exceed) their expectations. Here’s how:&lt;/p&gt;
 &lt;h4 id=&#34;1-structuring-our-team-for-success&#34;&gt;1. Structuring Our Team for Success&lt;/h4&gt;
 &lt;p&gt;Before we dive into the project, we need to think about how we’re going to structure our team. The way we organize ourselves can have a big impact on the project’s success:&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Dividing and Conquering:&lt;/em&gt; If the project has different components or modules, it might make sense to break into smaller groups, each responsible for a specific part. This approach can help us manage the work more effectively and ensure that each part of the project is well-developed.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Dividing and Conquering:&lt;/em&gt; If the project involves different components such as data preprocessing, model development, and algorithm optimization, it might make sense to break into smaller groups, each responsible for a specific part. This approach can help us manage the work more effectively and ensure that each part of the project is well-developed.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Collaboration Across Groups:&lt;/em&gt; Even if we’re divided into smaller teams, it’s important that we communicate and collaborate with each other regularly. This will help prevent any parts of the project from becoming isolated or disconnected from the whole.&lt;/p&gt;
 &lt;h4 id=&#34;2-communication-is-key&#34;&gt;2. Communication is Key&lt;/h4&gt;
-&lt;p&gt;For our project to be successful, we need to ensure that our communication is clear, efficient, and consistent:&lt;/p&gt;
+&lt;p&gt;Given the complexity of machine learning workflows, clear communication between team members working on different stages—like data handling, feature engineering, and model evaluation—is crucial. For our project to be successful, we need to ensure that our communication is clear, efficient, and consistent:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Regular Check-ins:&lt;/em&gt; We’ll have regular meetings to discuss progress, challenges, and next steps. These check-ins are crucial for keeping everyone on the same page and ensuring that we’re all moving in the same direction.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Clear Roles:&lt;/em&gt; Each of us will have specific roles and responsibilities within the project. Knowing who to go to for what will help streamline our communication and make sure that nothing falls through the cracks.&lt;/p&gt;
 &lt;h4 id=&#34;3-working-with-the-client&#34;&gt;3. Working with the Client&lt;/h4&gt;
-&lt;p&gt;Our client is an important part of this project, and understanding how they work will help us deliver a product that meets their needs:&lt;/p&gt;
+&lt;p&gt;Aligning our approach with the client&amp;rsquo;s expectations, especially in terms of the machine learning model&amp;rsquo;s performance and scalability, will be key to delivering a successful outcome. Our client is an important part of this project, and understanding how they work will help us deliver a product that meets their needs:&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Aligning with the Client:&lt;/em&gt; We should take the time to understand the client’s organizational structure and how they communicate. If we can mirror their structure in our team, it might make it easier for us to collaborate and deliver something that fits seamlessly into their operations.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Engaging Stakeholders:&lt;/em&gt; We’ll make sure to involve the right people from the client’s side throughout the project. Their feedback is invaluable in making sure we’re on the right track.&lt;/p&gt;
 &lt;h4 id=&#34;4-learning-and-growing&#34;&gt;4. Learning and Growing&lt;/h4&gt;
@@ -737,6 +737,12 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;li&gt;&lt;a href=&#34;https://www.interregeurope.eu/project-ideas&#34;&gt;Interreg Europe&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;[SideProject]https://www.reddit.com/r/SideProject/&lt;/li&gt;
 &lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Online courses (I&amp;rsquo;m not endorsing any of the courses/materials listed bellow. This is only a place for me to look at them at a later stage!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udemy.com/course/intro-to-optimization-pt1/&#34;&gt;Intro to Optimization Through the Lens of Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -1071,25 +1077,25 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/teaching/pyspark-fundamentals-and-advanced-topics/</guid>
       <description>&lt;h3 id=&#34;pyspark-fundamentals-and-advanced-topics&#34;&gt;PySpark Fundamentals and Advanced Topics&lt;/h3&gt;
-&lt;p&gt;Distributed computing is at the heart of all the recent advancements of Data science and AI models. We can now scale out as an alternative to scale up. And that makes it possible to retrieve data, prepare the data and train our models not only at a faster speed, but also cheaper.&lt;/p&gt;
+&lt;p&gt;Distributed computing is at the heart of all the recent advancements of Data science and AI models. We can now &lt;code&gt;scale out&lt;/code&gt; as an alternative to &lt;code&gt;scale up&lt;/code&gt;. And that makes it possible to retrieve data, prepare the data and train our models not only at a faster speed, but also cheaper.&lt;/p&gt;
 &lt;p&gt;One of the pioneer commercial players on the filed of distributed computing is DataBricks. This the company behind the open source Spark community.&lt;/p&gt;
 &lt;h4 id=&#34;course-objective&#34;&gt;Course Objective&lt;/h4&gt;
 &lt;p&gt;In today&amp;rsquo;s data-driven world, the volume of data generated is growing exponentially. Traditional data processing systems struggle to handle this deluge efficiently. Distributed computing frameworks like Apache Spark have emerged as powerful tools for processing large datasets quickly and efficiently. Understanding Spark and PySpark (the Python API for Spark) is crucial for data professionals who want to leverage the full potential of big data. This course is designed to equip you with the skills to process and analyse large datasets using Apache Spark and PySpark, emphasizing its importance in modern data science and machine learning workflows. By the end of this course, you will have a good understanding of how to process, analyze, and manipulate large datasets efficiently. You will also gain hands-on experience in building machine learning models and optimizing Spark queries for performance.&lt;/p&gt;
-&lt;p&gt;Over 32 hours of content is prepared that would help you develop a solid understanding of distributed computing, Spark&amp;rsquo;s architecture, and how to apply Spark for big data processing. The course includes a mix of theoretical concepts and hands-on exercises, leveraging free online resources.&lt;/p&gt;
+&lt;p&gt;Over 30 hours of content is prepared that would help you develop a solid understanding of distributed computing, Spark&amp;rsquo;s architecture, and how to apply Spark for big data processing. The course includes a mix of theoretical concepts and hands-on exercises, leveraging free online resources.&lt;/p&gt;
 &lt;h4 id=&#34;course-highlights&#34;&gt;Course Highlights&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Fundamentals of PySpark&lt;/strong&gt;: Learn the basics of PySpark, including its architecture, Resilient Distributed Datasets (RDDs), and DataFrames.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Data Processing and SQL&lt;/strong&gt;: Master the use of DataFrames and Spark SQL for data manipulation and querying.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Streaming and Real-Time Data&lt;/strong&gt;: Understand how to process real-time data using Spark Streaming.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;: Explore machine learning techniques and build models using Spark&amp;rsquo;s MLlib.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Optimization Techniques&lt;/strong&gt;: Learn how to optimize Spark applications for better performance and efficiency.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Capstone Project&lt;/strong&gt;: Apply your knowledge to a real-world project, demonstrating your ability to handle big data problems from start to finish.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;: Explore machine learning techniques and build models using Spark&amp;rsquo;s MLlib (for year 2025 - 2026).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimization Techniques&lt;/strong&gt;: Learn how to optimize Spark applications for better performance and efficiency (for year 2025 - 2026).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Capstone Project&lt;/strong&gt;: Apply your knowledge to a real-world project, demonstrating your ability to handle big data problems from start to finish (for year 2025 - 2026).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;learning-outcomes&#34;&gt;Learning Outcomes&lt;/h4&gt;
 &lt;p&gt;By the end of this course, you will be able to:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Install and configure PySpark on a Linux environment.&lt;/li&gt;
 &lt;li&gt;Understand and explain the architecture and components of Apache Spark.&lt;/li&gt;
+&lt;li&gt;Install and configure PySpark on a Linux environment (WSL).&lt;/li&gt;
 &lt;li&gt;Work with RDDs and DataFrames for data processing and analysis.&lt;/li&gt;
 &lt;li&gt;Use Spark SQL to run queries and manipulate structured data.&lt;/li&gt;
 &lt;li&gt;Process streaming data with Spark Streaming.&lt;/li&gt;
@@ -1121,7 +1127,7 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;/ul&gt;
 &lt;p&gt;This structured approach ensures that you will have ample time to grasp each concept thoroughly, practice through hands-on exercises, and apply what you have learned to real-world scenarios.&lt;/p&gt;
 &lt;h4 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h4&gt;
-&lt;p&gt;To begin, make sure you can install and configure PySpark. Familiarize yourself with the course materials, including the recommended readings and online resources. Each module contains practical assignments and quizzes to reinforce your learning, so take your time to complete these exercises.&lt;/p&gt;
+&lt;p&gt;To begin, make sure you can install and configure PySpark. Familiarize yourself with the course materials, including the recommended readings and online resources. Each module might  contain practical assignments and quizzes to reinforce your learning, so take your time to complete these exercises when available.&lt;/p&gt;
 &lt;h3 id=&#34;course-outline-pyspark-fundamentals-and-advanced-topicshttpsdataqubedioteachingpyspark-fundamentals-and-advanced-topics&#34;&gt;Course Outline: &lt;a href=&#34;https://dataqubed.io/teaching/pyspark-fundamentals-and-advanced-topics/&#34;&gt;PySpark Fundamentals and Advanced Topics&lt;/a&gt;&lt;/h3&gt;
 &lt;h4 id=&#34;module-1-introduction-to-big-data-and-apache-sparkhttpsdataqubedioteachingpyspark-introduction-to-big-data-and-apache-spark&#34;&gt;&lt;a href=&#34;https://dataqubed.io/teaching/pyspark-introduction-to-big-data-and-apache-spark/&#34;&gt;Module 1: Introduction to Big Data and Apache Spark&lt;/a&gt;&lt;/h4&gt;
 &lt;ol&gt;
@@ -1134,14 +1140,13 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;li&gt;&lt;strong&gt;Overview of Apache Spark&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;History and evolution&lt;/li&gt;
-&lt;li&gt;Comparison with Hadoop MapReduce&lt;/li&gt;
 &lt;li&gt;Components of the Spark ecosystem&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Installing PySpark&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;System requirements&lt;/li&gt;
-&lt;li&gt;Installing PySpark on a Linux environment&lt;/li&gt;
+&lt;li&gt;Installing PySpark on a Linux environment (WSL)&lt;/li&gt;
 &lt;li&gt;Configuring PySpark and Jupyter Notebook&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1309,10 +1314,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h4 id=&#34;module-9-advanced-features&#34;&gt;Module 9: Advanced Features&lt;/h4&gt;
-&lt;ol&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Working with GraphX for graph processing&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Using structured streaming for real-time analytics&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;learning-resources&#34;&gt;Learning Resources&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Documentation and Tutorials&lt;/strong&gt;
@@ -1971,7 +1975,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-832175469&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-348712965&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1989,7 +1993,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-832175469&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-348712965&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
