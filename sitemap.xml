@@ -10,19 +10,35 @@
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://dataqubed.io/blog/a-blueprint-for-successful-student-projects/</loc>
+    <lastmod>2024-08-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/blog/</loc>
+    <lastmod>2024-08-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/projectmanagement/</loc>
+    <lastmod>2024-08-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/</loc>
+    <lastmod>2024-08-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/teamcollaboration/</loc>
+    <lastmod>2024-08-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/year-3/</loc>
+    <lastmod>2024-08-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://dataqubed.io/teaching/practicing-civility-can-enhance-your-leadership/</loc>
     <lastmod>2024-08-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/</loc>
-    <lastmod>2024-08-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://dataqubed.io/teaching/</loc>
-    <lastmod>2024-08-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/year-3/</loc>
     <lastmod>2024-08-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -44,10 +60,6 @@
   </url><url>
     <loc>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</loc>
     <lastmod>2024-08-20T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/blog/</loc>
-    <lastmod>2024-08-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/hugo-how-to/</loc>
@@ -220,9 +232,6 @@
   </url><url>
     <loc>https://dataqubed.io/publication_types/paper-conference/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/blog/shorts/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
