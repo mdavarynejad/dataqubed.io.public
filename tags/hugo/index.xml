@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HUGO | Your Data Science Mentor - Mohsen Davarynejad</title>
+    <title>Hugo | Your Data Science Mentor - Mohsen Davarynejad</title>
     <link>https://dataqubed.io/tags/hugo/</link>
       <atom:link href="https://dataqubed.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    <description>HUGO</description>
+    <description>Hugo</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 19 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
-      <title>HUGO</title>
+      <title>Hugo</title>
       <link>https://dataqubed.io/tags/hugo/</link>
     </image>
     
@@ -71,20 +71,6 @@
 &lt;li&gt;Refresh the page and scroll back down to GitHub Pages—you should see a link to your new website!&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;And that’s it! Your Hugo site is now live on GitHub Pages.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Useful links</title>
-      <link>https://dataqubed.io/blog/useful-links/</link>
-      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/blog/useful-links/</guid>
-      <description>&lt;h2 id=&#34;useful-links&#34;&gt;useful links&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://davarynejad.com/&#34;&gt;Prof.dr. Davarynejad&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://forghany.com/&#34;&gt;Zary Forghany&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://miriam-hacker.com/&#34;&gt;Miriam Hacker, Research Program Manager at The Water Research Foundation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

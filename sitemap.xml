@@ -58,6 +58,10 @@
     <lastmod>2024-08-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://dataqubed.io/tags/links/</loc>
+    <lastmod>2024-08-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://dataqubed.io/teaching/pyspark-spark-streaming-part0/</loc>
     <lastmod>2024-08-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -126,24 +130,24 @@
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/shorts/get-started/</loc>
+    <loc>https://dataqubed.io/blog/teach-courses/</loc>
+    <lastmod>2023-11-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/markdown/</loc>
+    <lastmod>2023-11-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/shorts/</loc>
+    <lastmod>2023-11-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/blog/get-started/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/academic/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/shorts/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/shorts/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/markdown/</loc>
-    <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/pandas/</loc>
@@ -162,16 +166,12 @@
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/shorts/second-brain/</loc>
+    <loc>https://dataqubed.io/blog/second-brain/</loc>
     <lastmod>2023-10-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/shorts/data-visualization/</loc>
+    <loc>https://dataqubed.io/blog/data-visualization/</loc>
     <lastmod>2023-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/shorts/teach-courses/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/experience/</loc>
@@ -220,6 +220,9 @@
   </url><url>
     <loc>https://dataqubed.io/publication_types/paper-conference/</loc>
     <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/blog/shorts/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
