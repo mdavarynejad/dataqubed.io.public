@@ -37,6 +37,19 @@
     </item>
     
     <item>
+      <title>PySpark - Sparkling Water-part0</title>
+      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</link>
+      <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</guid>
+      <description>&lt;p&gt;Import 
+ to the same folder, rename it to &lt;code&gt;Kafka-to-Delta Streaming Pipeline&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
+&lt;h3 id=&#34;assignment&#34;&gt;Assignment&lt;/h3&gt;
+&lt;p&gt;Import 
+ to the same folder and look into the results. Can you explain what is the results you see in table &lt;code&gt;windowed_aggregations&lt;/code&gt;?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Applying Conway&#39;s Law - A Blueprint for Successful Projects</title>
       <link>https://dataqubed.io/blog/a-blueprint-for-successful-student-projects/</link>
       <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
@@ -2326,7 +2339,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-426817953&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-194723685&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -2344,7 +2357,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-426817953&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-194723685&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

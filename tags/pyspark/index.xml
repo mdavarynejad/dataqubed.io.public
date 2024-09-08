@@ -5,12 +5,25 @@
     <link>https://dataqubed.io/tags/pyspark/</link>
       <atom:link href="https://dataqubed.io/tags/pyspark/index.xml" rel="self" type="application/rss+xml" />
     <description>Pyspark</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 22 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 07 Sep 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
       <title>Pyspark</title>
       <link>https://dataqubed.io/tags/pyspark/</link>
     </image>
+    
+    <item>
+      <title>PySpark - Sparkling Water-part0</title>
+      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</link>
+      <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</guid>
+      <description>&lt;p&gt;Import 
+ to the same folder, rename it to &lt;code&gt;Kafka-to-Delta Streaming Pipeline&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
+&lt;h3 id=&#34;assignment&#34;&gt;Assignment&lt;/h3&gt;
+&lt;p&gt;Import 
+ to the same folder and look into the results. Can you explain what is the results you see in table &lt;code&gt;windowed_aggregations&lt;/code&gt;?&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>PySpark - Module 5.3</title>
