@@ -25,9 +25,30 @@
 &lt;p&gt;Pandas is considered the most widely used tool for data manipulation, filtering, and wrangling. It comes with enormous features and functionalities designed for fast and easy data analytics. As a data scientist, I use its features on a daily basis, and in this post, I’d love to share with you some of the tricks of pandas.&lt;/p&gt;
 &lt;p&gt;I hope that this crafted list of features serves as a quick reference and gives you a good starting point for learning Pandas. The listed features come in no specific order, so no conclusions can be made on the order.&lt;/p&gt;
 &lt;p&gt;I will be using the NVDA ticker price data set for this post. So before going into the feature lists, I’ll share with you a few lines of code to download the data locally.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.hashnode.com/res/hashnode/image/upload/v1706247367147/77d9c9e5-3598-4c6e-8361-889f3740408d.png&#34; alt=&#34;Davarynejad NVDA price&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://cdn.hashnode.com/res/hashnode/image/upload/v1706247367147/77d9c9e5-3598-4c6e-8361-889f3740408d.png&#34; alt=&#34;Davarynejad NVDA price&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Pull the NVDA exchange pricing data&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We will be using Yahoo! Finance&amp;rsquo;s API to download some market data. For that, we will be using the yfinance Python package. Follow &lt;a href=&#34;https://pypi.org/project/yfinance/&#34;&gt;this link and install yfinance&lt;/a&gt;. I installed it using the following single line of code:&lt;/p&gt;
+&lt;p&gt;We will be using Yahoo! Finance&amp;rsquo;s API to download some market data. For that, we will be using the yfinance Python package. Follow 
+. I installed it using the following single line of code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;yfinance&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
@@ -78,9 +99,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Chart the NVDA pricing data&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pandas_profiling&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ProfileReport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NVDA_price&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This helps you with a few lines of code and time-saving tricks when exploring the data. The &lt;code&gt;pandas_profiling&lt;/code&gt; library comes with more features than the one listed above. Interested readers are referred to the official website.&lt;/p&gt;
-&lt;p&gt;The package provides an extensive exploratory data analysis (EDA) that includes reporting on different types of correlations, such as Pearson&amp;rsquo;s r and Phik coefficient (φk). Phik (φk) is a new correlation coefficient that works consistently between categorical, ordinal, and interval variables. Phik can capture non-linear dependency and revert to the Pearson correlation coefficient in the case of the bivariate normal input distribution. Read more &lt;a href=&#34;https://phik.readthedocs.io/en/latest/index.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The package provides an extensive exploratory data analysis (EDA) that includes reporting on different types of correlations, such as Pearson&amp;rsquo;s r and Phik coefficient (φk). Phik (φk) is a new correlation coefficient that works consistently between categorical, ordinal, and interval variables. Phik can capture non-linear dependency and revert to the Pearson correlation coefficient in the case of the bivariate normal input distribution. Read more 
+.&lt;/p&gt;
 &lt;h3 id=&#34;number-9-easy-way-to-convert-data-toint-type&#34;&gt;&lt;strong&gt;Number 9: Easy way to convert data to&lt;/strong&gt;&lt;code&gt;int&lt;/code&gt; type&lt;/h3&gt;
-&lt;p&gt;This is a simple but useful trick! When converting the data into &lt;code&gt;int&lt;/code&gt; type, the most common approach is to use &lt;code&gt;.astype(&#39;int&#39;)&lt;/code&gt;. However, if there are strings or other invalid types, you will face an error, and the conversion will fail. An alternative is to use the &lt;a href=&#34;http://pd.to&#34;&gt;&lt;code&gt;pd.to&lt;/code&gt;&lt;/a&gt;&lt;code&gt;_numeric()&lt;/code&gt; command which will handle the errors. You may try this for yourself.&lt;/p&gt;
+&lt;p&gt;This is a simple but useful trick! When converting the data into &lt;code&gt;int&lt;/code&gt; type, the most common approach is to use &lt;code&gt;.astype(&#39;int&#39;)&lt;/code&gt;. However, if there are strings or other invalid types, you will face an error, and the conversion will fail. An alternative is to use the 
+&lt;code&gt;_numeric()&lt;/code&gt; command which will handle the errors. You may try this for yourself.&lt;/p&gt;
 &lt;h3 id=&#34;number-8-break-up-strings-in-multiple-columns&#34;&gt;Number 8: Break up strings in multiple columns&lt;/h3&gt;
 &lt;p&gt;A simple trick for splitting a column into multiple columns using a split function:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;NVDA_price&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NVDA_price&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;expand&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -139,17 +162,23 @@
 &lt;p&gt;Let’s assume that you have a column with millions of entries and you need to find the unique set of values It. &lt;code&gt;df.column_name.drop_duplicates(keep=&amp;quot;first&amp;quot;, inplace=False)&lt;/code&gt; is a lot faster than &lt;code&gt;df.column_name.unique()&lt;/code&gt;. Can be tested using &lt;code&gt;%timeit&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;keep=&amp;quot;first&amp;quot;&lt;/code&gt; option drops all the duplicates except for the first occurrence.&lt;/p&gt;
 &lt;h3 id=&#34;number-1-ufuncs&#34;&gt;Number 1: Ufuncs&lt;/h3&gt;
-&lt;p&gt;As explained &lt;a href=&#34;https://towardsdatascience.com/pandas-tips-and-tricks-33bcc8a40bb9&#34;&gt;here&lt;/a&gt; Pandas &lt;code&gt;Ufuncs&lt;/code&gt; is much better than &lt;code&gt;.apply&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;As explained 
+ Pandas &lt;code&gt;Ufuncs&lt;/code&gt; is much better than &lt;code&gt;.apply&lt;/code&gt; command.&lt;/p&gt;
 &lt;h2 id=&#34;wrap-up&#34;&gt;Wrap-Up&lt;/h2&gt;
 &lt;p&gt;This post should give you an idea of some Pandas tricks commonly used by data scientists. The list aims to make your code more efficient.&lt;/p&gt;
 &lt;p&gt;In my next post, I&amp;rsquo;ll share some basic concepts you need for working with data in &lt;code&gt;PySpark&lt;/code&gt;. The post will cover topics such as reading and writing data from CSV files, along with some basic statistical analysis and visualization of data.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;notes&#34;&gt;Notes:&lt;/h3&gt;
-&lt;p&gt;1 - The official panda&lt;a href=&#34;https://learnpython.com/course/python-data-science?icn=blogTraffic&amp;amp;ici=link-ArticleBottom&#34;&gt;s cheat sheet can be downloaded from he&lt;/a&gt;&lt;a href=&#34;https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf&#34;&gt;re&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;2- Link to the &lt;a href=&#34;https://github.com/mdavarynejad&#34;&gt;notebook of this tutorial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;1 - The official panda
+
+.&lt;/p&gt;
+&lt;p&gt;2- Link to the 
+.&lt;/p&gt;
 &lt;h3 id=&#34;refernces&#34;&gt;Refernces:&lt;/h3&gt;
-&lt;p&gt;1 - &lt;a href=&#34;https://www.youtube.com/watch?v=FxrGx8cPJlQ&amp;amp;t=33s&#34;&gt;Data School&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2 - &lt;a href=&#34;https://gist.github.com/luerhard/703716567879afefa59c06e5af48c371&#34;&gt;Lukas Erhard&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1 - 
+&lt;/p&gt;
+&lt;p&gt;2 - 
+&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Please leave a message below if you would like to share your thoughts or if you like to share your tricks on Pandas.&lt;/p&gt;</description>
     </item>

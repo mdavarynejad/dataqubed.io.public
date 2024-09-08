@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: August 27, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: September 8, 2024 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="dark">
   
 <head>
@@ -1480,103 +1480,105 @@
 </span></span><span class="line"><span class="cl"><span class="k">*</span> Artifacts: <span class="p">&lt;</span><span class="nt">link</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="an-example-of-business-requirements">An example of Business Requirements</h2>
 <table>
-<thead>
-<tr>
-<th>Requirements</th>
-<th>Priority</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>BRD:</strong> Create a requirement doc that defines the business scope of the ML project</td>
-<td><strong>P0</strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Data Pipeline:</strong> Create a data pipeline that ingests, transforms, and loads data into the client’s data warehouse.</td>
-<td><strong>P0</strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>ML Model:</strong> Create a model the client can use for churn model scoring.</td>
-<td><strong>P0</strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>ML Score:</strong> Output churn scores across ~10M users in a daily batch.</td>
-<td><strong>P0</strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>ML Monitoring:</strong> Create a model monitoring service that checks for model drifts.</td>
-<td><strong>P1</strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>Feature Importance:</strong> Display features that are strong predictors for user churn.</td>
-<td><strong>P1</strong></td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Requirements</th>
+          <th style="text-align: left">Priority</th>
+          <th style="text-align: left">Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>BRD:</strong> Create a requirement doc that defines the business scope of the ML project</td>
+          <td style="text-align: left"><strong>P0</strong></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Data Pipeline:</strong> Create a data pipeline that ingests, transforms, and loads data into the client’s data warehouse.</td>
+          <td style="text-align: left"><strong>P0</strong></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>ML Model:</strong> Create a model the client can use for churn model scoring.</td>
+          <td style="text-align: left"><strong>P0</strong></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>ML Score:</strong> Output churn scores across ~10M users in a daily batch.</td>
+          <td style="text-align: left"><strong>P0</strong></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>ML Monitoring:</strong> Create a model monitoring service that checks for model drifts.</td>
+          <td style="text-align: left"><strong>P1</strong></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Feature Importance:</strong> Display features that are strong predictors for user churn.</td>
+          <td style="text-align: left"><strong>P1</strong></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
 </table>
 <h2 id="an-example-of-key-dates">An example of Key Dates</h2>
 <table>
-<thead>
-<tr>
-<th>Phase</th>
-<th>Artifact</th>
-<th>Date</th>
-<th>Owner</th>
-<th>Status</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Problem Scoping</td>
-<td>BRD, Feasibility Analysis</td>
-<td>07/18/24</td>
-<td>Mohsen, Elavendan</td>
-<td>Done</td>
-</tr>
-<tr>
-<td>Data Preparation</td>
-<td>Data Pipeline</td>
-<td>07/30/24</td>
-<td>Jan, Mohsen</td>
-<td>In Progress</td>
-</tr>
-<tr>
-<td>Model Development</td>
-<td>Benchmark Model</td>
-<td>08/30/24</td>
-<td>Frank, Arash</td>
-<td>In Progress</td>
-</tr>
-<tr>
-<td>Productionization</td>
-<td>Productionized Model with Batch Inference</td>
-<td>09/15/24</td>
-<td>Zhanna, Dean</td>
-<td>Not Started</td>
-</tr>
-<tr>
-<td>Staging</td>
-<td></td>
-<td>09/30/24</td>
-<td>Bram, Alican</td>
-<td></td>
-</tr>
-<tr>
-<td>Launch</td>
-<td></td>
-<td>10/15/24</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Phase</th>
+          <th style="text-align: left">Artifact</th>
+          <th style="text-align: left">Date</th>
+          <th style="text-align: left">Owner</th>
+          <th style="text-align: left">Status</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Problem Scoping</td>
+          <td style="text-align: left">BRD, Feasibility Analysis</td>
+          <td style="text-align: left">07/18/24</td>
+          <td style="text-align: left">Mohsen, Elavendan</td>
+          <td style="text-align: left">Done</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Data Preparation</td>
+          <td style="text-align: left">Data Pipeline</td>
+          <td style="text-align: left">07/30/24</td>
+          <td style="text-align: left">Jan, Mohsen</td>
+          <td style="text-align: left">In Progress</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Model Development</td>
+          <td style="text-align: left">Benchmark Model</td>
+          <td style="text-align: left">08/30/24</td>
+          <td style="text-align: left">Frank, Arash</td>
+          <td style="text-align: left">In Progress</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Productionization</td>
+          <td style="text-align: left">Productionized Model with Batch Inference</td>
+          <td style="text-align: left">09/15/24</td>
+          <td style="text-align: left">Zhanna, Dean</td>
+          <td style="text-align: left">Not Started</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Staging</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">09/30/24</td>
+          <td style="text-align: left">Bram, Alican</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Launch</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">10/15/24</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
 </table>
 <p>By following this guideline and using the provided template, students can ensure that their projects are well-structured and have a clear path to success. The BRD is not just a formality but a strategic tool that helps to drive the project forward with clarity and purpose.</p>
+<p>Need to read more?<br>
+Have a look at <a href="https://uit.stanford.edu/pmo/business-requirements-doc" target="_blank" rel="noopener">this post</a> published on Stanford University&rsquo;s website. It provides an in-depth guide on creating a Business Requirements Document (BRD), outlining the process, benefits, and tips for successful implementation. This resource is invaluable for project teams looking to enhance clarity, efficiency, and communication throughout their project development and delivery.</p>
 
       </div>
 

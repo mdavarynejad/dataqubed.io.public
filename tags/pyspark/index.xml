@@ -31,7 +31,8 @@
 &lt;p&gt;Start Streaming: Use writeStream to output the results to a desired sink, like console, HDFS, or another Kafka topic, and start the streaming process.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1975282697838214/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; to the same folder, rename it to &lt;code&gt;Kafka-to-Delta Streaming Pipeline&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
+&lt;p&gt;Import 
+ to the same folder, rename it to &lt;code&gt;Kafka-to-Delta Streaming Pipeline&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
 &lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-0&#34;&gt;
   &lt;summary class=&#34;cursor-pointer&#34;&gt;Writing Data to Kafka from Spark!&lt;/summary&gt;
   &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
@@ -39,9 +40,11 @@
   &lt;/div&gt;
 &lt;/details&gt;
 &lt;h3 id=&#34;windowed-aggregations-performing-windowed-aggregations-on-streaming-data-from-kafka-using-pyspark&#34;&gt;Windowed Aggregations: Performing windowed aggregations on streaming data from Kafka using PySpark&lt;/h3&gt;
-&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065282/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; to the same folder and rename in to &lt;code&gt;Windowed Aggregations on Streaming Data&lt;/code&gt;. Follow the content and try to understand what is going on there.&lt;/p&gt;
+&lt;p&gt;Import 
+ to the same folder and rename in to &lt;code&gt;Windowed Aggregations on Streaming Data&lt;/code&gt;. Follow the content and try to understand what is going on there.&lt;/p&gt;
 &lt;h3 id=&#34;assignment&#34;&gt;Assignment&lt;/h3&gt;
-&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065276/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; to the same folder and look into the results. Can you explain what is the results you see in table &lt;code&gt;windowed_aggregations&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;Import 
+ to the same folder and look into the results. Can you explain what is the results you see in table &lt;code&gt;windowed_aggregations&lt;/code&gt;?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Whats next?&lt;/strong&gt; Module 5.4 (for year 2025-2026) will be dedicated to the best practices for kafka in databricks! Do you absolutely want to have it this year? Write Mohsen and email.&lt;/p&gt;
 </description>
     </item>
@@ -67,11 +70,53 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;These steps will prepare your environment for further development and organization as you proceed with the tasks in Module 5.&lt;/p&gt;
-&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/2453801694937611/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;, rename it to &lt;code&gt;Producer&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
-&lt;p&gt;In a new window in the same folder import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/2453801694937607/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;, rename it to &lt;code&gt;Consumer&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-db-cluster.png&#34; alt=&#34;Kafka&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Import 
+, rename it to &lt;code&gt;Producer&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
+&lt;p&gt;In a new window in the same folder import 
+, rename it to &lt;code&gt;Consumer&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-db-cluster.png&#34; alt=&#34;Kafka&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;Explain what is going on here. Why the Consumer has an entry (The bottom right screen of the image bellow)
-&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens-3.png&#34; alt=&#34;4 shell for 4 services&#34;&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens-3.png&#34; alt=&#34;4 shell for 4 services&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h3 id=&#34;kafka-producer-expects-json-serializable-data&#34;&gt;Kafka Producer Expects JSON-Serializable Data:&lt;/h3&gt;
 &lt;p&gt;The Kafka producer takes as input JSON-serializable data, which can lead to errors if the provided data cannot be serialized properly. Below you will see a few examples of data type that the Kafka producer expects, along with explanations on how to correctly format and serialize this data to avoid common errors.&lt;/p&gt;
 &lt;h4 id=&#34;sending-an-integer-value&#34;&gt;Sending an integer value&lt;/h4&gt;
@@ -84,7 +129,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;value&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;create-a-topic&#34;&gt;Create a topic&lt;/h3&gt;
-&lt;p&gt;Import &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/875042492617895/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt; tot he same folder, rename it to &lt;code&gt;Topic Management and Verification in Databricks&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
+&lt;p&gt;Import 
+ tot he same folder, rename it to &lt;code&gt;Topic Management and Verification in Databricks&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
 </description>
     </item>
     
@@ -103,7 +149,27 @@
 &lt;li&gt;&lt;strong&gt;Fault Tolerance&lt;/strong&gt;: Designed to handle failures without data loss.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Scalability&lt;/strong&gt;: Can manage large volumes of data across distributed systems.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/Kafka1.png&#34; alt=&#34;Kafka&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/Kafka1.png&#34; alt=&#34;Kafka&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;For more insights, check out the YouTube video below.
 
 
@@ -150,11 +216,92 @@
 &lt;li&gt;&lt;strong&gt;SSH Key&lt;/strong&gt;: Generate and upload an SSH key during VPS creation for secure and easy access.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;This setup provides a balance of performance and cost, making it ideal for small to medium Kafka deployments.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-choose-plan.png&#34; alt=&#34;Kafka&#34;&gt;
-&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-additional-features.png&#34; alt=&#34;Kafka&#34;&gt;
-&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-deploy.png&#34; alt=&#34;Kafka&#34;&gt;
-&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-ubuntu-image-deployd.png&#34; alt=&#34;Kafka&#34;&gt;&lt;/p&gt;
-&lt;p&gt;For the installation process, we&amp;rsquo;ll largely follow the guidelines provided in the &lt;a href=&#34;https://kafka.apache.org/quickstart&#34;&gt;Kafka Quickstart&lt;/a&gt;. This includes setting up Kafka with ZooKeeper, ensuring all services are started in the correct order, and making necessary configurations as needed.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-choose-plan.png&#34; alt=&#34;Kafka&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-additional-features.png&#34; alt=&#34;Kafka&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-deploy.png&#34; alt=&#34;Kafka&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/vultr-ubuntu-image-deployd.png&#34; alt=&#34;Kafka&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;For the installation process, we&amp;rsquo;ll largely follow the guidelines provided in the 
+. This includes setting up Kafka with ZooKeeper, ensuring all services are started in the correct order, and making necessary configurations as needed.&lt;/p&gt;
 &lt;h3 id=&#34;step-by-step-installation-guide&#34;&gt;Step-by-Step Installation Guide&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Start by SSHing into a machine:&lt;/li&gt;
@@ -202,7 +349,27 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-console-consumer.sh --topic buas-data-n-ai-events --from-beginning --bootstrap-server localhost:9092
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Spark machine is killed
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Frank to the rescue
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens.png&#34; alt=&#34;4 shell for 4 services&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens.png&#34; alt=&#34;4 shell for 4 services&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h3 id=&#34;make-the-kafka-broker-accessible-externally&#34;&gt;Make the Kafka broker accessible externally&lt;/h3&gt;
 &lt;p&gt;By now, you should have four shell windows open. To stop the running processes, press Ctrl + C and shutdown the services in a reverse order, starting from the last shell. This ensures that any changes made to the Kafka configuration or environment are properly loaded and active. We will then use the first shell (the one that we run the ZooKeeper service) to configure the broker to be accessible externally.&lt;/p&gt;
 &lt;p&gt;To make the Kafka broker accessible externally we first need to edit the Kafka config file located at &amp;lsquo;config/server.properties&amp;rsquo;. ZooKeeper service by using the &amp;lsquo;Ctrl + C&amp;rsquo; and then edit the server.properties:&lt;/p&gt;
@@ -218,7 +385,27 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw allow &lt;span class=&#34;m&#34;&gt;9092&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# And check the status &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ufw status verbose
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens-2.png&#34; alt=&#34;4 shell for 4 services&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens-2.png&#34; alt=&#34;4 shell for 4 services&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;Now activate the services in the same order as before,&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1 - Restart the ZooKeeper service again.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/zookeeper-server-start.sh config/zookeeper.properties
@@ -227,8 +414,29 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-console-producer.sh --topic buas-data-n-ai-events --bootstrap-server localhost:9092
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 4 - Restart the kafka server again. &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;bin/kafka-console-consumer.sh --topic buas-data-n-ai-events --from-beginning --bootstrap-server localhost:9092
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens-3.png&#34; alt=&#34;4 shell for 4 services&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Extra reading material:&lt;/strong&gt; Read through the &lt;a href=&#34;https://kafka.apache.org/intro&#34;&gt;brief introduction to learn how Kafka works at a high level&lt;/a&gt;. The article covers the main concepts of Kafka and compares it to other technologies. For a more detailed understanding of Kafka, refer to the official documentation.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/kafka-4-screens-3.png&#34; alt=&#34;4 shell for 4 services&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extra reading material:&lt;/strong&gt; Read through the 
+. The article covers the main concepts of Kafka and compares it to other technologies. For a more detailed understanding of Kafka, refer to the official documentation.&lt;/p&gt;
 &lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
   &lt;summary class=&#34;cursor-pointer&#34;&gt;👉 What is a Kafka server?&lt;/summary&gt;
   &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
@@ -306,10 +514,14 @@
 You have successfully finished the Apache Kafka installation. Now, your Kafka broker is up and running, ready to handle real-time data streams. This marks a significant milestone in setting up your data processing pipeline. Next, you can start creating topics, producing and consuming messages, and exploring Kafka’s powerful features to build scalable and resilient data systems. If you encounter any issues or need to expand your setup, consult the Kafka documentation or explore advanced configurations to optimize your deployment.&lt;/p&gt;
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Apache_Kafka&#34;&gt;Apache Kafka Wiki page&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/apache/kafka&#34;&gt;Apache Kafka on git&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/downloads&#34;&gt;Apache Kafka&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://kafka.apache.org/quickstart&#34;&gt;Apache Kafka quickstart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -352,7 +564,8 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;div style=&#34;border:1px solid black; padding:10px;&#34;&gt;
   &lt;mark&gt;Note:&lt;/mark&gt; You can skip `Module 5.1` and `Module 5.2` and jump straight to `Module 5.3` if you desire to skip installing and configuring a Kafka service, though it is not recommended at all. 
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&#34;https://leetcode.com/discuss/interview-question/system-design/3133672/New-Book-by-Alex-Xu-or-Machine-Learning-System-Design-My-Solutions&#34;&gt;Machine Learning System Design - My Solutions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -374,7 +587,8 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
-&lt;p&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/2183498494824179/4682920752598681/latest.html&#34;&gt;this Databricks notebook&lt;/a&gt; into your workspace. Lets put it into a new folder, lets say &lt;strong&gt;Module 4&lt;/strong&gt;  and rename it into &lt;strong&gt;01 - Reading and writing from-into&lt;/strong&gt; for consistency reasons. Follow the steps and cells. The material should be self explanatory.&lt;/p&gt;
+&lt;p&gt;Now clone 
+ into your workspace. Lets put it into a new folder, lets say &lt;strong&gt;Module 4&lt;/strong&gt;  and rename it into &lt;strong&gt;01 - Reading and writing from-into&lt;/strong&gt; for consistency reasons. Follow the steps and cells. The material should be self explanatory.&lt;/p&gt;
 &lt;h2 id=&#34;reading-form-and-writing-into-databases-using-jdbc&#34;&gt;Reading form and Writing into databases using JDBC&lt;/h2&gt;
 &lt;p&gt;Watch the Youtube video bellow.&lt;/p&gt;
 
@@ -385,7 +599,8 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
-&lt;p&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/2183498494824196/4682920752598681/latest.html&#34;&gt;this Databricks notebook&lt;/a&gt; into your workspace. Rename the file it into &lt;strong&gt;02 - JDBC connector&lt;/strong&gt; for consistency reasons. Follow the steps and cells. The material should be self explanatory.&lt;/p&gt;
+&lt;p&gt;Now clone 
+ into your workspace. Rename the file it into &lt;strong&gt;02 - JDBC connector&lt;/strong&gt; for consistency reasons. Follow the steps and cells. The material should be self explanatory.&lt;/p&gt;
 </description>
     </item>
     
@@ -411,7 +626,27 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;li&gt;Governance and management: in-built security controls and governance&lt;/li&gt;
 &lt;li&gt;Tools: wide range of production-ready data tooling from engineering to BI, AI and ML&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/whydb.png&#34; alt=&#34;Why DataBricks&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://dataqubed.io/uploads/pyspark/whydb.png&#34; alt=&#34;Why DataBricks&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;With Databricks Community Edition, we would like to avoid installing new software and maintaining it. Also it gives us a ton of flexibility and features that we will see in the next sections.&lt;/p&gt;
 &lt;p&gt;A non comprehensive list of benefits of DataBricks:&lt;/p&gt;
 &lt;h4 id=&#34;1-scalability-and-performance&#34;&gt;1. Scalability and Performance&lt;/h4&gt;
@@ -481,15 +716,24 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
        &lt;/div&gt;
 
 &lt;ul&gt;
-&lt;li&gt;[Introduction to Databricks notebooks] (&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/&#34;&gt;https://learn.microsoft.com/en-us/azure/databricks/notebooks/&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;[Manage notebooks] (&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebooks-manage&#34;&gt;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebooks-manage&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;[Develop code in Databricks notebooks] (&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebooks-code&#34;&gt;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebooks-code&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;[Databricks notebook interface and controls] (&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-ui&#34;&gt;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-ui&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-export-import&#34;&gt;Export and import Databricks notebooks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-outputs&#34;&gt;Notebook outputs and results&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/dashboards&#34;&gt;Dashboards in notebooks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/ipywidgets&#34;&gt;ipywidgets&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/notebook-workflows&#34;&gt;Run a Databricks notebook from another notebook&lt;/a&gt;, and see the bellow youtube.&lt;/li&gt;
+&lt;li&gt;[Introduction to Databricks notebooks] (
+)&lt;/li&gt;
+&lt;li&gt;[Manage notebooks] (
+)&lt;/li&gt;
+&lt;li&gt;[Develop code in Databricks notebooks] (
+)&lt;/li&gt;
+&lt;li&gt;[Databricks notebook interface and controls] (
+)&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+, and see the bellow youtube.&lt;/li&gt;
 &lt;/ul&gt;
 
    
@@ -500,21 +744,26 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
        &lt;/div&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/en-us/azure/databricks/notebooks/best-practices&#34;&gt;Software engineering best practices for notebooks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;ul&gt;
-&lt;li&gt;Now you know the essential procedures to work in DataBricks environment. Now head towards the &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256163/4682920752598681/latest.html&#34;&gt;00 - Test dev env&lt;/a&gt; notebook, clone it into your workspace and follow the steps. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;00 - Test the dev env&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Now clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256208/4682920752598681/latest.html&#34;&gt;01 - Data Prep&lt;/a&gt; into your workspace. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;01 - Data Prep&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Now you know the essential procedures to work in DataBricks environment. Now head towards the 
+ notebook, clone it into your workspace and follow the steps. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;00 - Test the dev env&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Now clone 
+ into your workspace. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;01 - Data Prep&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: As you already know a good practice in programming is to modularize your code. Following the best practices here I have created a notebook called &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256172/4682920752598681/latest.html&#34;&gt;02 - Functions&lt;/a&gt;. Clone that into you workspace, rename it to &lt;strong&gt;02 - Functions&lt;/strong&gt;, try to read through it, and make adjustments as needed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: As you already know a good practice in programming is to modularize your code. Following the best practices here I have created a notebook called 
+. Clone that into you workspace, rename it to &lt;strong&gt;02 - Functions&lt;/strong&gt;, try to read through it, and make adjustments as needed.&lt;/p&gt;
 &lt;p&gt;Next, we will explore the fundamentals of DataFrames in Databricks. We’ll cover how to create and manipulate DataFrames, perform basic operations, and leverage DataFrames for data analysis. This session will guide you through using Spark SQL for querying and transforming data, demonstrating practical examples of DataFrame operations.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Introduction to DataFrames&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Clone &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/3667358723256187/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. Rename the file to &lt;strong&gt;03 - Introduction to DataFrames&lt;/strong&gt;. Go through the material and try to make notes. The notebook covers few topics including:&lt;/p&gt;
+&lt;p&gt;Clone 
+. Rename the file to &lt;strong&gt;03 - Introduction to DataFrames&lt;/strong&gt;. Go through the material and try to make notes. The notebook covers few topics including:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Difference between RDDs and DataFrames&lt;/li&gt;
 &lt;li&gt;Creating DataFrames&lt;/li&gt;
@@ -531,10 +780,14 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;DataFrame Operations&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Selecting, filtering, and transforming data: Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1195017303654174/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. Referencing rename the file to &lt;strong&gt;04 - DataFrame Operations&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Aggregations and Grouping: Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1195017303654195/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;05 - Aggregations and Grouping&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Joins and unions: Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459116/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;06 - Joins and Unions&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Working with Semi-Structured Data: Follow &lt;a href=&#34;https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/717620449459134/4682920752598681/latest.html&#34;&gt;this notebook&lt;/a&gt;. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;07 - Working with semi-structured data&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Selecting, filtering, and transforming data: Follow 
+. Referencing rename the file to &lt;strong&gt;04 - DataFrame Operations&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Aggregations and Grouping: Follow 
+. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;05 - Aggregations and Grouping&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Joins and unions: Follow 
+. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;06 - Joins and Unions&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Working with Semi-Structured Data: Follow 
+. For consistency in the learning material and easy referencing rename the file to &lt;strong&gt;07 - Working with semi-structured data&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -554,7 +807,8 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;p&gt;Databricks has built-in support for charts and visualizations in both Databricks SQL and in notebooks. Based on the data prepared in &lt;strong&gt;01 - Data Prep&lt;/strong&gt; make few visualizations.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Details:&lt;/strong&gt; I will provide you with a git repo and you will be tasked place your notebook there. The repo will not accept new entries after the deadline. Please deliver both the Databricks &lt;strong&gt;.dbc&lt;/strong&gt; archive file format and &lt;strong&gt;.HTML&lt;/strong&gt; format. Make sure to give them identical filenames. Also make sure to put the name of the team and team members in the first cell of the notebook.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Deadline:&lt;/strong&gt; Your notebook must be submitted by Sep 29 at 23:59 CET. Please adhere strictly to this deadline.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Reading material&lt;/strong&gt;: Need some reading materials? Visit &lt;a href=&#34;https://docs.databricks.com/en/visualizations/index.html&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reading material&lt;/strong&gt;: Need some reading materials? Visit 
+.&lt;/p&gt;
 &lt;/span&gt;
 &lt;/div&gt;
 </description>
@@ -597,9 +851,13 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
-&lt;p&gt;As we have seen RDDS are closely linked to the concepts of Lazy evaluation and resilience. When you are done download &lt;strong&gt;01-Creating-RDDs.ipynb&lt;/strong&gt; from &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/01-Creating-RDDs.ipynb&#34;&gt;this link&lt;/a&gt; and follow the instruction and run it locally. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.&lt;/p&gt;
-&lt;p&gt;The html version of the notebook is available here &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/01-Creating-RDDs.html&#34;&gt;online&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Afterwards download &lt;strong&gt;02-RDD-Lineage-n-Persistence.ipynb&lt;/strong&gt; from &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/02-RDD-Lineage-n-Persistence.ipynb&#34;&gt;this link&lt;/a&gt; and run it locally. The html version of the notebook is available here &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/02-RDD-Lineage-n-Persistence.html&#34;&gt;online&lt;/a&gt; for immediate access.&lt;/p&gt;
+&lt;p&gt;As we have seen RDDS are closely linked to the concepts of Lazy evaluation and resilience. When you are done download &lt;strong&gt;01-Creating-RDDs.ipynb&lt;/strong&gt; from 
+ and follow the instruction and run it locally. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.&lt;/p&gt;
+&lt;p&gt;The html version of the notebook is available here 
+.&lt;/p&gt;
+&lt;p&gt;Afterwards download &lt;strong&gt;02-RDD-Lineage-n-Persistence.ipynb&lt;/strong&gt; from 
+ and run it locally. The html version of the notebook is available here 
+ for immediate access.&lt;/p&gt;
 &lt;h3 id=&#34;transformations-and-actions-in-spark&#34;&gt;Transformations and Actions in spark&lt;/h3&gt;
 &lt;p&gt;Now continue watching the Youtube video bellow entitled &amp;ldquo;Spark RDD Transformations and Actions&amp;rdquo;. The video should give you a sample of various Transformations and Actions in spark.&lt;/p&gt;
 
@@ -610,7 +868,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
-&lt;p&gt;Download &lt;strong&gt;03-Transformations-n-Actions.ipynb&lt;/strong&gt; from &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/03-Transformations-n-Actions.ipynb&#34;&gt;this link&lt;/a&gt; and run it locally. The html version of the notebook is available here &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/03-Transformations-n-Actions.html&#34;&gt;online&lt;/a&gt; for immediate access.&lt;/p&gt;
+&lt;p&gt;Download &lt;strong&gt;03-Transformations-n-Actions.ipynb&lt;/strong&gt; from 
+ and run it locally. The html version of the notebook is available here 
+ for immediate access.&lt;/p&gt;
 </description>
     </item>
     
@@ -661,7 +921,8 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 
 &lt;p&gt;Now that we have a high-level understanding of Big Data, its business value, and a basic understanding of Spark and PySpark—along with how PySpark compares and contrasts with Pandas—let’s dive into some practical implementations. We’ll begin by installing Spark and PySpark locally on our machines.&lt;/p&gt;
 &lt;h3 id=&#34;pyspark-installation&#34;&gt;PySpark installation&lt;/h3&gt;
-&lt;p&gt;After you are done with the videos above, go ahead and install PySpark. &lt;a href=&#34;https://github.com/nicholsonjohnc/spark-wsl-install&#34;&gt;This tutorial&lt;/a&gt; will give you the instruction on how to install PySpark on WSL but the process should remain almost the same when it comes to the installation on other OSs.&lt;/p&gt;
+&lt;p&gt;After you are done with the videos above, go ahead and install PySpark. 
+ will give you the instruction on how to install PySpark on WSL but the process should remain almost the same when it comes to the installation on other OSs.&lt;/p&gt;
 &lt;p&gt;For installing PySpark on your windows machine follow the instruction of the bellow Youtube video.&lt;/p&gt;
 
 
@@ -679,8 +940,10 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Do you know a simpler and better instruction? Please share your experience.&lt;/span&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;check-the-installation&#34;&gt;Check the installation&lt;/h3&gt;
-&lt;p&gt;Now lets check if your installation is complete. Download the file &lt;strong&gt;00-Check-your-spark-installation.ipynb&lt;/strong&gt; from &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/00-Check-your-spark-installation.ipynb&#34;&gt;this link&lt;/a&gt; and follow the instruction. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.&lt;/p&gt;
-&lt;p&gt;The html version of the notebook is available here &lt;a href=&#34;https://dataqubed.io/uploads/pyspark/00-Check-your-spark-installation.html&#34;&gt;online&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now lets check if your installation is complete. Download the file &lt;strong&gt;00-Check-your-spark-installation.ipynb&lt;/strong&gt; from 
+ and follow the instruction. Make sure you could run all the cells. The notebook should have sufficient comments in it and that should provide you with some hints about the code.&lt;/p&gt;
+&lt;p&gt;The html version of the notebook is available here 
+.&lt;/p&gt;
 </description>
     </item>
     
@@ -741,8 +1004,10 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;p&gt;This structured approach ensures that you will have ample time to grasp each concept thoroughly, practice through hands-on exercises, and apply what you have learned to real-world scenarios.&lt;/p&gt;
 &lt;h4 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h4&gt;
 &lt;p&gt;To begin, make sure you can install and configure PySpark. Familiarize yourself with the course materials, including the recommended readings and online resources. Each module might  contain practical assignments and quizzes to reinforce your learning, so take your time to complete these exercises when available.&lt;/p&gt;
-&lt;h3 id=&#34;course-outline-pyspark-fundamentals-and-advanced-topicshttpsdataqubedioteachingpyspark-fundamentals-and-advanced-topics&#34;&gt;Course Outline: &lt;a href=&#34;https://dataqubed.io/teaching/pyspark-fundamentals-and-advanced-topics/&#34;&gt;PySpark Fundamentals and Advanced Topics&lt;/a&gt;&lt;/h3&gt;
-&lt;h4 id=&#34;module-1-introduction-to-big-data-and-apache-sparkhttpsdataqubedioteachingpyspark-introduction-to-big-data-and-apache-spark&#34;&gt;&lt;a href=&#34;https://dataqubed.io/teaching/pyspark-introduction-to-big-data-and-apache-spark/&#34;&gt;Module 1: Introduction to Big Data and Apache Spark&lt;/a&gt;&lt;/h4&gt;
+&lt;h3 id=&#34;course-outline-pyspark-fundamentals-and-advanced-topicshttpsdataqubedioteachingpyspark-fundamentals-and-advanced-topics&#34;&gt;Course Outline: 
+&lt;/h3&gt;
+&lt;h4 id=&#34;module-1-introduction-to-big-data-and-apache-sparkhttpsdataqubedioteachingpyspark-introduction-to-big-data-and-apache-spark&#34;&gt;
+&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Introduction to Big Data&lt;/strong&gt;
 &lt;ul&gt;
@@ -764,7 +1029,8 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;module-2-spark-architecture-and-rddshttpsdataqubedioteachingpyspark-spark-architecture-and-rdds&#34;&gt;&lt;a href=&#34;https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/&#34;&gt;Module 2: Spark Architecture and RDDs&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;module-2-spark-architecture-and-rddshttpsdataqubedioteachingpyspark-spark-architecture-and-rdds&#34;&gt;
+&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Spark Architecture&lt;/strong&gt;
 &lt;ul&gt;
@@ -782,7 +1048,8 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;module-3-dataframes-and-spark-sqlhttpsdataqubedioteachingpyspark-dataframes-and-spark-sql&#34;&gt;&lt;a href=&#34;https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/&#34;&gt;Module 3: DataFrames and Spark SQL&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;module-3-dataframes-and-spark-sqlhttpsdataqubedioteachingpyspark-dataframes-and-spark-sql&#34;&gt;
+&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Introduction to DataFrames&lt;/strong&gt;&lt;/p&gt;
@@ -810,7 +1077,8 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;module-4-data-sources-and-sinkshttpsdataqubedioteachingpyspark-data-sources-and-sinks&#34;&gt;&lt;a href=&#34;https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/&#34;&gt;Module 4: Data Sources and Sinks&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;module-4-data-sources-and-sinkshttpsdataqubedioteachingpyspark-data-sources-and-sinks&#34;&gt;
+&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Reading Data&lt;/strong&gt;
 &lt;ul&gt;
@@ -1009,7 +1277,8 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;li&gt;How can you filter rows in a DataFrame?&lt;/li&gt;
 &lt;li&gt;Explain how to perform joins in PySpark.&lt;/li&gt;
 &lt;li&gt;How do you aggregate data in PySpark?&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=-U-_rq1zhiI&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=19&#34;&gt;What are UDFs (User Defined Functions), and how are they used?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
 &lt;li&gt;How can you handle missing or null values in PySpark?&lt;/li&gt;
 &lt;li&gt;How do you repartition a DataFrame, and why?&lt;/li&gt;
 &lt;li&gt;Describe how to cache a DataFrame. Why is it useful?&lt;/li&gt;
@@ -1019,7 +1288,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
 &lt;li&gt;What are accumulators, and how are they used?&lt;/li&gt;
 &lt;li&gt;How does PySpark handle data skewness?&lt;/li&gt;
 &lt;li&gt;Explain how checkpointing works in PySpark.&lt;/li&gt;
-&lt;li&gt;What is delta lake? Look at &lt;a href=&#34;https://www.youtube.com/watch?v=0GhFAzN4qs4&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=20&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://www.youtube.com/watch?v=xYtU6fpsS3M&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=21&#34;&gt;here&lt;/a&gt;!&lt;/li&gt;
+&lt;li&gt;What is delta lake? Look at 
+ and 
+!&lt;/li&gt;
 &lt;li&gt;What is data lakehouse architecture.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
