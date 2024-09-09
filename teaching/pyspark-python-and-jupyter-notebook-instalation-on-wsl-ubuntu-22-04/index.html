@@ -1411,8 +1411,7 @@
 
       <div class="content text-base">
         <h1>PySpark - Module 1-1</h1>
-        <h1 id="setting-up-apache-spark-python-and-jupyter-notebook-on-wsl-ubuntu-2204">Setting Up Apache Spark, Python, and Jupyter Notebook on WSL Ubuntu 22.04</h1>
-<p>In this guide, we&rsquo;ll walk you through the steps to set up Apache Spark, Python, and Jupyter Notebook on a freshly installed WSL Ubuntu 22.04. You&rsquo;ll also learn how to make Jupyter Notebook accessible from the host machine.</p>
+        <p>In this guide, we&rsquo;ll walk you through the steps to set up Apache Spark, Python, and Jupyter Notebook on a freshly installed WSL Ubuntu 22.04. You&rsquo;ll also learn how to make Jupyter Notebook accessible from the host machine.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ol>
 <li>A Windows machine with WSL installed.</li>
@@ -1447,7 +1446,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Spark environment variables</span>
 </span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SPARK_HOME</span><span class="o">=</span>/opt/spark
 </span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SPARK_HOME</span>/bin:<span class="nv">$SPARK_HOME</span>/sbin
-</span></span></code></pre></div><p>Save and exit the file. Exit the VM and run ut again to load the changes.</p>
+</span></span></code></pre></div><p>Save and exit the file. Exit the VM and run it again to load the changes.</p>
 <p>To verify that Spark is set up correctly, run:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">spark-shell
 </span></span></code></pre></div><p>This should launch the Spark shell.</p>
@@ -1475,12 +1474,13 @@
 </span></span></code></pre></div><p>You can now access Jupyter Notebook from your host machine by visiting http://localhost:8888 in your browser.</p>
 <h2 id="step-8-verify-the-pyspark-setup">Step 8: Verify the PySpark Setup</h2>
 <p>To ensure PySpark is set up correctly, you can create a new notebook in Jupyter and try the following code:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">import pyspark
-</span></span><span class="line"><span class="cl">from pyspark.sql import SparkSession
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pyspark</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pyspark</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nv">spark</span> <span class="o">=</span> SparkSession.builder.appName<span class="o">(</span><span class="s2">&#34;Test&#34;</span><span class="o">)</span>.getOrCreate<span class="o">()</span>
-</span></span><span class="line"><span class="cl"><span class="nv">df</span> <span class="o">=</span> spark.createDataFrame<span class="o">([(</span>1, <span class="s1">&#39;foo&#39;</span><span class="o">)</span>, <span class="o">(</span>2, <span class="s1">&#39;bar&#39;</span><span class="o">)]</span>, <span class="o">[</span><span class="s1">&#39;id&#39;</span>, <span class="s1">&#39;value&#39;</span><span class="o">])</span>
-</span></span><span class="line"><span class="cl">df.show<span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">&#34;Test&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)],</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></span></code></pre></div><p>If everything is set up correctly, you should see a small DataFrame printed in the notebook.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>If Jupyter Notebook does not start or is not accessible, ensure that your firewall allows access to port 8888.
