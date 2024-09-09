@@ -13,11 +13,13 @@
     </image>
     
     <item>
-      <title>PySpark - Sparkling Water-part0</title>
+      <title>PySpark - Sparkling Water - Module 0</title>
       <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</link>
       <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</guid>
-      <description>&lt;p&gt;Import 
+      <description>&lt;h1 id=&#34;recap---installation-guide-from-scratch&#34;&gt;Recap - Installation guide from scratch&lt;/h1&gt;
+&lt;p&gt;This is a recap, a full inhalation guide from WSL on windows to installation of H2O on Spark.&lt;/p&gt;
+&lt;p&gt;Import 
  to the same folder, rename it to &lt;code&gt;Kafka-to-Delta Streaming Pipeline&lt;/code&gt;, and follow the instructions.&lt;/p&gt;
 &lt;h3 id=&#34;assignment&#34;&gt;Assignment&lt;/h3&gt;
 &lt;p&gt;Import 
