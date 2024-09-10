@@ -183,5 +183,13 @@
 &lt;p&gt;Please leave a message below if you would like to share your thoughts or if you like to share your tricks on Pandas.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Pandas</title>
+      <link>https://dataqubed.io/blog/pandas/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/blog/pandas/</guid>
+      <description>&lt;p&gt;Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

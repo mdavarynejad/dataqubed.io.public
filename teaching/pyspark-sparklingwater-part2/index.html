@@ -194,10 +194,10 @@
     
       <meta
         property="article:published_time"
-        content="2024-09-07T00:00:00&#43;00:00"
+        content="2024-09-08T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2024-09-07T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2024-09-08T00:00:00&#43;00:00">
   
 
   
@@ -243,8 +243,6 @@
   
   
   
-  
-  
     
       
       
@@ -264,6 +262,8 @@
         
       
     
+  
+  
   
   
   
@@ -876,23 +876,7 @@
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
         </span>
     </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/teaching/pyspark-sparklingwater-part0/"
-    
-  >PySpark - Sparkling Water - Module 6.1
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/teaching/pyspark-sparklingwater-part1/"
-    
-  >PySpark - Sparkling Water - Module 6.1
-    </a>
-              
-            </li><li class="flex flex-col open"><a
+        <ul class="hb-sidebar-list"><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/teaching/pyspark-sparklingwater-part2/"
@@ -908,6 +892,22 @@
             </li>
           </ul>
   
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark-sparklingwater-part1/"
+    
+  >PySpark - Sparkling Water - Module 6.1
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark-sparklingwater-part0/"
+    
+  >PySpark - Sparkling Water - Module 6.0
+    </a>
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -1190,12 +1190,12 @@
 
     <ul class="flex flex-col gap-1 max-lg:hidden">
         
-        <li class=""><a
+        <li class="open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/teaching/pyspark-sparklingwater-part0/"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/teaching/pyspark-sparklingwater-part2/"
     
-  >PySpark - Sparkling Water - Module 6.1
+  >PySpark - Sparkling Water - Module 6.2
     </a></li>
         <li class=""><a
     class="hb-sidebar-custom-link
@@ -1204,12 +1204,12 @@
     
   >PySpark - Sparkling Water - Module 6.1
     </a></li>
-        <li class="open"><a
+        <li class=""><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
-    href="/teaching/pyspark-sparklingwater-part2/"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark-sparklingwater-part0/"
     
-  >PySpark - Sparkling Water - Module 6.2
+  >PySpark - Sparkling Water - Module 6.0
     </a></li>
         <li class=""><a
     class="hb-sidebar-custom-link
@@ -1451,6 +1451,7 @@ To find the IP address of your WSL instance, run:</p>
       ></iframe>
     </div>
 
+<p>Or you might as well want to look into <a href="https://github.com/h2oai/wave" target="_blank" rel="noopener">Wave Git Repo</a> if you have interest in bulding ML web application.</p>
 <h3 id="step-4-running-h2o-in-jupyter-notebooks">Step 4: Running H2O in Jupyter Notebooks</h3>
 <p>Now that H2O is installed and accessible via the web interface, you can also run it in your Jupyter Notebook.</p>
 <ol>
@@ -1463,13 +1464,17 @@ To find the IP address of your WSL instance, run:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">h2o</span>
 </span></span><span class="line"><span class="cl"><span class="n">h2o</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 </span></span></code></pre></div><p>This will initialize H2O and you can start working with it within your Jupyter environment.</p>
+<p>References:</p>
+<ul>
+<li><a href="https://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/index.html" target="_blank" rel="noopener">H2O Documentation</a></li>
+</ul>
 
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-09-07T00:00:00.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-09-08T00:00:00.000Z">
     <span>Last updated on</span>
-    Sep 7, 2024</time>
+    Sep 8, 2024</time>
       
       
   
@@ -1484,34 +1489,18 @@ To find the IP address of your WSL instance, run:</p>
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/teaching/pyspark-sparklingwater-part1/">
-          <span
-            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
-          <span class="flex flex-col">
-            <span
-              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >PySpark - Sparkling Water - Module 6.1</span>
-            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-              
-                Sep 7, 2024
-              
-            </span>
-          </span>
-        </a>
-      
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/teaching/practicing-civility-can-enhance-your-leadership/">
+        <a class="group flex text-right no-underline" href="/teaching/pyspark-sparklingwater-part1/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Shaping Your Success and Impact</span
+            >PySpark - Sparkling Water - Module 6.1</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Aug 24, 2024
+                Sep 7, 2024
               
             </span>
           </span>
