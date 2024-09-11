@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DataScienceWisdom | Your Data Science Mentor - Mohsen Davarynejad</title>
+    <link>https://dataqubed.io/tags/datasciencewisdom/</link>
+      <atom:link href="https://dataqubed.io/tags/datasciencewisdom/index.xml" rel="self" type="application/rss+xml" />
+    <description>DataScienceWisdom</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 11 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
+      <title>DataScienceWisdom</title>
+      <link>https://dataqubed.io/tags/datasciencewisdom/</link>
+    </image>
+    
+    <item>
+      <title>A Data Scientist&#39;s Chronicle of Lessons Learned and Strategies for Success</title>
+      <link>https://dataqubed.io/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/</link>
+      <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/</guid>
+      <description>&lt;h2 id=&#34;the-art-of-mastery-in-landscapes-of-corporate-challenges&#34;&gt;The Art of Mastery in landscapes of corporate challenges&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;A data scientist combines hacking, statistics, and machine learning to collect, scrub, examine, model, and understand data. Data scientists are not only skilled at working with data, but they also value data as a premium product.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;— Erwin Caniba&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Around 9 years ago, I decided to leave academia in the pursuit of putting my learnings to the test. On that occasion, I have decided to pen down my experiences gathered over the last 9 years of my professional voyage; a journey that has taken me through diverse industries, from the corridors of academia to the landscapes of corporate challenges. I distill my experiences into a set of principles, strategies, and wisdom gained through years of exploration.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Always &lt;strong&gt;challenge your stakeholders&lt;/strong&gt; on the problem definitions, problem assumptions, and the importance of the problem at hand. Make sure to understand the business context and challenges of your stakeholders.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In many real-world and industrial use cases, &lt;strong&gt;leveraging an existing solution&lt;/strong&gt; promotes efficiency by avoiding unnecessary repetition. Often, you will find that your particular problem has already been solved. If it initially appears to be unique, attempt to &lt;strong&gt;abstract the problem&lt;/strong&gt;, and then look for an algorithm that suits this view. This method usually uncovers that your issue corresponds to well-known problems that have established solutions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Start from design&lt;/strong&gt;, before code. Your initial design is the key to the project&amp;rsquo;s success. Break down the solution into testable maintainable pieces. Review your design, put it out there, and ask relevant people to challenge it. Feedback is a gift, so embrace it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Start with implementing &lt;strong&gt;Unit tests&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Be &lt;strong&gt;visible&lt;/strong&gt;, don’t work in a silo, and always speak your mind.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Focus on the data&lt;/strong&gt; rather than focusing on the model. Also, think about other sources of data that can be used. Check on their availability and accessibility.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Data science isn&amp;rsquo;t about the quantity of data but rather the quality.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;— Joo Ann Lee&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Always start from the &lt;strong&gt;simplest model&lt;/strong&gt; possible, which ticks the requirements.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;More often than not the &lt;strong&gt;models make strong assumptions&lt;/strong&gt;. So it&amp;rsquo;s always critical to accompany your analysis and findings with a sensitivity analysis: How robust are your conclusions to the model assumptions? Reliable inferences can be only in light of model-specific sensitivity analysis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ensure that the open-source tools embedded in decision-support solutions are accompanied by thorough documentation and will continue to &lt;strong&gt;receive support&lt;/strong&gt; over time. Additionally, a strong user community around these tools is essential for securing the necessary expertise for future needs.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Solution adoption&lt;/strong&gt; is more important than model performance. Use interpretable and glass box models whenever possible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You cannot improve what you cannot measure. So always have your &lt;strong&gt;KPIs&lt;/strong&gt; in place, and study the impact of the changes on the KPI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It&amp;rsquo;s good to work hard and get the whole to-do list finished. But more importantly, you need to focus on the &lt;strong&gt;impact&lt;/strong&gt;. Protrize the work, measure the impact of each feature, gauge, and show flexibility.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When joining a new organization ensure a &lt;strong&gt;code review&lt;/strong&gt; process is in place. Make it part of the organization if it&amp;rsquo;s not already. Always look for ways to make the code review process smoother and more productive.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Praising good work&lt;/strong&gt; is more than a formality; it is a celebration of the commitment to excellence. Each milestone achieved and every challenge overcome is a testament to the unwavering dedication of individuals who go above and beyond. So recognize them in the meeting/stand-ups.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Naming is important.&lt;/strong&gt; When implementing the solution, you will need to cook names along the way, whether it&amp;rsquo;s process names, file names, variable names, function names, etc. Consider this as a selling opportunity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Share your results with your stakeholders in &lt;strong&gt;incremental steps&lt;/strong&gt;. And focus on the story and the implications of the results of your work. In most cases, your stakeholders have no interest in the details of the used algorithms and failed solutions. Just get to the bottom line and avoid technical presentations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do not focus only on building a great ML model in a notebook. &lt;strong&gt;Think automation&lt;/strong&gt;. Automate as much as possible.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When it comes to maintaining legacy code, start with Increased test coverage, API solidifying, and small steps toward an ideal state isolated to subsystems behind the solidified interfaces. &lt;strong&gt;No Massive refactors&lt;/strong&gt; as they introduce too much change to reason about at once, and any mistake costs momentum and trust, which can lead to rolling back and abandonment at great expense. Make sure to take small steps that are easy to roll back. Avoid all-or-nothing ethos around the success of the refactor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Do not stop learning. &lt;strong&gt;Self-development&lt;/strong&gt; is the key to both individual and team success.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;The best way to learn data science is to do data science.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;— &lt;em&gt;Chanin Nantasenamat&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;* &lt;sup&gt; Image Credit: DALL-E 3 with the prompt: Create an image where a puzzle game is featured at the center. As you move towards the outer edges of the image, the puzzle pieces seamlessly transform into pins. These pins are intricately connected to each other with wires, resembling a complex network of junctions in a bustling city. Ensure that the pins exhibit a variety of colors to enhance the vibrant and dynamic feel of the cityscape&lt;/sup&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
