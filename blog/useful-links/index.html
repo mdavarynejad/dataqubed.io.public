@@ -1,13 +1,13 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: September 11, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: February 22, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="dark">
   
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="Hugo Blox Builder 0.2.0" />
+  <meta name="generator" content="Hugo Blox Builder 0.3.2" />
 
   
   
@@ -57,7 +57,7 @@
   
   
     
-    <link href="/dist/wc.min.css" rel="stylesheet" />
+    <link href="/dist/wc.min.05570f1deda629d4e2d77f73534a63aa04471f012db6735c59424372f467db85.css" rel="stylesheet" />
   
 
   
@@ -158,8 +158,8 @@
   
 
   
-  <link rel="icon" type="image/png" href="/media/icon_hu3247630877640252165.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4166356570829923896.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu_5cac115d14ed3d49.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_e7f327b39c12e7ca.png" />
 
   <link rel="canonical" href="https://dataqubed.io/blog/useful-links/" />
 
@@ -194,10 +194,10 @@
     
       <meta
         property="article:published_time"
-        content="2024-08-19T00:00:00&#43;00:00"
+        content="2025-02-21T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2024-08-19T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2025-02-21T00:00:00&#43;00:00">
   
 
   
@@ -229,8 +229,8 @@
     "https://dataqubed.io/blog/useful-links/featured.png"
   ],
   
-  "datePublished": "2024-08-19T00:00:00Z",
-  "dateModified": "2024-08-19T00:00:00Z",
+  "datePublished": "2025-02-21T00:00:00Z",
+  "dateModified": "2025-02-21T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -242,7 +242,7 @@
     "name": "Your Data Science Mentor - Mohsen Davarynejad",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://dataqubed.io/media/icon_hu17980401698969639728.png"
+      "url": "https://dataqubed.io/media/icon_hu_1df060215326dd50.png"
     }
   },
   "description": "Useful links"
@@ -286,7 +286,6 @@
   
   
   
-  
     
       
       
@@ -313,6 +312,9 @@
   
   
   
+  
+  
+  
     
       
       
@@ -332,8 +334,6 @@
         
       
     
-  
-  
   
   
   
@@ -598,40 +598,67 @@
     --pagefind-ui-border: #152028;
     --pagefind-ui-tag: #152028;
   }
+
+   
+  .search-close > svg {
+    height: calc(64px * var(--pagefind-ui-scale));
+    width: calc(64px * var(--pagefind-ui-scale));
+  }
 </style>
 
 <script>
+  
+  let searchWrapper = null;
+
   window.addEventListener('DOMContentLoaded', (event) => {
+    
     new PagefindUI({
       element: "#search",
       showSubResults: true,
       baseUrl: window.hbb.pagefind.baseUrl,
       bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
     });
+
+    
+    searchWrapper = document.getElementById('search-wrapper');
+
+    
+    let triggers = document.querySelectorAll('[data-search-toggle]');
+    triggers.forEach(trigger =>
+      trigger.addEventListener('click', handleSearchToggle)
+    );
   });
-  document.addEventListener('DOMContentLoaded', () => {
-    let element = document.getElementById('search');
-    let trigger = document.getElementById('search_toggle');
 
-    if (trigger) {
-      trigger.addEventListener('click', () => {
-        element.classList.toggle('hidden');
-        element.querySelector("input").value = ""
-        element.querySelector("input").focus()
+  function handleSearchToggle(event) {
+    if (!searchWrapper) return;
 
-        if (!element.classList.contains('hidden')) {
-          let clear_trigger = document.querySelector('.pagefind-ui__search-clear');
+    const isHidden = searchWrapper.classList.contains('hidden');
+    searchWrapper.classList.toggle('hidden');
+    document.body.style.overflow = isHidden ? 'hidden' : '';
 
-          if (clear_trigger && !clear_trigger.hasAttribute('listenerOnClick')) {
-            clear_trigger.setAttribute('listenerOnClick', 'true');
+    const searchInput = searchWrapper.querySelector("input");
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
 
-            clear_trigger.addEventListener('click', () => {
-              element.classList.toggle('hidden');
-            });
-          }
-        }
+    if (!searchWrapper.classList.contains('hidden')) {
+      let clearTrigger = document.querySelector('.pagefind-ui__search-clear');
 
-      });
+      if (clearTrigger && !clearTrigger.hasAttribute('listenerOnClick')) {
+        clearTrigger.setAttribute('listenerOnClick', 'true');
+
+        clearTrigger.addEventListener('click', () => {
+          searchInput.focus();
+        });
+      }
+    }
+  }
+
+  
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchWrapper && !searchWrapper.classList.contains('hidden')) {
+      searchWrapper.classList.add('hidden');
     }
   });
 </script>
@@ -659,8 +686,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.e5fa931947cac2d947732ea37a770aae2b5bd4a50b6048060cd129b46159a06d.js"
-    integrity="sha256-5fqTGUfKwtlHcy6jencKritb1KULYEgGDNEptGFZoG0="
+    src="/js/hugo-blox-en.min.47736f84e20cae1bb2224dc4605239689e913811575e32b5f86a700ee9d6529d.js"
+    integrity="sha256-R3NvhOIMrhuyIk3EYFI5aJ6ROBFXXjK1&#43;GpwDunWUp0="
   ></script>
 
   
@@ -851,9 +878,9 @@
       
       
       <button
-        aria-label="search"
+        aria-label="toggle search"
         class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
-        id="search_toggle">
+        data-search-toggle>
         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
       </button>
       
@@ -870,8 +897,26 @@
   </nav>
 </header>
 
+<div
+  id="search-wrapper"
+  class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"
+>
+  <div class="flex justify-end p-3">
+    <button
+      aria-label="search"
+      class="search-close text-black hover:text-primary dark:text-white"
+      data-search-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
 
-<div id="search" class="hidden p-3"></div>
+  <div id="search" class="flex-1 overflow-y-auto p-3">
+    
+  </div>
+</div>
 
 
         
@@ -929,7 +974,24 @@
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
         </span>
     </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+        <ul class="hb-sidebar-list"><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/blog/useful-links/"
+    
+  >Useful links
+    </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#useful-links"
+                class="hb-docs-link"
+              >Useful links</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/"
@@ -952,23 +1014,6 @@
     
   >How to Deploy Your Hugo Site to GitHub Pages - A Simple Step-by-Step Guide
     </a>
-              
-            </li><li class="flex flex-col open"><a
-    class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
-    href="/blog/useful-links/"
-    
-  >Useful links
-    </a>
-  
-    <ul class="hb-sidebar-mobile-toc"><li>
-              <a
-                href="#useful-links"
-                class="hb-docs-link"
-              >useful links</a>
-            </li>
-          </ul>
-  
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -1269,10 +1314,13 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#useful-links">useful links</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#useful-links">Useful links</a>
       </li></ul>
 
   
+  
+    
+    
   
 
 
@@ -1311,14 +1359,14 @@
       <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Useful links</h1>
 
       <div class="mt-4 mb-16">
-      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Aug 19, 2024</span><span class="mx-1">·</span>
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2"><span class="mr-1">Feb 21, 2025</span><span class="mx-1">·</span>
         
           
           
           <div class="group inline-flex items-center text-current gap-x-1.5 mx-1">
             
             
-            <img src="/author/mohsen-davarynejad/avatar_hu11452755846446524336.webp" alt="Mohsen Davarynejad" class="inline-block h-4 w-4 rounded-full border border-current" loading="lazy" />
+            <img src="/author/mohsen-davarynejad/avatar_hu_84058d8977daaddb.webp" alt="Mohsen Davarynejad" class="inline-block h-4 w-4 rounded-full border border-current" loading="lazy" />
             
             <div >Mohsen Davarynejad</div>
           </div>
@@ -1328,7 +1376,7 @@
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          1 min read
+          4 min read
         </span>
         
         </div>
@@ -1363,7 +1411,7 @@
       
       <div class="article-header article-container featured-image-wrapper mt-4 mb-16" style="max-width: 512px; max-height: 512px;">
         <div style="position: relative">
-          <img src="/blog/useful-links/featured_hu15129533240244846722.webp" width="512" height="512" alt="" class="featured-image">
+          <img src="/blog/useful-links/featured_hu_74db4e3c2782b86.webp" width="512" height="512" alt="" class="featured-image">
           <span class="article-header-caption">Image credit: Unsplash</span>
         </div>
       </div>
@@ -1373,36 +1421,158 @@
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <h2 id="useful-links">useful links</h2>
-<ul>
-<li>People</li>
-</ul>
+        <h2 id="useful-links">Useful links</h2>
+<p>People</p>
 <ul>
 <li><a href="https://davarynejad.com/" target="_blank" rel="noopener">Prof.dr. Davarynejad</a></li>
 <li><a href="https://forghany.com/" target="_blank" rel="noopener">Zary Forghany</a></li>
 <li><a href="https://miriam-hacker.com/" target="_blank" rel="noopener">Miriam Hacker, Research Program Manager at The Water Research Foundation</a></li>
 <li><a href="https://glciampaglia.com/" target="_blank" rel="noopener">Giovanni Luca Ciampaglia</a></li>
+<li><a href="https://cazencott.info/index.php/pages/Teaching" target="_blank" rel="noopener">Chloé-Agathe Azencott</a></li>
 </ul>
-<ul>
-<li>Explore project ideas</li>
-</ul>
+<p>Explore project ideas</p>
 <ul>
 <li><a href="https://www.interregeurope.eu/project-ideas" target="_blank" rel="noopener">Interreg Europe</a></li>
-<li>[SideProject]https://www.reddit.com/r/SideProject/</li>
+<li><a href="https://www.reddit.com/r/SideProject/" target="_blank" rel="noopener">SideProject</a></li>
 </ul>
-<ul>
-<li>Online courses (I&rsquo;m not endorsing any of the courses/materials listed bellow. This is only a place for me to look at them at a later stage!)</li>
-</ul>
+<p>Online courses (I&rsquo;m not endorsing any of the courses/materials listed bellow. This is only a place for me to look at them at a later stage!)</p>
 <ul>
 <li><a href="https://www.udemy.com/course/intro-to-optimization-pt1/" target="_blank" rel="noopener">Intro to Optimization Through the Lens of Data Science</a></li>
 </ul>
+<h2 id="optimization-and-linear-programming">Bookshelf - Textbooks available online for free.</h2> 
+<h3 id="optimization-and-linear-programming">Optimization and Linear Programming</h3>
+<p>
+<a href="https://optimaltransport.github.io/book/">Computational Optimal Transport</a><br />
+<a href="https://meboo.convexoptimization.com/access.html">Convex Optimization and Euclidean Distance Geometry</a><br />
+<a href="https://algorithmsbook.com/optimization/#">Algorithms for Optimization</a><br />
+<a href="https://dp.quantecon.org/">Dynamic Programming</a><br />
+<a href="https://sites.engineering.ucsb.edu/~jbraw/mpc/">Model Predictive Control: Theory, Computation, and Design, 2nd Ed.</a><br />
+<a href="https://arxiv.org/abs/1909.05207">Introduction to Online Convex Optimization</a><br />
+<a href="https://www.stoprog.org/sites/default/files/files/manujw.pdf">Stochastic Programming, 2nd Ed.</a><br />
+<a href="https://www.rand.org/pubs/reports/R366.html">Linear Programming and Extensions</a><br />
+<a href="https://convex-optimization.github.io/">Algorithms for Convex Optimization</a><br />
+<a href="https://algorithmsbook.com/">Algorithms for Decision Making</a><br />
+<a href="https://www.lix.polytechnique.fr/~liberti/teaching/dix/inf580-15/mathprog.pdf">Mathematical Programming</a><br />
+<a href="http://www.robertolucchetti.com/public/uploads/2018/09/Lucchetti-R.-Convexity-and-Well-Posed-Problems2005328.pdf">Convexity and Well-Posed Problems</a><br />
+<a href="https://web.stanford.edu/~boyd/cvxbook/">Convex Optimization</a><br />
+<a href="https://mykel.kochenderfer.com/textbooks/">Decision Making Under Uncertainty</a><br />
+<a href="https://www.designofapproxalgs.com/">The Design of Approximation Algorithms</a><br />
+<a href="https://arxiv.org/abs/1606.04838">Optimization Methods for Large-Scale Machine Learning</a><br />
+<a href="https://sbubeck.com/book.html">Convex Optimization: Algorithms and Complexity</a><br />
+<a href="https://sites.uclouvain.be/absil/amsbook/">Optimization Algorithms on Matrix Manifolds</a><br />
+<a href="https://cedricvillani.org/sites/dev/files/old_images/2012/08/preprint-1.pdf">Optimal Transport, Old and New</a><br />
+</p>
+<h3 id="data-science">Data Science</h3>
+<p>
+<a href="https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery/">The Fourth Paradigm: Data-Intensive Scientific Discovery</a><br />
+<a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a><br />
+<a href="https://inferentialthinking.com/chapters/intro.html">Computational and Inferential Thinking: The Foundations of Data Science, 2nd Ed.</a><br />
+<a href="http://guidetodatamining.com/">A Programmer’s Guide to Data Mining</a><br />
+<a href="https://datascienceatthecommandline.com/">Data Science at the Command Line, 2nd Ed.</a><br />
+<a href="https://rafalab.github.io/dsbook/">Introduction to Data Science</a><br />
+<a href="https://www.cs.cornell.edu/jeh/">Foundation of Data Science</a><br />
+<a href="https://srdas.github.io/MLBook/">Data Science: Theories, Models, Algorithms and Analytics</a><br />
+<a href="https://math.unice.fr/~cbouveyr/MBCbook/">Model-Based Clustering and Classification for Data Science</a><br />
+<a href="https://sjster.github.io/introduction_to_computational_statistics/docs/index.html">Computational Statistics with PyMC3</a><br />
+<a href="https://wesmckinney.com/book/">Python for Data Analysis, 3rd Ed.</a><br />
+<a href="https://book-wright-ma.github.io/">High-Dimensional Data Analysis with Low-Dimensional Models: Principles, Computation, and Applications</a><br />
+<a href="https://arxiv.org/abs/1506.07825">Data Assimilation: A Mathematical Introduction</a><br />
+<a href="https://courses.csail.mit.edu/6.042/spring18/">Mathematics for Computer Science</a><br />
+<a href="https://mathematical-tours.github.io/book/">Mathematical Foundations of Data Science</a><br />
+<a href="https://mathematical-tours.github.io/book-basics/">An Introduction to Data Sciences</a><br />
+<a href="http://databookuw.com/databook.pdf">Data-Driven Science &amp; Engineering</a><br />
+<a href="https://datascienceincontext.com/">Data Science in Context: Foundations, Challenges, Opportunities</a><br />
+<a href="https://arxiv.org/abs/1407.7502">Understanding Random Forests: From Theory to Practice</a><br />
+</p>
+<h3 id="machine-learning">Machine Learning</h3>
+<p>
+<a href="http://smlbook.org/">Machine Learning: A First Course for Engineers and Scientists</a><br />
+<a href="http://www.dkriesel.com/en/science/neural_networks">A Brief Introduction to Neural Networks</a><br />
+<a href="https://helioml.org/Introduction/title.html">Machine Learning, Statistics, and Data Mining for Heliophysics</a><br />
+<a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning, 2nd Ed.</a><br />
+<a href="https://mlstory.org/index.html">Pattern, Predictions, and Actions</a><br />
+<a href="https://probml.github.io/pml-book/">Probabilistic Machine Learning: An Introduction</a><br />
+<a href="https://hastie.su.domains/ElemStatLearn/">The Elements of Statistical Learning, 2nd Ed.</a><br />
+<a href="https://christophm.github.io/interpretable-ml-book/">Interpretable Machine Learning</a><br />
+<a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html">Machine Learning</a><br />
+<a href="https://arxiv.org/abs/1709.02840">A Brief Introduction to Machine Learning for Engineers</a><br />
+<a href="https://developers.google.com/machine-learning/crash-course">Google Machine Learning Crash Course</a><br />
+<a href="http://ciml.info/">A Course in Machine Learning</a><br />
+<a href="http://agbs.kyb.tuebingen.mpg.de/lwk/">Learning with Kernels: Support Vector Machines, Regularization, Optimization and Beyond</a><br />
+<a href="https://github.com/abhishekkrthakur/approachingalmost">Approaching (Almost) Any Machine Learning Problem</a><br />
+<a href="https://mml-book.github.io/">Mathematics for Machine Learning</a><br />
+<a href="https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/">Pattern Recognition and Machine Learning</a><br />
+<a href="https://direct.mit.edu/books/oa-monograph/5342/BoostingFoundations-and-Algorithms">Boosting: Foundations and Algorithms</a><br />
+<a href="https://www.statlearning.com/">An Introduction to Statistical Learning, 2nd Ed.</a><br />
+<a href="https://muse.jhu.edu/book/61941">How Smart Machines Think</a><br />
+<a href="https://hastie.su.domains/CASI/">Computer Age Statistical Inference</a><br />
+<a href="http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage">Bayesian Reasoning and Machine Learning</a><br />
+<a href="https://mbmlbook.com/index.html">Model-Based Machine Learning</a><br />
+<a href="http://cazencott.info/">Introduction au Machine Learning</a><br />
+<a href="https://intelligent-optimization.org/LIONbook/">The LION Way. Machine Learning plus Intelligent Optimization</a><br />
+<a href="http://themlbook.com/wiki/doku.php">The Hundred Pages Machine Learning Book</a><br />
+<a href="https://pages.dataiku.com/oreilly-introducing-mlops">Introducing MLOps</a><br />
+<a href="https://arxiv.org/abs/1407.7502">Understanding Random Forests: From Theory to Practice</a><br />
+<a href="https://mlu-explain.github.io/">MLU-Explain: Visual explanation of core machine learning concepts</a><br />
+<a href="https://www.cs.huji.ac.il/w~shais/UnderstandingMachineLearning/copy.html">Understanding Machine Learning: From Theory to Algorithms</a><br />
+</p>
+<h3 id="neural-networks-deep-learning-and-reinforcement-learning">Neural Networks, Deep Learning, and Reinforcement Learning</h3>
+<p>
+<a href="https://mlu-explain.github.io/">MLU-Explain: Visual explanation of core machine learning concepts</a><br />
+<a href="https://intelligent-optimization.org/LIONbook/">The LION Way. Machine Learning plus Intelligent Optimization</a><br />
+<a href="http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage">Bayesian Reasoning and Machine Learning</a><br />
+<a href="https://hastie.su.domains/CASI/">Computer Age Statistical Inference</a><br />
+<a href="http://themlbook.com/wiki/doku.php">The Hundred Pages Machine Learning Book</a><br />
+<a href="https://mml-book.github.io/">Mathematics for Machine Learning</a><br />
+<a href="https://arxiv.org/abs/1709.02840">A Brief Introduction to Machine Learning for Engineers</a><br />
+<a href="https://helioml.org/Introduction/title.html">Machine Learning, Statistics, and Data Mining for Heliophysics</a><br />
+<a href="http://ciml.info/">A Course in Machine Learning</a><br />
+<a href="https://github.com/abhishekkrthakur/approachingalmost">Approaching (Almost) Any Machine Learning Problem</a><br />
+<a href="http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html">Machine Learning</a><br />
+<a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning, 2nd Ed.</a><br />
+<a href="http://smlbook.org/">Machine Learning: A First Course for Engineers and Scientists</a><br />
+<a href="http://www.dkriesel.com/en/science/neural_networks">A Brief Introduction to Neural Networks</a><br />
+<a href="https://muse.jhu.edu/book/61941">How Smart Machines Think</a><br />
+<a href="https://probml.github.io/pml-book/">Probabilistic Machine Learning: An Introduction</a><br />
+<a href="https://christophm.github.io/interpretable-ml-book/">Interpretable Machine Learning</a><br />
+<a href="https://statlearning.com/">An Introduction to Statistical Learning, 2nd Ed.</a><br />
+<a href="https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/">Pattern Recognition and Machine Learning</a><br />
+<a href="https://mbmlbook.com/index.html">Model-Based Machine Learning</a><br />
+<a href="https://mlstory.org/index.html">Pattern, Predictions, and Actions</a><br />
+<a href="https://www.cs.huji.ac.il/w~shais/UnderstandingMachineLearning/copy.html">Understanding Machine Learning: From Theory to Algorithms</a><br />
+<a href="https://developers.google.com/machine-learning/crash-course">Google Machine Learning Crash Course</a><br />
+</p>
+<h3 id="graph-theory">Graph Theory</h3>
+<p>
+<a href="https://www.distributed-systems.net/index.php/books/gtcn/">Graph Theory and Complex Networks</a><br />
+<a href="http://www.networkflowalgs.com/">Network Flow Algorithms</a><br />
+<a href="https://neo4j.com/graph-algorithms-book/">Graph Algorithms</a><br />
+<a href="https://www.uni-due.de/~hm0110/book.pdf">Probability on Trees and Networks</a><br />
+<a href="https://web.cs.elte.hu/~lovasz/kurzusok/hombook-almost-final.pdf">Large Networks and Graph Limits</a><br />
+<a href="https://services.math.duke.edu/~rtd/DoG/DoG.html">Dynamics on Graphs</a><br />
+<a href="https://www.math.cmu.edu/~af1p/Book.html">Introduction to Random Graphs</a><br />
+<a href="http://www.cs.cornell.edu/home/kleinber/networks-book/">Network, Crowds, and Markets: Reasoning About a Highly Connected World</a><br />
+<a href="https://www.whitman.edu/mathematics/cgt_online/book/">An Introduction to Combinatorics and Graph Theory</a><br />
+<a href="http://networksciencebook.com/">Network Science</a><br />
+<a href="https://diestel-graph-theory.com/basic.html">Graph Theory, 5th Ed.</a><br />
+<a href="https://www.win.tue.nl/~rhofstad/">Random Graphs and Complex Networks, Volume I and II</a><br />
+</p>
+<h3 id="game-theory">Game Theory</h3>
+<p>
+<a href="https://www.economics.utoronto.ca/osborne/igt/">Introduction to Game Theory</a><br />
+<a href="https://www.rand.org/content/dam/rand/pubs/commercial_books/2007/RAND_CB149-1.pdf">Games of Strategy - Theory and Applications</a><br />
+<a href="http://faculty.econ.ucdavis.edu/faculty/bonanno/GT_Book.html">Game Theory</a><br />
+<a href="http://www.masfoundations.org/mas.pdf">Multiagent Systems</a><br />
+<a href="https://homes.cs.washington.edu/~karlin/">Game Theory, Alive</a><br />
+<a href="http://www.robertolucchetti.com/public/uploads/2018/09/Esculapio18Ottobre.pdf">A Primer in Game Theory</a>
+</p>
 
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2024-08-19T00:00:00.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-02-21T00:00:00.000Z">
     <span>Last updated on</span>
-    Aug 19, 2024</time>
+    Feb 21, 2025</time>
 
       <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
         
@@ -1548,7 +1718,7 @@
     width="96"
     height="96"
     alt="Mohsen Davarynejad"
-  src="/author/mohsen-davarynejad/avatar_hu4609463848930254875.jpg"
+  src="/author/mohsen-davarynejad/avatar_hu_c4ec83f3c87bacbf.jpg"
   loading="lazy"
   />
   
@@ -1674,34 +1844,18 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/blog/hugo-how-to/">
-          <span
-            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
-          <span class="flex flex-col">
-            <span
-              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >How to Deploy Your Hugo Site to GitHub Pages - A Simple Step-by-Step Guide</span>
-            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-              
-                Aug 19, 2024
-              
-            </span>
-          </span>
-        </a>
-      
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/blog/explainable-boosting-machine/">
+        <a class="group flex text-right no-underline" href="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Explainable boosting machine</span
+            >A Data Scientist&#39;s Chronicle of Lessons Learned and Strategies for Success</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
-                Aug 5, 2024
+                Sep 11, 2024
               
             </span>
           </span>
@@ -1781,7 +1935,7 @@
 
   
   <p class="powered-by text-center">
-    © 2024 Mohsen Davarynejad. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY SA 4.0</a>
+    © 2025 Mohsen Davarynejad. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY SA 4.0</a>
   </p>
   
 

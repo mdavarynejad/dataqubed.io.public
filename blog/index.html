@@ -1,13 +1,13 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: September 11, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: February 22, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="dark">
   
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="Hugo Blox Builder 0.2.0" />
+  <meta name="generator" content="Hugo Blox Builder 0.3.2" />
 
   
   
@@ -57,7 +57,7 @@
   
   
     
-    <link href="/dist/wc.min.css" rel="stylesheet" />
+    <link href="/dist/wc.min.05570f1deda629d4e2d77f73534a63aa04471f012db6735c59424372f467db85.css" rel="stylesheet" />
   
 
   
@@ -160,8 +160,8 @@
   
 
   
-  <link rel="icon" type="image/png" href="/media/icon_hu3247630877640252165.png" />
-  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4166356570829923896.png" />
+  <link rel="icon" type="image/png" href="/media/icon_hu_5cac115d14ed3d49.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_e7f327b39c12e7ca.png" />
 
   <link rel="canonical" href="https://dataqubed.io/blog/" />
 
@@ -191,11 +191,11 @@
   <meta property="og:site_name" content="Your Data Science Mentor - Mohsen Davarynejad" />
   <meta property="og:url" content="https://dataqubed.io/blog/" />
   <meta property="og:title" content="Blog | Your Data Science Mentor - Mohsen Davarynejad" />
-  <meta property="og:description" content="My courses" /><meta property="og:image" content="https://dataqubed.io/media/icon_hu7729264130191091259.png" />
-    <meta property="twitter:image" content="https://dataqubed.io/media/icon_hu7729264130191091259.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="My courses" /><meta property="og:image" content="https://dataqubed.io/media/icon_hu_645fa481986063ef.png" />
+    <meta property="twitter:image" content="https://dataqubed.io/media/icon_hu_645fa481986063ef.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2024-09-11T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2025-02-21T00:00:00&#43;00:00" />
     
   
 
@@ -236,7 +236,6 @@
   
   
   
-  
     
       
       
@@ -263,6 +262,9 @@
   
   
   
+  
+  
+  
     
       
       
@@ -282,8 +284,6 @@
         
       
     
-  
-  
   
   
   
@@ -548,40 +548,67 @@
     --pagefind-ui-border: #152028;
     --pagefind-ui-tag: #152028;
   }
+
+   
+  .search-close > svg {
+    height: calc(64px * var(--pagefind-ui-scale));
+    width: calc(64px * var(--pagefind-ui-scale));
+  }
 </style>
 
 <script>
+  
+  let searchWrapper = null;
+
   window.addEventListener('DOMContentLoaded', (event) => {
+    
     new PagefindUI({
       element: "#search",
       showSubResults: true,
       baseUrl: window.hbb.pagefind.baseUrl,
       bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
     });
+
+    
+    searchWrapper = document.getElementById('search-wrapper');
+
+    
+    let triggers = document.querySelectorAll('[data-search-toggle]');
+    triggers.forEach(trigger =>
+      trigger.addEventListener('click', handleSearchToggle)
+    );
   });
-  document.addEventListener('DOMContentLoaded', () => {
-    let element = document.getElementById('search');
-    let trigger = document.getElementById('search_toggle');
 
-    if (trigger) {
-      trigger.addEventListener('click', () => {
-        element.classList.toggle('hidden');
-        element.querySelector("input").value = ""
-        element.querySelector("input").focus()
+  function handleSearchToggle(event) {
+    if (!searchWrapper) return;
 
-        if (!element.classList.contains('hidden')) {
-          let clear_trigger = document.querySelector('.pagefind-ui__search-clear');
+    const isHidden = searchWrapper.classList.contains('hidden');
+    searchWrapper.classList.toggle('hidden');
+    document.body.style.overflow = isHidden ? 'hidden' : '';
 
-          if (clear_trigger && !clear_trigger.hasAttribute('listenerOnClick')) {
-            clear_trigger.setAttribute('listenerOnClick', 'true');
+    const searchInput = searchWrapper.querySelector("input");
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
 
-            clear_trigger.addEventListener('click', () => {
-              element.classList.toggle('hidden');
-            });
-          }
-        }
+    if (!searchWrapper.classList.contains('hidden')) {
+      let clearTrigger = document.querySelector('.pagefind-ui__search-clear');
 
-      });
+      if (clearTrigger && !clearTrigger.hasAttribute('listenerOnClick')) {
+        clearTrigger.setAttribute('listenerOnClick', 'true');
+
+        clearTrigger.addEventListener('click', () => {
+          searchInput.focus();
+        });
+      }
+    }
+  }
+
+  
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchWrapper && !searchWrapper.classList.contains('hidden')) {
+      searchWrapper.classList.add('hidden');
     }
   });
 </script>
@@ -609,8 +636,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.e5fa931947cac2d947732ea37a770aae2b5bd4a50b6048060cd129b46159a06d.js"
-    integrity="sha256-5fqTGUfKwtlHcy6jencKritb1KULYEgGDNEptGFZoG0="
+    src="/js/hugo-blox-en.min.47736f84e20cae1bb2224dc4605239689e913811575e32b5f86a700ee9d6529d.js"
+    integrity="sha256-R3NvhOIMrhuyIk3EYFI5aJ6ROBFXXjK1&#43;GpwDunWUp0="
   ></script>
 
   
@@ -801,9 +828,9 @@
       
       
       <button
-        aria-label="search"
+        aria-label="toggle search"
         class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
-        id="search_toggle">
+        data-search-toggle>
         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
       </button>
       
@@ -820,8 +847,26 @@
   </nav>
 </header>
 
+<div
+  id="search-wrapper"
+  class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"
+>
+  <div class="flex justify-end p-3">
+    <button
+      aria-label="search"
+      class="search-close text-black hover:text-primary dark:text-white"
+      data-search-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
 
-<div id="search" class="hidden p-3"></div>
+  <div id="search" class="flex-1 overflow-y-auto p-3">
+    
+  </div>
+</div>
 
 
         
@@ -973,7 +1018,7 @@
 
 
 
-<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center">
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
 
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
     Blog
@@ -983,7 +1028,7 @@
 </div>
 
 
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center px-6">
 
   
   
@@ -1016,13 +1061,101 @@
 
     <a
       class="relative block aspect-video"
+      href="/blog/useful-links/" >
+
+      <img alt="Useful links"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/useful-links/featured_hu_f58513506547644.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/links/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Links</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/blog/useful-links/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Useful links
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/blog/useful-links/" >
+        Useful links</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2025-02-21">Feb 21, 2025</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
       href="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/" >
 
       <img alt="A Data Scientist&#39;s Chronicle of Lessons Learned and Strategies for Success"
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/featured_hu12179173353123820654.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/featured_hu_6b1ebe196a6f54a6.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -1049,6 +1182,29 @@
       <div class="flex-none">
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
           
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
           <time class="truncate text-sm" datetime="2024-09-11">Sep 11, 2024</time>
         </div>
@@ -1087,7 +1243,7 @@
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/blog/a-blueprint-for-successful-student-projects/featured_hu12290102692430654822.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/a-blueprint-for-successful-student-projects/featured_hu_e2a2d4ce60db207a.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -1114,6 +1270,29 @@
       <div class="flex-none">
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
           
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
           <time class="truncate text-sm" datetime="2024-08-26">Aug 26, 2024</time>
         </div>
@@ -1152,7 +1331,7 @@
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/blog/hugo-how-to/featured_hu2595354660596527621.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/hugo-how-to/featured_hu_f58513506547644.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -1180,70 +1359,28 @@
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
           
           
-          <time class="truncate text-sm" datetime="2024-08-19">Aug 19, 2024</time>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-  
-    
-
-
-
-
-
-
-
-
-
-<div class="group cursor-pointer">
-
-  
-  
-  
-    
-  
-  
-  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
-
-    <a
-      class="relative block aspect-video"
-      href="/blog/useful-links/" >
-
-      <img alt="Useful links"
-           class="object-fill transition-all"
-           data-nimg="fill"
-           decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/blog/useful-links/featured_hu2595354660596527621.webp"
-           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
-           width="960"></a>
-  </div>
-  
-  <div class="">
-    <div class="">
-      <div class="flex gap-3">
-        
-        <a href="/tags/links/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Links</span></a>
-        
-      </div>
-      
-      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="/blog/useful-links/" ><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Useful links
-          </span></a>
-      </h2>
-      
-      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="/blog/useful-links/" >
-        Useful links</a></p>
-      </div>
-      <div class="flex-none">
-        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
           
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
           <time class="truncate text-sm" datetime="2024-08-19">Aug 19, 2024</time>
         </div>
@@ -1282,7 +1419,7 @@
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/blog/explainable-boosting-machine/featured_hu18413469532788721445.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/explainable-boosting-machine/featured_hu_a0b680d9c01a4e53.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -1309,6 +1446,29 @@
       <div class="flex-none">
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
           
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
           <time class="truncate text-sm" datetime="2024-08-05">Aug 5, 2024</time>
         </div>
@@ -1415,7 +1575,7 @@
 
   
   <p class="powered-by text-center">
-    © 2024 Mohsen Davarynejad. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY SA 4.0</a>
+    © 2025 Mohsen Davarynejad. This work is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener noreferrer" target="_blank">CC BY SA 4.0</a>
   </p>
   
 

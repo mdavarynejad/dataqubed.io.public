@@ -7,7 +7,7 @@
     <description>DataScienceWisdom</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 11 Sep 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://dataqubed.io/media/icon_hu_645fa481986063ef.png</url>
       <title>DataScienceWisdom</title>
       <link>https://dataqubed.io/tags/datasciencewisdom/</link>
     </image>
@@ -17,11 +17,11 @@
       <link>https://dataqubed.io/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/</link>
       <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/</guid>
-      <description>&lt;h2 id=&#34;the-art-of-mastery-in-landscapes-of-corporate-challenges&#34;&gt;The Art of Mastery in landscapes of corporate challenges&lt;/h2&gt;
+      <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/&#34; /&gt;
+&lt;h2 id=&#34;the-art-of-mastery-in-landscapes-of-corporate-challenges&#34;&gt;The Art of Mastery in landscapes of corporate challenges&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;A data scientist combines hacking, statistics, and machine learning to collect, scrub, examine, model, and understand data. Data scientists are not only skilled at working with data, but they also value data as a premium product.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;— Erwin Caniba&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;— Erwin Caniba&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Around 9 years ago, I decided to leave academia in the pursuit of putting my learnings to the test. On that occasion, I have decided to pen down my experiences gathered over the last 9 years of my professional voyage; a journey that has taken me through diverse industries, from the corridors of academia to the landscapes of corporate challenges. I distill my experiences into a set of principles, strategies, and wisdom gained through years of exploration.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -45,8 +45,7 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Data science isn&amp;rsquo;t about the quantity of data but rather the quality.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;— Joo Ann Lee&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;— Joo Ann Lee&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Always start from the &lt;strong&gt;simplest model&lt;/strong&gt; possible, which ticks the requirements.&lt;/p&gt;
@@ -90,8 +89,7 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&amp;ldquo;The best way to learn data science is to do data science.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;— &lt;em&gt;Chanin Nantasenamat&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;— &lt;em&gt;Chanin Nantasenamat&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;p&gt;* &lt;sup&gt; Image Credit: DALL-E 3 with the prompt: Create an image where a puzzle game is featured at the center. As you move towards the outer edges of the image, the puzzle pieces seamlessly transform into pins. These pins are intricately connected to each other with wires, resembling a complex network of junctions in a bustling city. Ensure that the pins exhibit a variety of colors to enhance the vibrant and dynamic feel of the cityscape&lt;/sup&gt;&lt;/p&gt;
 </description>

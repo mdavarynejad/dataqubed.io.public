@@ -7,7 +7,7 @@
     <description>EBM</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 05 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://dataqubed.io/media/icon_hu_645fa481986063ef.png</url>
       <title>EBM</title>
       <link>https://dataqubed.io/tags/ebm/</link>
     </image>
@@ -20,8 +20,7 @@
       <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/explainable-boosting-machine/&#34; /&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can have data without information, but you cannot have information without data.&lt;/p&gt;
-&lt;p&gt;Daniel Keys Moran, science fiction writer&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Daniel Keys Moran, science fiction writer&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;The business impact of machine learning models is becoming increasingly significant whether it is in marketing campaign budget allocation or credit risk management. However, the lack of interpretability and explainability of many machine learning models makes them not only difficult to &lt;em&gt;trust&lt;/em&gt; but also difficult to &lt;em&gt;debug&lt;/em&gt;. When the end user can comprehend the decision-making process of a machine learning model, they are more likely to accept, trust, and adopt the model&amp;rsquo;s outputs, giving rise to reliable model-based decisions.&lt;/p&gt;
 &lt;p&gt;The easiest way to ensure interpretability is to use interpretable models. Consequently, there is a growing interest in the development and utilization of interpretable machine learning models.&lt;/p&gt;
 &lt;p&gt;Explainable Boosting Machine (EBM) originally developed at Microsoft Research is an inherently interpretable machine learning model that gained increasing popularity in a variety of business applications due to its predictive performance and low computational cost. It falls into a category of ML models known as &amp;ldquo;Glass box&amp;rdquo;. Not only it can capture non-linear relationships between dependent and independent variables, but it also has a built-in mechanism to capture interactions among independent variables. at its heart, it uses some of the well-known ML techniques like bagging and gradient boosting.&lt;/p&gt;

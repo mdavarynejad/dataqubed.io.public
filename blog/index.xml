@@ -5,23 +5,176 @@
     <link>https://dataqubed.io/blog/</link>
       <atom:link href="https://dataqubed.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 11 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://dataqubed.io/media/icon_hu7729264130191091259.png</url>
+      <url>https://dataqubed.io/media/icon_hu_645fa481986063ef.png</url>
       <title>Blog</title>
       <link>https://dataqubed.io/blog/</link>
     </image>
+    
+    <item>
+      <title>Useful links</title>
+      <link>https://dataqubed.io/blog/useful-links/</link>
+      <pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/blog/useful-links/</guid>
+      <description>&lt;h2 id=&#34;useful-links&#34;&gt;Useful links&lt;/h2&gt;
+&lt;p&gt;People&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://davarynejad.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prof.dr. Davarynejad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forghany.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zary Forghany&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miriam-hacker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Miriam Hacker, Research Program Manager at The Water Research Foundation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://glciampaglia.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Giovanni Luca Ciampaglia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cazencott.info/index.php/pages/Teaching&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chloé-Agathe Azencott&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Explore project ideas&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.interregeurope.eu/project-ideas&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Interreg Europe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/SideProject/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SideProject&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Online courses (I&amp;rsquo;m not endorsing any of the courses/materials listed bellow. This is only a place for me to look at them at a later stage!)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udemy.com/course/intro-to-optimization-pt1/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Intro to Optimization Through the Lens of Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;optimization-and-linear-programming&#34;&gt;Bookshelf - Textbooks available online for free.&lt;/h2&gt; 
+&lt;h3 id=&#34;optimization-and-linear-programming&#34;&gt;Optimization and Linear Programming&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://optimaltransport.github.io/book/&#34;&gt;Computational Optimal Transport&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://meboo.convexoptimization.com/access.html&#34;&gt;Convex Optimization and Euclidean Distance Geometry&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://algorithmsbook.com/optimization/#&#34;&gt;Algorithms for Optimization&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://dp.quantecon.org/&#34;&gt;Dynamic Programming&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://sites.engineering.ucsb.edu/~jbraw/mpc/&#34;&gt;Model Predictive Control: Theory, Computation, and Design, 2nd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1909.05207&#34;&gt;Introduction to Online Convex Optimization&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.stoprog.org/sites/default/files/files/manujw.pdf&#34;&gt;Stochastic Programming, 2nd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.rand.org/pubs/reports/R366.html&#34;&gt;Linear Programming and Extensions&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://convex-optimization.github.io/&#34;&gt;Algorithms for Convex Optimization&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://algorithmsbook.com/&#34;&gt;Algorithms for Decision Making&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.lix.polytechnique.fr/~liberti/teaching/dix/inf580-15/mathprog.pdf&#34;&gt;Mathematical Programming&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.robertolucchetti.com/public/uploads/2018/09/Lucchetti-R.-Convexity-and-Well-Posed-Problems2005328.pdf&#34;&gt;Convexity and Well-Posed Problems&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://web.stanford.edu/~boyd/cvxbook/&#34;&gt;Convex Optimization&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mykel.kochenderfer.com/textbooks/&#34;&gt;Decision Making Under Uncertainty&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.designofapproxalgs.com/&#34;&gt;The Design of Approximation Algorithms&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1606.04838&#34;&gt;Optimization Methods for Large-Scale Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://sbubeck.com/book.html&#34;&gt;Convex Optimization: Algorithms and Complexity&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://sites.uclouvain.be/absil/amsbook/&#34;&gt;Optimization Algorithms on Matrix Manifolds&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://cedricvillani.org/sites/dev/files/old_images/2012/08/preprint-1.pdf&#34;&gt;Optimal Transport, Old and New&lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;data-science&#34;&gt;Data Science&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery/&#34;&gt;The Fourth Paradigm: Data-Intensive Scientific Discovery&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://jakevdp.github.io/PythonDataScienceHandbook/&#34;&gt;Python Data Science Handbook&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://inferentialthinking.com/chapters/intro.html&#34;&gt;Computational and Inferential Thinking: The Foundations of Data Science, 2nd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://guidetodatamining.com/&#34;&gt;A Programmer’s Guide to Data Mining&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://datascienceatthecommandline.com/&#34;&gt;Data Science at the Command Line, 2nd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://rafalab.github.io/dsbook/&#34;&gt;Introduction to Data Science&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.cs.cornell.edu/jeh/&#34;&gt;Foundation of Data Science&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://srdas.github.io/MLBook/&#34;&gt;Data Science: Theories, Models, Algorithms and Analytics&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://math.unice.fr/~cbouveyr/MBCbook/&#34;&gt;Model-Based Clustering and Classification for Data Science&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://sjster.github.io/introduction_to_computational_statistics/docs/index.html&#34;&gt;Computational Statistics with PyMC3&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://wesmckinney.com/book/&#34;&gt;Python for Data Analysis, 3rd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://book-wright-ma.github.io/&#34;&gt;High-Dimensional Data Analysis with Low-Dimensional Models: Principles, Computation, and Applications&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1506.07825&#34;&gt;Data Assimilation: A Mathematical Introduction&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://courses.csail.mit.edu/6.042/spring18/&#34;&gt;Mathematics for Computer Science&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mathematical-tours.github.io/book/&#34;&gt;Mathematical Foundations of Data Science&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mathematical-tours.github.io/book-basics/&#34;&gt;An Introduction to Data Sciences&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://databookuw.com/databook.pdf&#34;&gt;Data-Driven Science &amp;amp; Engineering&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://datascienceincontext.com/&#34;&gt;Data Science in Context: Foundations, Challenges, Opportunities&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1407.7502&#34;&gt;Understanding Random Forests: From Theory to Practice&lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;machine-learning&#34;&gt;Machine Learning&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://smlbook.org/&#34;&gt;Machine Learning: A First Course for Engineers and Scientists&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.dkriesel.com/en/science/neural_networks&#34;&gt;A Brief Introduction to Neural Networks&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://helioml.org/Introduction/title.html&#34;&gt;Machine Learning, Statistics, and Data Mining for Heliophysics&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://cs.nyu.edu/~mohri/mlbook/&#34;&gt;Foundations of Machine Learning, 2nd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mlstory.org/index.html&#34;&gt;Pattern, Predictions, and Actions&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://probml.github.io/pml-book/&#34;&gt;Probabilistic Machine Learning: An Introduction&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://hastie.su.domains/ElemStatLearn/&#34;&gt;The Elements of Statistical Learning, 2nd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://christophm.github.io/interpretable-ml-book/&#34;&gt;Interpretable Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html&#34;&gt;Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1709.02840&#34;&gt;A Brief Introduction to Machine Learning for Engineers&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://developers.google.com/machine-learning/crash-course&#34;&gt;Google Machine Learning Crash Course&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://ciml.info/&#34;&gt;A Course in Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://agbs.kyb.tuebingen.mpg.de/lwk/&#34;&gt;Learning with Kernels: Support Vector Machines, Regularization, Optimization and Beyond&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://github.com/abhishekkrthakur/approachingalmost&#34;&gt;Approaching (Almost) Any Machine Learning Problem&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mml-book.github.io/&#34;&gt;Mathematics for Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/&#34;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://direct.mit.edu/books/oa-monograph/5342/BoostingFoundations-and-Algorithms&#34;&gt;Boosting: Foundations and Algorithms&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.statlearning.com/&#34;&gt;An Introduction to Statistical Learning, 2nd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://muse.jhu.edu/book/61941&#34;&gt;How Smart Machines Think&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://hastie.su.domains/CASI/&#34;&gt;Computer Age Statistical Inference&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage&#34;&gt;Bayesian Reasoning and Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mbmlbook.com/index.html&#34;&gt;Model-Based Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://cazencott.info/&#34;&gt;Introduction au Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://intelligent-optimization.org/LIONbook/&#34;&gt;The LION Way. Machine Learning plus Intelligent Optimization&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://themlbook.com/wiki/doku.php&#34;&gt;The Hundred Pages Machine Learning Book&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://pages.dataiku.com/oreilly-introducing-mlops&#34;&gt;Introducing MLOps&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1407.7502&#34;&gt;Understanding Random Forests: From Theory to Practice&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mlu-explain.github.io/&#34;&gt;MLU-Explain: Visual explanation of core machine learning concepts&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.cs.huji.ac.il/w~shais/UnderstandingMachineLearning/copy.html&#34;&gt;Understanding Machine Learning: From Theory to Algorithms&lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;neural-networks-deep-learning-and-reinforcement-learning&#34;&gt;Neural Networks, Deep Learning, and Reinforcement Learning&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://mlu-explain.github.io/&#34;&gt;MLU-Explain: Visual explanation of core machine learning concepts&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://intelligent-optimization.org/LIONbook/&#34;&gt;The LION Way. Machine Learning plus Intelligent Optimization&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage&#34;&gt;Bayesian Reasoning and Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://hastie.su.domains/CASI/&#34;&gt;Computer Age Statistical Inference&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://themlbook.com/wiki/doku.php&#34;&gt;The Hundred Pages Machine Learning Book&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mml-book.github.io/&#34;&gt;Mathematics for Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://arxiv.org/abs/1709.02840&#34;&gt;A Brief Introduction to Machine Learning for Engineers&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://helioml.org/Introduction/title.html&#34;&gt;Machine Learning, Statistics, and Data Mining for Heliophysics&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://ciml.info/&#34;&gt;A Course in Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://github.com/abhishekkrthakur/approachingalmost&#34;&gt;Approaching (Almost) Any Machine Learning Problem&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html&#34;&gt;Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://cs.nyu.edu/~mohri/mlbook/&#34;&gt;Foundations of Machine Learning, 2nd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://smlbook.org/&#34;&gt;Machine Learning: A First Course for Engineers and Scientists&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.dkriesel.com/en/science/neural_networks&#34;&gt;A Brief Introduction to Neural Networks&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://muse.jhu.edu/book/61941&#34;&gt;How Smart Machines Think&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://probml.github.io/pml-book/&#34;&gt;Probabilistic Machine Learning: An Introduction&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://christophm.github.io/interpretable-ml-book/&#34;&gt;Interpretable Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://statlearning.com/&#34;&gt;An Introduction to Statistical Learning, 2nd Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/&#34;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mbmlbook.com/index.html&#34;&gt;Model-Based Machine Learning&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://mlstory.org/index.html&#34;&gt;Pattern, Predictions, and Actions&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.cs.huji.ac.il/w~shais/UnderstandingMachineLearning/copy.html&#34;&gt;Understanding Machine Learning: From Theory to Algorithms&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://developers.google.com/machine-learning/crash-course&#34;&gt;Google Machine Learning Crash Course&lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;graph-theory&#34;&gt;Graph Theory&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.distributed-systems.net/index.php/books/gtcn/&#34;&gt;Graph Theory and Complex Networks&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.networkflowalgs.com/&#34;&gt;Network Flow Algorithms&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://neo4j.com/graph-algorithms-book/&#34;&gt;Graph Algorithms&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.uni-due.de/~hm0110/book.pdf&#34;&gt;Probability on Trees and Networks&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://web.cs.elte.hu/~lovasz/kurzusok/hombook-almost-final.pdf&#34;&gt;Large Networks and Graph Limits&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://services.math.duke.edu/~rtd/DoG/DoG.html&#34;&gt;Dynamics on Graphs&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.math.cmu.edu/~af1p/Book.html&#34;&gt;Introduction to Random Graphs&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.cs.cornell.edu/home/kleinber/networks-book/&#34;&gt;Network, Crowds, and Markets: Reasoning About a Highly Connected World&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.whitman.edu/mathematics/cgt_online/book/&#34;&gt;An Introduction to Combinatorics and Graph Theory&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://networksciencebook.com/&#34;&gt;Network Science&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://diestel-graph-theory.com/basic.html&#34;&gt;Graph Theory, 5th Ed.&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.win.tue.nl/~rhofstad/&#34;&gt;Random Graphs and Complex Networks, Volume I and II&lt;/a&gt;&lt;br /&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;game-theory&#34;&gt;Game Theory&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.economics.utoronto.ca/osborne/igt/&#34;&gt;Introduction to Game Theory&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.rand.org/content/dam/rand/pubs/commercial_books/2007/RAND_CB149-1.pdf&#34;&gt;Games of Strategy - Theory and Applications&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://faculty.econ.ucdavis.edu/faculty/bonanno/GT_Book.html&#34;&gt;Game Theory&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.masfoundations.org/mas.pdf&#34;&gt;Multiagent Systems&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://homes.cs.washington.edu/~karlin/&#34;&gt;Game Theory, Alive&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://www.robertolucchetti.com/public/uploads/2018/09/Esculapio18Ottobre.pdf&#34;&gt;A Primer in Game Theory&lt;/a&gt;
+&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>A Data Scientist&#39;s Chronicle of Lessons Learned and Strategies for Success</title>
       <link>https://dataqubed.io/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/</link>
       <pubDate>Wed, 11 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/</guid>
-      <description>&lt;h2 id=&#34;the-art-of-mastery-in-landscapes-of-corporate-challenges&#34;&gt;The Art of Mastery in landscapes of corporate challenges&lt;/h2&gt;
+      <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/&#34; /&gt;
+&lt;h2 id=&#34;the-art-of-mastery-in-landscapes-of-corporate-challenges&#34;&gt;The Art of Mastery in landscapes of corporate challenges&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;A data scientist combines hacking, statistics, and machine learning to collect, scrub, examine, model, and understand data. Data scientists are not only skilled at working with data, but they also value data as a premium product.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;— Erwin Caniba&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;— Erwin Caniba&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Around 9 years ago, I decided to leave academia in the pursuit of putting my learnings to the test. On that occasion, I have decided to pen down my experiences gathered over the last 9 years of my professional voyage; a journey that has taken me through diverse industries, from the corridors of academia to the landscapes of corporate challenges. I distill my experiences into a set of principles, strategies, and wisdom gained through years of exploration.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -45,8 +198,7 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;Data science isn&amp;rsquo;t about the quantity of data but rather the quality.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;— Joo Ann Lee&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;— Joo Ann Lee&lt;/p&gt;&lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Always start from the &lt;strong&gt;simplest model&lt;/strong&gt; possible, which ticks the requirements.&lt;/p&gt;
@@ -90,8 +242,7 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&amp;ldquo;The best way to learn data science is to do data science.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;— &lt;em&gt;Chanin Nantasenamat&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;— &lt;em&gt;Chanin Nantasenamat&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;p&gt;* &lt;sup&gt; Image Credit: DALL-E 3 with the prompt: Create an image where a puzzle game is featured at the center. As you move towards the outer edges of the image, the puzzle pieces seamlessly transform into pins. These pins are intricately connected to each other with wires, resembling a complex network of junctions in a bustling city. Ensure that the pins exhibit a variety of colors to enhance the vibrant and dynamic feel of the cityscape&lt;/sup&gt;&lt;/p&gt;
 </description>
@@ -107,8 +258,7 @@
 &lt;p&gt;Conway&amp;rsquo;s Law is a concept that was first introduced by Melvin Conway in 1968. It states:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations.
-— Melvin E. Conway, How Do Committees Invent?&lt;/p&gt;
-&lt;/blockquote&gt;
+— Melvin E. Conway, How Do Committees Invent?&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;In simpler terms, the way our team communicates and is organized will directly influence the design and outcome of the project we&amp;rsquo;re working on. If we have clear, efficient communication, our project is likely to be well-structured and cohesive. On the other hand, if our communication is disjointed or fragmented, that might reflect in the final product.&lt;/p&gt;
 &lt;h3 id=&#34;why-should-you-care-about-conways-law&#34;&gt;Why Should You Care About Conway&amp;rsquo;s Law?&lt;/h3&gt;
 &lt;p&gt;As students, you&amp;rsquo;re stepping into a project that has real-world implications and business impact. Our client is counting on us to deliver something valuable and functional. Understanding Conway&amp;rsquo;s Law can help us ensure that we meet (and hopefully exceed) their expectations. Here’s how:&lt;/p&gt;
@@ -201,43 +351,6 @@
     </item>
     
     <item>
-      <title>Useful links</title>
-      <link>https://dataqubed.io/blog/useful-links/</link>
-      <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/blog/useful-links/</guid>
-      <description>&lt;h2 id=&#34;useful-links&#34;&gt;useful links&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;People&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Explore project ideas&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;li&gt;[SideProject]https://www.reddit.com/r/SideProject/&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Online courses (I&amp;rsquo;m not endorsing any of the courses/materials listed bellow. This is only a place for me to look at them at a later stage!)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Explainable boosting machine</title>
       <link>https://dataqubed.io/blog/explainable-boosting-machine/</link>
       <pubDate>Mon, 05 Aug 2024 00:00:00 +0000</pubDate>
@@ -245,8 +358,7 @@
       <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/explainable-boosting-machine/&#34; /&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can have data without information, but you cannot have information without data.&lt;/p&gt;
-&lt;p&gt;Daniel Keys Moran, science fiction writer&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Daniel Keys Moran, science fiction writer&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;The business impact of machine learning models is becoming increasingly significant whether it is in marketing campaign budget allocation or credit risk management. However, the lack of interpretability and explainability of many machine learning models makes them not only difficult to &lt;em&gt;trust&lt;/em&gt; but also difficult to &lt;em&gt;debug&lt;/em&gt;. When the end user can comprehend the decision-making process of a machine learning model, they are more likely to accept, trust, and adopt the model&amp;rsquo;s outputs, giving rise to reliable model-based decisions.&lt;/p&gt;
 &lt;p&gt;The easiest way to ensure interpretability is to use interpretable models. Consequently, there is a growing interest in the development and utilization of interpretable machine learning models.&lt;/p&gt;
 &lt;p&gt;Explainable Boosting Machine (EBM) originally developed at Microsoft Research is an inherently interpretable machine learning model that gained increasing popularity in a variety of business applications due to its predictive performance and low computational cost. It falls into a category of ML models known as &amp;ldquo;Glass box&amp;rdquo;. Not only it can capture non-linear relationships between dependent and independent variables, but it also has a built-in mechanism to capture interactions among independent variables. at its heart, it uses some of the well-known ML techniques like bagging and gradient boosting.&lt;/p&gt;
@@ -292,8 +404,7 @@
       <description>&lt;link rel=&#34;canonical&#34; href=&#34;https://dataqubed.io/blog/pandas-tips-and-tricks-for-data-scientists/&#34; /&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You can have data without information, but you cannot have information without data.&lt;/p&gt;
-&lt;p&gt;Daniel Keys Moran, science fiction writer&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Daniel Keys Moran, science fiction writer&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Pandas is considered the most widely used tool for data manipulation, filtering, and wrangling. It comes with enormous features and functionalities designed for fast and easy data analytics. As a data scientist, I use its features on a daily basis, and in this post, I’d love to share with you some of the tricks of pandas.&lt;/p&gt;
 &lt;p&gt;I hope that this crafted list of features serves as a quick reference and gives you a good starting point for learning Pandas. The listed features come in no specific order, so no conclusions can be made on the order.&lt;/p&gt;
 &lt;p&gt;I will be using the NVDA ticker price data set for this post. So before going into the feature lists, I’ll share with you a few lines of code to download the data locally.&lt;/p&gt;
@@ -319,8 +430,7 @@
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Pull the NVDA exchange pricing data&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We will be using Yahoo! Finance&amp;rsquo;s API to download some market data. For that, we will be using the yfinance Python package. Follow 
-. I installed it using the following single line of code:&lt;/p&gt;
+&lt;p&gt;We will be using Yahoo! Finance&amp;rsquo;s API to download some market data. For that, we will be using the yfinance Python package. Follow &lt;a href=&#34;https://pypi.org/project/yfinance/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this link and install yfinance&lt;/a&gt;. I installed it using the following single line of code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;yfinance&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
@@ -371,11 +481,9 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Chart the NVDA pricing data&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pandas_profiling&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ProfileReport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NVDA_price&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This helps you with a few lines of code and time-saving tricks when exploring the data. The &lt;code&gt;pandas_profiling&lt;/code&gt; library comes with more features than the one listed above. Interested readers are referred to the official website.&lt;/p&gt;
-&lt;p&gt;The package provides an extensive exploratory data analysis (EDA) that includes reporting on different types of correlations, such as Pearson&amp;rsquo;s r and Phik coefficient (φk). Phik (φk) is a new correlation coefficient that works consistently between categorical, ordinal, and interval variables. Phik can capture non-linear dependency and revert to the Pearson correlation coefficient in the case of the bivariate normal input distribution. Read more 
-.&lt;/p&gt;
+&lt;p&gt;The package provides an extensive exploratory data analysis (EDA) that includes reporting on different types of correlations, such as Pearson&amp;rsquo;s r and Phik coefficient (φk). Phik (φk) is a new correlation coefficient that works consistently between categorical, ordinal, and interval variables. Phik can capture non-linear dependency and revert to the Pearson correlation coefficient in the case of the bivariate normal input distribution. Read more &lt;a href=&#34;https://phik.readthedocs.io/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;number-9-easy-way-to-convert-data-toint-type&#34;&gt;&lt;strong&gt;Number 9: Easy way to convert data to&lt;/strong&gt;&lt;code&gt;int&lt;/code&gt; type&lt;/h3&gt;
-&lt;p&gt;This is a simple but useful trick! When converting the data into &lt;code&gt;int&lt;/code&gt; type, the most common approach is to use &lt;code&gt;.astype(&#39;int&#39;)&lt;/code&gt;. However, if there are strings or other invalid types, you will face an error, and the conversion will fail. An alternative is to use the 
-&lt;code&gt;_numeric()&lt;/code&gt; command which will handle the errors. You may try this for yourself.&lt;/p&gt;
+&lt;p&gt;This is a simple but useful trick! When converting the data into &lt;code&gt;int&lt;/code&gt; type, the most common approach is to use &lt;code&gt;.astype(&#39;int&#39;)&lt;/code&gt;. However, if there are strings or other invalid types, you will face an error, and the conversion will fail. An alternative is to use the &lt;a href=&#34;http://pd.to&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;pd.to&lt;/code&gt;&lt;/a&gt;&lt;code&gt;_numeric()&lt;/code&gt; command which will handle the errors. You may try this for yourself.&lt;/p&gt;
 &lt;h3 id=&#34;number-8-break-up-strings-in-multiple-columns&#34;&gt;Number 8: Break up strings in multiple columns&lt;/h3&gt;
 &lt;p&gt;A simple trick for splitting a column into multiple columns using a split function:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;NVDA_price&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NVDA_price&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;column_name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;expand&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -434,23 +542,17 @@
 &lt;p&gt;Let’s assume that you have a column with millions of entries and you need to find the unique set of values It. &lt;code&gt;df.column_name.drop_duplicates(keep=&amp;quot;first&amp;quot;, inplace=False)&lt;/code&gt; is a lot faster than &lt;code&gt;df.column_name.unique()&lt;/code&gt;. Can be tested using &lt;code&gt;%timeit&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;keep=&amp;quot;first&amp;quot;&lt;/code&gt; option drops all the duplicates except for the first occurrence.&lt;/p&gt;
 &lt;h3 id=&#34;number-1-ufuncs&#34;&gt;Number 1: Ufuncs&lt;/h3&gt;
-&lt;p&gt;As explained 
- Pandas &lt;code&gt;Ufuncs&lt;/code&gt; is much better than &lt;code&gt;.apply&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;As explained &lt;a href=&#34;https://towardsdatascience.com/pandas-tips-and-tricks-33bcc8a40bb9&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; Pandas &lt;code&gt;Ufuncs&lt;/code&gt; is much better than &lt;code&gt;.apply&lt;/code&gt; command.&lt;/p&gt;
 &lt;h2 id=&#34;wrap-up&#34;&gt;Wrap-Up&lt;/h2&gt;
 &lt;p&gt;This post should give you an idea of some Pandas tricks commonly used by data scientists. The list aims to make your code more efficient.&lt;/p&gt;
 &lt;p&gt;In my next post, I&amp;rsquo;ll share some basic concepts you need for working with data in &lt;code&gt;PySpark&lt;/code&gt;. The post will cover topics such as reading and writing data from CSV files, along with some basic statistical analysis and visualization of data.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;notes&#34;&gt;Notes:&lt;/h3&gt;
-&lt;p&gt;1 - The official panda
-
-.&lt;/p&gt;
-&lt;p&gt;2- Link to the 
-.&lt;/p&gt;
+&lt;p&gt;1 - The official panda&lt;a href=&#34;https://learnpython.com/course/python-data-science?icn=blogTraffic&amp;amp;ici=link-ArticleBottom&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;s cheat sheet can be downloaded from he&lt;/a&gt;&lt;a href=&#34;https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;re&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;2- Link to the &lt;a href=&#34;https://github.com/mdavarynejad&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;notebook of this tutorial&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;refernces&#34;&gt;Refernces:&lt;/h3&gt;
-&lt;p&gt;1 - 
-&lt;/p&gt;
-&lt;p&gt;2 - 
-&lt;/p&gt;
+&lt;p&gt;1 - &lt;a href=&#34;https://www.youtube.com/watch?v=FxrGx8cPJlQ&amp;amp;t=33s&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data School&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2 - &lt;a href=&#34;https://gist.github.com/luerhard/703716567879afefa59c06e5af48c371&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lukas Erhard&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Please leave a message below if you would like to share your thoughts or if you like to share your tricks on Pandas.&lt;/p&gt;</description>
     </item>
@@ -467,12 +569,8 @@
 &lt;p&gt;&lt;strong&gt;Youtube&lt;/strong&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{{&amp;lt; youtube D2vj0WcvH5c &amp;gt;}}
 &lt;/code&gt;&lt;/pre&gt;
-
-
-    
-    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/D2vj0WcvH5c?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
-      &gt;&lt;/iframe&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/D2vj0WcvH5c?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Bilibili&lt;/strong&gt;:&lt;/p&gt;
@@ -485,8 +583,7 @@
   &gt;&lt;/iframe&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Video file&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Videos may be added to a page by either placing them in your &lt;code&gt;assets/media/&lt;/code&gt; media library or in your 
-, and then embedding them with the &lt;em&gt;video&lt;/em&gt; shortcode:&lt;/p&gt;
+&lt;p&gt;Videos may be added to a page by either placing them in your &lt;code&gt;assets/media/&lt;/code&gt; media library or in your &lt;a href=&#34;https://gohugo.io/content-management/page-bundles/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;page&amp;rsquo;s folder&lt;/a&gt;, and then embedding them with the &lt;em&gt;video&lt;/em&gt; shortcode:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{{&amp;lt; video src=&amp;quot;my_video.mp4&amp;quot; controls=&amp;quot;yes&amp;quot; &amp;gt;}}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;podcast&#34;&gt;Podcast&lt;/h2&gt;
@@ -590,7 +687,7 @@ data.head()
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/a&gt;
       &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#-click-here-to-become-a-sponsor-and-help-support-hugo-bloxs-future-httpshugobloxcomsponsor&#34;&gt;&lt;a href=&#34;https://hugoblox.com/sponsor/&#34;&gt;❤️ Click here to become a sponsor and help support Hugo Blox&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#-click-here-to-become-a-sponsor-and-help-support-hugo-blox&#34;&gt;&lt;a href=&#34;https://hugoblox.com/sponsor/&#34;&gt;❤️ Click here to become a sponsor and help support Hugo Blox&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
     &lt;li&gt;&lt;a href=&#34;#ecosystem&#34;&gt;Ecosystem&lt;/a&gt;&lt;/li&gt;
@@ -611,52 +708,31 @@ data.head()
 &lt;/ol&gt;
 &lt;h3 id=&#34;get-started&#34;&gt;Get Started&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;👉 
-&lt;/li&gt;
-&lt;li&gt;📚 
-&lt;/li&gt;
-&lt;li&gt;💬 
- or 
-&lt;/li&gt;
-&lt;li&gt;🐦 Twitter: 
- 
- #MadeWithHugoBlox&lt;/li&gt;
-&lt;li&gt;💡 
-&lt;/li&gt;
-&lt;li&gt;⬆️ &lt;strong&gt;Updating Hugo Blox?&lt;/strong&gt; View the 
- and 
-&lt;/li&gt;
+&lt;li&gt;👉 &lt;a href=&#34;https://hugoblox.com/templates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 &lt;a href=&#34;https://docs.hugoblox.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;Hugo Blox community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/GetResearchDev&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GetResearchDev&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; #MadeWithHugoBlox&lt;/li&gt;
+&lt;li&gt;💡 &lt;a href=&#34;https://github.com/HugoBlox/hugo-blox-builder/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Hugo Blox&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating Hugo Blox?&lt;/strong&gt; View the &lt;a href=&#34;https://docs.hugoblox.com/reference/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://github.com/HugoBlox/hugo-blox-builder/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
 &lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
-&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-hugo-bloxs-future-httpshugobloxcomsponsor&#34;&gt;
-&lt;/h3&gt;
-&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock 
- awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-hugo-blox&#34;&gt;&lt;a href=&#34;https://hugoblox.com/sponsor/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;❤️ Click here to become a sponsor and help support Hugo Blox&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://hugoblox.com/sponsor/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;
-:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/GetRD/academic-file-converter&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bibtex To Markdown&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
-&lt;p&gt;
- are building with this template.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://hugoblox.com/creators/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learn what other &lt;strong&gt;creators&lt;/strong&gt;&lt;/a&gt; are building with this template.&lt;/p&gt;
 &lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with no-code 
- and 
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with no-code &lt;a href=&#34;https://hugoblox.com/blocks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;blocks&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://docs.hugoblox.com/reference/markdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in 
-, 
-, or 
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable 
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://docs.hugoblox.com/reference/markdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://docs.hugoblox.com/getting-started/cms/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://docs.hugoblox.com/getting-started/cms/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://docs.hugoblox.com/getting-started/customize/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code syntax highlighting and LaTeX math supported&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - 
-, 
-, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one-page design&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
@@ -669,13 +745,10 @@ data.head()
 &lt;/ul&gt;
 &lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
 &lt;p&gt;Hugo Blox and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Visitors can choose their preferred mode by clicking the sun/moon icon in the header.&lt;/p&gt;
-&lt;p&gt;
- for your site. Themes are fully customizable.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.hugoblox.com/getting-started/customize/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2016-present 
-.&lt;/p&gt;
-&lt;p&gt;Released under the 
- license.&lt;/p&gt;
+&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
 </description>
     </item>
     
@@ -792,8 +865,7 @@ data.head()
 &lt;p&gt;&lt;mark&gt;Highlight&lt;/mark&gt; important text with &lt;code&gt;mark&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;mark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Highlighted text&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;mark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;callouts&#34;&gt;Callouts&lt;/h2&gt;
-&lt;p&gt;Use 
- (aka &lt;em&gt;asides&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;) to draw attention to notes, tips, and warnings.&lt;/p&gt;
+&lt;p&gt;Use &lt;a href=&#34;https://docs.hugoblox.com/reference/markdown/#callouts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;callouts&lt;/a&gt; (aka &lt;em&gt;asides&lt;/em&gt;, &lt;em&gt;hints&lt;/em&gt;, or &lt;em&gt;alerts&lt;/em&gt;) to draw attention to notes, tips, and warnings.&lt;/p&gt;
 &lt;p&gt;By wrapping a paragraph in &lt;code&gt;{{% callout note %}} ... {{% /callout %}}&lt;/code&gt;, it will render as an aside.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{% callout note %}}
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
@@ -824,15 +896,14 @@ data.head()
       <description>&lt;p&gt;Hugo Blox is designed to give technical content creators a seamless experience. You can focus on the content and Hugo Blox handles the rest.&lt;/p&gt;
 &lt;p&gt;Use popular tools such as Plotly, Mermaid, and data frames.&lt;/p&gt;
 &lt;h2 id=&#34;charts&#34;&gt;Charts&lt;/h2&gt;
-&lt;p&gt;Hugo Blox supports the popular 
- format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p&gt;
+&lt;p&gt;Hugo Blox supports the popular &lt;a href=&#34;https://plot.ly/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly&lt;/a&gt; format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p&gt;
 &lt;p&gt;Save your Plotly JSON in your page folder, for example &lt;code&gt;line-chart.json&lt;/code&gt;, and then add the &lt;code&gt;{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code&gt; shortcode where you would like the chart to appear.&lt;/p&gt;
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
 
 
-&lt;div id=&#34;chart-263814579&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-694825137&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -850,14 +921,13 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-263814579&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-694825137&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
 &lt;/script&gt;
 
-&lt;p&gt;You might also find the 
- useful.&lt;/p&gt;
+&lt;p&gt;You might also find the &lt;a href=&#34;http://plotly-json-editor.getforge.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Plotly JSON Editor&lt;/a&gt; useful.&lt;/p&gt;
 &lt;h2 id=&#34;diagrams&#34;&gt;Diagrams&lt;/h2&gt;
 &lt;p&gt;Hugo Blox supports the &lt;em&gt;Mermaid&lt;/em&gt; Markdown extension for diagrams.&lt;/p&gt;
 &lt;p&gt;An example &lt;strong&gt;flowchart&lt;/strong&gt;:&lt;/p&gt;
