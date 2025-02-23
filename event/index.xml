@@ -5,7 +5,7 @@
     <link>https://dataqubed.io/event/</link>
       <atom:link href="https://dataqubed.io/event/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
     <image>
       <url>https://dataqubed.io/media/icon_hu_645fa481986063ef.png</url>
       <title>Recent &amp; Upcoming Talks</title>

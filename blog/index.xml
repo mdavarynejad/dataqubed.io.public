@@ -5,7 +5,7 @@
     <link>https://dataqubed.io/blog/</link>
       <atom:link href="https://dataqubed.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>Blog</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language>
     <image>
       <url>https://dataqubed.io/media/icon_hu_645fa481986063ef.png</url>
       <title>Blog</title>
@@ -17,8 +17,7 @@
       <link>https://dataqubed.io/blog/useful-links/</link>
       <pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/blog/useful-links/</guid>
-      <description>&lt;h2 id=&#34;useful-links&#34;&gt;Useful links&lt;/h2&gt;
-&lt;h3 id=&#34;people&#34;&gt;People&lt;/h3&gt;
+      <description>&lt;h3 id=&#34;people&#34;&gt;People&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://davarynejad.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prof.dr. Davarynejad&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://forghany.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zary Forghany&lt;/a&gt;&lt;/li&gt;
@@ -851,7 +850,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-896327514&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-571486239&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -869,7 +868,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-896327514&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-571486239&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
