@@ -6,11 +6,23 @@
     <lastmod>2024-08-14T16:26:02+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/links/</loc>
-    <lastmod>2025-02-23T20:34:21+01:00</lastmod>
+    <loc>https://dataqubed.io/teaching/deepseek-crewai-agents/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/year-3/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/teaching/deepseek-vllm-locally/</loc>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/links/</loc>
     <lastmod>2025-02-23T20:34:21+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -40,10 +52,6 @@
   </url><url>
     <loc>https://dataqubed.io/teaching/pyspark-sparklingwater-part2/</loc>
     <lastmod>2024-09-11T10:14:32+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/year-3/</loc>
-    <lastmod>2025-02-22T22:36:19+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/teaching/pyspark-sparklingwater-part1/</loc>
@@ -182,11 +190,11 @@
     <lastmod>2024-09-10T21:53:11+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/pytorch/</loc>
+    <loc>https://dataqubed.io/blog/pytorch/</loc>
     <lastmod>2024-09-10T21:53:11+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/blog/pytorch/</loc>
+    <loc>https://dataqubed.io/tags/pytorch/</loc>
     <lastmod>2024-09-10T21:53:11+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>

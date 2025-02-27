@@ -13,6 +13,76 @@
     </image>
     
     <item>
+      <title>Orchestrating AI Agents with CrewAI and Local DeepSeek API</title>
+      <link>https://dataqubed.io/teaching/deepseek-crewai-agents/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/deepseek-crewai-agents/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Running an LLM is great—but &lt;strong&gt;what if we could make AI agents collaborate, delegate tasks, and act autonomously&lt;/strong&gt;? This post builds upon our previous setup, integrating &lt;strong&gt;CrewAI&lt;/strong&gt; with our locally hosted &lt;strong&gt;DeepSeek R1 API&lt;/strong&gt;. You&amp;rsquo;ll learn how to create &lt;strong&gt;multi-agent AI systems&lt;/strong&gt;, enabling them to analyze information, generate content, and interact dynamically.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;02%20-%20Orchestrating%20AI%20Agents%20--%20CrewAI%20with%20Local%20DeepSeek%20R1%20API.ipynb&#34;&gt;Check out the notebook here.&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;AI isn’t just about answering queries—it’s about &lt;strong&gt;understanding goals, making decisions, and taking actions&lt;/strong&gt;. This is where &lt;strong&gt;AI agents&lt;/strong&gt; come in.&lt;/p&gt;
+&lt;p&gt;CrewAI allows us to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Define &lt;strong&gt;Agents&lt;/strong&gt; with specific roles and expertise.&lt;/li&gt;
+&lt;li&gt;Assign them &lt;strong&gt;Tasks&lt;/strong&gt; to accomplish autonomously.&lt;/li&gt;
+&lt;li&gt;Use a &lt;strong&gt;local LLM (DeepSeek R1) as the engine&lt;/strong&gt; powering these agents.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With this setup, we can &lt;strong&gt;automate workflows&lt;/strong&gt;, &lt;strong&gt;improve AI reasoning&lt;/strong&gt;, and even simulate real-world &lt;strong&gt;multi-agent interactions&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-use-ai-agents&#34;&gt;Why Use AI Agents?&lt;/h2&gt;
+&lt;p&gt;Traditional AI applications are &lt;strong&gt;static&lt;/strong&gt;—they answer questions but lack dynamic reasoning. AI agents, on the other hand, can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Collaborate&lt;/strong&gt;: Multiple agents work together, combining expertise.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Delegate&lt;/strong&gt;: Agents can assign subtasks and request additional data.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Act Autonomously&lt;/strong&gt;: Instead of just responding, they can &lt;strong&gt;execute complex multi-step processes&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Imagine a &lt;strong&gt;research assistant AI&lt;/strong&gt; that &lt;strong&gt;analyzes trends&lt;/strong&gt; and &lt;strong&gt;writes articles&lt;/strong&gt;—or a &lt;strong&gt;technical support bot&lt;/strong&gt; that &lt;strong&gt;searches for solutions and responds intelligently&lt;/strong&gt;. CrewAI makes this possible.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;By combining &lt;strong&gt;CrewAI with DeepSeek R1&lt;/strong&gt;, we’ve built a powerful &lt;strong&gt;multi-agent AI system&lt;/strong&gt; capable of &lt;strong&gt;complex reasoning and automation&lt;/strong&gt;. This is just the beginning!&lt;/p&gt;
+&lt;p&gt;In the &lt;strong&gt;next post&lt;/strong&gt;, we&amp;rsquo;ll explore a &lt;strong&gt;real-world use case&lt;/strong&gt; that requires more agents, &lt;strong&gt;self-delegation&lt;/strong&gt;, and autonomous decision-making—pushing the boundaries of what AI agents can do.&lt;/p&gt;
+&lt;p&gt;Stay tuned for the next chapter in our AI journey! 🚀&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Running DeepSeek R1 Locally with vLLM &amp; Ray Dashboard</title>
+      <link>https://dataqubed.io/teaching/deepseek-vllm-locally/</link>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/teaching/deepseek-vllm-locally/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Large Language Models (LLMs) have revolutionized AI applications, but running them efficiently on local hardware remains a challenge. In this post, we explore how to set up &lt;strong&gt;DeepSeek R1 Distill Qwen-1.5B&lt;/strong&gt; using &lt;strong&gt;vLLM&lt;/strong&gt;, an optimized inference engine, along with &lt;strong&gt;Ray Dashboard&lt;/strong&gt; for real-time resource monitoring. By the end of this guide, you’ll have a &lt;strong&gt;fast, API-accessible LLM&lt;/strong&gt; running on your local machine, ready for further agentic integrations.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;01%20-%20DeepSeek%20R1%20Local%20Setup%20--%20vLLM%20API,%20Ray%20Dashboard%20&amp;amp;%20CrewAI%20Agent%20Test.ipynb&#34;&gt;Check out the notebook here.&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Deploying open-source LLMs locally is now easier than ever, thanks to &lt;strong&gt;vLLM&lt;/strong&gt;—a high-performance inference framework designed for &lt;strong&gt;efficiency and scalability&lt;/strong&gt;. Unlike traditional Hugging Face transformers, &lt;strong&gt;vLLM optimizes memory usage and throughput&lt;/strong&gt;, making it ideal for running &lt;strong&gt;large-scale AI models&lt;/strong&gt; on consumer GPUs.&lt;/p&gt;
+&lt;p&gt;In this post, we will:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Set up &lt;strong&gt;DeepSeek R1 Distill Qwen-1.5B&lt;/strong&gt; on a local machine.&lt;/li&gt;
+&lt;li&gt;Expose it via an &lt;strong&gt;OpenAI-compatible API&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Use &lt;strong&gt;Ray Dashboard&lt;/strong&gt; to monitor GPU and system resource usage.&lt;/li&gt;
+&lt;li&gt;Optionally, &lt;strong&gt;expose the API to the web using ngrok&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-run-deepseek-r1-locally&#34;&gt;Why Run DeepSeek R1 Locally?&lt;/h2&gt;
+&lt;p&gt;LLMs are powerful, but running them in the cloud comes with limitations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cost:&lt;/strong&gt; Continuous API calls to hosted LLM services can be expensive.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Latency:&lt;/strong&gt; Local execution can be &lt;strong&gt;faster&lt;/strong&gt; for real-time applications.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy &amp;amp; Control:&lt;/strong&gt; Keep your AI workloads &lt;strong&gt;entirely on-premise&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By leveraging &lt;strong&gt;vLLM and Ray&lt;/strong&gt;, we ensure that our local LLM setup is not only &lt;strong&gt;efficient but also scalable&lt;/strong&gt;, allowing for &lt;strong&gt;multiple requests&lt;/strong&gt; while keeping GPU utilization optimized.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;By following this setup, you now have a &lt;strong&gt;fully operational LLM API&lt;/strong&gt; running locally, optimized for efficiency with &lt;strong&gt;vLLM and Ray&lt;/strong&gt;. Whether you&amp;rsquo;re developing chatbots, research tools, or agentic workflows, this setup provides the foundation for &lt;strong&gt;powerful local AI applications&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;But running a model is only the beginning! Next, we’ll dive into &lt;strong&gt;orchestrating AI agents&lt;/strong&gt; using &lt;strong&gt;CrewAI&lt;/strong&gt;, allowing multiple agents to collaborate, perform tasks, and make decisions dynamically.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;02%20-%20Orchestrating%20AI%20Agents%20--%20CrewAI%20with%20Local%20DeepSeek%20R1%20API.ipynb&#34;&gt;Continue to the next post: Orchestrating AI Agents with CrewAI and Local DeepSeek API.&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>PySpark - Sparkling Water - Module 6.2</title>
       <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part2/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
