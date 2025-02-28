@@ -14,9 +14,9 @@
     
     <item>
       <title>PySpark - Sparkling Water - Module 6.2</title>
-      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part2/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part2/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part2/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part2/</guid>
       <description>&lt;h2 id=&#34;installing-h2o-on-wsl-ubuntu-2204&#34;&gt;Installing H2O on WSL Ubuntu 22.04&lt;/h2&gt;
 &lt;p&gt;In this guide, I&amp;rsquo;ll walk you through the steps to install H2O on a WSL (Windows Subsystem for Linux) Ubuntu 22.04 environment. We assume you already have Java 11 and Jupyter Notebook installed and running. By the end, you&amp;rsquo;ll be able to access the H2O web UI directly from your Windows machine.&lt;/p&gt;
 &lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
@@ -109,9 +109,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>PySpark - Sparkling Water - Module 6.1</title>
-      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part1/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part1/</link>
       <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part1/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part1/</guid>
       <description>&lt;h2 id=&#34;introduction-to-distributed-machine-learning-a-practical-approach-with-h2o-and-sparkling-water&#34;&gt;Introduction to Distributed Machine Learning: A Practical Approach with H2O and Sparkling Water&lt;/h2&gt;
 &lt;p&gt;As datasets continue to grow in size, the limitations of traditional machine learning systems become more apparent. The need to process, analyze, and train models on massive datasets calls for a new approach—&lt;strong&gt;Distributed Machine Learning&lt;/strong&gt;. In this module, we will explore the basics of distributed ML through analogies, architectures, real-world applications, and tools like H2O and Sparkling Water.&lt;/p&gt;
 &lt;h3 id=&#34;analogy-to-real-world-distributed-systems&#34;&gt;Analogy to Real-World Distributed Systems&lt;/h3&gt;
@@ -156,9 +156,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>PySpark - Sparkling Water - Module 6.0</title>
-      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part0/</link>
       <pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part0/</guid>
       <description>&lt;h2 id=&#34;scalable-machine-learning-with-h2o-and-sparkling-water&#34;&gt;Scalable Machine Learning with H2O and Sparkling Water&lt;/h2&gt;
 &lt;h3 id=&#34;1-introduction-to-distributed-machine-learning&#34;&gt;1. Introduction to Distributed Machine Learning&lt;/h3&gt;
 &lt;p&gt;We&amp;rsquo;ll begin by exploring the core concepts behind distributed machine learning. This includes a look at how H2O and Sparkling Water fit into this space. You&amp;rsquo;ll understand H2O’s role in scaling ML models and how it integrates with Spark for large-scale data processing.&lt;/p&gt;
@@ -187,9 +187,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>PySpark - Module 5.3</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part3/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part3/</link>
       <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part3/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part3/</guid>
       <description>&lt;p&gt;While we experimented with setting up a Kafka service and accessing it programmatically, the solution provided in Module 5.2 does not leverage the capabilities of Spark and distributed computing as it focuses primarily on Python-based producers and consumers, without integrating Spark&amp;rsquo;s distributed computing power.&lt;/p&gt;
 &lt;h2 id=&#34;integration-of-kafka-with-apache-spark-structured-streaming&#34;&gt;Integration of Kafka with Apache Spark Structured Streaming:&lt;/h2&gt;
 &lt;h3 id=&#34;reading-data-from-kafka-in-spark-using-pyspark-for-streaming&#34;&gt;Reading Data from Kafka in Spark: Using PySpark for Streaming&lt;/h3&gt;
@@ -221,9 +221,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>PySpark - Module 5.2</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part2/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part2/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part2/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part2/</guid>
       <description>&lt;h2 id=&#34;python-based-producers-and-consumers&#34;&gt;Python-Based Producers and Consumers&lt;/h2&gt;
 &lt;p&gt;Our Apache Kafka service is now accessible to the external world, and we&amp;rsquo;ve successfully conducted basic tests to ensure its functionality. The next step is to access Kafka programmatically, specifically using 
   &lt;span class=&#34;inline-block  pr-1&#34;&gt;
@@ -303,9 +303,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>PySpark - Module 5.1</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part1/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part1/</guid>
       <description>&lt;h2 id=&#34;deploying-apache-kafka-on-a-single-node&#34;&gt;Deploying Apache Kafka on a Single Node&lt;/h2&gt;
 &lt;p&gt;Deploying Kafka on a single node is a great way to get started with understanding its core functionalities. This setup involves configuring a Kafka broker along with Zookeeper, which manages the broker&amp;rsquo;s metadata. In this guide, you&amp;rsquo;ll learn how to install, configure, and run Apache Kafka on a single node, making it accessible for testing and small-scale applications. This foundational setup will prepare you for more complex, distributed deployments.&lt;/p&gt;
 &lt;h2 id=&#34;apache-kafka&#34;&gt;Apache Kafka&lt;/h2&gt;
@@ -685,9 +685,9 @@ You have successfully finished the Apache Kafka installation. Now, your Kafka br
     
     <item>
       <title>PySpark - Module 5.0</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part0/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part0/</link>
       <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part0/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part0/</guid>
       <description>&lt;h2 id=&#34;spark-streaming&#34;&gt;Spark Streaming&lt;/h2&gt;
 &lt;p&gt;So far, we&amp;rsquo;ve covered the fundamentals of PySpark:&lt;/p&gt;
 &lt;ul&gt;
@@ -727,9 +727,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 4</title>
-      <link>https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-data-sources-and-sinks/</link>
       <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-data-sources-and-sinks/</guid>
       <description>&lt;h2 id=&#34;data-sources-and-sinks&#34;&gt;Data Sources and Sinks&lt;/h2&gt;
 &lt;p&gt;By now, you should have a foundational understanding of Spark and its key concepts, including RDDs and lazy evaluation. We also learned how to use Databricks PySpark for creating and manipulating Spark DataFrames, and querying them with Spark SQL. We performed various DataFrame operations like selecting, filtering, and joining data. Additionally, we explored ways to handle semi-structured data.&lt;/p&gt;
 &lt;p&gt;In this module we will study how to read and write from/into CSV, JSON, Parquet, and other formats. We will then continue by making jdbc connection for reading from / writing to databases.&lt;/p&gt;
@@ -752,9 +752,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 3</title>
-      <link>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-dataframes-and-spark-sql/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-dataframes-and-spark-sql/</guid>
       <description>&lt;h2 id=&#34;module-3-dataframes-and-spark-sql-in-databricks&#34;&gt;Module 3: DataFrames and Spark SQL (in Databricks)&lt;/h2&gt;
 &lt;p&gt;By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.&lt;/p&gt;
 &lt;p&gt;You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.&lt;/p&gt;
@@ -935,9 +935,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 2</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-architecture-and-rdds/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-architecture-and-rdds/</guid>
       <description>&lt;h2 id=&#34;spark-architecture-and-rdds&#34;&gt;Spark Architecture and RDDs&lt;/h2&gt;
 &lt;h3 id=&#34;a-gentle-intro-to-spark-architecture&#34;&gt;A gentle intro to Spark Architecture&lt;/h3&gt;
 &lt;p&gt;Look at the Youtube video bellow carefully.&lt;/p&gt;
@@ -973,9 +973,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 1</title>
-      <link>https://dataqubed.io/teaching/pyspark-introduction-to-big-data-and-apache-spark/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-introduction-to-big-data-and-apache-spark/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-introduction-to-big-data-and-apache-spark/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-introduction-to-big-data-and-apache-spark/</guid>
       <description>&lt;h2 id=&#34;introduction-to-big-data-and-apache-spark&#34;&gt;Introduction to Big Data and Apache Spark&lt;/h2&gt;
 &lt;p&gt;In today&amp;rsquo;s data-driven world, organizations generate and process vast amounts of data, often referred to as &amp;ldquo;Big Data&amp;rdquo;. In some literature Big Data is characterized by its large volume, high velocity, and wide variety, making traditional data processing tools inadequate for handling such complex datasets. To address these challenges, specialized tools and frameworks have been developed.&lt;/p&gt;
 &lt;p&gt;One of the most powerful tools for processing Big Data is Apache Spark, an open-source, distributed computing system that provides an interface for programming entire clusters with implicit data parallelism and fault tolerance. Spark is widely used in big data processing due to its ability to perform in-memory computations, which significantly speeds up processing times compared to traditional disk-based methods.&lt;/p&gt;
@@ -1027,9 +1027,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 1-1</title>
-      <link>https://dataqubed.io/teaching/pyspark-python-and-jupyter-notebook-instalation-on-wsl-ubuntu-22-04/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-python-and-jupyter-notebook-instalation-on-wsl-ubuntu-22-04/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-python-and-jupyter-notebook-instalation-on-wsl-ubuntu-22-04/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-python-and-jupyter-notebook-instalation-on-wsl-ubuntu-22-04/</guid>
       <description>&lt;p&gt;In this guide, we&amp;rsquo;ll walk you through the steps to set up Apache Spark, Python, and Jupyter Notebook on a freshly installed WSL Ubuntu 22.04. You&amp;rsquo;ll also learn how to make Jupyter Notebook accessible from the host machine.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;ol&gt;
@@ -1111,9 +1111,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 0</title>
-      <link>https://dataqubed.io/teaching/pyspark-fundamentals-and-advanced-topics/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-fundamentals-and-advanced-topics/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-fundamentals-and-advanced-topics/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-fundamentals-and-advanced-topics/</guid>
       <description>&lt;h3 id=&#34;pyspark-fundamentals-and-advanced-topics&#34;&gt;PySpark Fundamentals and Advanced Topics&lt;/h3&gt;
 &lt;p&gt;Distributed computing is at the heart of all the recent advancements of Data science and AI models. We can now &lt;code&gt;scale out&lt;/code&gt; as an alternative to &lt;code&gt;scale up&lt;/code&gt;. And that makes it possible to retrieve data, prepare the data and train our models not only at a faster speed, but also cheaper.&lt;/p&gt;
 &lt;p&gt;One of the pioneer commercial players on the filed of distributed computing is DataBricks. This the company behind the open source Spark community.&lt;/p&gt;

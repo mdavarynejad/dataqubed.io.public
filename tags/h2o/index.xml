@@ -14,9 +14,9 @@
     
     <item>
       <title>PySpark - Sparkling Water - Module 6.2</title>
-      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part2/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part2/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part2/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part2/</guid>
       <description>&lt;h2 id=&#34;installing-h2o-on-wsl-ubuntu-2204&#34;&gt;Installing H2O on WSL Ubuntu 22.04&lt;/h2&gt;
 &lt;p&gt;In this guide, I&amp;rsquo;ll walk you through the steps to install H2O on a WSL (Windows Subsystem for Linux) Ubuntu 22.04 environment. We assume you already have Java 11 and Jupyter Notebook installed and running. By the end, you&amp;rsquo;ll be able to access the H2O web UI directly from your Windows machine.&lt;/p&gt;
 &lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
@@ -109,9 +109,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>PySpark - Sparkling Water - Module 6.1</title>
-      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part1/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part1/</link>
       <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part1/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part1/</guid>
       <description>&lt;h2 id=&#34;introduction-to-distributed-machine-learning-a-practical-approach-with-h2o-and-sparkling-water&#34;&gt;Introduction to Distributed Machine Learning: A Practical Approach with H2O and Sparkling Water&lt;/h2&gt;
 &lt;p&gt;As datasets continue to grow in size, the limitations of traditional machine learning systems become more apparent. The need to process, analyze, and train models on massive datasets calls for a new approach—&lt;strong&gt;Distributed Machine Learning&lt;/strong&gt;. In this module, we will explore the basics of distributed ML through analogies, architectures, real-world applications, and tools like H2O and Sparkling Water.&lt;/p&gt;
 &lt;h3 id=&#34;analogy-to-real-world-distributed-systems&#34;&gt;Analogy to Real-World Distributed Systems&lt;/h3&gt;
@@ -156,9 +156,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>PySpark - Sparkling Water - Module 6.0</title>
-      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part0/</link>
       <pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part0/</guid>
       <description>&lt;h2 id=&#34;scalable-machine-learning-with-h2o-and-sparkling-water&#34;&gt;Scalable Machine Learning with H2O and Sparkling Water&lt;/h2&gt;
 &lt;h3 id=&#34;1-introduction-to-distributed-machine-learning&#34;&gt;1. Introduction to Distributed Machine Learning&lt;/h3&gt;
 &lt;p&gt;We&amp;rsquo;ll begin by exploring the core concepts behind distributed machine learning. This includes a look at how H2O and Sparkling Water fit into this space. You&amp;rsquo;ll understand H2O’s role in scaling ML models and how it integrates with Spark for large-scale data processing.&lt;/p&gt;

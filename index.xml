@@ -35,9 +35,9 @@
     
     <item>
       <title>Orchestrating AI Agents with CrewAI and Local DeepSeek API</title>
-      <link>https://dataqubed.io/teaching/deepseek-crewai-agents/</link>
+      <link>https://dataqubed.io/teaching/agentic-ai/deepseek-crewai-agents/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/deepseek-crewai-agents/</guid>
+      <guid>https://dataqubed.io/teaching/agentic-ai/deepseek-crewai-agents/</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Running an LLM is great—but &lt;strong&gt;what if we could make AI agents collaborate, delegate tasks, and act autonomously&lt;/strong&gt;? This post builds upon our previous setup, integrating &lt;strong&gt;CrewAI&lt;/strong&gt; with our locally hosted &lt;strong&gt;DeepSeek R1 API&lt;/strong&gt;. You&amp;rsquo;ll learn how to create &lt;strong&gt;multi-agent AI systems&lt;/strong&gt;, enabling them to analyze information, generate content, and interact dynamically.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/mdavarynejad/Agentic_examples/blob/main/02%20-%20Orchestrating%20AI%20Agents%20--%20CrewAI%20with%20Local%20DeepSeek%20R1%20API.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the notebook here.&lt;/a&gt;&lt;/p&gt;
@@ -60,6 +60,10 @@
 &lt;li&gt;&lt;strong&gt;Act Autonomously&lt;/strong&gt;: Instead of just responding, they can &lt;strong&gt;execute complex multi-step processes&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Imagine a &lt;strong&gt;research assistant AI&lt;/strong&gt; that &lt;strong&gt;analyzes trends&lt;/strong&gt; and &lt;strong&gt;writes articles&lt;/strong&gt;—or a &lt;strong&gt;technical support bot&lt;/strong&gt; that &lt;strong&gt;searches for solutions and responds intelligently&lt;/strong&gt;. CrewAI makes this possible.&lt;/p&gt;
+&lt;h2 id=&#34;-terminology-insight-agenticai-vs-aiagents&#34;&gt;🔍 Terminology Insight: AgenticAI vs. AIAgents&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;AgenticAI&lt;/strong&gt;: This term aligns with the broader concept of AI agents acting autonomously with reasoning and decision-making abilities. It emphasizes the idea of &lt;strong&gt;agency in AI&lt;/strong&gt;, which is central to CrewAI&amp;rsquo;s orchestration of multiple agents.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AIAgents&lt;/strong&gt;: This is a more general and widely recognized tag. It simply refers to AI-driven agents but does not necessarily highlight their autonomous, goal-oriented behavior as strongly as &lt;strong&gt;AgenticAI&lt;/strong&gt; does.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;For a detailed explanation and line-by-line implementation, check out the full notebook &lt;a href=&#34;https://github.com/mdavarynejad/Agentic_examples/blob/main/02%20-%20Orchestrating%20AI%20Agents%20--%20CrewAI%20with%20Local%20DeepSeek%20R1%20API.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;🚀 Looking for more insights?&lt;br&gt;
@@ -74,9 +78,9 @@ Check out the &lt;strong&gt;&lt;a href=&#34;https://dataqubed.io/tags/&#34; targ
     
     <item>
       <title>Running DeepSeek R1 Locally with vLLM &amp; Ray Dashboard</title>
-      <link>https://dataqubed.io/teaching/deepseek-vllm-locally/</link>
+      <link>https://dataqubed.io/teaching/agentic-ai/deepseek-vllm-locally/</link>
       <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/deepseek-vllm-locally/</guid>
+      <guid>https://dataqubed.io/teaching/agentic-ai/deepseek-vllm-locally/</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Large Language Models (LLMs) have revolutionized AI applications, but running them efficiently on local hardware remains a challenge. In this post, we explore how to set up &lt;strong&gt;DeepSeek R1 Distill Qwen-1.5B&lt;/strong&gt; using &lt;strong&gt;vLLM&lt;/strong&gt;, an optimized inference engine, along with &lt;strong&gt;Ray Dashboard&lt;/strong&gt; for real-time resource monitoring. By the end of this guide, you’ll have a &lt;strong&gt;fast, API-accessible LLM&lt;/strong&gt; running on your local machine, ready for further agentic integrations.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/mdavarynejad/Agentic_examples/blob/main/01%20-%20DeepSeek%20R1%20Local%20Setup%20--%20vLLM%20API%2C%20Ray%20Dashboard%20%26%20CrewAI%20Agent%20Test.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the notebook here.&lt;/a&gt;&lt;/p&gt;
@@ -294,9 +298,9 @@ Check out the &lt;strong&gt;&lt;a href=&#34;https://dataqubed.io/tags/&#34; targ
     
     <item>
       <title>PySpark - Sparkling Water - Module 6.2</title>
-      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part2/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part2/</link>
       <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part2/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part2/</guid>
       <description>&lt;h2 id=&#34;installing-h2o-on-wsl-ubuntu-2204&#34;&gt;Installing H2O on WSL Ubuntu 22.04&lt;/h2&gt;
 &lt;p&gt;In this guide, I&amp;rsquo;ll walk you through the steps to install H2O on a WSL (Windows Subsystem for Linux) Ubuntu 22.04 environment. We assume you already have Java 11 and Jupyter Notebook installed and running. By the end, you&amp;rsquo;ll be able to access the H2O web UI directly from your Windows machine.&lt;/p&gt;
 &lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
@@ -389,9 +393,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>PySpark - Sparkling Water - Module 6.1</title>
-      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part1/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part1/</link>
       <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part1/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part1/</guid>
       <description>&lt;h2 id=&#34;introduction-to-distributed-machine-learning-a-practical-approach-with-h2o-and-sparkling-water&#34;&gt;Introduction to Distributed Machine Learning: A Practical Approach with H2O and Sparkling Water&lt;/h2&gt;
 &lt;p&gt;As datasets continue to grow in size, the limitations of traditional machine learning systems become more apparent. The need to process, analyze, and train models on massive datasets calls for a new approach—&lt;strong&gt;Distributed Machine Learning&lt;/strong&gt;. In this module, we will explore the basics of distributed ML through analogies, architectures, real-world applications, and tools like H2O and Sparkling Water.&lt;/p&gt;
 &lt;h3 id=&#34;analogy-to-real-world-distributed-systems&#34;&gt;Analogy to Real-World Distributed Systems&lt;/h3&gt;
@@ -436,9 +440,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>PySpark - Sparkling Water - Module 6.0</title>
-      <link>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part0/</link>
       <pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-sparklingwater-part0/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-sparklingwater-part0/</guid>
       <description>&lt;h2 id=&#34;scalable-machine-learning-with-h2o-and-sparkling-water&#34;&gt;Scalable Machine Learning with H2O and Sparkling Water&lt;/h2&gt;
 &lt;h3 id=&#34;1-introduction-to-distributed-machine-learning&#34;&gt;1. Introduction to Distributed Machine Learning&lt;/h3&gt;
 &lt;p&gt;We&amp;rsquo;ll begin by exploring the core concepts behind distributed machine learning. This includes a look at how H2O and Sparkling Water fit into this space. You&amp;rsquo;ll understand H2O’s role in scaling ML models and how it integrates with Spark for large-scale data processing.&lt;/p&gt;
@@ -507,9 +511,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>Shaping Your Success and Impact</title>
-      <link>https://dataqubed.io/teaching/practicing-civility-can-enhance-your-leadership/</link>
+      <link>https://dataqubed.io/teaching/business/practicing-civility-can-enhance-your-leadership/</link>
       <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/practicing-civility-can-enhance-your-leadership/</guid>
+      <guid>https://dataqubed.io/teaching/business/practicing-civility-can-enhance-your-leadership/</guid>
       <description>&lt;h2 id=&#34;the-power-of-civility-shaping-your-success-and-impact&#34;&gt;The Power of Civility: Shaping Your Success and Impact&lt;/h2&gt;
 &lt;p&gt;As you prepare to step into the professional world and take on real projects with companies, there&amp;rsquo;s one question that will shape your success more than any other: Who do you want to be? This isn&amp;rsquo;t just about your skills or knowledge—it&amp;rsquo;s rather more about &lt;code&gt;how you choose to show up every day&lt;/code&gt;, &lt;code&gt;how you treat the people around you&lt;/code&gt;, and &lt;code&gt;the environment you help create&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Watch to bellow TedTalk and remind yourselves of the powerful impact of civility—or the lack of it—on everything from &lt;code&gt;team performance&lt;/code&gt; to &lt;code&gt;personal well-being&lt;/code&gt;. You&amp;rsquo;ll hear compelling research and real-world stories that reveal just how critical it is to be mindful of our interactions. In the workplace and within your small study group, incivility isn’t just unpleasant; &lt;code&gt;it’s a productivity killer&lt;/code&gt;. It drains motivation, diminishes creativity, and even puts lives at risk in critical situations. But the good news is that civility pays off—in your &lt;code&gt;relationships&lt;/code&gt;, your &lt;code&gt;work&lt;/code&gt;, and your &lt;code&gt;overall success&lt;/code&gt;.&lt;/p&gt;
@@ -525,9 +529,9 @@ To find the IP address of your WSL instance, run:&lt;/p&gt;
     
     <item>
       <title>BRD for Successful Project Execution</title>
-      <link>https://dataqubed.io/teaching/business-requirement-document-brd/</link>
+      <link>https://dataqubed.io/teaching/business/business-requirement-document-brd/</link>
       <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/business-requirement-document-brd/</guid>
+      <guid>https://dataqubed.io/teaching/business/business-requirement-document-brd/</guid>
       <description>&lt;p&gt;Why I never say &lt;code&gt;Yes&lt;/code&gt; to a project without a BRD. I either drop it, or we have to agree to make one.&lt;/p&gt;
 &lt;h2 id=&#34;importance-of-a-business-requirement-document-brd-for-successful-project-execution&#34;&gt;Importance of a Business Requirement Document (BRD) for Successful Project Execution&lt;/h2&gt;
 &lt;p&gt;When working on data-heavy projects that involve developing machine learning models and directly interacting with key stakeholders, having a well-defined Business Requirement Document (BRD) is crucial. A BRD acts as a blueprint for the project, ensuring that all team members and stakeholders are aligned on the goals, scope, and deliverables. Without a BRD, projects can easily suffer from scope creep, miscommunication, and a lack of clear direction. This post will serve as a guideline for students on how to approach their projects using a BRD, which will be a critical tool throughout the year.&lt;/p&gt;
@@ -740,9 +744,9 @@ Have a look at &lt;a href=&#34;https://uit.stanford.edu/pmo/business-requirement
     
     <item>
       <title>PySpark - Module 5.3</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part3/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part3/</link>
       <pubDate>Thu, 22 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part3/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part3/</guid>
       <description>&lt;p&gt;While we experimented with setting up a Kafka service and accessing it programmatically, the solution provided in Module 5.2 does not leverage the capabilities of Spark and distributed computing as it focuses primarily on Python-based producers and consumers, without integrating Spark&amp;rsquo;s distributed computing power.&lt;/p&gt;
 &lt;h2 id=&#34;integration-of-kafka-with-apache-spark-structured-streaming&#34;&gt;Integration of Kafka with Apache Spark Structured Streaming:&lt;/h2&gt;
 &lt;h3 id=&#34;reading-data-from-kafka-in-spark-using-pyspark-for-streaming&#34;&gt;Reading Data from Kafka in Spark: Using PySpark for Streaming&lt;/h3&gt;
@@ -774,9 +778,9 @@ Have a look at &lt;a href=&#34;https://uit.stanford.edu/pmo/business-requirement
     
     <item>
       <title>PySpark - Module 5.2</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part2/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part2/</link>
       <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part2/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part2/</guid>
       <description>&lt;h2 id=&#34;python-based-producers-and-consumers&#34;&gt;Python-Based Producers and Consumers&lt;/h2&gt;
 &lt;p&gt;Our Apache Kafka service is now accessible to the external world, and we&amp;rsquo;ve successfully conducted basic tests to ensure its functionality. The next step is to access Kafka programmatically, specifically using 
   &lt;span class=&#34;inline-block  pr-1&#34;&gt;
@@ -856,9 +860,9 @@ Have a look at &lt;a href=&#34;https://uit.stanford.edu/pmo/business-requirement
     
     <item>
       <title>PySpark - Module 5.1</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part1/</link>
       <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part1/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part1/</guid>
       <description>&lt;h2 id=&#34;deploying-apache-kafka-on-a-single-node&#34;&gt;Deploying Apache Kafka on a Single Node&lt;/h2&gt;
 &lt;p&gt;Deploying Kafka on a single node is a great way to get started with understanding its core functionalities. This setup involves configuring a Kafka broker along with Zookeeper, which manages the broker&amp;rsquo;s metadata. In this guide, you&amp;rsquo;ll learn how to install, configure, and run Apache Kafka on a single node, making it accessible for testing and small-scale applications. This foundational setup will prepare you for more complex, distributed deployments.&lt;/p&gt;
 &lt;h2 id=&#34;apache-kafka&#34;&gt;Apache Kafka&lt;/h2&gt;
@@ -1300,9 +1304,9 @@ You have successfully finished the Apache Kafka installation. Now, your Kafka br
     
     <item>
       <title>PySpark - Module 5.0</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-streaming-part0/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part0/</link>
       <pubDate>Mon, 19 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-streaming-part0/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-streaming-part0/</guid>
       <description>&lt;h2 id=&#34;spark-streaming&#34;&gt;Spark Streaming&lt;/h2&gt;
 &lt;p&gt;So far, we&amp;rsquo;ve covered the fundamentals of PySpark:&lt;/p&gt;
 &lt;ul&gt;
@@ -1342,9 +1346,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 4</title>
-      <link>https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-data-sources-and-sinks/</link>
       <pubDate>Sun, 18 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-data-sources-and-sinks/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-data-sources-and-sinks/</guid>
       <description>&lt;h2 id=&#34;data-sources-and-sinks&#34;&gt;Data Sources and Sinks&lt;/h2&gt;
 &lt;p&gt;By now, you should have a foundational understanding of Spark and its key concepts, including RDDs and lazy evaluation. We also learned how to use Databricks PySpark for creating and manipulating Spark DataFrames, and querying them with Spark SQL. We performed various DataFrame operations like selecting, filtering, and joining data. Additionally, we explored ways to handle semi-structured data.&lt;/p&gt;
 &lt;p&gt;In this module we will study how to read and write from/into CSV, JSON, Parquet, and other formats. We will then continue by making jdbc connection for reading from / writing to databases.&lt;/p&gt;
@@ -1367,9 +1371,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 3</title>
-      <link>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-dataframes-and-spark-sql/</link>
       <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-dataframes-and-spark-sql/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-dataframes-and-spark-sql/</guid>
       <description>&lt;h2 id=&#34;module-3-dataframes-and-spark-sql-in-databricks&#34;&gt;Module 3: DataFrames and Spark SQL (in Databricks)&lt;/h2&gt;
 &lt;p&gt;By now you have some understating of Spark and distributed computing. You know the RDDs, the importance of lazy evaluations as well as the reason why RDDs are fault tolerant.&lt;/p&gt;
 &lt;p&gt;You also gained a bit of experience on how to install Spark on your local machine, how to test it and did a bit of coding in PySpark.&lt;/p&gt;
@@ -1550,9 +1554,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 2</title>
-      <link>https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-spark-architecture-and-rdds/</link>
       <pubDate>Fri, 16 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-spark-architecture-and-rdds/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-spark-architecture-and-rdds/</guid>
       <description>&lt;h2 id=&#34;spark-architecture-and-rdds&#34;&gt;Spark Architecture and RDDs&lt;/h2&gt;
 &lt;h3 id=&#34;a-gentle-intro-to-spark-architecture&#34;&gt;A gentle intro to Spark Architecture&lt;/h3&gt;
 &lt;p&gt;Look at the Youtube video bellow carefully.&lt;/p&gt;
@@ -1588,9 +1592,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 1</title>
-      <link>https://dataqubed.io/teaching/pyspark-introduction-to-big-data-and-apache-spark/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-introduction-to-big-data-and-apache-spark/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-introduction-to-big-data-and-apache-spark/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-introduction-to-big-data-and-apache-spark/</guid>
       <description>&lt;h2 id=&#34;introduction-to-big-data-and-apache-spark&#34;&gt;Introduction to Big Data and Apache Spark&lt;/h2&gt;
 &lt;p&gt;In today&amp;rsquo;s data-driven world, organizations generate and process vast amounts of data, often referred to as &amp;ldquo;Big Data&amp;rdquo;. In some literature Big Data is characterized by its large volume, high velocity, and wide variety, making traditional data processing tools inadequate for handling such complex datasets. To address these challenges, specialized tools and frameworks have been developed.&lt;/p&gt;
 &lt;p&gt;One of the most powerful tools for processing Big Data is Apache Spark, an open-source, distributed computing system that provides an interface for programming entire clusters with implicit data parallelism and fault tolerance. Spark is widely used in big data processing due to its ability to perform in-memory computations, which significantly speeds up processing times compared to traditional disk-based methods.&lt;/p&gt;
@@ -1642,9 +1646,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 1-1</title>
-      <link>https://dataqubed.io/teaching/pyspark-python-and-jupyter-notebook-instalation-on-wsl-ubuntu-22-04/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-python-and-jupyter-notebook-instalation-on-wsl-ubuntu-22-04/</link>
       <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-python-and-jupyter-notebook-instalation-on-wsl-ubuntu-22-04/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-python-and-jupyter-notebook-instalation-on-wsl-ubuntu-22-04/</guid>
       <description>&lt;p&gt;In this guide, we&amp;rsquo;ll walk you through the steps to set up Apache Spark, Python, and Jupyter Notebook on a freshly installed WSL Ubuntu 22.04. You&amp;rsquo;ll also learn how to make Jupyter Notebook accessible from the host machine.&lt;/p&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;ol&gt;
@@ -1726,9 +1730,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>PySpark - Module 0</title>
-      <link>https://dataqubed.io/teaching/pyspark-fundamentals-and-advanced-topics/</link>
+      <link>https://dataqubed.io/teaching/pyspark/pyspark-fundamentals-and-advanced-topics/</link>
       <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/pyspark-fundamentals-and-advanced-topics/</guid>
+      <guid>https://dataqubed.io/teaching/pyspark/pyspark-fundamentals-and-advanced-topics/</guid>
       <description>&lt;h3 id=&#34;pyspark-fundamentals-and-advanced-topics&#34;&gt;PySpark Fundamentals and Advanced Topics&lt;/h3&gt;
 &lt;p&gt;Distributed computing is at the heart of all the recent advancements of Data science and AI models. We can now &lt;code&gt;scale out&lt;/code&gt; as an alternative to &lt;code&gt;scale up&lt;/code&gt;. And that makes it possible to retrieve data, prepare the data and train our models not only at a faster speed, but also cheaper.&lt;/p&gt;
 &lt;p&gt;One of the pioneer commercial players on the filed of distributed computing is DataBricks. This the company behind the open source Spark community.&lt;/p&gt;
@@ -2113,9 +2117,9 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     
     <item>
       <title>Unlocking Entrepreneurial Success</title>
-      <link>https://dataqubed.io/teaching/unlocking-entrepreneurial-success/</link>
+      <link>https://dataqubed.io/teaching/business/unlocking-entrepreneurial-success/</link>
       <pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/unlocking-entrepreneurial-success/</guid>
+      <guid>https://dataqubed.io/teaching/business/unlocking-entrepreneurial-success/</guid>
       <description>&lt;p&gt;As you prepare to have a head start in your third year, where you&amp;rsquo;ll dive into exciting projects with real companies, there&amp;rsquo;s no better time to get inspired by someone who&amp;rsquo;s mastered the art of entrepreneurship. Steven Bartlett’s podcast on Spotify features a conversation with Marc Randolph, the former CEO of Netflix, and it&amp;rsquo;s packed with insights that could reshape how you approach your own projects.&lt;/p&gt;
 &lt;p&gt;Marc Randolph has been through the highs and lows of building a business from the ground up. In this podcast, he shares his journey and the tough lessons he’s learned along the way. One of his core beliefs? Every idea is bad—until you prove otherwise. This mindset is not just about being skeptical; it’s about understanding that success comes from testing, refining, and relentlessly improving your ideas.&lt;/p&gt;
 &lt;p&gt;Listening to this podcast will give you a fresh perspective on how to tackle the challenges you&amp;rsquo;ll face this year. It’s a must-hear for anyone serious about turning ideas into reality. Get ready to learn from one of the best, and start your year with the motivation to make your projects truly exceptional.&lt;/p&gt;
@@ -2650,7 +2654,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-173542986&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-589124763&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -2668,7 +2672,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-173542986&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-589124763&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

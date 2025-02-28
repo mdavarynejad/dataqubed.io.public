@@ -14,9 +14,9 @@
     
     <item>
       <title>Orchestrating AI Agents with CrewAI and Local DeepSeek API</title>
-      <link>https://dataqubed.io/teaching/deepseek-crewai-agents/</link>
+      <link>https://dataqubed.io/teaching/agentic-ai/deepseek-crewai-agents/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/deepseek-crewai-agents/</guid>
+      <guid>https://dataqubed.io/teaching/agentic-ai/deepseek-crewai-agents/</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Running an LLM is great—but &lt;strong&gt;what if we could make AI agents collaborate, delegate tasks, and act autonomously&lt;/strong&gt;? This post builds upon our previous setup, integrating &lt;strong&gt;CrewAI&lt;/strong&gt; with our locally hosted &lt;strong&gt;DeepSeek R1 API&lt;/strong&gt;. You&amp;rsquo;ll learn how to create &lt;strong&gt;multi-agent AI systems&lt;/strong&gt;, enabling them to analyze information, generate content, and interact dynamically.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/mdavarynejad/Agentic_examples/blob/main/02%20-%20Orchestrating%20AI%20Agents%20--%20CrewAI%20with%20Local%20DeepSeek%20R1%20API.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the notebook here.&lt;/a&gt;&lt;/p&gt;
@@ -39,6 +39,10 @@
 &lt;li&gt;&lt;strong&gt;Act Autonomously&lt;/strong&gt;: Instead of just responding, they can &lt;strong&gt;execute complex multi-step processes&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Imagine a &lt;strong&gt;research assistant AI&lt;/strong&gt; that &lt;strong&gt;analyzes trends&lt;/strong&gt; and &lt;strong&gt;writes articles&lt;/strong&gt;—or a &lt;strong&gt;technical support bot&lt;/strong&gt; that &lt;strong&gt;searches for solutions and responds intelligently&lt;/strong&gt;. CrewAI makes this possible.&lt;/p&gt;
+&lt;h2 id=&#34;-terminology-insight-agenticai-vs-aiagents&#34;&gt;🔍 Terminology Insight: AgenticAI vs. AIAgents&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;AgenticAI&lt;/strong&gt;: This term aligns with the broader concept of AI agents acting autonomously with reasoning and decision-making abilities. It emphasizes the idea of &lt;strong&gt;agency in AI&lt;/strong&gt;, which is central to CrewAI&amp;rsquo;s orchestration of multiple agents.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AIAgents&lt;/strong&gt;: This is a more general and widely recognized tag. It simply refers to AI-driven agents but does not necessarily highlight their autonomous, goal-oriented behavior as strongly as &lt;strong&gt;AgenticAI&lt;/strong&gt; does.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;For a detailed explanation and line-by-line implementation, check out the full notebook &lt;a href=&#34;https://github.com/mdavarynejad/Agentic_examples/blob/main/02%20-%20Orchestrating%20AI%20Agents%20--%20CrewAI%20with%20Local%20DeepSeek%20R1%20API.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;🚀 Looking for more insights?&lt;br&gt;
@@ -53,9 +57,9 @@ Check out the &lt;strong&gt;&lt;a href=&#34;https://dataqubed.io/tags/&#34; targ
     
     <item>
       <title>Running DeepSeek R1 Locally with vLLM &amp; Ray Dashboard</title>
-      <link>https://dataqubed.io/teaching/deepseek-vllm-locally/</link>
+      <link>https://dataqubed.io/teaching/agentic-ai/deepseek-vllm-locally/</link>
       <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/teaching/deepseek-vllm-locally/</guid>
+      <guid>https://dataqubed.io/teaching/agentic-ai/deepseek-vllm-locally/</guid>
       <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Large Language Models (LLMs) have revolutionized AI applications, but running them efficiently on local hardware remains a challenge. In this post, we explore how to set up &lt;strong&gt;DeepSeek R1 Distill Qwen-1.5B&lt;/strong&gt; using &lt;strong&gt;vLLM&lt;/strong&gt;, an optimized inference engine, along with &lt;strong&gt;Ray Dashboard&lt;/strong&gt; for real-time resource monitoring. By the end of this guide, you’ll have a &lt;strong&gt;fast, API-accessible LLM&lt;/strong&gt; running on your local machine, ready for further agentic integrations.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/mdavarynejad/Agentic_examples/blob/main/01%20-%20DeepSeek%20R1%20Local%20Setup%20--%20vLLM%20API%2C%20Ray%20Dashboard%20%26%20CrewAI%20Agent%20Test.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the notebook here.&lt;/a&gt;&lt;/p&gt;
