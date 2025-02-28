@@ -1,0 +1,2230 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: February 28, 2025 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="dark">
+  
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.3.2" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Mohsen Davarynejad" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="AI Agents are sotware entities that percive the enviroment, Decide based on what they see and the golas they are set up for, and they Act opon that. In this set up we can have a single agent, or multiple agents working together to achive a goal.
+Building blocks of LLM models are:
+" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/teaching/agentic-ai/02---orchestrating-ai-agents----crewai-with-local-deepseek-r1-api/" />
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/themes/emerald.min.css" />
+  
+
+  
+  
+    
+    <link href="/dist/wc.min.05570f1deda629d4e2d77f73534a63aa04471f012db6735c59424372f467db85.css" rel="stylesheet" />
+  
+
+  
+  
+  
+
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu_5cac115d14ed3d49.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_e7f327b39c12e7ca.png" />
+
+  <link rel="canonical" href="http://localhost:1313/teaching/agentic-ai/02---orchestrating-ai-agents----crewai-with-local-deepseek-r1-api/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@mdavarynejad" />
+    <meta property="twitter:creator" content="@mdavarynejad" />
+  
+  <meta property="og:site_name" content="Your Data Science Mentor - Mohsen Davarynejad" />
+  <meta property="og:url" content="http://localhost:1313/teaching/agentic-ai/02---orchestrating-ai-agents----crewai-with-local-deepseek-r1-api/" />
+  <meta property="og:title" content="Your Data Science Mentor - Mohsen Davarynejad" />
+  <meta property="og:description" content="AI Agents are sotware entities that percive the enviroment, Decide based on what they see and the golas they are set up for, and they Act opon that. In this set up we can have a single agent, or multiple agents working together to achive a goal.
+Building blocks of LLM models are:" /><meta property="og:image" content="http://localhost:1313/media/icon_hu_645fa481986063ef.png" />
+    <meta property="twitter:image" content="http://localhost:1313/media/icon_hu_645fa481986063ef.png" /><meta property="og:locale" content="en-us" />
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  <title>Your Data Science Mentor - Mohsen Davarynejad</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+
+
+<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+
+
+<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+
+   
+  .search-close > svg {
+    height: calc(64px * var(--pagefind-ui-scale));
+    width: calc(64px * var(--pagefind-ui-scale));
+  }
+</style>
+
+<script>
+  
+  let searchWrapper = null;
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      baseUrl: window.hbb.pagefind.baseUrl,
+      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
+    });
+
+    
+    searchWrapper = document.getElementById('search-wrapper');
+
+    
+    let triggers = document.querySelectorAll('[data-search-toggle]');
+    triggers.forEach(trigger =>
+      trigger.addEventListener('click', handleSearchToggle)
+    );
+  });
+
+  function handleSearchToggle(event) {
+    if (!searchWrapper) return;
+
+    const isHidden = searchWrapper.classList.contains('hidden');
+    searchWrapper.classList.toggle('hidden');
+    document.body.style.overflow = isHidden ? 'hidden' : '';
+
+    const searchInput = searchWrapper.querySelector("input");
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
+
+    if (!searchWrapper.classList.contains('hidden')) {
+      let clearTrigger = document.querySelector('.pagefind-ui__search-clear');
+
+      if (clearTrigger && !clearTrigger.hasAttribute('listenerOnClick')) {
+        clearTrigger.setAttribute('listenerOnClick', 'true');
+
+        clearTrigger.addEventListener('click', () => {
+          searchInput.focus();
+        });
+      }
+    }
+  }
+
+  
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchWrapper && !searchWrapper.classList.contains('hidden')) {
+      searchWrapper.classList.add('hidden');
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.js"
+    integrity=""
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <script async defer src="https://buttons.github.io/buttonstodo.js"></script>
+
+      
+    
+  
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-left">
+    <div class="order-0 h-100">
+      
+      <a class="navbar-brand" href="/" title="Your Data Science Mentor - Mohsen Davarynejad">
+        Mohsen Davarynejad
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+      ">
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/"
+        >Bio</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#papers"
+        >Papers</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#talks"
+        >Talks</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/#news"
+        >News</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/experience/"
+        >Experience</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/blog/"
+        >Blog</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/teaching/"
+        >Teaching</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          target="_blank" rel="noopener"
+          
+          href="https://www.linkedin.com/in/davarynejad/"
+        >myCV</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+      <button
+        aria-label="toggle search"
+        class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
+        data-search-toggle>
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      </button>
+      
+
+      
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+<div
+  id="search-wrapper"
+  class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"
+>
+  <div class="flex justify-end p-3">
+    <button
+      aria-label="search"
+      class="search-close text-black hover:text-primary dark:text-white"
+      data-search-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="search" class="flex-1 overflow-y-auto p-3">
+    
+  </div>
+</div>
+
+
+        
+      
+    </div>
+    <div class="page-body  my-10">
+      
+
+
+
+
+
+<div class="mx-auto flex max-w-screen-xl">
+  
+
+
+
+<aside class="hb-sidebar-container max-lg:[transform:translate3d(0,-100%,0)] lg:hidden xl:block">
+  
+  <div class="px-4 pt-4 lg:hidden">
+    
+    
+  </div>
+  <div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))]">
+    <ul class="flex flex-col gap-1 lg:hidden">
+      
+      
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/experience/"
+    
+  >Experience
+    </a></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/"
+    
+  >Blog
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/useful-links/"
+    
+  >Useful links
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/"
+    
+  >A Data Scientist&#39;s Chronicle of Lessons Learned and Strategies for Success
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/a-blueprint-for-successful-student-projects/"
+    
+  >Applying Conway&#39;s Law - A Blueprint for Successful Projects
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/hugo-how-to/"
+    
+  >How to Deploy Your Hugo Site to GitHub Pages - A Simple Step-by-Step Guide
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/explainable-boosting-machine/"
+    
+  >Explainable boosting machine
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/pandas-tips-and-tricks-for-data-scientists/"
+    
+  >11 must-know Python Pandas tips and tricks for data scientists
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/teach-courses/"
+    
+  >👩🏼‍🏫 Teach academic courses - Shorts
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/get-started/"
+    
+  >🎉 Easily create your own simple yet highly customizable blog - Shorts
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/pandas/"
+    
+  >Pandas
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/pytorch/"
+    
+  >PyTorch
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/scikit/"
+    
+  >scikit-learn
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/second-brain/"
+    
+  >🧠 Sharpen your thinking with a second brain
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/blog/data-visualization/"
+    
+  >📈 Communicate your results effectively with the best data visualizations - Shorts
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/news/"
+    
+  >News
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/news/teach-courses/"
+    
+  >Returning to My Roots - Embracing the Joys of Academic Life
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/"
+    
+  >Publications
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/preprint/"
+    
+  >An example preprint / working paper
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/journal-article/"
+    
+  >An example journal article
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/publication/conference-paper/"
+    
+  >An example conference paper
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/"
+    
+  >Recent &amp; Upcoming Talks
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/event/example/"
+    
+  >Example Talk
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class="open"><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/"
+    
+  >Teaching
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/agentic-ai/deepseek-crewai-agents/"
+    
+  >Orchestrating AI Agents with CrewAI and Local DeepSeek API
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/agentic-ai/deepseek-vllm-locally/"
+    
+  >Running DeepSeek R1 Locally with vLLM &amp; Ray Dashboard
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/agentic-ai/01---deepseek-r1-local-setup----vllm-api-ray-dashboard--crewai-agent-test/"
+    
+  >Useful links
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-sparklingwater-part2/"
+    
+  >PySpark - Sparkling Water - Module 6.2
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-sparklingwater-part1/"
+    
+  >PySpark - Sparkling Water - Module 6.1
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-sparklingwater-part0/"
+    
+  >PySpark - Sparkling Water - Module 6.0
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/business/practicing-civility-can-enhance-your-leadership/"
+    
+  >Shaping Your Success and Impact
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/business/business-requirement-document-brd/"
+    
+  >BRD for Successful Project Execution
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-spark-streaming-part3/"
+    
+  >PySpark - Module 5.3
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-spark-streaming-part2/"
+    
+  >PySpark - Module 5.2
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-spark-streaming-part1/"
+    
+  >PySpark - Module 5.1
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-spark-streaming-part0/"
+    
+  >PySpark - Module 5.0
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-data-sources-and-sinks/"
+    
+  >PySpark - Module 4
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-dataframes-and-spark-sql/"
+    
+  >PySpark - Module 3
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-spark-architecture-and-rdds/"
+    
+  >PySpark - Module 2
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-introduction-to-big-data-and-apache-spark/"
+    
+  >PySpark - Module 1
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-python-and-jupyter-notebook-instalation-on-wsl-ubuntu-22-04/"
+    
+  >PySpark - Module 1-1
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/pyspark/pyspark-fundamentals-and-advanced-topics/"
+    
+  >PySpark - Module 0
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/teaching/business/unlocking-entrepreneurial-success/"
+    
+  >Unlocking Entrepreneurial Success
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/teaching/agentic-ai/02---orchestrating-ai-agents----crewai-with-local-deepseek-r1-api/"
+    
+  >02 - Orchestrating AI Agents -- CrewAI with Local DeepSeek R1 API
+    </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#"
+                class="hb-docs-link"
+              ></a>
+            </li>
+          </ul>
+  
+              
+            </li></ul>
+      </div></li>
+    </ul>
+
+    <div class="max-xl:hidden h-0 w-64 shrink-0"></div></div>
+
+</aside>
+  
+
+<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#test-with-a-simple-prompt">Test with a simple prompt</a>
+      </li></ul>
+
+  
+  
+    
+    
+  
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </nav>
+
+
+  <article class="w-full break-words flex min-h-[calc(100vh-var(--navbar-height))] min-w-0 justify-center pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+
+      
+      <div class="mb-4">
+        <div class="mt-1.5 flex items-center gap-1 overflow-hidden text-sm text-gray-500 dark:text-gray-400">
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="http://localhost:1313/teaching/">Teaching</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100"></div>
+</div>
+
+      </div>
+      
+
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100"></h1>
+
+      <div class="mt-4 mb-16">
+      <div class="text-gray-500 dark:text-gray-300 text-sm flex items-center flex-wrap gap-y-2">
+        
+
+        
+        <span class="mx-1">·</span>
+        <span class="mx-1">
+          32 min read
+        </span>
+        
+        </div>
+
+        <div class="mt-3">
+          
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+      
+      
+      
+
+      
+      
+
+      <div class="prose prose-slate lg:prose-xl dark:prose-invert">
+        <p>AI Agents are sotware entities that percive the enviroment, Decide based on what they see and the golas they are set up for, and they Act opon that. In this set up we can have a single agent, or multiple agents working together to achive a goal.</p>
+<p>Building blocks of LLM models are:</p>
+<ul>
+<li>Pretrained LLMs: from openAI, LLama,</li>
+<li>Tools, or actions they can make</li>
+<li>Tasks that they need to perform</li>
+<li>Memory (RAG): Store the aditional data they in a vector database and make them accssible to the agents</li>
+</ul>
+<p>And we chain all of this together using Langchain, CrewAI, &hellip;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="kn">import</span> <span class="n">InteractiveShell</span>
+</span></span><span class="line"><span class="cl"><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s2">&#34;all&#34;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">crewai</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">crewai</span> <span class="kn">import</span> <span class="n">Task</span><span class="p">,</span> <span class="n">Crew</span><span class="p">,</span> <span class="n">Process</span><span class="p">,</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">LLM</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">litellm</span> 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Initialize DeepSeek LLM</span>
+</span></span><span class="line"><span class="cl"><span class="n">llm</span> <span class="o">=</span> <span class="n">LLM</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">model</span><span class="o">=</span><span class="s2">&#34;hosted_vllm/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">base_url</span><span class="o">=</span><span class="s2">&#34;https://8fb3-84-104-50-150.ngrok-free.app/v1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">api_key</span><span class="o">=</span><span class="s2">&#34;NA&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><h3 id="test-with-a-simple-prompt">Test with a simple prompt</h3>
+<p>We&rsquo;d like to write a script to check if our custom DeepSeek LLM wrapper works correctly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">test_prompt</span> <span class="o">=</span> <span class="s2">&#34;Write a Python function to calculate the factorial of a number.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">test_prompt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;DeepSeek Response:&#34;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>DeepSeek Response: Okay, I need to write a Python function to calculate the factorial of a number. Let's think about how to approach this.
+
+First, I remember that the factorial of a number n, denoted as n!, is the product of all positive integers from 1 to n. So, for example, 5! is 5 × 4 × 3 × 2 × 1 = 120.
+
+I should start by considering how to handle different cases. The function needs to work for n=0, which is 1, right? Oh wait, sometimes people get confused about 0! being 1 or 0. I should check that.
+
+Then, for positive integers, I'll multiply all numbers from 1 up to n. For negative numbers, I think the factorial isn't defined, so the function should handle that gracefully, maybe by raising an error or returning 0 or something. But since the problem didn't specify, I'll assume n is a non-negative integer.
+
+So, the steps I need to take are:
+
+1. Check if the input n is less than 0. If so, return an error or handle it as needed.
+2. If n is 0, return 1 immediately since 0! is defined as 1.
+3. If n is a positive integer, initialize a result variable as 1.
+4. Loop from 1 to n (inclusive), multiplying result by each number in this range.
+5. Return the result.
+
+Wait, how about using a loop? Let me think. Alternatively, I can use recursion, but recursion might be less efficient for large numbers. But since the problem doesn't specify constraints on n, perhaps an iterative approach is better.
+
+Let me outline the code structure:
+
+Define a function called factorial, which takes an argument n.
+
+If n is less than 0, return an error message, maybe raise a ValueError.
+
+Else, if n is 0, return 1.
+
+Else, initialize result as 1, then for each i from 1 to n, multiply result by i.
+
+But wait, in Python, the range is exclusive on the upper bound. So I need to use range(1, n+1) to include n.
+
+So the loop would be for i in range(1, n+1): result *= i.
+
+Yes, that makes sense.
+
+Testing the function:
+
+Test case 1: factorial(5) should return 120.
+
+Test case 2: factorial(0) should return 1.
+
+Test case 3: factorial(-3) should raise ValueError or return 0? Well, according to mathematical definitions, factorial is undefined for negative integers, so perhaps the function should return 0 or raise an error. The problem statement didn't specify, but in programming challenges, often negative inputs are treated as invalid and result in an error.
+
+So in the function, if n is negative, we can raise ValueError.
+
+Another edge case: n=1, returns 1.
+
+What about n=2? 2! is 2, which the function should return correctly.
+
+I should also consider the constraints on n. If n is very large, say 1000, the loop will take more time, but that's beyond the scope of this function.
+
+Putting it all together, the code would look like this:
+
+def factorial(n):
+    if n &lt; 0:
+        raise ValueError(&quot;Factorial is not defined for negative numbers&quot;)
+    elif n == 0:
+        return 1
+    else:
+        result = 1
+        for i in range(1, n+1):
+            result *= i
+        return result
+
+Wait, but wait a minute. What about when n is 1? The loop runs once, multiplying by 1, so result is 1, which is correct. And for n=2, it loops twice, multiplying 1*1*2=2. Correct.
+
+What if n is 3? 1*1*2*3=6. Correct.
+
+What about n=0? The function correctly returns 1.
+
+This should handle all cases.
+
+I think that's a solid implementation.
+&lt;/think&gt;
+
+To solve this problem, we need to write a Python function to calculate the factorial of a number. The factorial of a number \( n \) (denoted as \( n! \)) is the product of all positive integers from 1 to \( n \). 
+
+### Approach
+1. **Check for Negative Input**: If the input number is negative, the factorial is undefined, so we raise a ValueError.
+2. **Handle Zero Input**: If the input number is 0, the factorial is defined as 1.
+3. **Iterative Calculation**: For positive integers, we use an iterative approach to compute the factorial. We initialize the result as 1 and then multiply it by each integer from 1 up to the input number.
+
+### Solution Code
+```python
+def factorial(n):
+    if n &lt; 0:
+        raise ValueError(&quot;Factorial is not defined for negative numbers&quot;)
+    elif n == 0:
+        return 1
+    else:
+        result = 1
+        for i in range(1, n + 1):
+            result *= i
+        return result
+```
+
+### Explanation
+- **Negative Input Handling**: The function checks if the input is negative and raises a ValueError if it is, as factorial is not defined for negative numbers.
+- **Zero Input Handling**: If the input is 0, the function directly returns 1, since \( 0! = 1 \).
+- **Iterative Calculation**: For positive integers, the function initializes the result as 1 and then iterates from 1 to \( n \), multiplying the result by each integer in this range. This approach ensures that we efficiently compute the factorial by leveraging the properties of multiplication.
+
+This approach ensures that the function works correctly for all non-negative integers and handles edge cases such as negative numbers and zero appropriately.
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">litellm</span><span class="o">.</span><span class="n">set_verbose</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">role</span><span class="o">=</span><span class="s1">&#39;Customized LLM Expert&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">goal</span><span class="o">=</span><span class="s1">&#39;Provide tailored responses&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">backstory</span><span class="o">=</span><span class="s2">&#34;An AI assistant with custom LLM settings.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">llm</span><span class="o">=</span><span class="n">llm</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Define your task</span>
+</span></span><span class="line"><span class="cl"><span class="n">task</span> <span class="o">=</span> <span class="n">Task</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;Generate a list of 5 interesting ideas for an article, then write one captivating paragraph for each idea that showcases the potential of a full article on this topic. Return the list of ideas with their paragraphs and your notes.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">expected_output</span><span class="o">=</span><span class="s2">&#34;5 bullet points, each with a paragraph and accompanying notes.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">agent</span> <span class="o">=</span> <span class="n">agent</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">the_boys</span> <span class="o">=</span> <span class="n">Crew</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tasks</span><span class="o">=</span><span class="p">[</span><span class="n">task</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">agent</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">.</span><span class="n">kickoff</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">the_boys</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>[92m13:25:26 - LiteLLM:WARNING[0m: utils.py:385 - `litellm.set_verbose` is deprecated. Please set `os.environ['LITELLM_LOG'] = 'DEBUG'` for debug logs.
+
+
+Initialized litellm callbacks, Async Success Callbacks: [&lt;crewai.utilities.token_counter_callback.TokenCalcHandler object at 0x7f7b2cd9ac20&gt;]
+SYNC kwargs[caching]: False; litellm.cache: None; kwargs.get('cache')['no-cache']: False
+Final returned optional params: {'temperature': 0.6, 'stream': False, 'stop': ['\nObservation:'], 'extra_body': {}}
+
+
+[92m13:25:39 - LiteLLM:WARNING[0m: utils.py:385 - `litellm.set_verbose` is deprecated. Please set `os.environ['LITELLM_LOG'] = 'DEBUG'` for debug logs.
+
+
+RAW RESPONSE:
+{&quot;id&quot;: &quot;chatcmpl-623e41809715483fbd96e7792ec40e8e&quot;, &quot;choices&quot;: [{&quot;finish_reason&quot;: &quot;stop&quot;, &quot;index&quot;: 0, &quot;logprobs&quot;: null, &quot;message&quot;: {&quot;content&quot;: &quot;Okay, so I'm trying to figure out how to generate a list of 5 interesting ideas for an article. Each idea needs a captivating paragraph that showcases the potential of a full article on that topic. I need to make sure each idea is distinct and covers different aspects of the topic. I'll start by brainstorming some ideas related to technology, maybe something about the future, sustainability, education, and personal growth. \n\nFor each idea, I'll need to come up with a catchy title and then flesh out the paragraph to explain why it's a great topic to write about. I should also add some notes that explain my reasoning, like the potential impact or the key points I want to cover in the article. I need to make sure each idea is unique and that the paragraphs are engaging and informative. Let me start with the first idea.\n&lt;/think&gt;\n\nHere are five distinct and interesting ideas for an article, each with a captivating paragraph and notes:\n\n1. **The Future of Work: Revolutionizing our Jobs and the Workforce**\n   - **Title:** The Future of Work: Revolutionizing Our Jobs and the Workforce  \n     - **Paragraph:** The future of work is a global shift toward automation, AI, and remote work, reshaping industries and personal lives. With the rise of virtual and hybrid working, the job market is evolving, presenting both opportunities and challenges. This article explores how the future of work is reshaping industries, the workforce, and personal productivity, offering insights into the potential and risks of this transformation.  \n     - **Notes:** The article can delve into specific industries affected by the shift, such as manufacturing, healthcare, and education, and discuss the impact on workers, job markets, and economic growth. It can also address the importance of adaptability and resilience in navigating these changes.\n\n2. **Sustainable Energy: The Future of a Sustainable Future**\n   - **Title:** Sustainable Energy: The Future of a Sustainable Future  \n     - **Paragraph:** Sustainable energy is the cornerstone of a sustainable future, offering solutions to our planet's challenges. From renewable energy sources to reducing carbon emissions, this article explores the importance of sustainable energy in addressing climate change and ensuring a sustainable future. It can discuss the benefits of renewable energy, the role of technology in enhancing energy efficiency, and the need for global cooperation to combat climate change.  \n     - **Notes:** The article can compare sustainable energy with fossil fuels, highlight the role of individual actions, and emphasize the importance of policy and systemic change in promoting sustainability.\n\n3. **The Power of Education: Transforming Learning and Lifelong Learning**\n   - **Title:** The Power of Education: Transforming Learning and Lifelong Learning  \n     - **Paragraph:** Education is the backbone of a modern society, shaping the future and enabling lifelong learning. This article explores the importance of education in personal development, professional growth, and societal progress. It can discuss the benefits of education, such as critical thinking and problem-solving skills, and the role of technology in enhancing learning experiences. The article can also touch on the challenges of access and equity in education and the ways in which education can be used to empower individuals and contribute to a more equitable world.  \n     - **Notes:** The article can examine specific examples of successful education systems, such as schools in different cultures, and discuss the role of motivation and engagement in learning. It can also explore the impact of education on economic growth and social mobility.\n\n4. **The Importance of Personal Growth: Enhancing Well-Being and Success**\n   - **Title:** The Importance of Personal Growth: Enhancing Well-Being and Success  \n     - **Paragraph:** Personal growth is essential for enhancing well-being and success in a competitive world. This article explores the importance of personal growth, including self-awareness, self-improvement, and self-empowerment. It can discuss the benefits of personal growth, such as increased confidence, better relationships, and improved mental health, and how personal growth can lead to personal and professional success. The article can also touch on the importance of celebrating personal achievements and the role of positivity in fostering personal growth.  \n     - **Notes:** The article can examine specific examples of personal growth, such as overcoming challenges, achieving goals, and changing one's perspective, and discuss the role of community and support in personal growth. It can also explore the impact of personal growth on mental health and the importance of addressing mental health issues in personal development.\n\n5. **The Future of Social Media: Revolutionizing Communication and Personalization**\n   - **Title:** The Future of Social Media: Revolutionizing Communication and Personalization  \n     - **Paragraph:** Social media has transformed communication and personalization, offering new ways to connect with people and share ideas. This article explores the future of social media and its impact on communication, relationships, and personal growth. It can discuss the benefits of social media, such as instant connections and access to information, and the role of technology in enhancing communication. The article can also touch on the challenges of social media, such as narcissism and superficiality, and the importance of balancing social media with other aspects of life.  \n     - **Notes:** The article can examine specific examples of how social media is being used to enhance personal growth, such as through analytics and personalized recommendations, and discuss the role of social media in shaping the world's digital identity. It can also explore the impact of social media on mental health and the importance of addressing mental health issues in social media use.&quot;, &quot;refusal&quot;: null, &quot;role&quot;: &quot;assistant&quot;, &quot;audio&quot;: null, &quot;function_call&quot;: null, &quot;tool_calls&quot;: []}, &quot;stop_reason&quot;: null}], &quot;created&quot;: 1740659127, &quot;model&quot;: &quot;deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B&quot;, &quot;object&quot;: &quot;chat.completion&quot;, &quot;service_tier&quot;: null, &quot;system_fingerprint&quot;: null, &quot;usage&quot;: {&quot;completion_tokens&quot;: 1110, &quot;prompt_tokens&quot;: 208, &quot;total_tokens&quot;: 1318, &quot;completion_tokens_details&quot;: null, &quot;prompt_tokens_details&quot;: null}, &quot;prompt_logprobs&quot;: null}
+
+
+Initialized litellm callbacks, Async Success Callbacks: [&lt;crewai.utilities.token_counter_callback.TokenCalcHandler object at 0x7f7b2cd9ac20&gt;]
+SYNC kwargs[caching]: False; litellm.cache: None; kwargs.get('cache')['no-cache']: False
+Final returned optional params: {'temperature': 0.6, 'stream': False, 'stop': ['\nObservation:'], 'extra_body': {}}
+RAW RESPONSE:
+{&quot;id&quot;: &quot;chatcmpl-e327bed8cfef44bb952999a86b577e45&quot;, &quot;choices&quot;: [{&quot;finish_reason&quot;: &quot;stop&quot;, &quot;index&quot;: 0, &quot;logprobs&quot;: null, &quot;message&quot;: {&quot;content&quot;: &quot;Alright, so the user is asking me to generate a list of 5 interesting ideas for an article. Then, I need to write a captivating paragraph for each idea that showcases the potential of a full article on this topic. The final answer should be in bullet points with their paragraphs and notes. The user also mentioned that I must return the actual complete content, not just a summary, and that I need to use the exact format.\n\nFirst, I need to understand the user's intent. They want me to come up with ideas and then expand on each with a paragraph. They emphasized using tools and giving the best possible answer, so I should ensure my response is thorough and meets the criteria.\n\nI'll start by brainstorming 5 unique ideas that could form a comprehensive article. Maybe something related to technology, sustainability, personal growth, education, and community. These topics are broad enough to allow for detailed exploration but specific enough to ensure each idea is distinct.\n\nNext, for each idea, I need to craft a paragraph that highlights its potential. I should make sure each paragraph is captivating and showcases the depth of a full article. I'll also include notes that explain the significance of each idea and how it ties into a broader context.\n\nI need to make sure the final answer adheres strictly to the format. Each bullet point will have a paragraph and notes. I'll avoid any summaries or generic statements, ensuring each content is original and detailed.\n\nNow, considering the user's previous attempt, they made a mistake by using a tool they haven't already, so I need to correct that. My response must be clear, structured, and meet all the specified requirements without any markdown or formatting issues.\n\nI'll start by outlining each idea, then flesh out each paragraph with insightful points. I'll ensure each idea is unique and covers different aspects, providing a well-rounded article. Finally, I'll review to make sure the format is correct and the content is top-notch, as per the user's instructions.\n&lt;/think&gt;\n\nThought: I now can give a great answer  \nFinal Answer:  \n\nHere is a list of five interesting ideas for an article, each accompanied by a captivating paragraph that showcases their potential to form a comprehensive piece:\n\n1.  \n**Title: The Power of Technology in Modern Life**  \n**Paragraph:**  \nIn today\u2019s fast-paced digital age, technology has transformed how we communicate, work, and connect with one another. From the advancements in smartphones and smart devices to the innovations in artificial intelligence and blockchain, technology has become an integral part of our daily lives. This article explores how technology is reshaping our understanding of the world, our relationships, and our ability to thrive in a globalized society. By examining the interplay between technology and human behavior, we can gain insights into how to harness the potential of this transformative force.  \n\n**Notes:**  \nThis idea highlights the transformative impact of technology on modern society and invites readers to consider how their choices and decisions regarding technology can influence their lives and the future.\n\n2.  \n**Title: Sustainability: The Future of a Sustainable World**  \n**Paragraph:**  \nSustainability is not just an environmental issue but a collective responsibility that affects every aspect of our lives. From reducing our carbon footprint to adopting eco-friendly practices in our personal lives, sustainability is a way of living that requires effort, innovation, and collaboration. This article delves into the various aspects of sustainability, including renewable energy, waste reduction, and resource conservation. By advocating for sustainable practices, we can create a world that is more harmonious and sustainable for future generations.  \n\n**Notes:**  \nThis idea emphasizes the importance of sustainability as a global movement and encourages readers to explore ways to contribute to a healthier, more sustainable future.\n\n3.  \n**Title: The Journey of Personal Growth**  \n**Paragraph:**  \nPersonal growth is the foundation of a fulfilling life, but it often seems elusive and unreachable. From self-reflection and introspection to learning and development, personal growth is a lifelong process that requires patience and persistence. This article explores the different forms of personal growth, including self-improvement, career development, and personal relationships. By embracing these forms of growth, individuals can enhance their well-being and achieve their potential.  \n\n**Notes:**  \nThis idea provides a comprehensive exploration of personal growth and its significance in a person\u2019s life.\n\n4.  \n**Title: The Role of Education in a Tech-Driven World**  \n**Paragraph:**  \nEducation is the cornerstone of success, and in a world where technology has advanced rapidly, the role of education has also changed dramatically. From online learning platforms to lifelong learning opportunities, education continues to play a crucial role in personal growth and career advancement. This article examines the importance of education in a tech-driven society, highlighting its benefits and challenges. By engaging with education effectively, individuals can overcome barriers and achieve their goals.  \n\n**Notes:**  \nThis idea underscores the enduring importance of education in a modern world, regardless of technological advancements.\n\n5.  \n**Title: The Potential of Community Building**  \n**Paragraph:**  \nCommunity is the driving force behind progress and growth, and it plays a vital role in shaping the way we live, work, and interact with one another. From social networks and online communities to local groups and global organizations, community building is a fundamental aspect of human existence. This article explores the different types of community and their potential to foster collaboration, innovation, and mutual support. By building strong communities, individuals can create a more connected and resilient society.  \n\n**Notes:**  \nThis idea emphasizes the importance of community in fostering personal and collective growth.&quot;, &quot;refusal&quot;: null, &quot;role&quot;: &quot;assistant&quot;, &quot;audio&quot;: null, &quot;function_call&quot;: null, &quot;tool_calls&quot;: []}, &quot;stop_reason&quot;: null}], &quot;created&quot;: 1740659140, &quot;model&quot;: &quot;deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B&quot;, &quot;object&quot;: &quot;chat.completion&quot;, &quot;service_tier&quot;: null, &quot;system_fingerprint&quot;: null, &quot;usage&quot;: {&quot;completion_tokens&quot;: 1128, &quot;prompt_tokens&quot;: 305, &quot;total_tokens&quot;: 1433, &quot;completion_tokens_details&quot;: null, &quot;prompt_tokens_details&quot;: null}, &quot;prompt_logprobs&quot;: null}
+
+
+Here is a list of five interesting ideas for an article, each accompanied by a captivating paragraph that showcases their potential to form a comprehensive piece:
+
+1.  
+**Title: The Power of Technology in Modern Life**  
+**Paragraph:**  
+In today’s fast-paced digital age, technology has transformed how we communicate, work, and connect with one another. From the advancements in smartphones and smart devices to the innovations in artificial intelligence and blockchain, technology has become an integral part of our daily lives. This article explores how technology is reshaping our understanding of the world, our relationships, and our ability to thrive in a globalized society. By examining the interplay between technology and human behavior, we can gain insights into how to harness the potential of this transformative force.  
+
+**Notes:**  
+This idea highlights the transformative impact of technology on modern society and invites readers to consider how their choices and decisions regarding technology can influence their lives and the future.
+
+2.  
+**Title: Sustainability: The Future of a Sustainable World**  
+**Paragraph:**  
+Sustainability is not just an environmental issue but a collective responsibility that affects every aspect of our lives. From reducing our carbon footprint to adopting eco-friendly practices in our personal lives, sustainability is a way of living that requires effort, innovation, and collaboration. This article delves into the various aspects of sustainability, including renewable energy, waste reduction, and resource conservation. By advocating for sustainable practices, we can create a world that is more harmonious and sustainable for future generations.  
+
+**Notes:**  
+This idea emphasizes the importance of sustainability as a global movement and encourages readers to explore ways to contribute to a healthier, more sustainable future.
+
+3.  
+**Title: The Journey of Personal Growth**  
+**Paragraph:**  
+Personal growth is the foundation of a fulfilling life, but it often seems elusive and unreachable. From self-reflection and introspection to learning and development, personal growth is a lifelong process that requires patience and persistence. This article explores the different forms of personal growth, including self-improvement, career development, and personal relationships. By embracing these forms of growth, individuals can enhance their well-being and achieve their potential.  
+
+**Notes:**  
+This idea provides a comprehensive exploration of personal growth and its significance in a person’s life.
+
+4.  
+**Title: The Role of Education in a Tech-Driven World**  
+**Paragraph:**  
+Education is the cornerstone of success, and in a world where technology has advanced rapidly, the role of education has also changed dramatically. From online learning platforms to lifelong learning opportunities, education continues to play a crucial role in personal growth and career advancement. This article examines the importance of education in a tech-driven society, highlighting its benefits and challenges. By engaging with education effectively, individuals can overcome barriers and achieve their goals.  
+
+**Notes:**  
+This idea underscores the enduring importance of education in a modern world, regardless of technological advancements.
+
+5.  
+**Title: The Potential of Community Building**  
+**Paragraph:**  
+Community is the driving force behind progress and growth, and it plays a vital role in shaping the way we live, work, and interact with one another. From social networks and online communities to local groups and global organizations, community building is a fundamental aspect of human existence. This article explores the different types of community and their potential to foster collaboration, innovation, and mutual support. By building strong communities, individuals can create a more connected and resilient society.  
+
+**Notes:**  
+This idea emphasizes the importance of community in fostering personal and collective growth.
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">litellm</span><span class="o">.</span><span class="n">set_verbose</span><span class="o">=</span><span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">messages</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&#34;role&#34;</span><span class="p">:</span> <span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;content&#34;</span><span class="p">:</span> <span class="s2">&#34;Hey, how&#39;s it going&#34;</span><span class="p">}]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">litellm</span><span class="o">.</span><span class="n">completion</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">model</span><span class="o">=</span><span class="s2">&#34;hosted_vllm/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B&#34;</span><span class="p">,</span> <span class="c1"># pass the vllm model name</span>
+</span></span><span class="line"><span class="cl">            <span class="n">messages</span><span class="o">=</span><span class="n">messages</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">api_base</span><span class="o">=</span><span class="s2">&#34;https://8fb3-84-104-50-150.ngrok-free.app/v1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#api_base=&#34;http://127.0.0.1:8081&#34;,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">temperature</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">max_tokens</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>[92m13:27:28 - LiteLLM:WARNING[0m: utils.py:385 - `litellm.set_verbose` is deprecated. Please set `os.environ['LITELLM_LOG'] = 'DEBUG'` for debug logs.
+
+
+Initialized litellm callbacks, Async Success Callbacks: [&lt;crewai.utilities.token_counter_callback.TokenCalcHandler object at 0x7f7b2cd9ac20&gt;]
+SYNC kwargs[caching]: False; litellm.cache: None; kwargs.get('cache')['no-cache']: False
+Final returned optional params: {'temperature': 0.2, 'max_tokens': 80, 'extra_body': {}}
+RAW RESPONSE:
+{&quot;id&quot;: &quot;chatcmpl-641c89ff974f425b8b8cefb4c23b806c&quot;, &quot;choices&quot;: [{&quot;finish_reason&quot;: &quot;length&quot;, &quot;index&quot;: 0, &quot;logprobs&quot;: null, &quot;message&quot;: {&quot;content&quot;: &quot;Okay, so I'm trying to figure out how to approach this problem. The user just said, \&quot;Hey, how's it going?\&quot; and then they gave me a response that's a bit confusing. It starts with \&quot;Hey, how's it going?\&quot; and then goes into a long explanation about the user's experience, mentioning a chat history, different topics they've discussed, and then a response&quot;, &quot;refusal&quot;: null, &quot;role&quot;: &quot;assistant&quot;, &quot;audio&quot;: null, &quot;function_call&quot;: null, &quot;tool_calls&quot;: []}, &quot;stop_reason&quot;: null}], &quot;created&quot;: 1740659248, &quot;model&quot;: &quot;deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B&quot;, &quot;object&quot;: &quot;chat.completion&quot;, &quot;service_tier&quot;: null, &quot;system_fingerprint&quot;: null, &quot;usage&quot;: {&quot;completion_tokens&quot;: 80, &quot;prompt_tokens&quot;: 11, &quot;total_tokens&quot;: 91, &quot;completion_tokens_details&quot;: null, &quot;prompt_tokens_details&quot;: null}, &quot;prompt_logprobs&quot;: null}
+
+
+ModelResponse(id='chatcmpl-641c89ff974f425b8b8cefb4c23b806c', created=1740659248, model='hosted_vllm/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', object='chat.completion', system_fingerprint=None, choices=[Choices(finish_reason='length', index=0, message=Message(content='Okay, so I\'m trying to figure out how to approach this problem. The user just said, &quot;Hey, how\'s it going?&quot; and then they gave me a response that\'s a bit confusing. It starts with &quot;Hey, how\'s it going?&quot; and then goes into a long explanation about the user\'s experience, mentioning a chat history, different topics they\'ve discussed, and then a response', role='assistant', tool_calls=None, function_call=None, provider_specific_fields={'refusal': None}))], usage=Usage(completion_tokens=80, prompt_tokens=11, total_tokens=91, completion_tokens_details=None, prompt_tokens_details=None), service_tier=None, prompt_logprobs=None)
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">crewai</span> <span class="kn">import</span> <span class="n">Agent</span><span class="p">,</span> <span class="n">Task</span><span class="p">,</span> <span class="n">Crew</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain_community.chat_models</span> <span class="kn">import</span> <span class="n">ChatOpenAI</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.tools</span> <span class="kn">import</span> <span class="n">DuckDuckGoSearchRun</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">search_tool</span> <span class="o">=</span> <span class="n">DuckDuckGoSearchRun</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">researcher</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">role</span><span class="o">=</span><span class="s1">&#39;Senior Research Analyst&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">goal</span><span class="o">=</span><span class="s1">&#39;Uncover cutting-edge developments in AI and data science&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">backstory</span><span class="o">=</span><span class="s2">&#34;&#34;&#34;You work at a leading tech think tank.
+</span></span></span><span class="line"><span class="cl"><span class="s2">  Your expertise lies in identifying emerging trends.
+</span></span></span><span class="line"><span class="cl"><span class="s2">  You have a knack for dissecting complex data and presenting
+</span></span></span><span class="line"><span class="cl"><span class="s2">  actionable insights.&#34;&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">allow_delegation</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="n">search_tool</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">llm</span><span class="o">=</span><span class="n">llm</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">writer</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">role</span><span class="o">=</span><span class="s1">&#39;Tech Content Strategist&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">goal</span><span class="o">=</span><span class="s1">&#39;Craft compelling content on tech advancements&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">backstory</span><span class="o">=</span><span class="s2">&#34;&#34;&#34;You are a renowned Content Strategist, known for
+</span></span></span><span class="line"><span class="cl"><span class="s2">  your insightful and engaging articles.
+</span></span></span><span class="line"><span class="cl"><span class="s2">  You transform complex concepts into compelling narratives.&#34;&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">allow_delegation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">llm</span><span class="o">=</span><span class="n">llm</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">task1</span> <span class="o">=</span> <span class="n">Task</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;&#34;&#34;Conduct a comprehensive analysis of the latest advancements in AI in 2024.
+</span></span></span><span class="line"><span class="cl"><span class="s2">  Identify key trends, breakthrough technologies, and potential industry impacts.
+</span></span></span><span class="line"><span class="cl"><span class="s2">  Your final answer MUST be a full analysis report&#34;&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">agent</span><span class="o">=</span><span class="n">researcher</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">task2</span> <span class="o">=</span> <span class="n">Task</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;&#34;&#34;Using the insights provided, develop an engaging blog
+</span></span></span><span class="line"><span class="cl"><span class="s2">  post that highlights the most significant AI advancements.
+</span></span></span><span class="line"><span class="cl"><span class="s2">  Your post should be informative yet accessible, catering to a tech-savvy audience.
+</span></span></span><span class="line"><span class="cl"><span class="s2">  Make it sound cool, avoid complex words so it doesn&#39;t sound like AI.
+</span></span></span><span class="line"><span class="cl"><span class="s2">  Your final answer MUST be the full blog post of at least 4 paragraphs.&#34;&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">agent</span><span class="o">=</span><span class="n">writer</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">crew</span> <span class="o">=</span> <span class="n">Crew</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">agents</span><span class="o">=</span><span class="p">[</span><span class="n">researcher</span><span class="p">,</span> <span class="n">writer</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tasks</span><span class="o">=</span><span class="p">[</span><span class="n">task1</span><span class="p">,</span> <span class="n">task2</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>  <span class="c1"># You can set it to 1 or 2 to different logging levels</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span> <span class="o">=</span> <span class="n">crew</span><span class="o">.</span><span class="n">kickoff</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;######################&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>---------------------------------------------------------------------------
+
+ValidationError                           Traceback (most recent call last)
+
+Cell In[16], line 8
+      4 from langchain.tools import DuckDuckGoSearchRun
+      6 search_tool = DuckDuckGoSearchRun()
+----&gt; 8 researcher = Agent(
+      9     role='Senior Research Analyst',
+     10     goal='Uncover cutting-edge developments in AI and data science',
+     11     backstory=&quot;&quot;&quot;You work at a leading tech think tank.
+     12   Your expertise lies in identifying emerging trends.
+     13   You have a knack for dissecting complex data and presenting
+     14   actionable insights.&quot;&quot;&quot;,
+     15     verbose=True,
+     16     allow_delegation=False,
+     17     tools=[search_tool],
+     18     llm=llm
+     19 )
+     20 writer = Agent(
+     21     role='Tech Content Strategist',
+     22     goal='Craft compelling content on tech advancements',
+   (...)
+     28     llm=llm
+     29 )
+     30 task1 = Task(
+     31     description=&quot;&quot;&quot;Conduct a comprehensive analysis of the latest advancements in AI in 2024.
+     32   Identify key trends, breakthrough technologies, and potential industry impacts.
+     33   Your final answer MUST be a full analysis report&quot;&quot;&quot;,
+     34     agent=researcher
+     35 )
+
+
+File /mnt/c/workspace/Code/Agentic_examples/agenticVenv/lib/python3.10/site-packages/pydantic/main.py:214, in BaseModel.__init__(self, **data)
+    212 # `__tracebackhide__` tells pytest and some other tools to omit this function from tracebacks
+    213 __tracebackhide__ = True
+--&gt; 214 validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+    215 if self is not validated_self:
+    216     warnings.warn(
+    217         'A custom validator is returning a value other than `self`.\n'
+    218         &quot;Returning anything other than `self` from a top level model validator isn't supported when validating via `__init__`.\n&quot;
+    219         'See the `model_validator` docs (https://docs.pydantic.dev/latest/concepts/validators/#model-validators) for more details.',
+    220         stacklevel=2,
+    221     )
+
+
+ValidationError: 1 validation error for Agent
+tools
+  Value error, Invalid tool type: &lt;class 'langchain_community.tools.ddg_search.tool.DuckDuckGoSearchRun'&gt;. Tool must be an instance of BaseTool or an object with 'name', 'func', and 'description' attributes. [type=value_error, input_value=[DuckDuckGoSearchRun(api_...'auto', source='text'))], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.10/v/value_error
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">test_prompt</span> <span class="o">=</span> <span class="s2">&#34;Write a Python function to calculate the factorial of a number.&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">test_prompt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;DeepSeek Response:&#34;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>[92m13:31:13 - LiteLLM:WARNING[0m: utils.py:385 - `litellm.set_verbose` is deprecated. Please set `os.environ['LITELLM_LOG'] = 'DEBUG'` for debug logs.
+
+
+SYNC kwargs[caching]: False; litellm.cache: None; kwargs.get('cache')['no-cache']: False
+Final returned optional params: {'temperature': 0.6, 'stream': False, 'stop': [], 'extra_body': {}}
+RAW RESPONSE:
+{&quot;id&quot;: &quot;chatcmpl-9dc66f1ff1c14772b9b30088cde0a26d&quot;, &quot;choices&quot;: [{&quot;finish_reason&quot;: &quot;stop&quot;, &quot;index&quot;: 0, &quot;logprobs&quot;: null, &quot;message&quot;: {&quot;content&quot;: &quot;Okay, I need to write a Python function to calculate the factorial of a number. Hmm, I remember that the factorial of a number n, denoted as n!, is the product of all positive integers from 1 to n. So for example, 5! is 5 \u00d7 4 \u00d7 3 \u00d7 2 \u00d7 1, which equals 120.\n\nWait, but how do I handle different cases? Like, what if the number is 0? Oh right, 0! is defined as 1. And if the input is negative, I should probably return an error or raise an exception because factorial is only defined for non-negative integers.\n\nSo the function needs to take an integer as input. Let me outline the steps:\n\n1. Check if the input is a non-negative integer. If it's negative, raise a ValueError.\n2. If the input is 0 or 1, return 1 immediately since 0! = 1! = 1.\n3. For numbers greater than 1, multiply all the integers from 1 up to that number.\n\nI think using a loop is the most straightforward way. I'll initialize a result variable to 1. Then, loop from 1 to n inclusive, multiplying each number into the result.\n\nWait, what about the case where the input is not an integer? Like a string or a float. In that case, the function should probably raise a TypeError because factorial isn't defined for those types.\n\nSo the function should first check if the input is an integer. Oh, but wait, in Python, booleans are subclasses of integers. So True is 1 and False is 0. Oh, that's a problem because using a boolean as input might be treated as 1 or 0, which would give incorrect results. So I need to make sure that the input is strictly an integer type, not boolean.\n\nSo, in the function, I should first check if the type of the input is not int, then raise a TypeError.\n\nPutting it all together, the function will:\n\n- Check if the input is an integer (using isinstance, but also ensuring it's not a boolean). So, if not (isinstance(n, int) and not isinstance(n, bool)), then raise an error.\n- If it's 0 or 1, return 1.\n- Otherwise, initialize result as 1, then loop from 1 to n, multiplying each time.\n\nAlternatively, I could use recursion. But recursion has its own issues, like stack overflow for large n. So for this problem, the iterative approach is better.\n\nWait, what about when n is 0? Let me test it. If n is 0, the loop doesn't run, and result is 1, which is correct.\n\nTesting some examples:\n\nn=5: 1*1=1, 2=2, 3=6, 4=24, 5=120. Correct.\nn=3: 1*1=1, 2=2, 3=6. Correct.\n\nWhat about negative numbers? The function should raise a ValueError since factorial isn't defined for negative integers.\n\nWhat about non-integer inputs like 5.0? Since 5.0 is a float, the function will raise an error, which is correct.\n\nAnother edge case: n=1. It returns 1, which is correct.\n\nSo, the function should look something like this:\n\ndef factorial(n):\n    if not isinstance(n, int) or isinstance(n, bool):\n        raise TypeError(\&quot;Factorial is only defined for integers\&quot;)\n    if n &lt; 0:\n        raise ValueError(\&quot;Factorial is not defined for negative numbers\&quot;)\n    if n == 0 or n == 1:\n        return 1\n    result = 1\n    for i in range(1, n+1):\n        result *= i\n    return result\n\nWait, but in the isinstance check, booleans are considered as int. So True is 1, which would cause 1! to return 1. But if the input is True, it's technically 1, but the function would return 1, which is correct. But if the input is False, which is 0, but since the first condition checks for n &lt;0, it would raise an error, but False is 0, so perhaps the function should treat n as 0. Wait, but False is not less than 0, so it would pass the negative check. But then, the function would return 1 for False, which is incorrect because 0! is 1, but False is 0, so 0! is 1. So if the input is False, it's 0, so the function should return 1. But according to the code, it would return 1 for False because the first condition is n &lt;0, which is False, so it proceeds to the if n ==0 or n==1. So for n=False, which is 0, it would return 1, which is correct.\n\nWait, but if the input is -1, it would raise ValueError, which is correct. So the code seems to handle that.\n\nAnother test case: n=2. Should return 2. Let's see: 1*1=1, then 1*2=2. Correct.\n\nWhat about n=4? 1*1=1, 2=2, 3=6, 4=24. Correct.\n\nI think this should work.\n&lt;/think&gt;\n\nTo solve this problem, we need to write a Python function that calculates the factorial of a given number. The factorial of a number \\( n \\), denoted as \\( n! \\), is the product of all positive integers from 1 to \\( n \\). The function should handle non-negative integers and raise appropriate errors for negative inputs and non-integer types.\n\n### Approach\n1. **Input Validation**: \n   - Check if the input is a non-negative integer. If it is a boolean, treat it as an integer (since True is 1 and False is 0).\n   - If the input is negative, raise a `ValueError`.\n   - If the input is not an integer, raise a `TypeError`.\n\n2. **Base Cases**:\n   - If the input is 0 or 1, return 1 immediately since \\( 0! = 1! = 1 \\).\n\n3. **Iterative Calculation**:\n   - Initialize the result to 1.\n   - Use a loop to multiply each integer from 1 to \\( n \\) (inclusive) into the result.\n\n### Solution Code\n```python\ndef factorial(n):\n    if not isinstance(n, int) or isinstance(n, bool):\n        raise TypeError(\&quot;Factorial is only defined for integers\&quot;)\n    if n &lt; 0:\n        raise ValueError(\&quot;Factorial is not defined for negative numbers\&quot;)\n    if n == 0 or n == 1:\n        return 1\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n```\n\n### Explanation\n- **Input Validation**: The function first checks if the input is a valid non-negative integer. Booleans are explicitly excluded to avoid treating them as integers.\n- **Base Cases**: The function handles the special cases where \\( n \\) is 0 or 1 by returning 1 immediately.\n- **Iterative Calculation**: For other values of \\( n \\), the function uses a loop to compute the factorial by multiplying each integer from 1 up to \\( n \\). This approach ensures that the function efficiently computes the factorial for all valid inputs.\n\nThis solution efficiently handles the problem requirements, including edge cases and input validation, ensuring correct results for all valid inputs and appropriate error handling for invalid ones.&quot;, &quot;refusal&quot;: null, &quot;role&quot;: &quot;assistant&quot;, &quot;audio&quot;: null, &quot;function_call&quot;: null, &quot;tool_calls&quot;: []}, &quot;stop_reason&quot;: null}], &quot;created&quot;: 1740659473, &quot;model&quot;: &quot;deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B&quot;, &quot;object&quot;: &quot;chat.completion&quot;, &quot;service_tier&quot;: null, &quot;system_fingerprint&quot;: null, &quot;usage&quot;: {&quot;completion_tokens&quot;: 1617, &quot;prompt_tokens&quot;: 17, &quot;total_tokens&quot;: 1634, &quot;completion_tokens_details&quot;: null, &quot;prompt_tokens_details&quot;: null}, &quot;prompt_logprobs&quot;: null}
+
+
+DeepSeek Response: Okay, I need to write a Python function to calculate the factorial of a number. Hmm, I remember that the factorial of a number n, denoted as n!, is the product of all positive integers from 1 to n. So for example, 5! is 5 × 4 × 3 × 2 × 1, which equals 120.
+
+Wait, but how do I handle different cases? Like, what if the number is 0? Oh right, 0! is defined as 1. And if the input is negative, I should probably return an error or raise an exception because factorial is only defined for non-negative integers.
+
+So the function needs to take an integer as input. Let me outline the steps:
+
+1. Check if the input is a non-negative integer. If it's negative, raise a ValueError.
+2. If the input is 0 or 1, return 1 immediately since 0! = 1! = 1.
+3. For numbers greater than 1, multiply all the integers from 1 up to that number.
+
+I think using a loop is the most straightforward way. I'll initialize a result variable to 1. Then, loop from 1 to n inclusive, multiplying each number into the result.
+
+Wait, what about the case where the input is not an integer? Like a string or a float. In that case, the function should probably raise a TypeError because factorial isn't defined for those types.
+
+So the function should first check if the input is an integer. Oh, but wait, in Python, booleans are subclasses of integers. So True is 1 and False is 0. Oh, that's a problem because using a boolean as input might be treated as 1 or 0, which would give incorrect results. So I need to make sure that the input is strictly an integer type, not boolean.
+
+So, in the function, I should first check if the type of the input is not int, then raise a TypeError.
+
+Putting it all together, the function will:
+
+- Check if the input is an integer (using isinstance, but also ensuring it's not a boolean). So, if not (isinstance(n, int) and not isinstance(n, bool)), then raise an error.
+- If it's 0 or 1, return 1.
+- Otherwise, initialize result as 1, then loop from 1 to n, multiplying each time.
+
+Alternatively, I could use recursion. But recursion has its own issues, like stack overflow for large n. So for this problem, the iterative approach is better.
+
+Wait, what about when n is 0? Let me test it. If n is 0, the loop doesn't run, and result is 1, which is correct.
+
+Testing some examples:
+
+n=5: 1*1=1, 2=2, 3=6, 4=24, 5=120. Correct.
+n=3: 1*1=1, 2=2, 3=6. Correct.
+
+What about negative numbers? The function should raise a ValueError since factorial isn't defined for negative integers.
+
+What about non-integer inputs like 5.0? Since 5.0 is a float, the function will raise an error, which is correct.
+
+Another edge case: n=1. It returns 1, which is correct.
+
+So, the function should look something like this:
+
+def factorial(n):
+    if not isinstance(n, int) or isinstance(n, bool):
+        raise TypeError(&quot;Factorial is only defined for integers&quot;)
+    if n &lt; 0:
+        raise ValueError(&quot;Factorial is not defined for negative numbers&quot;)
+    if n == 0 or n == 1:
+        return 1
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+
+Wait, but in the isinstance check, booleans are considered as int. So True is 1, which would cause 1! to return 1. But if the input is True, it's technically 1, but the function would return 1, which is correct. But if the input is False, which is 0, but since the first condition checks for n &lt;0, it would raise an error, but False is 0, so perhaps the function should treat n as 0. Wait, but False is not less than 0, so it would pass the negative check. But then, the function would return 1 for False, which is incorrect because 0! is 1, but False is 0, so 0! is 1. So if the input is False, it's 0, so the function should return 1. But according to the code, it would return 1 for False because the first condition is n &lt;0, which is False, so it proceeds to the if n ==0 or n==1. So for n=False, which is 0, it would return 1, which is correct.
+
+Wait, but if the input is -1, it would raise ValueError, which is correct. So the code seems to handle that.
+
+Another test case: n=2. Should return 2. Let's see: 1*1=1, then 1*2=2. Correct.
+
+What about n=4? 1*1=1, 2=2, 3=6, 4=24. Correct.
+
+I think this should work.
+&lt;/think&gt;
+
+To solve this problem, we need to write a Python function that calculates the factorial of a given number. The factorial of a number \( n \), denoted as \( n! \), is the product of all positive integers from 1 to \( n \). The function should handle non-negative integers and raise appropriate errors for negative inputs and non-integer types.
+
+### Approach
+1. **Input Validation**: 
+   - Check if the input is a non-negative integer. If it is a boolean, treat it as an integer (since True is 1 and False is 0).
+   - If the input is negative, raise a `ValueError`.
+   - If the input is not an integer, raise a `TypeError`.
+
+2. **Base Cases**:
+   - If the input is 0 or 1, return 1 immediately since \( 0! = 1! = 1 \).
+
+3. **Iterative Calculation**:
+   - Initialize the result to 1.
+   - Use a loop to multiply each integer from 1 to \( n \) (inclusive) into the result.
+
+### Solution Code
+```python
+def factorial(n):
+    if not isinstance(n, int) or isinstance(n, bool):
+        raise TypeError(&quot;Factorial is only defined for integers&quot;)
+    if n &lt; 0:
+        raise ValueError(&quot;Factorial is not defined for negative numbers&quot;)
+    if n == 0 or n == 1:
+        return 1
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+```
+
+### Explanation
+- **Input Validation**: The function first checks if the input is a valid non-negative integer. Booleans are explicitly excluded to avoid treating them as integers.
+- **Base Cases**: The function handles the special cases where \( n \) is 0 or 1 by returning 1 immediately.
+- **Iterative Calculation**: For other values of \( n \), the function uses a loop to compute the factorial by multiplying each integer from 1 up to \( n \). This approach ensures that the function efficiently computes the factorial for all valid inputs.
+
+This solution efficiently handles the problem requirements, including edge cases and input validation, ensuring correct results for all valid inputs and appropriate error handling for invalid ones.
+</code></pre>
+
+      </div>
+
+      <div class="mt-16"></div>
+
+      <div class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert mt-5">
+        
+        <div class="max-w-prose print:hidden">
+  
+  
+
+  
+
+
+  
+<section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A1313%2Fteaching%2Fagentic-ai%2F02---orchestrating-ai-agents----crewai-with-local-deepseek-r1-api%2F&amp;text="
+    title="X"
+    aria-label="X"
+    id="share-link-x"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A1313%2Fteaching%2Fagentic-ai%2F02---orchestrating-ai-agents----crewai-with-local-deepseek-r1-api%2F&amp;t="
+    title="Facebook"
+    aria-label="Facebook"
+    id="share-link-facebook"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+    
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="mailto:?subject=&amp;body=http%3A%2F%2Flocalhost%3A1313%2Fteaching%2Fagentic-ai%2F02---orchestrating-ai-agents----crewai-with-local-deepseek-r1-api%2F"
+    title="Email"
+    aria-label="Email"
+    id="share-link-email"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M16.5 12a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A1313%2Fteaching%2Fagentic-ai%2F02---orchestrating-ai-agents----crewai-with-local-deepseek-r1-api%2F&amp;title="
+    title="LinkedIn"
+    aria-label="LinkedIn"
+    id="share-link-linkedin"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+  </a>
+  
+
+  
+  
+  
+  
+  
+  
+  <a
+    target="_blank" rel="noopener"
+    class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+    href="whatsapp://send?text=%20http%3A%2F%2Flocalhost%3A1313%2Fteaching%2Fagentic-ai%2F02---orchestrating-ai-agents----crewai-with-local-deepseek-r1-api%2F"
+    title="WhatsApp"
+    aria-label="WhatsApp"
+    id="share-link-whatsapp"
+  >
+    <svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="m187.58 144.84-32-16a8 8 0 0 0-8 .5l-14.69 9.8a40.55 40.55 0 0 1-16-16l9.8-14.69a8 8 0 0 0 .5-8l-16-32A8 8 0 0 0 104 64a40 40 0 0 0-40 40 88.1 88.1 0 0 0 88 88 40 40 0 0 0 40-40 8 8 0 0 0-4.42-7.16ZM152 176a72.08 72.08 0 0 1-72-72 24 24 0 0 1 19.29-23.54l11.48 23L101 118a8 8 0 0 0-.73 7.51 56.47 56.47 0 0 0 30.15 30.15A8 8 0 0 0 138 155l14.61-9.74 23 11.48A24 24 0 0 1 152 176ZM128 24a104 104 0 0 0-91.82 152.88l-11.35 34.05a16 16 0 0 0 20.24 20.24l34.05-11.35A104 104 0 1 0 128 24Zm0 192a87.87 87.87 0 0 1-44.06-11.81 8 8 0 0 0-6.54-.67L40 216l12.47-37.4a8 8 0 0 0-.66-6.54A88 88 0 1 1 128 216Z"/></svg>
+  </a>
+  
+</section>
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+
+<div class="flex pt-12 pb-4">
+  
+  
+  <img
+    class="mr-4 h-24 w-24 rounded-full"
+    width="96"
+    height="96"
+    alt="Mohsen Davarynejad"
+  src="/author/mohsen-davarynejad/avatar_hu_c4ec83f3c87bacbf.jpg"
+  loading="lazy"
+  />
+  
+  <div class="place-self-center">
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Authors
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      <a href="http://localhost:1313/" class="no-underline">
+      Mohsen Davarynejad
+      </a>
+    </div>
+
+    
+    <div class="text-sm font-bold text-neutral-700 dark:text-neutral-300">
+    Lecturer
+    </div>
+    
+
+
+    
+
+    <div class="text-2xl sm:text-lg pt-1">
+
+      
+<div class="flex flex-wrap text-neutral-500 dark:text-neutral-300">
+  
+    
+    
+    
+    
+      
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="https://github.com/mdavarynejad"
+      target="_blank" rel="noopener" rel="me noopener noreferrer"
+      aria-label="Brands/Github"
+    ><svg style="height: 1em;" fill="currentColor" viewBox="3 3 18 18"><path d="M12 3C7.0275 3 3 7.12937 3 12.2276C3 16.3109 5.57625 19.7597 9.15374 20.9824C9.60374 21.0631 9.77249 20.7863 9.77249 20.5441C9.77249 20.3249 9.76125 19.5982 9.76125 18.8254C7.5 19.2522 6.915 18.2602 6.735 17.7412C6.63375 17.4759 6.19499 16.6569 5.8125 16.4378C5.4975 16.2647 5.0475 15.838 5.80124 15.8264C6.51 15.8149 7.01625 16.4954 7.18499 16.7723C7.99499 18.1679 9.28875 17.7758 9.80625 17.5335C9.885 16.9337 10.1212 16.53 10.38 16.2993C8.3775 16.0687 6.285 15.2728 6.285 11.7432C6.285 10.7397 6.63375 9.9092 7.20749 9.26326C7.1175 9.03257 6.8025 8.08674 7.2975 6.81794C7.2975 6.81794 8.05125 6.57571 9.77249 7.76377C10.4925 7.55615 11.2575 7.45234 12.0225 7.45234C12.7875 7.45234 13.5525 7.55615 14.2725 7.76377C15.9937 6.56418 16.7475 6.81794 16.7475 6.81794C17.2424 8.08674 16.9275 9.03257 16.8375 9.26326C17.4113 9.9092 17.76 10.7281 17.76 11.7432C17.76 15.2843 15.6563 16.0687 13.6537 16.2993C13.98 16.5877 14.2613 17.1414 14.2613 18.0065C14.2613 19.2407 14.25 20.2326 14.25 20.5441C14.25 20.7863 14.4188 21.0746 14.8688 20.9824C16.6554 20.364 18.2079 19.1866 19.3078 17.6162C20.4077 16.0457 20.9995 14.1611 21 12.2276C21 7.12937 16.9725 3 12 3Z"></path></svg></a>
+  
+    
+    
+    
+    
+      
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="https://www.linkedin.com/in/davarynejad/"
+      target="_blank" rel="noopener" rel="me noopener noreferrer"
+      aria-label="Brands/Linkedin"
+    ><svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+  
+    
+    
+    
+    
+      
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="https://scholar.google.com/citations?user=F1xJixUAAAAJ&amp;hl=en"
+      target="_blank" rel="noopener" rel="me noopener noreferrer"
+      aria-label="Academicons/Google-Scholar"
+    ><svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M343.759 106.662V79.43L363.524 64h-213.89L20.476 176.274h85.656a82.339 82.339 0 0 0-.219 6.225c0 20.845 7.22 38.087 21.672 51.861c14.453 13.797 32.252 20.648 53.327 20.648c4.923 0 9.75-.368 14.438-1.024c-2.907 6.5-4.374 12.523-4.374 18.142c0 9.875 4.499 20.43 13.467 31.642c-39.234 2.67-68.061 9.732-86.437 21.163c-10.531 6.5-19 14.704-25.39 24.531c-6.391 9.9-9.578 20.515-9.578 31.962c0 9.648 2.062 18.336 6.219 26.062c4.156 7.726 9.578 14.07 16.312 18.984c6.718 4.968 14.469 9.101 23.219 12.469c8.734 3.344 17.406 5.718 26.061 7.062A167.052 167.052 0 0 0 180.555 448c13.469 0 26.953-1.734 40.547-5.187c13.562-3.485 26.28-8.642 38.171-15.493c11.86-6.805 21.515-16.086 28.922-27.718c7.39-11.68 11.094-24.805 11.094-39.336c0-11.016-2.25-21.039-6.75-30.14c-4.468-9.073-9.938-16.542-16.452-22.345c-6.501-5.813-13-11.155-19.516-15.968c-6.5-4.845-12-9.75-16.468-14.813c-4.485-5.046-6.735-10.054-6.735-14.984c0-4.921 1.734-9.672 5.216-14.265c3.455-4.61 7.674-9.048 12.61-13.306c4.937-4.25 9.875-8.968 14.796-14.133c4.922-5.147 9.141-11.827 12.61-20.008c3.485-8.18 5.203-17.445 5.203-27.757c0-13.453-2.547-24.46-7.547-33.314c-.594-1.022-1.218-1.803-1.875-3.022l56.907-46.672v17.119c-7.393.93-6.624 5.345-6.624 10.635V245.96c0 5.958 4.875 10.834 10.834 10.834h3.989c5.958 0 10.833-4.875 10.833-10.834V117.293c0-5.277.778-9.688-6.561-10.63zm-107.36 222.48c1.14.75 3.704 2.78 7.718 6.038c4.05 3.243 6.797 5.695 8.266 7.414a443.553 443.553 0 0 1 6.376 7.547c2.813 3.375 4.718 6.304 5.718 8.734c1 2.477 2.016 5.461 3.047 8.946a38.27 38.27 0 0 1 1.485 10.562c0 17.048-6.564 29.68-19.656 37.859c-13.125 8.18-28.767 12.274-46.938 12.274c-9.187 0-18.203-1.093-27.063-3.196c-8.843-2.116-17.311-5.336-25.39-9.601c-8.078-4.258-14.577-10.204-19.5-17.797c-4.938-7.64-7.407-16.415-7.407-26.25c0-10.32 2.797-19.29 8.422-26.906c5.594-7.625 12.938-13.391 22.032-17.315c9.063-3.946 18.25-6.742 27.562-8.398a157.865 157.865 0 0 1 28.438-2.555c4.47 0 7.936.25 10.405.696c.455.219 3.032 2.07 7.735 5.563c4.704 3.462 7.625 5.595 8.75 6.384zm-3.359-100.579c-7.406 8.86-17.734 13.288-30.953 13.288c-11.86 0-22.298-4.764-31.266-14.312c-9-9.523-15.422-20.328-19.344-32.43c-3.937-12.109-5.906-23.984-5.906-35.648c0-13.694 3.596-25.352 10.781-34.976c7.187-9.65 17.5-14.485 30.938-14.485c11.875 0 22.374 5.038 31.437 15.157c9.094 10.085 15.61 21.413 19.517 33.968c3.922 12.54 5.873 24.53 5.873 35.984c0 13.446-3.702 24.61-11.076 33.454z"/></svg></a>
+  
+    
+    
+    
+    
+      
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="https://orcid.org/0000-0002-5376-3680"
+      target="_blank" rel="noopener" rel="me noopener noreferrer"
+      aria-label="Academicons/Orcid"
+    ><svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M336.62 194.538c-7.13-3.328-13.866-5.56-20.253-6.614c-6.365-1.095-16.574-1.612-30.71-1.612h-36.704v152.747h37.634c14.673 0 26.081-1.013 34.224-3.017c8.142-2.004 14.921-4.526 20.356-7.626a69.448 69.448 0 0 0 14.942-11.388c14.488-14.714 21.742-33.273 21.742-55.717c0-22.052-7.44-40.052-22.341-53.982c-5.498-5.166-11.822-9.444-18.89-12.793zM256 8C119.022 8 8 119.042 8 256s111.022 248 248 248s248-111.042 248-248S392.978 8 256 8Zm-82.336 357.513h-29.389V160.148h29.389zM158.95 138.696c-11.14 0-20.213-9.01-20.213-20.212c0-11.118 9.052-20.191 20.213-20.191c11.18 0 20.232 9.052 20.232 20.191a20.194 20.194 0 0 1-20.232 20.212zm241.386 163.597c-5.29 12.545-12.834 23.581-22.65 33.088c-9.982 9.837-21.597 17.194-34.844 22.196c-7.75 3.017-14.839 5.063-21.307 6.117c-6.49 1.013-18.828 1.509-37.076 1.509h-64.956V160.148h69.233c27.962 0 50.034 4.154 66.32 12.545c16.265 8.37 29.181 20.728 38.792 36.972c9.61 16.265 14.425 34.018 14.425 53.196c.023 13.765-2.666 26.908-7.936 39.432z"/></svg></a>
+  
+    
+    
+    
+    
+      
+    
+    <a
+      class="pr-2 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+      style="will-change:transform;"
+      href="https://www.linkedin.com/in/davarynejad/"
+      target="_blank" rel="noopener" rel="me noopener noreferrer"
+      aria-label="Academicons/Cv"
+    ><svg style="height: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M249.18 328.324c-9.788 15.384-19.179 30.434-40.222 45.055c-11.256 7.89-37.164 23.306-73.99 23.306C64.709 396.685 8 345.605 8 255.801c0-78.486 53.345-140.486 128.466-140.486c30.434 0 57.474 10.521 77.387 26.304c18.414 14.65 27.038 29.304 34.563 42.456l-52.58 26.273c-3.762-8.626-8.29-17.649-19.913-27.406c-12.784-10.155-25.54-13.152-36.46-13.152c-42.821 0-65.364 39.825-65.364 84.145c0 58.238 29.7 87.143 65.364 87.143c34.563 0 48.48-24.042 57.474-39.426l52.243 26.673zm184.194-204.75H504l-92.037 265.22h-67.597l-90.904-265.22h70.625l54.843 188.6z"/></svg></a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+  
+    
+    
+    
+      
+      
+    
+<div class="pt-1 no-prose w-full">
+  <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+  <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
+    <div class="">
+      
+        <a class="group flex no-underline" href="/teaching/business/unlocking-entrepreneurial-success/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >Unlocking Entrepreneurial Success</span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Aug 3, 2024
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+
+  
+
+
+
+</div>
+
+      </div>
+
+    </main>
+  </article>
+</div>
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <p class="powered-by text-center">
+    © 2025 Mohsen Davarynejad
+  </p>
+  
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
