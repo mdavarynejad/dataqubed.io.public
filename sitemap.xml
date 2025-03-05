@@ -7,35 +7,47 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/agenticai/</loc>
-    <lastmod>2025-02-28T07:09:10+01:00</lastmod>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/crewai/</loc>
-    <lastmod>2025-02-28T07:09:10+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/deepseek/</loc>
-    <lastmod>2025-02-28T07:09:10+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/teaching/agentic-ai/deepseek-crewai-agents/</loc>
-    <lastmod>2025-02-28T07:09:10+01:00</lastmod>
+    <loc>https://dataqubed.io/blog/agentic-ai-and-deepseek-decoding-a-million-emails/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/</loc>
-    <lastmod>2025-02-28T07:09:10+01:00</lastmod>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/crewai/</loc>
+    <lastmod>2025-02-28T10:41:13+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/deepseek/</loc>
+    <lastmod>2025-02-28T10:41:13+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/series/million-emails/</loc>
+    <lastmod>2025-02-28T10:41:13+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/teaching/agentic-ai/deepseek-crewai-agents/</loc>
+    <lastmod>2025-02-28T10:41:13+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/series/</loc>
+    <lastmod>2025-02-28T10:41:13+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/teaching/agentic-ai/deepseek-vllm-locally/</loc>
-    <lastmod>2025-02-28T07:09:10+01:00</lastmod>
+    <lastmod>2025-02-28T10:41:13+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/links/</loc>
-    <lastmod>2025-02-23T20:34:21+01:00</lastmod>
+    <lastmod>2025-02-28T10:41:13+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/useful-links/</loc>
-    <lastmod>2025-02-23T20:34:21+01:00</lastmod>
+    <lastmod>2025-02-28T10:41:13+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/</loc>
@@ -55,6 +67,10 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/pyspark/</loc>
+    <lastmod>2025-02-28T07:09:10+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/series/pyspark/</loc>
     <lastmod>2025-02-28T07:09:10+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -268,6 +284,9 @@
   </url><url>
     <loc>https://dataqubed.io/blog/</loc>
     <lastmod>2024-08-26T12:22:08+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/categories/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/news/</loc>
