@@ -130,6 +130,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TEYHTBD2S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-5TEYHTBD2S', { 'anonymize_ip': true });
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -913,13 +952,13 @@
 
 
 
-<a href="/blog/agentic-ai-and-deepseek-decoding-a-million-emails/"  class="mb-5">
+<a href="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/"  class="mb-5">
   <div class="md:flex">
     <div class="md:flex-shrink-0 overflow-hidden">
       
         
         
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/blog/agentic-ai-and-deepseek-decoding-a-million-emails/featured_hu_e3dbec6c44146be7.webp" height="655" width="655" alt="Decoding a Million Emails - Agentic AI for Analysis of Elon Musk&#39;s Challenge">
+      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/featured_hu_e3dbec6c44146be7.webp" height="655" width="655" alt="Decoding a Million Emails - Agentic AI for Analysis of Elon Musk&#39;s Challenge">
       
     </div>
     <div class="p-8">
@@ -941,13 +980,13 @@
 
 
 
-<a href="/teaching/agentic-ai/deepseek-crewai-agents/"  class="mb-5">
+<a href="/blog/agentic-ai/deepseek-crewai-agents/"  class="mb-5">
   <div class="md:flex">
     <div class="md:flex-shrink-0 overflow-hidden">
       
         
         
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/teaching/agentic-ai/deepseek-crewai-agents/featured_hu_4f6890dcc47514ed.webp" height="655" width="655" alt="Orchestrating AI Agents with CrewAI and Local DeepSeek API">
+      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/blog/agentic-ai/deepseek-crewai-agents/featured_hu_4f6890dcc47514ed.webp" height="655" width="655" alt="Orchestrating AI Agents with CrewAI and Local DeepSeek API">
       
     </div>
     <div class="p-8">
@@ -969,13 +1008,13 @@
 
 
 
-<a href="/teaching/agentic-ai/deepseek-vllm-locally/"  class="mb-5">
+<a href="/blog/agentic-ai/deepseek-vllm-locally/"  class="mb-5">
   <div class="md:flex">
     <div class="md:flex-shrink-0 overflow-hidden">
       
         
         
-      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/teaching/agentic-ai/deepseek-vllm-locally/featured_hu_4f6890dcc47514ed.webp" height="655" width="655" alt="Running DeepSeek R1 Locally with vLLM & Ray Dashboard">
+      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/blog/agentic-ai/deepseek-vllm-locally/featured_hu_4f6890dcc47514ed.webp" height="655" width="655" alt="Running DeepSeek R1 Locally with vLLM & Ray Dashboard">
       
     </div>
     <div class="p-8">

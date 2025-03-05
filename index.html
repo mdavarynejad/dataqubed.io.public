@@ -130,6 +130,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TEYHTBD2S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-5TEYHTBD2S', { 'anonymize_ip': true });
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -1462,7 +1501,7 @@
 
 
 
-<section id="papers" class="relative hbb-section blox-collection  " style="padding: 6rem 0 6rem 0;" >
+<section id="posts" class="relative hbb-section blox-collection  " style="padding: 6rem 0 6rem 0;" >
  <div class="home-section-bg " >
    
  </div>
@@ -1504,8 +1543,6 @@
 
 
 
-  
-
 
 
 
@@ -1530,7 +1567,7 @@
 <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
 
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
-    Featured Publications
+    Recent blog posts
   </div>
 
   
@@ -1544,7 +1581,7 @@
 
 
 <div class="container px-8 mx-auto xl:px-5 py-5 lg:py-8 max-w-screen-lg ">
-  <div class="grid gap-10 md:grid-cols-2 lg:gap-10">
+  <div class="grid gap-10 md:grid-cols-3 lg:gap-10">
 
 
   
@@ -1570,13 +1607,13 @@
 
     <a
       class="relative block aspect-video"
-      href="/publication/preprint/" >
+      href="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/" >
 
-      <img alt="An example preprint / working paper"
+      <img alt="Decoding a Million Emails - Agentic AI for Analysis of Elon Musk&#39;s Challenge"
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/publication/preprint/featured_hu_5e4950e9bc24a60a.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/featured_hu_73fbba533bd93b02.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -1585,20 +1622,20 @@
     <div class="">
       <div class="flex gap-3">
         
-        <a href="/tags/large-language-models/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Large Language Models</span></a>
+        <a href="/tags/agenticai/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">AgenticAI</span></a>
         
       </div>
       
       <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="/publication/preprint/" ><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">An example preprint / working paper
+        href="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Decoding a Million Emails - Agentic AI for Analysis of Elon Musk&#39;s Challenge
           </span></a>
       </h2>
       
       <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="/publication/preprint/" >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.</a></p>
+        href="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/" >
+        We analyzed over a million self-reported work updates from federal employees to uncover key trends and insights. The catch - I don’t have access to the data—yet. But that didn’t stop me from outlining my approach to extracting patterns from massive unstructured text.</a></p>
       </div>
       <div class="flex-none">
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
@@ -1627,7 +1664,7 @@
           
           <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
-          <time class="truncate text-sm" datetime="2019-04-07">Apr 7, 2019</time>
+          <time class="truncate text-sm" datetime="2025-03-05">Mar 5, 2025</time>
         </div>
       </div>
 
@@ -1658,13 +1695,13 @@
 
     <a
       class="relative block aspect-video"
-      href="/publication/conference-paper/" >
+      href="/blog/agentic-ai/deepseek-crewai-agents/" >
 
-      <img alt="An example conference paper"
+      <img alt="Orchestrating AI Agents with CrewAI and Local DeepSeek API"
            class="object-fill transition-all"
            data-nimg="fill"
            decoding="async"
-           fetchpriority="high" height="540" loading="lazy" src="/publication/conference-paper/featured_hu_96670b27f77f3a32.webp"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/agentic-ai/deepseek-crewai-agents/featured_hu_d9d57e069036e13e.webp"
            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
            width="960"></a>
   </div>
@@ -1673,20 +1710,20 @@
     <div class="">
       <div class="flex gap-3">
         
-        <a href="/tags/large-language-models/"><span
-          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Large Language Models</span></a>
+        <a href="/tags/agenticai/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">AgenticAI</span></a>
         
       </div>
       
       <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
-        href="/publication/conference-paper/" ><span
-        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">An example conference paper
+        href="/blog/agentic-ai/deepseek-crewai-agents/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Orchestrating AI Agents with CrewAI and Local DeepSeek API
           </span></a>
       </h2>
       
       <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
-        href="/publication/conference-paper/" >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.</a></p>
+        href="/blog/agentic-ai/deepseek-crewai-agents/" >
+        Discover how practicing civility can enhance your leadership and boost performance.</a></p>
       </div>
       <div class="flex-none">
         <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
@@ -1715,7 +1752,271 @@
           
           <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
           
-          <time class="truncate text-sm" datetime="2013-07-01">Jul 1, 2013</time>
+          <time class="truncate text-sm" datetime="2025-02-27">Feb 27, 2025</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/blog/agentic-ai/deepseek-vllm-locally/" >
+
+      <img alt="Running DeepSeek R1 Locally with vLLM & Ray Dashboard"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/agentic-ai/deepseek-vllm-locally/featured_hu_d9d57e069036e13e.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/agenticai/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">AgenticAI</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/blog/agentic-ai/deepseek-vllm-locally/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Running DeepSeek R1 Locally with vLLM &amp; Ray Dashboard
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/blog/agentic-ai/deepseek-vllm-locally/" >
+        Discover how practicing civility can enhance your leadership and boost performance.</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2025-02-26">Feb 26, 2025</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/blog/useful-links/" >
+
+      <img alt="Useful links"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/useful-links/featured_hu_f58513506547644.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/links/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Links</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/blog/useful-links/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Useful links
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/blog/useful-links/" >
+        Useful links</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2025-02-21">Feb 21, 2025</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/" >
+
+      <img alt="A Data Scientist&#39;s Chronicle of Lessons Learned and Strategies for Success"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/featured_hu_6b1ebe196a6f54a6.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/datasciencewisdom/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">DataScienceWisdom</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">A Data Scientist&#39;s Chronicle of Lessons Learned and Strategies for Success
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/blog/a-data-scientists-chronicle-of-lessons-learned-and-strategies-for-success/" >
+        The Art of Mastery in landscapes of corporate challenges</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2024-09-11">Sep 11, 2024</time>
         </div>
       </div>
 
@@ -1732,6 +2033,32 @@
 </div>
 
 
+
+
+
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+
+  <div class="container mx-auto max-w-screen-lg px-8 xl:px-5 pb-5 lg:pb-8">
+    <div class="mt-10 flex justify-center">
+      <a
+        class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+        href="/blog/">
+          <span>See all</span>
+        </a>
+      </div>
+  </div>
 
 
 
