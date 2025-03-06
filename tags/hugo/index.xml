@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo | Your Data Science Mentor - Mohsen Davarynejad</title>
+    <title>HUGO | Your Data Science Mentor - Mohsen Davarynejad</title>
     <link>https://dataqubed.io/tags/hugo/</link>
       <atom:link href="https://dataqubed.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    <description>Hugo</description>
+    <description>HUGO</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 19 Aug 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu_645fa481986063ef.png</url>
-      <title>Hugo</title>
+      <title>HUGO</title>
       <link>https://dataqubed.io/tags/hugo/</link>
     </image>
     
@@ -72,14 +72,6 @@
 &lt;/ol&gt;
 &lt;p&gt;And that’s it! Your Hugo site is now live on GitHub Pages.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>scikit-learn</title>
-      <link>https://dataqubed.io/blog/scikit/</link>
-      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/blog/scikit/</guid>
-      <description>&lt;p&gt;scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.&lt;/p&gt;</description>
     </item>
     
   </channel>
