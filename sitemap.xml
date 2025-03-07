@@ -18,23 +18,23 @@
     <lastmod>2025-03-06T11:55:21+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/</loc>
+    <loc>https://dataqubed.io/series/llms/</loc>
     <lastmod>2025-03-06T11:55:21+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/series/million-emails/</loc>
+    <lastmod>2025-03-06T11:55:21+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/</loc>
+    <lastmod>2025-03-06T12:13:07+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/deepseek/</loc>
     <lastmod>2025-03-05T21:58:26+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/series/million-emails/</loc>
-    <lastmod>2025-03-05T21:58:26+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://dataqubed.io/blog/agentic-ai/deepseek-crewai-agents/</loc>
-    <lastmod>2025-03-05T21:58:26+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/series/</loc>
     <lastmod>2025-03-05T21:58:26+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -195,19 +195,19 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/second-brain/</loc>
-    <lastmod>2024-09-10T21:53:11+02:00</lastmod>
+    <lastmod>2025-03-06T12:13:07+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/markdown/</loc>
-    <lastmod>2024-09-10T21:53:11+02:00</lastmod>
+    <lastmod>2025-03-06T12:13:07+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/teach-courses/</loc>
-    <lastmod>2024-08-26T10:02:29+02:00</lastmod>
+    <lastmod>2025-03-06T12:13:07+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/shorts/</loc>
-    <lastmod>2024-08-26T10:02:29+02:00</lastmod>
+    <lastmod>2025-03-06T12:13:07+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/get-started/</loc>
@@ -228,6 +228,10 @@
   </url><url>
     <loc>https://dataqubed.io/</loc>
     <lastmod>2025-03-06T11:55:21+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/series/</loc>
+    <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/publication/preprint/</loc>
@@ -271,6 +275,9 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/categories/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/series/_index11/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/news/</loc>

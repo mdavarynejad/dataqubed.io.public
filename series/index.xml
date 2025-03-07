@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series | Your Data Science Mentor - Mohsen Davarynejad</title>
+    <title>Your Data Science Mentor - Mohsen Davarynejad</title>
     <link>https://dataqubed.io/series/</link>
       <atom:link href="https://dataqubed.io/series/index.xml" rel="self" type="application/rss+xml" />
-    <description>Series</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <description>Your Data Science Mentor - Mohsen Davarynejad</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu_645fa481986063ef.png</url>
-      <title>Series</title>
+      <title>Your Data Science Mentor - Mohsen Davarynejad</title>
       <link>https://dataqubed.io/series/</link>
     </image>
+    
+    <item>
+      <title>My page</title>
+      <link>https://dataqubed.io/series/_index11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/series/_index11/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
