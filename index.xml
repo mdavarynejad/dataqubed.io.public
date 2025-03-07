@@ -7,7 +7,7 @@
     <description>Your Data Science Mentor - Mohsen Davarynejad</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://dataqubed.io/media/icon_hu_645fa481986063ef.png</url>
+      <url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url>
       <title>Your Data Science Mentor - Mohsen Davarynejad</title>
       <link>https://dataqubed.io/</link>
     </image>
@@ -2890,7 +2890,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-846729513&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-752631489&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -2908,7 +2908,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-846729513&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-752631489&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
