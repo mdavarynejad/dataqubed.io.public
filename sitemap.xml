@@ -6,6 +6,10 @@
     <lastmod>2024-08-14T16:26:02+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://dataqubed.io/series/agenticai/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://dataqubed.io/tags/agenticai/</loc>
     <lastmod>2025-03-07T13:10:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -14,19 +18,27 @@
     <lastmod>2025-03-07T13:10:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/</loc>
-    <lastmod>2025-03-07T13:10:17+01:00</lastmod>
+    <loc>https://dataqubed.io/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/series/llms/</loc>
     <lastmod>2025-03-07T13:10:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/series/million-emails/</loc>
+    <loc>https://dataqubed.io/tags/</loc>
     <lastmod>2025-03-07T13:10:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/</loc>
+    <loc>https://dataqubed.io/tags/wslubuntu/</loc>
+    <lastmod>2025-03-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/</loc>
+    <lastmod>2025-03-07T13:10:17+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/series/million-emails/</loc>
     <lastmod>2025-03-07T13:10:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -227,7 +239,7 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/</loc>
-    <lastmod>2025-03-07T13:10:17+01:00</lastmod>
+    <lastmod>2025-03-07T13:53:53+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/series/</loc>

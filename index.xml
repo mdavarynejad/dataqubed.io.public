@@ -34,6 +34,116 @@
     </item>
     
     <item>
+      <title>Deploying DeepSeek-R1 Locally with vLLM on Ubuntu (WSL)</title>
+      <link>https://dataqubed.io/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/</guid>
+      <description>&lt;p&gt;With the rapid advancements in AI, running large language models locally has become an attractive alternative to cloud-based solutions. DeepSeek-R1, a state-of-the-art open-source model, enables advanced reasoning and problem-solving capabilities. Deploying it locally on Ubuntu within WSL (Windows Subsystem for Linux) offers enhanced privacy, reduced latency, and greater control over performance.&lt;/p&gt;
+&lt;p&gt;This guide will walk you through setting up DeepSeek-R1 on Ubuntu (WSL) using vLLM, a highly efficient inference engine. Whether you’re an AI enthusiast, a developer, or a researcher, this step-by-step tutorial will help you harness the full power of DeepSeek-R1 on your local machine.&lt;/p&gt;
+&lt;h1 id=&#34;deploying-deepseek-r1-locally-with-vllm-on-ubuntu-wsl&#34;&gt;Deploying DeepSeek-R1 Locally with vLLM on Ubuntu (WSL)&lt;/h1&gt;
+&lt;p&gt;Deploying advanced AI models like DeepSeek-R1 locally on Ubuntu running within WSL (Windows Subsystem for Linux) provides a powerful yet flexible way to utilize AI capabilities without relying on cloud services. This approach enhances data privacy, reduces latency, and offers greater control over AI applications.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-deepseek-r1&#34;&gt;Understanding DeepSeek-R1&lt;/h2&gt;
+&lt;p&gt;DeepSeek-R1 is a state-of-the-art open-source reasoning model built on a Mixture of Experts (MoE) architecture, featuring 671 billion parameters. Uniquely, it activates only 37 billion parameters during each forward pass, balancing performance and efficiency. This design enables advanced reasoning capabilities, making it suitable for complex tasks in mathematics, coding, and logical analysis.&lt;/p&gt;
+&lt;h2 id=&#34;advantages-of-local-deployment&#34;&gt;Advantages of Local Deployment&lt;/h2&gt;
+&lt;p&gt;Running DeepSeek-R1 locally on Ubuntu within WSL offers several benefits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Data Privacy &amp;amp; Security&lt;/strong&gt;: Your data remains on-premises, ensuring confidentiality without third-party access.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Offline Functionality&lt;/strong&gt;: Operate without an internet connection, ensuring availability in remote or secure environments.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Customization &amp;amp; Flexibility&lt;/strong&gt;: Tailor the model to specific needs, integrate with local applications, and fine-tune parameters.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Performance &amp;amp; Speed&lt;/strong&gt;: Experience reduced latency and faster response times by leveraging local hardware resources.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost Efficiency&lt;/strong&gt;: Eliminate recurring cloud service fees and manage resources based on actual requirements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;Before proceeding, ensure your system meets the following requirements:&lt;/p&gt;
+&lt;h3 id=&#34;hardware&#34;&gt;Hardware:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A GPU with CUDA support (NVIDIA GPUs recommended for optimal performance).&lt;/li&gt;
+&lt;li&gt;Minimum 16GB RAM (32GB or more recommended for large-scale tasks).&lt;/li&gt;
+&lt;li&gt;SSD storage for faster model loading and inference.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;software&#34;&gt;Software:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu (running on WSL2 with GPU support enabled).&lt;/li&gt;
+&lt;li&gt;Python 3.8 or higher.&lt;/li&gt;
+&lt;li&gt;CUDA 11.6 or higher (for GPU acceleration).&lt;/li&gt;
+&lt;li&gt;PyTorch or TensorFlow (depending on the chosen backend).&lt;/li&gt;
+&lt;li&gt;Git and virtual environment tools for dependency management.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;setting-up-wsl-for-deepseek-r1&#34;&gt;Setting Up WSL for DeepSeek-R1&lt;/h2&gt;
+&lt;h3 id=&#34;1-install-wsl2-and-ubuntu&#34;&gt;1. Install WSL2 and Ubuntu&lt;/h3&gt;
+&lt;p&gt;If WSL2 is not installed, set it up using the following steps:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl --install -d Ubuntu
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After installation, restart your system and open Ubuntu.&lt;/p&gt;
+&lt;h3 id=&#34;2-enable-gpu-support-in-wsl2&#34;&gt;2. Enable GPU Support in WSL2&lt;/h3&gt;
+&lt;p&gt;Ensure you have the NVIDIA drivers installed and CUDA set up:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install -y nvidia-cuda-toolkit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Confirm CUDA installation with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvcc --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-install-dependencies&#34;&gt;3. Install Dependencies&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install -y python3-pip git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install --upgrade pip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;installation-methods&#34;&gt;Installation Methods&lt;/h2&gt;
+&lt;h3 id=&#34;1-using-ollama&#34;&gt;1. Using Ollama&lt;/h3&gt;
+&lt;p&gt;Ollama simplifies the management of AI models locally.&lt;/p&gt;
+&lt;h4 id=&#34;step-1-install-ollama&#34;&gt;Step 1: Install Ollama&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://ollama.ai/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-2-install-deepseek-r1-model&#34;&gt;Step 2: Install DeepSeek-R1 Model&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama pull deepseek-r1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-3-run-deepseek-r1&#34;&gt;Step 3: Run DeepSeek-R1&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama run deepseek-r1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-4-test-the-installation&#34;&gt;Step 4: Test the Installation&lt;/h4&gt;
+&lt;p&gt;Interact with the model by entering prompts in your terminal.&lt;/p&gt;
+&lt;h3 id=&#34;2-using-vllm&#34;&gt;2. Using vLLM&lt;/h3&gt;
+&lt;p&gt;vLLM is optimized for efficient inference with transformer-based models.&lt;/p&gt;
+&lt;h4 id=&#34;step-1-install-vllm&#34;&gt;Step 1: Install vLLM&lt;/h4&gt;
+&lt;p&gt;Ensure you have &lt;code&gt;pip&lt;/code&gt; installed, then run:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install vllm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-2-download-deepseek-r1-model&#34;&gt;Step 2: Download DeepSeek-R1 Model&lt;/h4&gt;
+&lt;p&gt;Clone the repository and navigate to the directory:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/deepseek-ai/deepseek-r1.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; deepseek-r1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-3-load-the-model-with-vllm&#34;&gt;Step 3: Load the Model with vLLM&lt;/h4&gt;
+&lt;p&gt;Initialize the model:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python -m vllm.entrypoints.api_server --model deepseek-r1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-4-api-access&#34;&gt;Step 4: API Access&lt;/h4&gt;
+&lt;p&gt;Interact with DeepSeek-R1 via API calls for various applications.&lt;/p&gt;
+&lt;h3 id=&#34;3-using-transformers-hugging-face&#34;&gt;3. Using Transformers (Hugging Face)&lt;/h3&gt;
+&lt;p&gt;The Transformers library allows for flexible model loading and customization.&lt;/p&gt;
+&lt;h4 id=&#34;step-1-install-dependencies&#34;&gt;Step 1: Install Dependencies&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install transformers torch accelerate
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-2-load-the-model&#34;&gt;Step 2: Load the Model&lt;/h4&gt;
+&lt;p&gt;In a Python script or interactive session:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoModelForCausalLM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoTokenizer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoTokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;deepseek-ai/deepseek-r1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoModelForCausalLM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;deepseek-ai/deepseek-r1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-3-generate-text&#34;&gt;Step 3: Generate Text&lt;/h4&gt;
+&lt;p&gt;Test the model&amp;rsquo;s functionality:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;input_text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;What is DeepSeek-R1?&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input_text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;return_tensors&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;outputs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokenizer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;decode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;outputs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-4-fine-tuning-optional&#34;&gt;Step 4: Fine-Tuning (Optional)&lt;/h4&gt;
+&lt;p&gt;For advanced users, fine-tuning DeepSeek-R1 on custom datasets can be achieved using the Hugging Face Trainer API.&lt;/p&gt;
+&lt;h2 id=&#34;troubleshooting-common-issues&#34;&gt;Troubleshooting Common Issues&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CUDA Not Recognized&lt;/strong&gt;: Ensure CUDA is installed and accessible by verifying with &lt;code&gt;nvcc --version&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Memory Errors&lt;/strong&gt;: Reduce batch size or switch to CPU mode:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;model&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AutoModelForCausalLM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;from_pretrained&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;deepseek-ai/deepseek-r1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;device_map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;cpu&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Slow Performance&lt;/strong&gt;: Optimize by using TorchScript or ONNX.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By following this guide, you can efficiently set up and run DeepSeek-R1 on Ubuntu within WSL2, leveraging local resources for enhanced performance and privacy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Decoding a Million Emails - Agentic AI for Analysis of Elon Musk&#39;s Challenge</title>
       <link>https://dataqubed.io/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
@@ -2780,7 +2890,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-956824713&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-846729513&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -2798,7 +2908,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-956824713&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-846729513&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
