@@ -34,14 +34,12 @@
     </item>
     
     <item>
-      <title>Deploying DeepSeek-R1 Locally with vLLM on Ubuntu (WSL)</title>
+      <title>Deploying DeepSeek-R1 Locally with vLLM on Ubuntu</title>
       <link>https://dataqubed.io/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/</link>
-      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/</guid>
       <description>&lt;p&gt;With the rapid advancements in AI, running large language models locally has become an attractive alternative to cloud-based solutions. DeepSeek-R1, a state-of-the-art open-source model, enables advanced reasoning and problem-solving capabilities. Deploying it locally on Ubuntu within WSL (Windows Subsystem for Linux) offers enhanced privacy, reduced latency, and greater control over performance.&lt;/p&gt;
 &lt;p&gt;This guide will walk you through setting up DeepSeek-R1 on Ubuntu (WSL) using vLLM, a highly efficient inference engine. Whether you’re an AI enthusiast, a developer, or a researcher, this step-by-step tutorial will help you harness the full power of DeepSeek-R1 on your local machine.&lt;/p&gt;
-&lt;h1 id=&#34;deploying-deepseek-r1-locally-with-vllm-on-ubuntu-wsl&#34;&gt;Deploying DeepSeek-R1 Locally with vLLM on Ubuntu (WSL)&lt;/h1&gt;
-&lt;p&gt;Deploying advanced AI models like DeepSeek-R1 locally on Ubuntu running within WSL (Windows Subsystem for Linux) provides a powerful yet flexible way to utilize AI capabilities without relying on cloud services. This approach enhances data privacy, reduces latency, and offers greater control over AI applications.&lt;/p&gt;
 &lt;h2 id=&#34;understanding-deepseek-r1&#34;&gt;Understanding DeepSeek-R1&lt;/h2&gt;
 &lt;p&gt;DeepSeek-R1 is a state-of-the-art open-source reasoning model built on a Mixture of Experts (MoE) architecture, featuring 671 billion parameters. Uniquely, it activates only 37 billion parameters during each forward pass, balancing performance and efficiency. This design enables advanced reasoning capabilities, making it suitable for complex tasks in mathematics, coding, and logical analysis.&lt;/p&gt;
 &lt;h2 id=&#34;advantages-of-local-deployment&#34;&gt;Advantages of Local Deployment&lt;/h2&gt;
@@ -71,9 +69,22 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;setting-up-wsl-for-deepseek-r1&#34;&gt;Setting Up WSL for DeepSeek-R1&lt;/h2&gt;
 &lt;h3 id=&#34;1-install-wsl2-and-ubuntu&#34;&gt;1. Install WSL2 and Ubuntu&lt;/h3&gt;
-&lt;p&gt;If WSL2 is not installed, set it up using the following steps:&lt;/p&gt;
+&lt;p&gt;Before starting, ensure that WSL2 (Windows Subsystem for Linux) is installed on your system. If it is not installed, follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wsl --install -d Ubuntu
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After installation, restart your system and open Ubuntu.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Restart your system if prompted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once the installation is complete, open &lt;strong&gt;Ubuntu&lt;/strong&gt; from the Start menu and set up your user credentials.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;1-alternative-using-a-cloud-based-gpu-instance&#34;&gt;&lt;strong&gt;1. Alternative: Using a Cloud-based GPU Instance&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;For students who want to run their workloads on a GPU-enabled instance, they can opt for cloud providers. A great option is Vultr (&lt;a href=&#34;https://www.vultr.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vultr.com&lt;/a&gt;), which offers GPU-enabled instances and provides free sign-up credits for new users.&lt;/p&gt;
+&lt;p&gt;Other cloud providers, such as AWS, GCP, and Azure, also offer GPU instances, and they also provide free credits, an extra advantage for those looking for a cost-effective solution.&lt;/p&gt;
 &lt;h3 id=&#34;2-enable-gpu-support-in-wsl2&#34;&gt;2. Enable GPU Support in WSL2&lt;/h3&gt;
 &lt;p&gt;Ensure you have the NVIDIA drivers installed and CUDA set up:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade -y
@@ -94,8 +105,37 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama run deepseek-r1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;step-4-test-the-installation&#34;&gt;Step 4: Test the Installation&lt;/h4&gt;
 &lt;p&gt;Interact with the model by entering prompts in your terminal.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Using Ollama&#34; srcset=&#34;
+               /blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/ScreenshotDeepseekOllama_hu_6d2ad2caadcbecc5.webp 400w,
+               /blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/ScreenshotDeepseekOllama_hu_6713f13160d61449.webp 760w,
+               /blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/ScreenshotDeepseekOllama_hu_ec2352c650a5abb8.webp 1200w&#34;
+               src=&#34;https://dataqubed.io/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/ScreenshotDeepseekOllama_hu_6d2ad2caadcbecc5.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;276&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;h3 id=&#34;2-using-vllm&#34;&gt;2. Using vLLM&lt;/h3&gt;
-&lt;p&gt;vLLM is optimized for efficient inference with transformer-based models.&lt;/p&gt;
+&lt;p&gt;vLLM is optimized for efficient inference with transformer-based models. It enables high-throughput and low-latency inference, making it ideal for deploying LLMs (Large Language Models) in production environments.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;: For a detailed step-by-step guide on how to install and run vLLM with DeepSeek locally, students can follow this instructional blog post: &lt;a href=&#34;https://dataqubed.io/blog/agentic-ai/deepseek-vllm-locally/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Running DeepSeek with vLLM Locally&lt;/a&gt; where they can use Jupyter Notebook to follow along with the instructions and experiment with vLLM interactively.&lt;/p&gt;
 &lt;h4 id=&#34;step-1-install-vllm&#34;&gt;Step 1: Install vLLM&lt;/h4&gt;
 &lt;p&gt;Ensure you have &lt;code&gt;pip&lt;/code&gt; installed, then run:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install vllm
@@ -2671,6 +2711,27 @@ Set up and run PySpark streaming tasks within Databricks, processing and analyzi
     </item>
     
     <item>
+      <title>Adaptive Fuzzy Fitness Granulation (AFFG)</title>
+      <link>https://dataqubed.io/publication/conference-paper/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/publication/conference-paper/</guid>
+      <description>&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;Add the publication&amp;rsquo;s &lt;strong&gt;full text&lt;/strong&gt; or &lt;strong&gt;supplementary notes&lt;/strong&gt; here. You can use rich formatting such as including &lt;a href=&#34;https://docs.hugoblox.com/content/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Revolutionize Academic Teaching with AI &amp; Data-Driven Insights</title>
       <link>https://dataqubed.io/blog/teach-courses/</link>
       <pubDate>Mon, 29 Jan 2024 00:00:00 +0000</pubDate>
@@ -2890,7 +2951,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-752631489&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-416528397&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -2908,7 +2969,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-752631489&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-416528397&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3094,7 +3155,7 @@ Crash --&gt; [*]
     </item>
     
     <item>
-      <title>An example preprint / working paper</title>
+      <title>Working paper / Airport Accessibility and Transportation Efficiency</title>
       <link>https://dataqubed.io/publication/preprint/</link>
       <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/publication/preprint/</guid>
@@ -3110,31 +3171,10 @@ Crash --&gt; [*]
     </item>
     
     <item>
-      <title>An example journal article</title>
+      <title>Expanded Summary of Adaptive Fuzzy Fitness Granulation</title>
       <link>https://dataqubed.io/publication/journal-article/</link>
       <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/publication/journal-article/</guid>
-      <description>&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
-&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
-  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
-&lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.&lt;/span&gt;
-&lt;/div&gt;
-&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
-&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
-  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
-&lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;Add the publication&amp;rsquo;s &lt;strong&gt;full text&lt;/strong&gt; or &lt;strong&gt;supplementary notes&lt;/strong&gt; here. You can use rich formatting such as including &lt;a href=&#34;https://docs.hugoblox.com/content/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>An example conference paper</title>
-      <link>https://dataqubed.io/publication/conference-paper/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/publication/conference-paper/</guid>
       <description>&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;

@@ -1,0 +1,3352 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: March 8, 2025 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="dark">
+  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.3.2" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Mohsen Davarynejad" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="ML and Data science System design and around it!" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://dataqubed.io/series/" />
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/themes/emerald.min.css" />
+  
+
+  
+  
+    
+    <link href="/dist/wc.min.05570f1deda629d4e2d77f73534a63aa04471f012db6735c59424372f467db85.css" rel="stylesheet" />
+  
+
+  
+  
+  
+
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TEYHTBD2S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-5TEYHTBD2S', { 'anonymize_ip': true });
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="alternate" href="/series/index.xml" type="application/rss+xml" title="Your Data Science Mentor - Mohsen Davarynejad" />
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu_59b3b2356dce98dc.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_a1c3b43b88d9caf8.png" />
+
+  <link rel="canonical" href="https://dataqubed.io/series/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@mdavarynejad" />
+    <meta property="twitter:creator" content="@mdavarynejad" />
+  
+  <meta property="og:site_name" content="Your Data Science Mentor - Mohsen Davarynejad" />
+  <meta property="og:url" content="https://dataqubed.io/series/" />
+  <meta property="og:title" content="Your Data Science Mentor - Mohsen Davarynejad" />
+  <meta property="og:description" content="ML and Data science System design and around it!" /><meta property="og:image" content="https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png" />
+    <meta property="twitter:image" content="https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta property="og:updated_time" content="2022-10-24T00:00:00&#43;00:00" />
+    
+  
+
+  
+
+
+
+
+  <title>Your Data Science Mentor - Mohsen Davarynejad</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+    
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+
+
+<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+
+
+<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+
+   
+  .search-close > svg {
+    height: calc(64px * var(--pagefind-ui-scale));
+    width: calc(64px * var(--pagefind-ui-scale));
+  }
+</style>
+
+<script>
+  
+  let searchWrapper = null;
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      baseUrl: window.hbb.pagefind.baseUrl,
+      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
+    });
+
+    
+    searchWrapper = document.getElementById('search-wrapper');
+
+    
+    let triggers = document.querySelectorAll('[data-search-toggle]');
+    triggers.forEach(trigger =>
+      trigger.addEventListener('click', handleSearchToggle)
+    );
+  });
+
+  function handleSearchToggle(event) {
+    if (!searchWrapper) return;
+
+    const isHidden = searchWrapper.classList.contains('hidden');
+    searchWrapper.classList.toggle('hidden');
+    document.body.style.overflow = isHidden ? 'hidden' : '';
+
+    const searchInput = searchWrapper.querySelector("input");
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
+
+    if (!searchWrapper.classList.contains('hidden')) {
+      let clearTrigger = document.querySelector('.pagefind-ui__search-clear');
+
+      if (clearTrigger && !clearTrigger.hasAttribute('listenerOnClick')) {
+        clearTrigger.setAttribute('listenerOnClick', 'true');
+
+        clearTrigger.addEventListener('click', () => {
+          searchInput.focus();
+        });
+      }
+    }
+  }
+
+  
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && searchWrapper && !searchWrapper.classList.contains('hidden')) {
+      searchWrapper.classList.add('hidden');
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.47736f84e20cae1bb2224dc4605239689e913811575e32b5f86a700ee9d6529d.js"
+    integrity="sha256-R3NvhOIMrhuyIk3EYFI5aJ6ROBFXXjK1&#43;GpwDunWUp0="
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <script async defer src="https://buttons.github.io/buttonstodo.js"></script>
+
+      
+    
+  
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-left">
+    <div class="order-0 h-100">
+      
+      <a class="navbar-brand" href="/" title="Your Data Science Mentor - Mohsen Davarynejad">
+        Mohsen Davarynejad
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+      ">
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/"
+        >Bio</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/news"
+        >News</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/experience/"
+        >Experience</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/blog/"
+        >Blog</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/teaching/"
+        >Teaching</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+      <button
+        aria-label="toggle search"
+        class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
+        data-search-toggle>
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      </button>
+      
+
+      
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+<div
+  id="search-wrapper"
+  class="hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 flex flex-col overflow-hidden"
+>
+  <div class="flex justify-end p-3">
+    <button
+      aria-label="search"
+      class="search-close text-black hover:text-primary dark:text-white"
+      data-search-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="search" class="flex-1 overflow-y-auto p-3">
+    
+  </div>
+</div>
+
+
+        
+      
+    </div>
+    <div class="page-body ">
+      
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="posts" class="relative hbb-section blox-collection  " style="padding: 2rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Recent blog posts
+  </div>
+
+  
+</div>
+
+
+<div class="flex flex-col items-center px-6">
+
+  
+  
+
+
+<div class="container px-8 mx-auto xl:px-5 py-5 lg:py-8 max-w-screen-lg ">
+  <div class="grid gap-10 md:grid-cols-3 lg:gap-10">
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/" >
+
+      <img alt="Deploying DeepSeek-R1 Locally with vLLM on Ubuntu"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/featured_hu_45ad7a1792d3c0f7.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/agenticai/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">AgenticAI</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Deploying DeepSeek-R1 Locally with vLLM on Ubuntu
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/" >
+        Learn how to deploy DeepSeek-R1 locally on Ubuntu for a fast, secure, and cost-efficient AI inference. This step-by-step guide covers installation, GPU optimization, and troubleshooting for seamless AI model deployment.</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2025-03-08">Mar 8, 2025</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/" >
+
+      <img alt="Decoding a Million Emails - Agentic AI for Analysis of Elon Musk&#39;s Challenge"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/featured_hu_73fbba533bd93b02.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/agenticai/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">AgenticAI</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Decoding a Million Emails - Agentic AI for Analysis of Elon Musk&#39;s Challenge
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/" >
+        We analyzed over a million self-reported work updates from federal employees to uncover key trends and insights. The catch - I don’t have access to the data—yet. But that didn’t stop me from outlining my approach to extracting patterns from massive unstructured text.</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2025-03-05">Mar 5, 2025</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/blog/agentic-ai/deepseek-crewai-agents/" >
+
+      <img alt="Orchestrating AI Agents with CrewAI and Local DeepSeek API"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/agentic-ai/deepseek-crewai-agents/featured_hu_c99dd5a20f76fb1d.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/agenticai/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">AgenticAI</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/blog/agentic-ai/deepseek-crewai-agents/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Orchestrating AI Agents with CrewAI and Local DeepSeek API
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/blog/agentic-ai/deepseek-crewai-agents/" >
+        Unlock the power of AI collaboration with CrewAI &#43; DeepSeek R1; where autonomous agents analyze, delegate, and act seamlessly. Transform static AI into dynamic problem-solvers; boost automation, intelligence, and efficiency today! 🚀</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2025-02-27">Feb 27, 2025</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/blog/agentic-ai/deepseek-vllm-locally/" >
+
+      <img alt="Running DeepSeek R1 Locally with vLLM & Ray Dashboard"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/agentic-ai/deepseek-vllm-locally/featured_hu_2449cd1264f3749d.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/agenticai/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">AgenticAI</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/blog/agentic-ai/deepseek-vllm-locally/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Running DeepSeek R1 Locally with vLLM &amp; Ray Dashboard
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/blog/agentic-ai/deepseek-vllm-locally/" >
+        Run DeepSeek R1 Distill Qwen-1.5B blazing fast on your local machine with vLLM for optimized inference and Ray Dashboard for real-time monitoring! Say goodbye to high cloud costs and latency; unlock powerful, on-premise AI with full control today! 🚀</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2025-02-26">Feb 26, 2025</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/blog/useful-links/" >
+
+      <img alt="Useful links"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/blog/useful-links/featured_hu_f58513506547644.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/links/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Links</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/blog/useful-links/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Useful links
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/blog/useful-links/" >
+        Useful links</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2025-02-21">Feb 21, 2025</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+
+  
+  
+    
+  
+
+  
+  
+  
+  
+    
+  
+
+  
+
+  <div class="container mx-auto max-w-screen-lg px-8 xl:px-5 pb-5 lg:pb-8">
+    <div class="mt-10 flex justify-center">
+      <a
+        class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+        href="/blog/">
+          <span>See all</span>
+        </a>
+      </div>
+  </div>
+
+
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-collection" class="relative hbb-section blox-collection  " style="padding: 2rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Recent Publications
+  </div>
+
+  
+</div>
+
+
+<div class="flex flex-col items-center px-6">
+
+  
+  
+<div class="mt-16 sm:mt-20 container max-w-3xl w-full">
+  <div class="flex flex-col space-y-3">
+
+
+  
+    
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span class="font-bold">
+      Mohsen Davarynejad</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
+      Mohsen Davarynejad</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>
+  </span>
+  (2024).
+  <a href="/publication/conference-paper/" class="underline">Adaptive Fuzzy Fitness Granulation (AFFG)</a>.
+  In <em>ICW</em>.
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/conference-paper/conference-paper.pdf" target="_blank" rel="noopener">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>
+  PDF
+</a>
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/conference-paper/cite.bib" target="_blank" data-filename="/publication/conference-paper/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+  
+    
+  
+
+
+
+
+  
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+  
+    
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span class="font-bold">
+      Mohsen Davarynejad</span>
+  </span>
+  (2019).
+  <a href="/publication/preprint/" class="underline">Working paper / Airport Accessibility and Transportation Efficiency</a>.
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+  
+  <a class="hb-attachment-link hb-attachment-small" href="http://example.org" target="_blank" rel="noopener">
+    <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg>
+    Custom Link</a>
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+  
+    
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span class="font-bold">
+      Mohsen Davarynejad</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
+      Mohsen Davarynejad</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>
+  </span>
+  (2015).
+  <a href="/publication/journal-article/" class="underline">Expanded Summary of Adaptive Fuzzy Fitness Granulation</a>.
+  International Journal of Approximate Reasoning, Volume 49, Issue 3..
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/journal-article/cite.bib" target="_blank" data-filename="/publication/journal-article/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+  
+
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-cta-card" class="relative hbb-section blox-cta-card  " style="padding: 2rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-primary-700 p-8 md:px-20 md:py-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center"
+     >
+  <h2 class="text-white text-4xl md:text-6xl tracking-tight">
+    👉 Build your own academic website like this
+  </h2>
+  <div class="text-gray-100 mt-4 text-lg md:text-xl prose">
+    <p>This site is generated by Hugo Blox Builder - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.</p>
+<p><a class="github-button" href="https://github.com/HugoBlox/hugo-blox-builder" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/hugo-blox-builder on GitHub">Star</a></p>
+<p>Easily build anything with blocks - no-code required!</p>
+<p>From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.</p>
+
+  </div>
+  
+  <div class="flex mt-5">
+    <a href="https://hugoblox.com/templates/" class="rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-white hover:bg-gray-300 text-black border-2 border-transparent">
+      Get Started
+    </a>
+  </div>
+  
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-hero" class="relative hbb-section blox-hero dark " style="padding: 2rem 0 2rem 0;" >
+ <div class="home-section-bg " style="background-image: linear-gradient(90deg, #004ba0, #1976d2);">
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+<div class="relative isolate px-6 pt-14 lg:px-8">
+
+  <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+
+    
+
+    <div class="text-center">
+      <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">Hugo Academic Theme</h1>
+      <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"><p><strong>Generated by Hugo Blox Builder - the FREE, Hugo-based open source website builder trusted by 500,000+ sites.</strong></p>
+<p><strong>Easily build anything with blocks - no-code required!</strong></p>
+<p>From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.</p>
+<!--Custom spacing-->
+<div class="mb-3"></div>
+<!--GitHub Button JS-->
+<script async defer src="https://buttons.github.io/buttons.js"></script></p>
+
+      
+
+        
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="featured" class="relative hbb-section blox-collection  " style="padding: 2rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Featured Publications
+  </div>
+
+  
+</div>
+
+
+<div class="flex flex-col items-center px-6">
+
+  
+  <div class="container max-w-[65ch] mx-auto bg-white dark:bg-zinc-900 rounded-xl border-gray-100 dark:border-gray-700 border shadow-md overflow-hidden my-5">
+
+
+  
+    
+
+
+
+
+
+
+
+
+<a href="/publication/conference-paper/"  class="mb-5">
+  <div class="md:flex">
+    <div class="md:flex-shrink-0 overflow-hidden">
+      
+        
+        
+      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/publication/conference-paper/featured_hu_982971878a6fddd9.webp" height="655" width="655" alt="Adaptive Fuzzy Fitness Granulation (AFFG)">
+      
+    </div>
+    <div class="p-8">
+      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Adaptive Fuzzy Fitness Granulation (AFFG)</div>
+      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
+        AFFG is an effective strategy for improving evolutionary algorithms by leveraging fuzzy logic to optimize the trade-off between computational cost and solution accuracy..</p>
+      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Feb 1, 2024</p>
+    </div>
+  </div>
+</a>
+
+  
+    
+
+
+
+
+
+
+
+
+<a href="/publication/preprint/"  class="mb-5">
+  <div class="md:flex">
+    <div class="md:flex-shrink-0 overflow-hidden">
+      
+        
+        
+      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/publication/preprint/featured_hu_c22e7811a7d1162f.webp" height="655" width="655" alt="Working paper / Airport Accessibility and Transportation Efficiency">
+      
+    </div>
+    <div class="p-8">
+      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Working paper / Airport Accessibility and Transportation Efficiency</div>
+      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
+        Improving airport accessibility is essential for enhancing the efficiency of air travel and urban mobility. Governments and transportation planners must adopt holistic strategies that combine infrastructure development, policy initiatives, and technological advancements to ensure seamless airport connectivity.</p>
+      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Apr 7, 2019</p>
+    </div>
+  </div>
+</a>
+
+  
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="section-collection" class="relative hbb-section blox-collection  " style="padding: 2rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Recent Publications
+  </div>
+
+  <p><div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300">Quickly discover relevant content by <a href="./publication/">filtering publications</a>.</span>
+</div></p>
+</div>
+
+
+<div class="flex flex-col items-center px-6">
+
+  
+  
+<div class="mt-16 sm:mt-20 container max-w-3xl w-full">
+  <div class="flex flex-col space-y-3">
+
+
+  
+    
+
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+
+  
+  
+
+  <span class="article-metadata li-cite-author">
+    
+
+  <span class="font-bold">
+      Mohsen Davarynejad</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>, <span >
+      Mohsen Davarynejad</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Equal contribution"></i>
+  </span>
+  (2015).
+  <a href="/publication/journal-article/" class="underline">Expanded Summary of Adaptive Fuzzy Fitness Granulation</a>.
+  International Journal of Approximate Reasoning, Volume 49, Issue 3..
+  
+
+  
+  <div class="flex flex-wrap space-x-3">
+    
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<a class="hb-attachment-link hb-attachment-small" href="/publication/journal-article/cite.bib" target="_blank" data-filename="/publication/journal-article/cite.bib">
+  <svg style="height: 1em" class='inline-block' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+  Cite
+</a>
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  </div>
+  
+
+  
+  
+</div>
+
+  
+
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+  
+
+  
+</section>
+
+  
+
+  
+  
+    
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="talks" class="relative hbb-section blox-collection  " style="padding: 2rem 0 2rem 0;" >
+ <div class="home-section-bg " >
+   
+ </div>
+  
+
+  
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+    Recent &amp; Upcoming Talks
+  </div>
+
+  
+</div>
+
+
+<div class="flex flex-col items-center px-6">
+
+  
+  
+
+
+<div class="container px-8 mx-auto xl:px-5 py-5 lg:py-8 max-w-screen-lg ">
+  <div class="grid gap-10 md:grid-cols-2 lg:gap-10">
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/publication/conference-paper/" >
+
+      <img alt="Adaptive Fuzzy Fitness Granulation (AFFG)"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/publication/conference-paper/featured_hu_96670b27f77f3a32.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/affg/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">AFFG</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/publication/conference-paper/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Adaptive Fuzzy Fitness Granulation (AFFG)
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/publication/conference-paper/" >
+        AFFG is an effective strategy for improving evolutionary algorithms by leveraging fuzzy logic to optimize the trade-off between computational cost and solution accuracy..</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2024-02-01">Feb 1, 2024</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/publication/preprint/" >
+
+      <img alt="Working paper / Airport Accessibility and Transportation Efficiency"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/publication/preprint/featured_hu_5e4950e9bc24a60a.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/airport-accessibility/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">Airport Accessibility</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/publication/preprint/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Working paper / Airport Accessibility and Transportation Efficiency
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/publication/preprint/" >
+        Improving airport accessibility is essential for enhancing the efficiency of air travel and urban mobility. Governments and transportation planners must adopt holistic strategies that combine infrastructure development, policy initiatives, and technological advancements to ensure seamless airport connectivity.</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2019-04-07">Apr 7, 2019</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+    
+
+
+
+
+
+
+
+
+
+<div class="group cursor-pointer">
+
+  
+  
+  
+    
+  
+  
+  <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+
+    <a
+      class="relative block aspect-video"
+      href="/publication/journal-article/" >
+
+      <img alt="Expanded Summary of Adaptive Fuzzy Fitness Granulation"
+           class="object-fill transition-all"
+           data-nimg="fill"
+           decoding="async"
+           fetchpriority="high" height="540" loading="lazy" src="/publication/journal-article/featured_hu_60a9833da51ae070.webp"
+           style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+           width="960"></a>
+  </div>
+  
+  <div class="">
+    <div class="">
+      <div class="flex gap-3">
+        
+        <a href="/tags/affg/"><span
+          class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-primary-700 dark:text-primary-300">AFFG</span></a>
+        
+      </div>
+      
+      <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white"><a
+        href="/publication/journal-article/" ><span
+        class="bg-gradient-to-r from-primary-200 to-primary-100 bg-[length:0px_10px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px] dark:from-primary-800 dark:to-primary-900">Expanded Summary of Adaptive Fuzzy Fitness Granulation
+          </span></a>
+      </h2>
+      
+      <div class="grow"><p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400"><a
+        href="/publication/journal-article/" >
+        Adaptive Fuzzy Fitness Granulation (AFFG) provides a powerful enhancement to evolutionary algorithms by leveraging fuzzy logic to control the precision of fitness evaluations dynamically. By balancing exploration and exploitation, reducing computational costs, and improving robustness against noisy evaluations, AFFG proves to be a valuable tool for solving complex optimization problems across various domains.</a></p>
+      </div>
+      <div class="flex-none">
+        <div class="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400 cursor-default">
+          
+          
+          <div class="flex items-center gap-3">
+            
+            <div class="relative h-5 w-5 flex-shrink-0">
+              
+              
+              
+              <img alt="avatar"
+                   class="rounded-full object-cover"
+                   data-nimg="fill"
+                   decoding="async" height="50"
+                   loading="lazy"
+                   sizes="20px"
+                   src="/author/mohsen-davarynejad/avatar_hu_9a60569e7e9242e9.webp"
+                   style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"
+                   width="50">
+              
+            </div>
+            <span class="truncate text-sm">Mohsen Davarynejad</span>
+          </div>
+          
+          
+          <span class="text-xs text-gray-300 dark:text-gray-600">•</span>
+          
+          <time class="truncate text-sm" datetime="2015-09-01">Sep 1, 2015</time>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+  
+
+  
+</section>
+
+  
+
+
+    </div>
+    <div class="page-footer">
+      <footer class="w-full bg-gray-800 text-gray-400 text-sm py-8 relative">
+    
+    <div class="absolute top-0 left-0 w-full h-6 bg-dot-pattern"></div>
+  
+    <div class="flex flex-col items-center px-6">
+      <div class="container px-8 mx-auto xl:px-5 py-6 lg:py-8 max-w-screen-xl">
+        <div class="grid gap-6 md:grid-cols-2 lg:gap-10 items-center">
+  
+          
+          <div class="flex justify-center md:justify-start">
+            <ul class="flex flex-col md:flex-row gap-4 text-center md:text-left">
+              <li><a href="/" class="hover:text-gray-300">🏠 HOME</a></li>
+              <li><a href="/index.html#about" class="hover:text-gray-300">💁‍♂️ ABOUT</a></li>
+            </ul>
+          </div>
+  
+          
+          <div class="text-center md:text-right">
+            <span>© 2025 Mohsen Davarynejad | </span>
+            <a href="https://www.davarynejad.com" class="hover:text-gray-300">www.davarynejad.com</a>
+          </div>
+  
+        </div> 
+      </div> 
+    </div>
+  
+    
+    <div class="absolute bottom-0 left-0 w-full h-6 bg-dot-pattern"></div>
+  </footer>
+  
+  
+  <style>
+    .bg-dot-pattern {
+      background-image: radial-gradient(white 10%, transparent 20%);
+      background-size: 10px 10px;
+      opacity: 0.5;
+    }
+  </style>
+  
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

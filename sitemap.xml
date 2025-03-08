@@ -6,32 +6,24 @@
     <lastmod>2024-08-14T16:26:02+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/series/agenticai/</loc>
-    <lastmod>2025-03-07T17:33:47+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://dataqubed.io/tags/agenticai/</loc>
-    <lastmod>2025-03-07T17:33:47+01:00</lastmod>
+    <lastmod>2025-03-08T08:00:59+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/crewai/</loc>
-    <lastmod>2025-03-07T17:33:47+01:00</lastmod>
+    <lastmod>2025-03-08T08:00:59+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/agentic-ai/deploying-deepseek-r1--ocally-with-vllm-on-ubuntu/</loc>
-    <lastmod>2025-03-07T17:33:47+01:00</lastmod>
+    <lastmod>2025-03-08T08:00:59+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/series/llms/</loc>
-    <lastmod>2025-03-07T17:33:47+01:00</lastmod>
+    <lastmod>2025-03-08T08:00:59+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/</loc>
-    <lastmod>2025-03-07T17:33:47+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/wslubuntu/</loc>
-    <lastmod>2025-03-07T17:33:47+01:00</lastmod>
+    <lastmod>2025-03-08T08:00:59+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/agentic-ai/agentic-ai-and-deepseek-decoding-a-million-emails/</loc>
@@ -214,6 +206,34 @@
     <lastmod>2025-03-06T12:13:07+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://dataqubed.io/publication/conference-paper/</loc>
+    <lastmod>2024-08-15T19:19:03+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/affg/</loc>
+    <lastmod>2024-08-15T19:19:03+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/computational-efficiency/</loc>
+    <lastmod>2024-08-15T19:19:03+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/evolutionary-algorithms/</loc>
+    <lastmod>2024-08-15T19:19:03+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/evolutionary-computation/</loc>
+    <lastmod>2024-08-15T19:19:03+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/publication_types/paper-conference/</loc>
+    <lastmod>2024-08-15T19:19:03+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/publication_types/</loc>
+    <lastmod>2024-08-16T10:07:46+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://dataqubed.io/blog/teach-courses/</loc>
     <lastmod>2025-03-06T12:13:07+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -239,14 +259,14 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/</loc>
-    <lastmod>2025-03-07T13:53:53+01:00</lastmod>
+    <lastmod>2025-03-07T18:04:41+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/series/</loc>
     <lastmod>2025-03-07T13:10:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/publication/preprint/</loc>
+    <loc>https://dataqubed.io/tags/airport-accessibility/</loc>
     <lastmod>2024-08-16T10:07:46+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -254,32 +274,24 @@
     <lastmod>2024-08-16T10:07:46+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/large-language-models/</loc>
+    <loc>https://dataqubed.io/tags/multi-modal-transport/</loc>
     <lastmod>2024-08-16T10:07:46+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/publication_types/</loc>
+    <loc>https://dataqubed.io/tags/public-transit/</loc>
     <lastmod>2024-08-16T10:07:46+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/publication/journal-article/</loc>
-    <lastmod>2024-08-14T16:26:02+02:00</lastmod>
+    <loc>https://dataqubed.io/publication/preprint/</loc>
+    <lastmod>2024-08-16T10:07:46+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/publication_types/article-journal/</loc>
     <lastmod>2024-08-14T16:26:02+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://dataqubed.io/tags/source-themes/</loc>
+    <loc>https://dataqubed.io/publication/journal-article/</loc>
     <lastmod>2024-08-14T16:26:02+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/publication/conference-paper/</loc>
-    <lastmod>2024-08-15T19:19:03+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/publication_types/paper-conference/</loc>
-    <lastmod>2024-08-15T19:19:03+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/blog/</loc>

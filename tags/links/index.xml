@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Links | Your Data Science Mentor - Mohsen Davarynejad</title>
+    <link>https://dataqubed.io/tags/links/</link>
+      <atom:link href="https://dataqubed.io/tags/links/index.xml" rel="self" type="application/rss+xml" />
+    <description>Links</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url>
+      <title>Links</title>
+      <link>https://dataqubed.io/tags/links/</link>
+    </image>
+    
+    <item>
+      <title>Useful links</title>
+      <link>https://dataqubed.io/blog/useful-links/</link>
+      <pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/blog/useful-links/</guid>
+      <description>&lt;h3 id=&#34;people&#34;&gt;People&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://davarynejad.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Prof.dr. Davarynejad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forghany.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Zary Forghany&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://fuzhanrahmanian.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://fuzhanrahmanian.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://miriam-hacker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Miriam Hacker, Research Program Manager at The Water Research Foundation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://glciampaglia.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Giovanni Luca Ciampaglia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cazencott.info/index.php/pages/Teaching&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chloé-Agathe Azencott&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cosmin-bercea.com/about-me&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;explore-post-ideas&#34;&gt;Explore post ideas&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blowfish.page/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HUGO blowfish&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.shilaan.com/post/visualizing-data-with-raincloud-plots/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Visualizing data with raincloud plots&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;explore-project-ideas&#34;&gt;Explore project ideas&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.interregeurope.eu/project-ideas&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Interreg Europe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/SideProject/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SideProject&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;data-sets&#34;&gt;Data sets&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://neurips.cc/virtual/2024/events/datasets-benchmarks-2024&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NeurIPS Datasets Benchmarks 2024&lt;/a&gt;, &lt;a href=&#34;https://neurips.cc/virtual/2024/poster/97568&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A Systematic Review of NeurIPS Dataset Management Practices&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;explore-courseworkshop-ideas&#34;&gt;Explore course/workshop ideas&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/katrienantonio/workshop-ML?tab=readme-ov-file&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Workshop Machine Learning in R, 2020&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/katrienantonio/lectures?tab=readme-ov-file&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data science for economists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/katrienantonio/hands-on-machine-learning-Python-module-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hands-on Machine Learning in Python&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;online-courses&#34;&gt;Online courses&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;(I&amp;rsquo;m not endorsing any of the courses/materials listed below. This is only a place for me to look at them at a later stage!)&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.udemy.com/course/intro-to-optimization-pt1/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Intro to Optimization Through the Lens of Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bookshelf---textbooks-available-online-for-free&#34;&gt;Bookshelf - Textbooks available online for free&lt;/h2&gt;
+&lt;h3 id=&#34;optimization-and-linear-programming&#34;&gt;Optimization and Linear Programming&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://optimaltransport.github.io/book/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Computational Optimal Transport&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://meboo.convexoptimization.com/access.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Convex Optimization and Euclidean Distance Geometry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://algorithmsbook.com/optimization/#&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Algorithms for Optimization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dp.quantecon.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dynamic Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sites.engineering.ucsb.edu/~jbraw/mpc/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Model Predictive Control: Theory, Computation, and Design, 2nd Ed.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1909.05207&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to Online Convex Optimization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.stoprog.org/sites/default/files/files/manujw.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Stochastic Programming, 2nd Ed.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.rand.org/pubs/reports/R366.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Linear Programming and Extensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://convex-optimization.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Algorithms for Convex Optimization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://algorithmsbook.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Algorithms for Decision Making&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.lix.polytechnique.fr/~liberti/teaching/dix/inf580-15/mathprog.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mathematical Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.robertolucchetti.com/public/uploads/2018/09/Lucchetti-R.-Convexity-and-Well-Posed-Problems2005328.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Convexity and Well-Posed Problems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://web.stanford.edu/~boyd/cvxbook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Convex Optimization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mykel.kochenderfer.com/textbooks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decision Making Under Uncertainty&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.designofapproxalgs.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Design of Approximation Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1606.04838&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Optimization Methods for Large-Scale Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sbubeck.com/book.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Convex Optimization: Algorithms and Complexity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sites.uclouvain.be/absil/amsbook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Optimization Algorithms on Matrix Manifolds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cedricvillani.org/sites/dev/files/old_images/2012/08/preprint-1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Optimal Transport, Old and New&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;data-science&#34;&gt;Data Science&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/research/publication/fourth-paradigm-data-intensive-scientific-discovery/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Fourth Paradigm: Data-Intensive Scientific Discovery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jakevdp.github.io/PythonDataScienceHandbook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python Data Science Handbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://inferentialthinking.com/chapters/intro.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Computational and Inferential Thinking: The Foundations of Data Science, 2nd Ed.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://guidetodatamining.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A Programmer’s Guide to Data Mining&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://datascienceatthecommandline.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Science at the Command Line, 2nd Ed.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://rafalab.github.io/dsbook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction to Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cs.cornell.edu/jeh/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Foundation of Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://srdas.github.io/MLBook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Science: Theories, Models, Algorithms and Analytics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://math.unice.fr/~cbouveyr/MBCbook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Model-Based Clustering and Classification for Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sjster.github.io/introduction_to_computational_statistics/docs/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Computational Statistics with PyMC3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wesmckinney.com/book/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python for Data Analysis, 3rd Ed.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://book-wright-ma.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;High-Dimensional Data Analysis with Low-Dimensional Models: Principles, Computation, and Applications&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1506.07825&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Assimilation: A Mathematical Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://courses.csail.mit.edu/6.042/spring18/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mathematics for Computer Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mathematical-tours.github.io/book/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mathematical Foundations of Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mathematical-tours.github.io/book-basics/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An Introduction to Data Sciences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://databookuw.com/databook.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data-Driven Science &amp;amp; Engineering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://datascienceincontext.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Data Science in Context: Foundations, Challenges, Opportunities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1407.7502&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Understanding Random Forests: From Theory to Practice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;machine-learning&#34;&gt;Machine Learning&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://smlbook.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Machine Learning: A First Course for Engineers and Scientists&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dkriesel.com/en/science/neural_networks&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A Brief Introduction to Neural Networks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://helioml.org/Introduction/title.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Machine Learning, Statistics, and Data Mining for Heliophysics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cs.nyu.edu/~mohri/mlbook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Foundations of Machine Learning, 2nd Ed.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mlstory.org/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pattern, Predictions, and Actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://probml.github.io/pml-book/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Probabilistic Machine Learning: An Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hastie.su.domains/ElemStatLearn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Elements of Statistical Learning, 2nd Ed.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://christophm.github.io/interpretable-ml-book/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Interpretable Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cs.cmu.edu/afs/cs.cmu.edu/user/mitchell/ftp/mlbook.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Machine Learning (Tom Mitchell)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/1709.02840&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A Brief Introduction to Machine Learning for Engineers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.google.com/machine-learning/crash-course&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Machine Learning Crash Course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ciml.info/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;A Course in Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://agbs.kyb.tuebingen.mpg.de/lwk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning with Kernels: Support Vector Machines, Regularization, Optimization and Beyond&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/abhishekkrthakur/approachingalmost&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Approaching (Almost) Any Machine Learning Problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mml-book.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mathematics for Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pattern Recognition and Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://direct.mit.edu/books/oa-monograph/5342/BoostingFoundations-and-Algorithms&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Boosting: Foundations and Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.statlearning.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An Introduction to Statistical Learning, 2nd Ed.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://muse.jhu.edu/book/61941&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How Smart Machines Think&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://hastie.su.domains/CASI/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Computer Age Statistical Inference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bayesian Reasoning and Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mbmlbook.com/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Model-Based Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cazencott.info/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introduction au Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://intelligent-optimization.org/LIONbook/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The LION Way. Machine Learning plus Intelligent Optimization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://themlbook.com/wiki/doku.php&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Hundred Pages Machine Learning Book&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pages.dataiku.com/oreilly-introducing-mlops&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Introducing MLOps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
