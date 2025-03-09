@@ -19,11 +19,11 @@
       <guid>https://dataqubed.io/building-agentic-ai-solutions-with-deepseek-r1-crewai-and-cloud-agnostic-deployment-on-ubuntu/</guid>
       <description>&lt;h1 id=&#34;building-agentic-ai-solutions-with-deepseek-r1-crewai-and-cloud-agnostic-deployment-on-ubuntu&#34;&gt;Building Agentic AI Solutions with DeepSeek-R1, CrewAI, and Cloud-Agnostic Deployment on Ubuntu&lt;/h1&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The rise of &lt;strong&gt;agentic AI&lt;/strong&gt;—where AI models operate autonomously to complete tasks—has opened new possibilities for businesses and developers. &lt;strong&gt;DeepSeek-R1&lt;/strong&gt;, an advanced open-source reasoning model, combined with &lt;strong&gt;CrewAI&lt;/strong&gt;, a framework for orchestrating AI agents, enables the creation of intelligent, multi-agent workflows. Unlike cloud-dependent solutions, this guide focuses on &lt;strong&gt;deploying DeepSeek-R1 in a cloud-agnostic setup on Ubuntu&lt;/strong&gt;, whether on-premises or in a private cloud environment.&lt;/p&gt;
-&lt;p&gt;In this article, we will explore how to set up &lt;strong&gt;DeepSeek-R1 and CrewAI&lt;/strong&gt; on Ubuntu using &lt;strong&gt;vLLM&lt;/strong&gt; for efficient inference, enabling local or hybrid AI deployments while maintaining data privacy and flexibility.&lt;/p&gt;
+&lt;p&gt;The rise of agentic AI, where AI models operate autonomously to complete tasks—has opened new possibilities for businesses and developers. DeepSeek-R1, an advanced open-source reasoning model, combined with CrewAI, a framework for orchestrating AI agents, enables the creation of intelligent, multi-agent workflows. Unlike cloud-dependent solutions, this guide focuses on deploying DeepSeek-R1 in a cloud-agnostic setup on Ubuntu, whether on-premises or in a private cloud environment.&lt;/p&gt;
+&lt;p&gt;In this article, we will explore how to set up DeepSeek-R1 and CrewAI on Ubuntu using Ollama for efficient inference, enabling local or hybrid AI deployments while maintaining data privacy and flexibility.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;why-choose-cloud-agnostic-deployment&#34;&gt;Why Choose Cloud-Agnostic Deployment?&lt;/h2&gt;
-&lt;p&gt;Deploying AI models in a &lt;strong&gt;cloud-agnostic&lt;/strong&gt; manner means avoiding vendor lock-in while maintaining full control over data, compute resources, and scaling strategies. This approach offers several advantages:&lt;/p&gt;
+&lt;p&gt;Deploying AI models in a cloud-agnostic manner means avoiding vendor lock-in while maintaining full control over data, compute resources, and scaling strategies. This approach offers several advantages:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Data Privacy &amp;amp; Security&lt;/strong&gt;: Keep sensitive data in a controlled environment.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Lower Costs&lt;/strong&gt;: Reduce dependency on expensive cloud GPU instances.&lt;/li&gt;
@@ -33,22 +33,100 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;understanding-the-key-components&#34;&gt;Understanding the Key Components&lt;/h2&gt;
-&lt;h3 id=&#34;deepseek-r1&#34;&gt;&lt;strong&gt;DeepSeek-R1&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;DeepSeek-R1 is a powerful &lt;strong&gt;Mixture of Experts (MoE)&lt;/strong&gt; model optimized for reasoning, problem-solving, and coding tasks. While it consists of 671 billion parameters, only &lt;strong&gt;37 billion are active per inference&lt;/strong&gt;, allowing efficient execution on modern GPUs.&lt;/p&gt;
-&lt;h3 id=&#34;crewai&#34;&gt;&lt;strong&gt;CrewAI&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;deepseek-r1&#34;&gt;DeepSeek-R1&lt;/h3&gt;
+&lt;p&gt;DeepSeek-R1 is a powerful Mixture of Experts (MoE) model optimized for reasoning, problem-solving, and coding tasks. While it consists of 671 billion parameters, only 37 billion are active per inference, allowing efficient execution on modern GPUs.&lt;/p&gt;
+&lt;h3 id=&#34;crewai&#34;&gt;CrewAI&lt;/h3&gt;
 &lt;p&gt;CrewAI is an orchestration framework that allows multiple AI agents to collaborate on complex tasks. It enables structured workflows where AI agents specialize in different roles, enhancing task efficiency and scalability.&lt;/p&gt;
-&lt;h3 id=&#34;vllm&#34;&gt;&lt;strong&gt;vLLM&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;vLLM is an inference engine optimized for serving large-scale language models efficiently. It offers significant memory savings and fast inference speeds, making it ideal for deploying DeepSeek-R1 in local or self-managed environments.&lt;/p&gt;
-&lt;hr&gt;
+&lt;h3 id=&#34;ollama&#34;&gt;Ollama&lt;/h3&gt;
+&lt;p&gt;Ollama is a lightweight, user-friendly framework designed to run and manage large language models (LLMs) locally with minimal setup. Unlike traditional model-serving solutions, Ollama provides a seamless out-of-the-box experience, abstracting away complex configurations and infrastructure dependencies. It’s particularly appealing to developers and researchers who want to deploy models without the overhead of cloud services or deep ML expertise.&lt;/p&gt;
+&lt;p&gt;Compared to vLLM, which is optimized for high-throughput, GPU-based inference using PagedAttention, Ollama prioritizes ease of use and accessibility. While vLLM is a powerhouse for enterprise-grade applications needing maximum inference speed and efficiency, Ollama is designed for local experimentation, rapid prototyping, and lightweight deployment; ideal for running models on personal machines or edge devices.&lt;/p&gt;
+&lt;p&gt;Unlike competitors like TGI (Text Generation Inference) and vLLM, Ollama bundles model management, serving, and optimization into a single package, removing the need for external orchestrators. While it may not match vLLM’s efficiency at scale, its simplicity makes it a compelling alternative for individuals and small teams looking to experiment with LLMs locally, without the complexity of Kubernetes or specialized hardware.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Feature&lt;/th&gt;
+          &lt;th&gt;Ollama&lt;/th&gt;
+          &lt;th&gt;vLLM&lt;/th&gt;
+          &lt;th&gt;TGI (Text Generation Inference)&lt;/th&gt;
+          &lt;th&gt;LM Studio&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Ease of Use&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;⭐⭐⭐⭐⭐ (Plug &amp;amp; Play)&lt;/td&gt;
+          &lt;td&gt;⭐⭐⭐ (Requires Setup)&lt;/td&gt;
+          &lt;td&gt;⭐⭐⭐ (Requires Setup)&lt;/td&gt;
+          &lt;td&gt;⭐⭐⭐⭐⭐ (GUI-Based)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Performance&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;⭐⭐⭐ (Good for Local Use)&lt;/td&gt;
+          &lt;td&gt;⭐⭐⭐⭐⭐ (Optimized for GPUs)&lt;/td&gt;
+          &lt;td&gt;⭐⭐⭐⭐ (Efficient Serving)&lt;/td&gt;
+          &lt;td&gt;⭐⭐⭐ (Local Use Only)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Model Serving&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Local Inference + CLI&lt;/td&gt;
+          &lt;td&gt;High-speed Distributed Serving&lt;/td&gt;
+          &lt;td&gt;Optimized for Cloud &amp;amp; Local&lt;/td&gt;
+          &lt;td&gt;Local Inference Only&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Hardware&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;CPU &amp;amp; GPU Supported&lt;/td&gt;
+          &lt;td&gt;GPU Required (PagedAttention)&lt;/td&gt;
+          &lt;td&gt;CPU &amp;amp; GPU Supported&lt;/td&gt;
+          &lt;td&gt;CPU &amp;amp; GPU Supported&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Use Case&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Local Testing &amp;amp; Prototyping&lt;/td&gt;
+          &lt;td&gt;Scalable Inference for Production&lt;/td&gt;
+          &lt;td&gt;Cloud &amp;amp; Edge AI Deployment&lt;/td&gt;
+          &lt;td&gt;Offline Model Interaction&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Streaming&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;✅ Yes&lt;/td&gt;
+          &lt;td&gt;✅ Yes&lt;/td&gt;
+          &lt;td&gt;✅ Yes&lt;/td&gt;
+          &lt;td&gt;✅ Yes&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Fine-Tuning&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;❌ No&lt;/td&gt;
+          &lt;td&gt;✅ Partial Support&lt;/td&gt;
+          &lt;td&gt;✅ Partial Support&lt;/td&gt;
+          &lt;td&gt;❌ No&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Model Download&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;✅ Automatic&lt;/td&gt;
+          &lt;td&gt;❌ Manual&lt;/td&gt;
+          &lt;td&gt;❌ Manual&lt;/td&gt;
+          &lt;td&gt;✅ Automatic&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Best For&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;Developers &amp;amp; Individuals&lt;/td&gt;
+          &lt;td&gt;Large-Scale AI Applications&lt;/td&gt;
+          &lt;td&gt;Cloud Deployments &amp;amp; APIs&lt;/td&gt;
+          &lt;td&gt;Offline Users &amp;amp; Beginners&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;in-this-implementation-we-opt-for-ollama-due-to-its-simplicity-ease-of-deployment-and-local-first-approach-additionally-ollama-abstracts-away-the-complexities-of-model-management-handling-downloads-serving-and-optimizations-automatically-this-eliminates-the-need-for-manual-environment-setup-kubernetes-orchestration-or-intricate-api-configurations-which-are-often-required-by-vllm-or-tgi--for-this-project-where-we-focus-on-local-ai-deployment-ease-of-integration-with-crewai-and-rapid-prototyping-ollama-provides-the-perfect-balance-of-functionality-and-accessibility-it-allows-us-to-run-deepseek-r1-on-ubuntu-seamlessly-while-maintaining-flexibility-to-scale-or-modify-our-setup-in-the-future&#34;&gt;In this implementation, we opt for Ollama due to its simplicity, ease of deployment, and local-first approach. Additionally, Ollama abstracts away the complexities of model management, handling downloads, serving, and optimizations automatically. This eliminates the need for manual environment setup, Kubernetes orchestration, or intricate API configurations, which are often required by vLLM or TGI.  For this project, where we focus on local AI deployment, ease of integration with CrewAI, and rapid prototyping, Ollama provides the perfect balance of functionality and accessibility. It allows us to run DeepSeek-R1 on Ubuntu seamlessly while maintaining flexibility to scale or modify our setup in the future.&lt;/h2&gt;
 &lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
 &lt;p&gt;Before setting up DeepSeek-R1 and CrewAI, ensure your system meets the following requirements:&lt;/p&gt;
-&lt;h3 id=&#34;hardware-requirements&#34;&gt;&lt;strong&gt;Hardware Requirements&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;hardware-requirements&#34;&gt;Hardware Requirements&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;NVIDIA GPU&lt;/strong&gt; with CUDA support (recommended: A100, 3090, 4090, or higher).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Minimum 16GB RAM&lt;/strong&gt; (32GB or more preferred for large-scale tasks).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;SSD storage&lt;/strong&gt; for faster model loading and execution.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;software-requirements&#34;&gt;&lt;strong&gt;Software Requirements&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;software-requirements&#34;&gt;Software Requirements&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Ubuntu (20.04 or 22.04) running on a local server, workstation, or WSL.&lt;/li&gt;
 &lt;li&gt;Python 3.8 or higher.&lt;/li&gt;
@@ -58,29 +136,31 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;setting-up-the-environment-with-venv&#34;&gt;Setting Up the Environment with venv&lt;/h2&gt;
-&lt;h3 id=&#34;step-1-install-required-dependencies&#34;&gt;&lt;strong&gt;Step 1: Install Required Dependencies&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;step-1-install-required-dependencies&#34;&gt;Step 1: Install Required Dependencies&lt;/h3&gt;
 &lt;p&gt;Update your system and install necessary tools:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade -y
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install -y python3-venv git sqlite3
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-2-install-cuda-and-cudnn&#34;&gt;&lt;strong&gt;Step 2: Install CUDA and cuDNN&lt;/strong&gt;&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-2-install-cuda-and-cudnn&#34;&gt;Step 2: Install CUDA and cuDNN&lt;/h3&gt;
 &lt;p&gt;Ensure that your system has CUDA and cuDNN installed:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nvcc --version
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If CUDA is missing, install it using:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install -y nvidia-cuda-toolkit
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-3-set-up-virtual-environment&#34;&gt;&lt;strong&gt;Step 3: Set Up Virtual Environment&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;Create and activate a virtual environment:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-3-install-ollama&#34;&gt;Step 3: Install Ollama&lt;/h3&gt;
+&lt;p&gt;Ollama provides an easy way to run LLMs locally. Install it with:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -fsSL https://ollama.ai/install.sh &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-4-download-and-load-deepseek-r1&#34;&gt;Step 4: Download and Load DeepSeek-R1&lt;/h3&gt;
+&lt;p&gt;Once Ollama is installed, pull the DeepSeek-R1 model:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama pull deepseek-r1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Start the DeepSeek-R1 model for local inference:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ollama serve
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-5-set-up-virtual-environment&#34;&gt;Step 5: Set Up Virtual Environment&lt;/h3&gt;
+&lt;p&gt;Now, open a new terminal create and activate a virtual environment:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 -m venv deepseek-env
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; deepseek-env/bin/activate
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-4-install-required-packages&#34;&gt;&lt;strong&gt;Step 4: Install Required Packages&lt;/strong&gt;&lt;/h3&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-6-install-required-packages&#34;&gt;&lt;strong&gt;Step 6: Install Required Packages&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;Install necessary dependencies inside the virtual environment:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install --upgrade pip
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install vllm crewai transformers torch accelerate kagglehub pandas sqlalchemy
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-5-download-and-load-deepseek-r1&#34;&gt;&lt;strong&gt;Step 5: Download and Load DeepSeek-R1&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;Clone the DeepSeek-R1 repository and set up the model:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/deepseek-ai/deepseek-r1.git
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; deepseek-r1
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Start the vLLM inference server:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 -m vllm.entrypoints.api_server --model deepseek-r1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;setting-up-the-sqlite-database-from-kaggle-data&#34;&gt;Setting Up the SQLite Database from Kaggle Data&lt;/h2&gt;
 &lt;p&gt;Download and store the dataset in an SQLite database:&lt;/p&gt;
@@ -108,30 +188,8 @@
 &lt;h2 id=&#34;using-crewai-for-ai-driven-data-analysis&#34;&gt;Using CrewAI for AI-Driven Data Analysis&lt;/h2&gt;
 &lt;p&gt;Now, let&amp;rsquo;s connect an AI agent to the SQLite database and perform queries:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;requests&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost:11434/api/generate&amp;#34;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# Ensure Ollama is running on this port&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;headers&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;application/json&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;model&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;deepseek-r1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;prompt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;prompt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;stream&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# Set to True if you want a streaming response&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requests&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;status_code&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;response&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;response&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;No response received&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Error: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{response.text}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sqlalchemy&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_engine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;crewai&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Agent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Workflow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LLM&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LLM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;ollama/deepseek-r1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;temperature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;base_url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost:11434/api/generate&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;api_key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;NA&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sqlalchemy&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;create_engine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;crewai&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Agent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Task&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Crew&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LLM&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Database connection setup&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;DATABASE_URL&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sqlite:///ecommerce.db&amp;#34;&lt;/span&gt;
@@ -143,22 +201,28 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DataFrame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fetchall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;columns&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;keys&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Define AI Agents&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LLM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;ollama/deepseek-r1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;temperature&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;base_url&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost:11434/api/generate&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;api_key&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;NA&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;analyzer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Agent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Data Analyst&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Analyzes sales data trends&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;goal&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Provide insights on sales patterns&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;backstory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;An experienced data analyst specializing in e-commerce transactions.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;verbose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;reporter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Agent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Report Generator&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Generates structured reports from analysis&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;goal&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Create easy-to-read reports based on data insights&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;goal&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Create easy-to-read reports based on data insights.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;backstory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;A seasoned report creator with a knack for summarizing complex data.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;llm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;verbose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
@@ -182,8 +246,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;crew&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kickoff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Deploying &lt;strong&gt;DeepSeek-R1 and CrewAI&lt;/strong&gt; in a cloud-agnostic setup on Ubuntu provides &lt;strong&gt;scalability, security, and flexibility&lt;/strong&gt; without relying on proprietary cloud platforms. By leveraging &lt;strong&gt;vLLM for optimized inference&lt;/strong&gt; and integrating AI-driven &lt;strong&gt;data analysis workflows&lt;/strong&gt;, businesses can &lt;strong&gt;harness real-time insights from their own databases&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Whether running on &lt;strong&gt;on-prem hardware, private clouds, or hybrid environments&lt;/strong&gt;, this approach ensures complete control over AI workflows. Try it today and unlock the full potential of &lt;strong&gt;agentic AI solutions&lt;/strong&gt; in a cloud-independent manner.&lt;/p&gt;
+&lt;p&gt;Deploying DeepSeek-R1 and CrewAI in a cloud-agnostic setup on Ubuntu using Ollama provides &lt;strong&gt;scalability, security, and flexibility&lt;/strong&gt; without relying on proprietary cloud platforms. By leveraging Ollama for optimized inference and integrating AI-driven &lt;strong&gt;data analysis workflows&lt;/strong&gt;, businesses can harness real-time insights from their own databases.&lt;/p&gt;
+&lt;p&gt;Whether running on on-prem hardware, private clouds, or hybrid environments, this approach ensures complete control over AI workflows. Try it today and unlock the full potential of agentic AI solutions in a cloud-independent manner.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;Tags:&lt;/strong&gt; #AgenticAI #DeepSeekR1 #UbuntuAI #vLLM #CloudAgnosticAI #AIDataAnalysis&lt;/p&gt;
 </description>
@@ -1383,7 +1447,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-342195867&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-932546187&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1401,7 +1465,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-342195867&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-932546187&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
