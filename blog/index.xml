@@ -308,6 +308,26 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Gradio makes it incredibly easy to build and share interactive machine learning applications. We started with a simple example, then progressively enhanced it by integrating models and adding UI elements. You can now build your own interactive ML tools and deploy them effortlessly.&lt;/p&gt;
+&lt;h2 id=&#34;read-more&#34;&gt;Read More&lt;/h2&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in diving deeper into Gradio and its capabilities, check out the following resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Time Series Visualization in Gradio&lt;/strong&gt;: Learn how to create interactive time plots and visualize time-series data in your Gradio apps with ease.&lt;br&gt;
+&lt;a href=&#34;https://www.gradio.app/guides/time-plots&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the tutorial&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Using Flagging in Gradio&lt;/strong&gt;: Learn how to implement flagging in your Gradio apps to collect user feedback, improve models, and monitor predictions effectively.&lt;br&gt;
+&lt;a href=&#34;https://www.gradio.app/guides/using-flagging&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Read the guide here&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Building Multi-Page Apps&lt;/strong&gt;: Want to create a more structured app? This guide walks you through setting up multi-page applications in Gradio for better user navigation.&lt;br&gt;
+&lt;a href=&#34;https://www.gradio.app/guides/multipage-apps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Explore multi-page apps&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Integrating Gradio with Slack&lt;/strong&gt;: This guide walks you through creating a Slack bot powered by a Gradio app, making AI models easily accessible within Slack workspaces. This serves as a reminder of Gradio&amp;rsquo;s extensive customization options and the wide range of use cases it supports.
+&lt;a href=&#34;https://www.gradio.app/guides/creating-a-slack-bot-from-a-gradio-app&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Build a Slack bot with Gradio&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -1778,7 +1798,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-125734698&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-865124793&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -1796,7 +1816,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-125734698&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-865124793&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
