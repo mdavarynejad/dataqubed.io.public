@@ -236,7 +236,7 @@
         content="2025-03-10T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-03-10T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2025-03-10T10:41:37&#43;01:00">
   
 
   
@@ -269,7 +269,7 @@
   ],
   
   "datePublished": "2025-03-10T00:00:00Z",
-  "dateModified": "2025-03-10T00:00:00Z",
+  "dateModified": "2025-03-10T10:41:37+01:00",
   
   "author": {
     "@type": "Person",
@@ -911,9 +911,9 @@
             </li>
           <li>
               <a
-                href="#your-first-gradio-app"
+                href="#setting-up-the-environment-with-venv"
                 class="hb-docs-link"
-              >Your First Gradio App</a>
+              >Setting Up the Environment with venv</a>
             </li>
           <li>
               <a
@@ -1305,7 +1305,10 @@
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#key-features-of-gradio">Key Features of Gradio:</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#your-first-gradio-app">Your First Gradio App</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#setting-up-the-environment-with-venv">Setting Up the Environment with venv</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#step-0-install-required-dependencies">Step 0: Install Required Dependencies</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#step-1-a-simple-gradio-interface">Step 1: A Simple Gradio Interface</a>
@@ -1397,7 +1400,7 @@
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          3 min read
+          4 min read
         </span>
         
         </div>
@@ -1453,31 +1456,79 @@
 </ul>
 <p>Let&rsquo;s dive into building our first Gradio application!</p>
 <hr>
-<h2 id="your-first-gradio-app">Your First Gradio App</h2>
-<p>Before starting, install Gradio if you haven&rsquo;t already:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install gradio
+<h2 id="setting-up-the-environment-with-venv">Setting Up the Environment with venv</h2>
+<h3 id="step-0-install-required-dependencies">Step 0: Install Required Dependencies</h3>
+<p>Update your system and install necessary tools:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt upgrade -y
+</span></span><span class="line"><span class="cl">sudo apt install -y python3-venv git
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python3 -m venv gradio-env
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> gradio-env/bin/activate
+</span></span></code></pre></div><p>Now lets install Gradio:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install --upgrade pip
+</span></span><span class="line"><span class="cl">pip install gradio
 </span></span></code></pre></div><h3 id="step-1-a-simple-gradio-interface">Step 1: A Simple Gradio Interface</h3>
 <p>We&rsquo;ll create a basic function that takes a name as input and returns a greeting.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">gradio</span> <span class="k">as</span> <span class="nn">gr</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">! Welcome to Gradio!&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="sa">f</span><span class="s2">&#34;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">! Welcome to Y1D trading 101!&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">iface</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Interface</span><span class="p">(</span><span class="n">fn</span><span class="o">=</span><span class="n">greet</span><span class="p">,</span> <span class="n">inputs</span><span class="o">=</span><span class="s2">&#34;text&#34;</span><span class="p">,</span> <span class="n">outputs</span><span class="o">=</span><span class="s2">&#34;text&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">iface</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="explanation">Explanation:</h4>
+</span></span><span class="line"><span class="cl"><span class="n">iface</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">server_name</span><span class="o">=</span><span class="s2">&#34;0.0.0.0&#34;</span><span class="p">,</span> <span class="n">server_port</span><span class="o">=</span><span class="mi">7860</span><span class="p">)</span>
+</span></span></code></pre></div><p>In case you need to access the app externally we first need to open firewall for port 7860.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ufw allow 7861/tcp
+</span></span><span class="line"><span class="cl">sudo ufw reload
+</span></span></code></pre></div><p>To check firewall status:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ufw status
+</span></span></code></pre></div><p>If ufw is inactive, enable it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo ufw <span class="nb">enable</span>
+</span></span></code></pre></div><p>Nest step is to find the IP of your Machine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hostname -I
+</span></span></code></pre></div><p>And now access your app in a browser on IP:7860</p>
+<p>Run the script, and you&rsquo;ll see a simple web interface where users can enter their names and receive a greeting.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="Access the port" srcset="
+               /building-interactive-machine-learning-applications-with-gradio/gradioportaccess_hu_ea0e511b77ec94b4.webp 400w,
+               /building-interactive-machine-learning-applications-with-gradio/gradioportaccess_hu_65d9032ab232fcc1.webp 760w,
+               /building-interactive-machine-learning-applications-with-gradio/gradioportaccess_hu_e1ca83a722fd6c89.webp 1200w"
+               src="/building-interactive-machine-learning-applications-with-gradio/gradioportaccess_hu_ea0e511b77ec94b4.webp"
+               width="760"
+               height="162"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>You can also use ngrok for an easy tunnel, a solution that we will skip here for now.</p>
+<h4 id="explanation">Explanation:</h4>
 <ul>
 <li><code>fn=greet</code>: The function that processes the input.</li>
 <li><code>inputs=&quot;text&quot;</code>: Takes a text input from the user.</li>
 <li><code>outputs=&quot;text&quot;</code>: Outputs a text response.</li>
 <li><code>iface.launch()</code>: Runs the application in the browser.</li>
+<li><code>iface.launch(server_name=&quot;0.0.0.0&quot;, server_port=7860)</code>: Runs tha app on specified port.</li>
 </ul>
-<p>Run this script, and you&rsquo;ll see a <strong>simple web interface</strong> where users can enter their names and receive a greeting.</p>
 <hr>
 <h2 id="extending-the-application">Extending the Application</h2>
 <p>Now, let&rsquo;s build a more useful application. Suppose we have a sentiment analysis model, and we want to create an interactive UI for it.</p>
-<h3 id="step-2-adding-a-sentiment-analysis-model">Step 2: Adding a Sentiment Analysis Model</h3>
-<p>We&rsquo;ll use the <code>transformers</code> library to load a <strong>pre-trained model</strong> from Hugging Face.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pip install torch transformers
+</span></span></code></pre></div><h3 id="step-2-adding-a-sentiment-analysis-model">Step 2: Adding a Sentiment Analysis Model</h3>
+<p>We&rsquo;ll use the <code>transformers</code> library to load a pre-trained model from Hugging Face.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">gradio</span> <span class="k">as</span> <span class="nn">gr</span>
 </span></span><span class="line"><span class="cl">
@@ -1496,17 +1547,73 @@
 </span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;Enter a sentence and get its sentiment prediction.&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">iface</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="new-features-added">New Features Added:</h4>
+</span></span><span class="line"><span class="cl"><span class="n">iface</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">server_name</span><span class="o">=</span><span class="s2">&#34;0.0.0.0&#34;</span><span class="p">,</span> <span class="n">server_port</span><span class="o">=</span><span class="mi">7860</span><span class="p">)</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="Access the port" srcset="
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentpositive_hu_ca731448d33bc560.webp 400w,
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentpositive_hu_31aeb2ff961c3c14.webp 760w,
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentpositive_hu_1890e1f81751eeb2.webp 1200w"
+               src="/building-interactive-machine-learning-applications-with-gradio/gradiosentimentpositive_hu_ca731448d33bc560.webp"
+               width="760"
+               height="217"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="Access the port" srcset="
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentneg_hu_6e2345d8e7db1544.webp 400w,
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentneg_hu_4838a6262f56cac4.webp 760w,
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentneg_hu_6326431f3695faff.webp 1200w"
+               src="/building-interactive-machine-learning-applications-with-gradio/gradiosentimentneg_hu_6e2345d8e7db1544.webp"
+               width="760"
+               height="237"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h4 id="new-features-added">New Features Added:</h4>
 <ul>
 <li><strong>Using a real ML model</strong>: We integrated a Hugging Face transformer for sentiment analysis.</li>
 <li><strong>Providing a title and description</strong>: Makes the UI more informative.</li>
 </ul>
 <hr>
 <h2 id="making-the-app-more-interactive">Making the App More Interactive</h2>
-<p>We can further enhance our Gradio app by adding <strong>dropdown menus</strong>, <strong>multiple inputs</strong>, and <strong>custom UI elements</strong>.</p>
+<p>We can further enhance our Gradio app by adding dropdown menus, multiple inputs, and custom UI elements.</p>
 <h3 id="step-3-adding-multiple-models-and-customization-options">Step 3: Adding Multiple Models and Customization Options</h3>
-<p>Let’s extend our sentiment analysis app to allow users to <strong>choose between different models</strong> and <strong>adjust the confidence threshold</strong>.</p>
+<p>Let’s extend our sentiment analysis app to allow users to choose between different models and adjust the confidence threshold.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">gradio</span> <span class="k">as</span> <span class="nn">gr</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span>
 </span></span><span class="line"><span class="cl">
@@ -1538,8 +1645,64 @@
 </span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;Select a model, enter text, and set a confidence threshold.&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">iface</span><span class="o">.</span><span class="n">launch</span><span class="p">()</span>
-</span></span></code></pre></div><h4 id="new-features">New Features:</h4>
+</span></span><span class="line"><span class="cl"><span class="n">iface</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">server_name</span><span class="o">=</span><span class="s2">&#34;0.0.0.0&#34;</span><span class="p">,</span> <span class="n">server_port</span><span class="o">=</span><span class="mi">7860</span><span class="p">)</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="Access the port" srcset="
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentnegdistilBERT_hu_5e571d3ac1ca1ca7.webp 400w,
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentnegdistilBERT_hu_a10713c5d04bd0d5.webp 760w,
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentnegdistilBERT_hu_d88818502eb570eb.webp 1200w"
+               src="/building-interactive-machine-learning-applications-with-gradio/gradiosentimentnegdistilBERT_hu_5e571d3ac1ca1ca7.webp"
+               width="760"
+               height="416"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="flex justify-center	">
+    <div class="w-100" ><img alt="Access the port" srcset="
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentnegBERT_hu_dba37389b75baf37.webp 400w,
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentnegBERT_hu_d24b567e98264ea4.webp 760w,
+               /building-interactive-machine-learning-applications-with-gradio/gradiosentimentnegBERT_hu_a381987e82d9b515.webp 1200w"
+               src="/building-interactive-machine-learning-applications-with-gradio/gradiosentimentnegBERT_hu_dba37389b75baf37.webp"
+               width="760"
+               height="420"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h4 id="new-features">New Features:</h4>
 <ul>
 <li><strong>Dropdown menu</strong>: Allows users to choose between different ML models.</li>
 <li><strong>Slider control</strong>: Users can adjust the confidence threshold.</li>
@@ -1558,15 +1721,15 @@
 </span></span></code></pre></div><p>This generates a public Gradio link accessible anywhere.</p>
 </li>
 <li>
-<p><strong>Hosting on Hugging Face Spaces</strong>:</p>
+<p><strong>Hosting on Hugging Face Spaces</strong> (Out of scope):</p>
 <ul>
-<li>Push your script to a Hugging Face repo and create a <strong>Gradio Space</strong>.</li>
+<li>Push your script to a Hugging Face repo and create a Gradio Space.</li>
 </ul>
 </li>
 <li>
-<p><strong>Docker Deployment</strong>:</p>
+<p><strong>Docker Deployment</strong> (Out of scope):</p>
 <ul>
-<li>Containerize your app and deploy it using <strong>Docker, AWS, or Google Cloud</strong>.</li>
+<li>Containerize your app and deploy it using Docker, AWS, or Google Cloud.</li>
 </ul>
 </li>
 </ol>
@@ -1577,7 +1740,7 @@
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-10T00:00:00.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-10T10:41:37.000Z">
     <span>Last updated on</span>
     Mar 10, 2025</time>
 
