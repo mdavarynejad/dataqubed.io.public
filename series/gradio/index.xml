@@ -324,7 +324,7 @@
 &lt;a href=&#34;https://www.gradio.app/guides/multipage-apps&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Explore multi-page apps&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Integrating Gradio with Slack&lt;/strong&gt;: This guide walks you through creating a Slack bot powered by a Gradio app, making AI models easily accessible within Slack workspaces. This serves as a reminder of Gradio&amp;rsquo;s extensive customization options and the wide range of use cases it supports.
+&lt;p&gt;&lt;strong&gt;Integrating Gradio with Slack&lt;/strong&gt;: This guide walks you through creating a Slack bot powered by a Gradio app, making AI models easily accessible within Slack workspaces. This serves as a reminder of Gradio&amp;rsquo;s extensive customization options and the wide range of use cases it supports.&lt;br&gt;
 &lt;a href=&#34;https://www.gradio.app/guides/creating-a-slack-bot-from-a-gradio-app&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Build a Slack bot with Gradio&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
