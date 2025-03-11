@@ -236,7 +236,7 @@
         content="2025-03-11T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-03-11T06:56:26&#43;01:00">
+    <meta property="article:modified_time" content="2025-03-11T17:46:42&#43;01:00">
   
 
   
@@ -269,7 +269,7 @@
   ],
   
   "datePublished": "2025-03-11T00:00:00Z",
-  "dateModified": "2025-03-11T06:56:26+01:00",
+  "dateModified": "2025-03-11T17:46:42+01:00",
   
   "author": {
     "@type": "Person",
@@ -1594,6 +1594,23 @@ document.addEventListener("DOMContentLoaded", async function() {
 <li>Ensure your API returns the latest Gradio app URL in JSON format.</li>
 <li>Optionally, enhance the script to fetch a default backup URL if the API is down.</li>
 </ul>
+<p>Are you searching for alternative? Look into <a href="https://www.gradio.app/guides/gradio-lite" target="_blank" rel="noopener">gradio-lite</a>.</p>
+<html>
+	<head>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.css" />
+	</head>
+	<body>
+		<gradio-lite>
+		import gradio as gr
+
+		def greet(name):
+			return "Hello, " + name + "!"
+
+		gr.Interface(greet, "textbox", "textbox").launch()
+		</gradio-lite>
+	</body>
+</html>
 <h2 id="summary">Summary:</h2>
 <ul>
 <li>We created a Hugo partial to dynamically fetch and embed a Gradio app.</li>
@@ -1604,7 +1621,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-11T06:56:26.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-11T17:46:42.000Z">
     <span>Last updated on</span>
     Mar 11, 2025</time>
 

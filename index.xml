@@ -265,6 +265,23 @@ document.addEventListener(&#34;DOMContentLoaded&#34;, async function() {
 &lt;li&gt;Ensure your API returns the latest Gradio app URL in JSON format.&lt;/li&gt;
 &lt;li&gt;Optionally, enhance the script to fetch a default backup URL if the API is down.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Are you searching for alternative? Look into &lt;a href=&#34;https://www.gradio.app/guides/gradio-lite&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gradio-lite&lt;/a&gt;.&lt;/p&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;script type=&#34;module&#34; crossorigin src=&#34;https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js&#34;&gt;&lt;/script&gt;
+		&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.css&#34; /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;gradio-lite&gt;
+		import gradio as gr
+
+		def greet(name):
+			return &#34;Hello, &#34; + name + &#34;!&#34;
+
+		gr.Interface(greet, &#34;textbox&#34;, &#34;textbox&#34;).launch()
+		&lt;/gradio-lite&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
 &lt;h2 id=&#34;summary&#34;&gt;Summary:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;We created a Hugo partial to dynamically fetch and embed a Gradio app.&lt;/li&gt;
@@ -3784,7 +3801,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-731298564&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-654312897&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   async function fetchChartJSON() {
     console.debug(&#39;Hugo Blox fetching chart JSON...&#39;)
@@ -3802,7 +3819,7 @@ data.head()
 
       fetchChartJSON().then(chart =&gt; {
         console.debug(&#39;Plotting chart...&#39;)
-        window.Plotly.newPlot(&#39;chart-731298564&#39;, chart.data, chart.layout, {responsive: true});
+        window.Plotly.newPlot(&#39;chart-654312897&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
