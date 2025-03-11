@@ -236,7 +236,7 @@
         content="2025-03-11T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-03-11T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2025-03-11T06:56:26&#43;01:00">
   
 
   
@@ -269,7 +269,7 @@
   ],
   
   "datePublished": "2025-03-11T00:00:00Z",
-  "dateModified": "2025-03-11T00:00:00Z",
+  "dateModified": "2025-03-11T06:56:26+01:00",
   
   "author": {
     "@type": "Person",
@@ -901,7 +901,15 @@
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
         </span>
     </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col open"><a
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/building-and-testing-gradio-apps-with-codesandbox/"
+    
+  >Building and Testing Gradio Apps with CodeSandbox
+    </a>
+              
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/how-to-embed-a-dynamic-gradio-app-in-your-hugoblox-site/"
@@ -923,14 +931,6 @@
             </li>
           </ul>
   
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/setting-up-an-api-to-provide-the-gradio-url/"
-    
-  >Setting Up an API to Provide the Gradio URL
-    </a>
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -1440,7 +1440,7 @@
 <p>To keep things modular, we&rsquo;ll create a partial in Hugo, which we can reuse anywhere in our site.</p>
 <h4 id="create-the-partial-file">Create the Partial File</h4>
 <p>Save the following file in your Hugo project:</p>
-<p><code>📂 layouts/partials/gradio.html</code></p>
+<p><code>📂 layouts/shortcodes/gradio.html</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;gradio-container&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;error-message&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;display: none; color: red; font-weight: bold;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;gradio-frame&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;600px&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;border:none; display: none;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
@@ -1474,7 +1474,40 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="step-2-add-the-partial-to-your-hugo-page">Step 2: Add the Partial to Your Hugo Page</h3>
 <p>Now, in any Hugo Markdown or HTML page where you want the Gradio app, simply add:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">{{</span> <span class="n">partial</span> <span class="s2">&#34;gradio.html&#34;</span> <span class="p">}}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl"><div id="gradio-container">
+  <p id="loading-message">Loading the Gradio app, please wait...</p>
+  <p id="error-message" style="display: none; color: red; font-weight: bold;"></p>
+  <iframe id="gradio-frame" width="100%" height="600px" style="border:none; display: none;"></iframe>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", async function() {
+  const apiUrl = "https://your-api.com/get-gradio-url";
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error("API returned an error");
+    }
+
+    const data = await response.json();
+    const gradioUrl = data.url;
+
+    if (!gradioUrl) {
+      throw new Error("No URL provided by API");
+    }
+
+    document.getElementById("loading-message").style.display = "none";
+    document.getElementById("gradio-frame").src = gradioUrl;
+    document.getElementById("gradio-frame").style.display = "block";
+  } catch (error) {
+    console.error("Failed to load Gradio URL:", error);
+    document.getElementById("loading-message").style.display = "none";
+    document.getElementById("error-message").innerText = "⚠️ The Gradio app is currently unavailable. Please try again later.";
+    document.getElementById("error-message").style.display = "block";
+  }
+});
+</script>
 </span></span></code></pre></div><p>This will ensure the Gradio app gets loaded dynamically.</p>
 <h3 id="step-3-handling-api-failures-gracefully">Step 3: Handling API Failures Gracefully</h3>
 <p>To improve user experience, we can add a loading message while fetching the API and a fallback message if the API is down.</p>
@@ -1519,6 +1552,42 @@
 <li>Displays the app if the API returns a valid URL.</li>
 <li>Shows an error message if the API is down.</li>
 </ul>
+<p>So now we have a loading message (<p id="loading-message">Loading the Gradio app, please wait&hellip;</p>) that is displayed while the API request is in progress. This provides a better user experience by informing users that the app is being loaded. and once the Gradio URL is retrieved and set in the iframe, the loading message is hidden (document.getElementById(&ldquo;loading-message&rdquo;).style.display = &ldquo;none&rdquo;;). This enhances user experience by providing clear feedback during loading.</p>
+<p>Example:</p>
+<div id="gradio-container">
+  <p id="loading-message">Loading the Gradio app, please wait...</p>
+  <p id="error-message" style="display: none; color: red; font-weight: bold;"></p>
+  <iframe id="gradio-frame" width="100%" height="600px" style="border:none; display: none;"></iframe>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", async function() {
+  const apiUrl = "https://your-api.com/get-gradio-url";
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error("API returned an error");
+    }
+
+    const data = await response.json();
+    const gradioUrl = data.url;
+
+    if (!gradioUrl) {
+      throw new Error("No URL provided by API");
+    }
+
+    document.getElementById("loading-message").style.display = "none";
+    document.getElementById("gradio-frame").src = gradioUrl;
+    document.getElementById("gradio-frame").style.display = "block";
+  } catch (error) {
+    console.error("Failed to load Gradio URL:", error);
+    document.getElementById("loading-message").style.display = "none";
+    document.getElementById("error-message").innerText = "⚠️ The Gradio app is currently unavailable. Please try again later.";
+    document.getElementById("error-message").style.display = "block";
+  }
+});
+</script>
 <h3 id="next-steps">Next Steps:</h3>
 <ul>
 <li>Deploy your HugoBlox site and test it.</li>
@@ -1531,12 +1600,11 @@
 <li>We handle API failures gracefully, displaying a fallback message.</li>
 <li>This approach keeps your Hugo site flexible, with no need for rebuilds when the URL changes.</li>
 </ul>
-<p>{{ partial &ldquo;gradio.html&rdquo; }}</p>
 
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-11T00:00:00.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-11T06:56:26.000Z">
     <span>Last updated on</span>
     Mar 11, 2025</time>
 
@@ -1814,18 +1882,34 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-    </div>
-    <div class="">
-      
-        <a class="group flex text-right no-underline" href="/setting-up-an-api-to-provide-the-gradio-url/">
+        <a class="group flex no-underline" href="/building-and-testing-gradio-apps-with-codesandbox/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Setting Up an API to Provide the Gradio URL</span
-            >
+            >Building and Testing Gradio Apps with CodeSandbox</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
                 Mar 11, 2025
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+        <a class="group flex text-right no-underline" href="/building-interactive-machine-learning-applications-with-gradio/">
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >Building Interactive Machine Learning Applications with Gradio</span
+            >
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Mar 10, 2025
               
             </span>
           </span>
@@ -1849,7 +1933,7 @@
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/setting-up-an-api-to-provide-the-gradio-url/">Setting Up an API to Provide the Gradio URL</a></li>
+      <li><a href="/building-and-testing-gradio-apps-with-codesandbox/">Building and Testing Gradio Apps with CodeSandbox</a></li>
       
       <li><a href="/building-interactive-machine-learning-applications-with-gradio/">Building Interactive Machine Learning Applications with Gradio</a></li>
       
