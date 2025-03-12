@@ -290,7 +290,7 @@
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Public Sharing&lt;/strong&gt;: Add &lt;code&gt;share=True&lt;/code&gt; to &lt;code&gt;.launch()&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;iface&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;launch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;share&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This generates a public Gradio link accessible anywhere.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This generates a public, somewhat random, Gradio link accessible anywhere.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Hosting on Hugging Face Spaces&lt;/strong&gt; (Out of scope):&lt;/p&gt;
@@ -299,7 +299,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Docker Deployment&lt;/strong&gt; (Out of scope):&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://dataqubed.io/dockerizing-your-gradio-app-for-consistent-endpoints-a-seamless-deployment/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Docker Deployment&lt;/a&gt;&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Containerize your app and deploy it using Docker, AWS, or Google Cloud.&lt;/li&gt;
 &lt;/ul&gt;
