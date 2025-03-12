@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: March 11, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: March 12, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="dark">
   
 <head>
@@ -236,7 +236,7 @@
         content="2025-03-11T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2025-03-11T17:46:42&#43;01:00">
+    <meta property="article:modified_time" content="2025-03-11T18:54:28&#43;01:00">
   
 
   
@@ -269,7 +269,7 @@
   ],
   
   "datePublished": "2025-03-11T00:00:00Z",
-  "dateModified": "2025-03-11T17:46:42+01:00",
+  "dateModified": "2025-03-11T18:54:28+01:00",
   
   "author": {
     "@type": "Person",
@@ -320,6 +320,8 @@
   
 
 
+  
+  
   
   
   
@@ -904,6 +906,14 @@
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/setting-up-an-api-to-provide-the-gradio-url/"
+    
+  >Setting Up an API to Provide the Gradio URL
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/building-and-testing-gradio-apps-with-codesandbox/"
     
   >Building and Testing Gradio Apps with CodeSandbox
@@ -1383,7 +1393,7 @@
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          3 min read
+          4 min read
         </span>
         
         </div>
@@ -1440,7 +1450,7 @@
 <p>To keep things modular, we&rsquo;ll create a partial in Hugo, which we can reuse anywhere in our site.</p>
 <h4 id="create-the-partial-file">Create the Partial File</h4>
 <p>Save the following file in your Hugo project:</p>
-<p><code>📂 layouts/shortcodes/gradio.html</code></p>
+<p><code>📂 layouts/shortcodes/gradio_test.html</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;gradio-container&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;error-message&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;display: none; color: red; font-weight: bold;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;gradio-frame&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100%&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;600px&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;border:none; display: none;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
@@ -1474,44 +1484,11 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="step-2-add-the-partial-to-your-hugo-page">Step 2: Add the Partial to Your Hugo Page</h3>
 <p>Now, in any Hugo Markdown or HTML page where you want the Gradio app, simply add:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl"><div id="gradio-container">
-  <p id="loading-message">Loading the Gradio app, please wait...</p>
-  <p id="error-message" style="display: none; color: red; font-weight: bold;"></p>
-  <iframe id="gradio-frame" width="100%" height="600px" style="border:none; display: none;"></iframe>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", async function() {
-  const apiUrl = "https://your-api.com/get-gradio-url";
-
-  try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) {
-      throw new Error("API returned an error");
-    }
-
-    const data = await response.json();
-    const gradioUrl = data.url;
-
-    if (!gradioUrl) {
-      throw new Error("No URL provided by API");
-    }
-
-    document.getElementById("loading-message").style.display = "none";
-    document.getElementById("gradio-frame").src = gradioUrl;
-    document.getElementById("gradio-frame").style.display = "block";
-  } catch (error) {
-    console.error("Failed to load Gradio URL:", error);
-    document.getElementById("loading-message").style.display = "none";
-    document.getElementById("error-message").innerText = "⚠️ The Gradio app is currently unavailable. Please try again later.";
-    document.getElementById("error-message").style.display = "block";
-  }
-});
-</script>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">{{&lt; gradio_test &gt;}}
 </span></span></code></pre></div><p>This will ensure the Gradio app gets loaded dynamically.</p>
 <h3 id="step-3-handling-api-failures-gracefully">Step 3: Handling API Failures Gracefully</h3>
 <p>To improve user experience, we can add a loading message while fetching the API and a fallback message if the API is down.</p>
-<p>Updated <code>gradio.html</code> Partial with Loading Message</p>
+<p>Updated <code>gradio_test.html</code> partial shortcode with loading message:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;gradio-container&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;loading-message&#34;</span><span class="p">&gt;</span>Loading the Gradio app, please wait...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;error-message&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;display: none; color: red; font-weight: bold;&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -1595,6 +1572,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 <li>Optionally, enhance the script to fetch a default backup URL if the API is down.</li>
 </ul>
 <p>Are you searching for alternative? Look into <a href="https://www.gradio.app/guides/gradio-lite" target="_blank" rel="noopener">gradio-lite</a>.</p>
+<p>Example1:</p>
 <html>
 	<head>
 		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
@@ -1605,9 +1583,24 @@ document.addEventListener("DOMContentLoaded", async function() {
 		import gradio as gr
 
 		def greet(name):
-			return "Hello, " + name + "!"
+			return "Hello, " + name + "!" + " We are happy to see you in Y1D!"
 
 		gr.Interface(greet, "textbox", "textbox").launch()
+		</gradio-lite>
+	</body>
+</html>
+<p>Example1:</p>
+<html>
+	<head>
+		<script type="module" crossorigin src="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.css" />
+	</head>
+	<body>
+		<gradio-lite>
+		import gradio as gr
+
+		gr.themes.builder()
+
 		</gradio-lite>
 	</body>
 </html>
@@ -1621,7 +1614,7 @@ document.addEventListener("DOMContentLoaded", async function() {
       </div>
 
       
-  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-11T17:46:42.000Z">
+  <time class="mt-12 mb-8 block text-xs text-gray-500 ltr:text-right rtl:text-left dark:text-gray-400" datetime="2025-03-11T18:54:28.000Z">
     <span>Last updated on</span>
     Mar 11, 2025</time>
 

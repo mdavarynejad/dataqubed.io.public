@@ -2,28 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FastAPI | Your Data Science Mentor - Mohsen Davarynejad</title>
-    <link>http://localhost:1313/tags/fastapi/</link>
-      <atom:link href="http://localhost:1313/tags/fastapi/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://dataqubed.io/tags/fastapi/</link>
+      <atom:link href="https://dataqubed.io/tags/fastapi/index.xml" rel="self" type="application/rss+xml" />
     <description>FastAPI</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 12 Mar 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:1313/media/icon_hu_913fe0962b0e757d.png</url>
+      <url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url>
       <title>FastAPI</title>
-      <link>http://localhost:1313/tags/fastapi/</link>
+      <link>https://dataqubed.io/tags/fastapi/</link>
     </image>
     
     <item>
       <title>Setting Up an API to Provide the Gradio URL</title>
-      <link>http://localhost:1313/setting-up-an-api-to-provide-the-gradio-url/</link>
-      <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/setting-up-an-api-to-provide-the-gradio-url/</guid>
-      <description>&lt;p&gt;This post is linked to &lt;a href=&#34;dataqubed.io&#34;&gt;How to Embed a Dynamic Gradio App in Your HugoBlox Site&lt;/a&gt;, where we discussed embedding a Gradio app dynamically in HugoBlox using an API. The API serves the Gradio app URL dynamically so that the Hugo site does not need to be rebuilt every time the URL changes. Here, we&amp;rsquo;ll walk through setting up that API and deploying it.&lt;/p&gt;
+      <link>https://dataqubed.io/setting-up-an-api-to-provide-the-gradio-url/</link>
+      <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/setting-up-an-api-to-provide-the-gradio-url/</guid>
+      <description>&lt;p&gt;This post is linked to &lt;a href=&#34;https://dataqubed.io/how-to-embed-a-dynamic-gradio-app-in-your-hugoblox-site/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;How to Embed a Dynamic Gradio App in Your HugoBlox Site&lt;/a&gt;, where we discussed embedding a Gradio app dynamically in HugoBlox using an API. The API serves the Gradio app URL dynamically so that the Hugo site does not need to be rebuilt every time the URL changes. Here, we&amp;rsquo;ll walk through setting up that API and deploying it.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;step-1-create-a-simple-api-to-serve-the-gradio-url&#34;&gt;Step 1: Create a Simple API to Serve the Gradio URL&lt;/h3&gt;
 &lt;p&gt;We&amp;rsquo;ll use FastAPI (Python) to create a simple API that returns the Gradio app URL in JSON format.&lt;/p&gt;
 &lt;h4 id=&#34;1-install-fastapi-and-uvicorn&#34;&gt;1. Install FastAPI and Uvicorn&lt;/h4&gt;
 &lt;p&gt;If you haven&amp;rsquo;t already, install FastAPI and Uvicorn:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install fastapi uvicorn
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and before that of course you need to make a venv, activate it and update the pip.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade -y
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install -y python3-venv
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python3 -m venv api-env
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; api-env/bin/activate
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install --upgrade pip
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;2-create-the-api-server-apppy&#34;&gt;2. Create the API Server (&lt;code&gt;app.py&lt;/code&gt;)&lt;/h4&gt;
 &lt;p&gt;Create a file called &lt;code&gt;app.py&lt;/code&gt; and add the following code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;fastapi&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FastAPI&lt;/span&gt;
@@ -90,7 +96,7 @@
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;https://your-vercel-app.vercel.app/api/get-gradio-url
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-4-update-your-hugoblox-site&#34;&gt;Step 4: Update Your HugoBlox Site&lt;/h3&gt;
-&lt;p&gt;Once your API is live, update the API URL in your Hugo partial (&lt;code&gt;gradio.html&lt;/code&gt;):&lt;/p&gt;
+&lt;p&gt;Once your API is live, update the API URL in your Hugo shortcode (&lt;code&gt;gradio.html&lt;/code&gt;):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addEventListener&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;DOMContentLoaded&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;async&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;apiUrl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://your-deployed-api.com/get-gradio-url&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Replace with your actual API URL

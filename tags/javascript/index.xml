@@ -29,7 +29,7 @@
 &lt;p&gt;To keep things modular, we&amp;rsquo;ll create a partial in Hugo, which we can reuse anywhere in our site.&lt;/p&gt;
 &lt;h4 id=&#34;create-the-partial-file&#34;&gt;Create the Partial File&lt;/h4&gt;
 &lt;p&gt;Save the following file in your Hugo project:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;📂 layouts/shortcodes/gradio.html&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;📂 layouts/shortcodes/gradio_test.html&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;gradio-container&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;error-message&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;display: none; color: red; font-weight: bold;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;iframe&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;gradio-frame&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;100%&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;600px&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;border:none; display: none;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;iframe&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -63,44 +63,11 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;step-2-add-the-partial-to-your-hugo-page&#34;&gt;Step 2: Add the Partial to Your Hugo Page&lt;/h3&gt;
 &lt;p&gt;Now, in any Hugo Markdown or HTML page where you want the Gradio app, simply add:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;div id=&#34;gradio-container&#34;&gt;
-  &lt;p id=&#34;loading-message&#34;&gt;Loading the Gradio app, please wait...&lt;/p&gt;
-  &lt;p id=&#34;error-message&#34; style=&#34;display: none; color: red; font-weight: bold;&#34;&gt;&lt;/p&gt;
-  &lt;iframe id=&#34;gradio-frame&#34; width=&#34;100%&#34; height=&#34;600px&#34; style=&#34;border:none; display: none;&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-document.addEventListener(&#34;DOMContentLoaded&#34;, async function() {
-  const apiUrl = &#34;https://your-api.com/get-gradio-url&#34;;
-
-  try {
-    const response = await fetch(apiUrl);
-    if (!response.ok) {
-      throw new Error(&#34;API returned an error&#34;);
-    }
-
-    const data = await response.json();
-    const gradioUrl = data.url;
-
-    if (!gradioUrl) {
-      throw new Error(&#34;No URL provided by API&#34;);
-    }
-
-    document.getElementById(&#34;loading-message&#34;).style.display = &#34;none&#34;;
-    document.getElementById(&#34;gradio-frame&#34;).src = gradioUrl;
-    document.getElementById(&#34;gradio-frame&#34;).style.display = &#34;block&#34;;
-  } catch (error) {
-    console.error(&#34;Failed to load Gradio URL:&#34;, error);
-    document.getElementById(&#34;loading-message&#34;).style.display = &#34;none&#34;;
-    document.getElementById(&#34;error-message&#34;).innerText = &#34;⚠️ The Gradio app is currently unavailable. Please try again later.&#34;;
-    document.getElementById(&#34;error-message&#34;).style.display = &#34;block&#34;;
-  }
-});
-&lt;/script&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;{{&amp;lt; gradio_test &amp;gt;}}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will ensure the Gradio app gets loaded dynamically.&lt;/p&gt;
 &lt;h3 id=&#34;step-3-handling-api-failures-gracefully&#34;&gt;Step 3: Handling API Failures Gracefully&lt;/h3&gt;
 &lt;p&gt;To improve user experience, we can add a loading message while fetching the API and a fallback message if the API is down.&lt;/p&gt;
-&lt;p&gt;Updated &lt;code&gt;gradio.html&lt;/code&gt; Partial with Loading Message&lt;/p&gt;
+&lt;p&gt;Updated &lt;code&gt;gradio_test.html&lt;/code&gt; partial shortcode with loading message:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;gradio-container&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;loading-message&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Loading the Gradio app, please wait...&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;error-message&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;display: none; color: red; font-weight: bold;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -184,6 +151,7 @@ document.addEventListener(&#34;DOMContentLoaded&#34;, async function() {
 &lt;li&gt;Optionally, enhance the script to fetch a default backup URL if the API is down.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Are you searching for alternative? Look into &lt;a href=&#34;https://www.gradio.app/guides/gradio-lite&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gradio-lite&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Example1:&lt;/p&gt;
 &lt;html&gt;
 	&lt;head&gt;
 		&lt;script type=&#34;module&#34; crossorigin src=&#34;https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js&#34;&gt;&lt;/script&gt;
@@ -194,9 +162,24 @@ document.addEventListener(&#34;DOMContentLoaded&#34;, async function() {
 		import gradio as gr
 
 		def greet(name):
-			return &#34;Hello, &#34; + name + &#34;!&#34;
+			return &#34;Hello, &#34; + name + &#34;!&#34; + &#34; We are happy to see you in Y1D!&#34;
 
 		gr.Interface(greet, &#34;textbox&#34;, &#34;textbox&#34;).launch()
+		&lt;/gradio-lite&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+&lt;p&gt;Example1:&lt;/p&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;script type=&#34;module&#34; crossorigin src=&#34;https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js&#34;&gt;&lt;/script&gt;
+		&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.css&#34; /&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;gradio-lite&gt;
+		import gradio as gr
+
+		gr.themes.builder()
+
 		&lt;/gradio-lite&gt;
 	&lt;/body&gt;
 &lt;/html&gt;

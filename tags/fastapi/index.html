@@ -1,9 +1,9 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: March 11, 2025 --><html lang="en-us" dir="ltr"
+<!-- Last Published: March 12, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="dark">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -44,7 +44,7 @@
   <meta name="description" content="ML and Data science System design and around it!" />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:1313/tags/fastapi/" />
+  <link rel="alternate" hreflang="en-us" href="https://dataqubed.io/tags/fastapi/" />
 
   
   
@@ -130,6 +130,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5TEYHTBD2S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-5TEYHTBD2S', { 'anonymize_ip': true });
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -163,7 +202,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu_59b3b2356dce98dc.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu_a1c3b43b88d9caf8.png" />
 
-  <link rel="canonical" href="http://localhost:1313/tags/fastapi/" />
+  <link rel="canonical" href="https://dataqubed.io/tags/fastapi/" />
 
   
   
@@ -189,13 +228,13 @@
     <meta property="twitter:creator" content="@mdavarynejad" />
   
   <meta property="og:site_name" content="Your Data Science Mentor - Mohsen Davarynejad" />
-  <meta property="og:url" content="http://localhost:1313/tags/fastapi/" />
+  <meta property="og:url" content="https://dataqubed.io/tags/fastapi/" />
   <meta property="og:title" content="FastAPI | Your Data Science Mentor - Mohsen Davarynejad" />
-  <meta property="og:description" content="ML and Data science System design and around it!" /><meta property="og:image" content="http://localhost:1313/media/icon_hu_913fe0962b0e757d.png" />
-    <meta property="twitter:image" content="http://localhost:1313/media/icon_hu_913fe0962b0e757d.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="ML and Data science System design and around it!" /><meta property="og:image" content="https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png" />
+    <meta property="twitter:image" content="https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2025-03-11T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2025-03-12T00:00:00&#43;00:00" />
     
   
 
@@ -231,6 +270,8 @@
   
 
 
+  
+  
   
   
   
@@ -738,8 +779,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/js/hugo-blox-en.min.47736f84e20cae1bb2224dc4605239689e913811575e32b5f86a700ee9d6529d.js"
+    integrity="sha256-R3NvhOIMrhuyIk3EYFI5aJ6ROBFXXjK1&#43;GpwDunWUp0="
   ></script>
 
   
@@ -974,7 +1015,7 @@
       <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Setting Up an API to Provide the Gradio URL</div>
       <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
         Learn how to set up a simple API that dynamically provides the Gradio app URL for use in HugoBlox.</p>
-      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Mar 11, 2025</p>
+      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Mar 12, 2025</p>
     </div>
   </div>
 </a>
