@@ -228,8 +228,8 @@
 &lt;li&gt;Displays the app if the API returns a valid URL.&lt;/li&gt;
 &lt;li&gt;Shows an error message if the API is down.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;So now we have a loading message (&lt;p id=&#34;loading-message&#34;&gt;Loading the Gradio app, please wait&amp;hellip;&lt;/p&gt;) that is displayed while the API request is in progress. This provides a better user experience by informing users that the app is being loaded. and once the Gradio URL is retrieved and set in the iframe, the loading message is hidden (document.getElementById(&amp;ldquo;loading-message&amp;rdquo;).style.display = &amp;ldquo;none&amp;rdquo;;). This enhances user experience by providing clear feedback during loading.&lt;/p&gt;
-&lt;p&gt;Example:&lt;/p&gt;
+&lt;p&gt;So now we have a loading message that is displayed while the API request is in progress. This provides a better user experience by informing users that the app is being loaded. And once the Gradio URL is retrieved and set in the iframe, the loading message is hidden. This enhances user experience by providing clear feedback during loading.&lt;/p&gt;
+&lt;p&gt;Example 1:&lt;/p&gt;
 &lt;div id=&#34;gradio-container&#34;&gt;
   &lt;p id=&#34;loading-message&#34;&gt;Loading the Gradio app, please wait...&lt;/p&gt;
   &lt;p id=&#34;error-message&#34; style=&#34;display: none; color: red; font-weight: bold;&#34;&gt;&lt;/p&gt;
@@ -271,7 +271,7 @@ document.addEventListener(&#34;DOMContentLoaded&#34;, async function() {
 &lt;li&gt;Optionally, enhance the script to fetch a default backup URL if the API is down.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Are you searching for alternative? Look into &lt;a href=&#34;https://www.gradio.app/guides/gradio-lite&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gradio-lite&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Example1:&lt;/p&gt;
+&lt;p&gt;Example 2:&lt;/p&gt;
 &lt;html&gt;
 	&lt;head&gt;
 		&lt;script type=&#34;module&#34; crossorigin src=&#34;https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js&#34;&gt;&lt;/script&gt;
@@ -288,7 +288,7 @@ document.addEventListener(&#34;DOMContentLoaded&#34;, async function() {
 		&lt;/gradio-lite&gt;
 	&lt;/body&gt;
 &lt;/html&gt;
-&lt;p&gt;Example1:&lt;/p&gt;
+&lt;p&gt;Example 3:&lt;/p&gt;
 &lt;html&gt;
 	&lt;head&gt;
 		&lt;script type=&#34;module&#34; crossorigin src=&#34;https://cdn.jsdelivr.net/npm/@gradio/lite/dist/lite.js&#34;&gt;&lt;/script&gt;

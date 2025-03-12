@@ -7,11 +7,19 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/api/</loc>
-    <lastmod>2025-03-11T18:54:28+01:00</lastmod>
+    <lastmod>2025-03-12T10:18:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/deployment/</loc>
-    <lastmod>2025-03-11T18:54:28+01:00</lastmod>
+    <lastmod>2025-03-12T10:18:24+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/docker/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/dockerizing-your-gradio-app-for-consistent-endpoints-a-seamless-deployment/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/fastapi/</loc>
@@ -19,7 +27,11 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/gradio/</loc>
-    <lastmod>2025-03-11T18:54:28+01:00</lastmod>
+    <lastmod>2025-03-12T10:18:24+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/machine-learning/</loc>
+    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/setting-up-an-api-to-provide-the-gradio-url/</loc>
@@ -27,23 +39,23 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/</loc>
-    <lastmod>2025-03-11T18:54:28+01:00</lastmod>
+    <lastmod>2025-03-12T10:18:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/building-and-testing-gradio-apps-with-codesandbox/</loc>
-    <lastmod>2025-03-11T18:54:28+01:00</lastmod>
+    <lastmod>2025-03-12T10:18:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/codesandbox/</loc>
-    <lastmod>2025-03-11T18:54:28+01:00</lastmod>
+    <lastmod>2025-03-12T10:18:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/how-to-embed-a-dynamic-gradio-app-in-your-hugoblox-site/</loc>
-    <lastmod>2025-03-11T18:54:28+01:00</lastmod>
+    <lastmod>2025-03-12T10:18:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/javascript/</loc>
-    <lastmod>2025-03-11T18:54:28+01:00</lastmod>
+    <lastmod>2025-03-12T10:18:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/building-interactive-machine-learning-applications-with-gradio/</loc>
