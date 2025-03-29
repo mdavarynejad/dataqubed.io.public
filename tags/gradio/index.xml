@@ -5,7 +5,7 @@
     <link>https://dataqubed.io/tags/gradio/</link>
       <atom:link href="https://dataqubed.io/tags/gradio/index.xml" rel="self" type="application/rss+xml" />
     <description>Gradio</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 12 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url>
       <title>Gradio</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Dockerizing Your Gradio App for Consistent Endpoints; A Seamless Deployment</title>
       <link>https://dataqubed.io/dockerizing-your-gradio-app-for-consistent-endpoints-a-seamless-deployment/</link>
-      <pubDate>Wed, 12 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://dataqubed.io/dockerizing-your-gradio-app-for-consistent-endpoints-a-seamless-deployment/</guid>
       <description>&lt;p&gt;When developing machine learning applications, ease of deployment is often overlooked in favor of model accuracy and performance. However, an ML model is only as valuable as its accessibility. Enter Gradio, an intuitive library that allows developers to create user-friendly web interfaces for their ML models. But while Gradio makes UI development easy, deployment and scaling remain a challenge—unless you containerize your app with Docker.&lt;/p&gt;
 &lt;p&gt;One common frustration when using &lt;code&gt;share=True&lt;/code&gt; in Gradio is that it generates a random URL each time the app is deployed. This makes it difficult to maintain a consistent endpoint for users or external integrations. By dockerizing the Gradio app, we solve this issue by providing a fixed and stable local or cloud-based URL for deployment.&lt;/p&gt;

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLM | Your Data Science Mentor - Mohsen Davarynejad</title>
+    <link>https://dataqubed.io/tags/llm/</link>
+      <atom:link href="https://dataqubed.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <description>LLM</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url>
+      <title>LLM</title>
+      <link>https://dataqubed.io/tags/llm/</link>
+    </image>
+    
+    <item>
+      <title>Optimizing Query Context Handling in RAG Systems- Embedding vs. LLM Rewriting</title>
+      <link>https://dataqubed.io/optimizing-query-context-handling-in-rag-systems-embedding-vs.-llm-rewriting/</link>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/optimizing-query-context-handling-in-rag-systems-embedding-vs.-llm-rewriting/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Efficiently handling follow-up or context-dependent questions is crucial for building high-performing Retrieval-Augmented Generation (RAG) systems. Users often provide only partial or ambiguous queries—particularly in conversational or UI-driven contexts—making it essential to supply the model with sufficient background information. This guide explores two main strategies to address this challenge:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Embedding the Full Query Context&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LLM-Based Query Rewriting&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We’ll examine the advantages, limitations, and practical use cases of each, as well as a hybrid approach that can balance speed and accuracy.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;strategy-1-embedding-the-full-query-context&#34;&gt;Strategy 1: Embedding the Full Query Context&lt;/h2&gt;
+&lt;h3 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h3&gt;
+&lt;p&gt;This method combines all past user interactions with the latest query into a single text string before generating an embedding. For example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;QUERY1:&lt;/strong&gt; How should I write my project proposal?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;QUERY2:&lt;/strong&gt; What structure should the proposal follow?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;QUERY3:&lt;/strong&gt; Do I need to add references?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These strings are concatenated into a single block of text, then converted into an embedding (using a model such as a sentence transformer or OpenAI embeddings) for querying a vector store (e.g., FAISS).&lt;/p&gt;
+&lt;h3 id=&#34;advantages&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Efficiency:&lt;/strong&gt; Avoids additional LLM calls, thus reducing latency.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Simplicity:&lt;/strong&gt; Easy to implement in existing retrieval pipelines.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Context Preservation:&lt;/strong&gt; Maintains the natural progression of conversation history.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;limitations&#34;&gt;Limitations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Semantic Dilution:&lt;/strong&gt; Multiple combined queries can dilute the specific intent of the latest question.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ambiguity Handling:&lt;/strong&gt; Vague references (“this,” “that,” etc.) may remain unresolved.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Noise Sensitivity:&lt;/strong&gt; Off-topic or irrelevant content in the history can negatively impact retrieval.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;strategy-2-llm-based-query-rewriting&#34;&gt;Strategy 2: LLM-Based Query Rewriting&lt;/h2&gt;
+&lt;h3 id=&#34;how-it-works-1&#34;&gt;How It Works&lt;/h3&gt;
+&lt;p&gt;Instead of embedding the raw conversation history, you first prompt an LLM to rewrite the user’s latest query into a fully self-contained question. For example:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Previous Questions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How should I write my project proposal?&lt;/li&gt;
+&lt;li&gt;What structure should the proposal follow?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Current Question:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Do I need to add references?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Instruction:&lt;/strong&gt;&lt;br&gt;
+Rewrite the above conversation into a standalone, context-rich query.&lt;/p&gt;
+&lt;p&gt;The LLM might respond:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Do I need to include APA-style references in my project proposal for Move Tickers?”&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Only this rewritten query is then embedded and used to query your vector database.&lt;/p&gt;
+&lt;h3 id=&#34;advantages-1&#34;&gt;Advantages&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Disambiguation:&lt;/strong&gt; Resolves unclear or informal prompts by adding explicit context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improved Retrieval Accuracy:&lt;/strong&gt; Focuses on the core intent of the question.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User-Friendly:&lt;/strong&gt; Ideal for conversational interfaces where follow-up prompts may be minimal or ambiguous.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;limitations-1&#34;&gt;Limitations&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Additional Latency:&lt;/strong&gt; Each rewrite requires an extra LLM call, adding cost and processing time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Potential Over-Correction:&lt;/strong&gt; Poorly tuned prompts may lead to rewriting with unintended details.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Implementation Complexity:&lt;/strong&gt; Requires integrating another LLM call and related logic into your pipeline.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;when-to-use-each-strategy&#34;&gt;When to Use Each Strategy&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Scenario&lt;/th&gt;
+          &lt;th&gt;Full Context Embedding&lt;/th&gt;
+          &lt;th&gt;LLM Rewriting&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Low-latency applications&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;✅ Optimal&lt;/td&gt;
+          &lt;td&gt;❌ May add delay&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Well-formed, coherent queries&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;✅ Suitable&lt;/td&gt;
+          &lt;td&gt;❌ Unnecessary&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Short, vague user inputs&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;⚠️ Potential issues&lt;/td&gt;
+          &lt;td&gt;✅ Highly effective&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;High-accuracy retrieval requirements&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;❌ May dilute intent&lt;/td&gt;
+          &lt;td&gt;✅ Offers clarity&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Conversational UIs with multiple follow-up questions&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;⚠️ Context can degrade&lt;/td&gt;
+          &lt;td&gt;✅ Clarifies ambiguity&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Cost-sensitive environments&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;✅ Lower cost&lt;/td&gt;
+          &lt;td&gt;❌ Additional expense&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;a-hybrid-approach-combining-the-best-of-both-worlds&#34;&gt;A Hybrid Approach: Combining the Best of Both Worlds&lt;/h2&gt;
+&lt;p&gt;Many real-world scenarios benefit from a hybrid strategy:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Primary Path:&lt;/strong&gt; Embed the full query context as the default approach to keep latency and costs low.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fallback Mechanism:&lt;/strong&gt; If the system detects a poor match or low-confidence retrieval, invoke the LLM to rewrite the query. This second pass can clarify the request and lead to better results.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;By blending speed (embedding) with precision (LLM rewriting), you can handle a broad range of user queries effectively.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The choice between embedding the full context and using an LLM to rewrite the query depends on your specific requirements for speed, accuracy, and cost. Embedding the entire conversation is simple and low-latency but can dilute focus on the latest query. LLM rewriting excels in clarifying ambiguous prompts but introduces added cost and complexity. A hybrid strategy often delivers the best balance, harnessing both speed and precision to maintain robust performance.&lt;/p&gt;
+&lt;p&gt;If you need guidance on implementing or fine-tuning these strategies, feel free to get in touch!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
