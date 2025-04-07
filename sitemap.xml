@@ -7,43 +7,51 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/llm/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/series/llms/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/optimizing-query-context-handling-in-rag-systems-embedding-vs.-llm-rewriting/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/query-context/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/rag/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/</loc>
-    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/transforming-mobility-intelligence-meet-transgpt/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/transportation/</loc>
+    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/series/llms/</loc>
+    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/optimizing-query-context-handling-in-rag-systems-embedding-vs.-llm-rewriting/</loc>
+    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/query-context/</loc>
+    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/rag/</loc>
+    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/docker/</loc>
-    <lastmod>2025-03-12T20:14:45+01:00</lastmod>
+    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/dockerizing-your-gradio-app-for-consistent-endpoints-a-seamless-deployment/</loc>
-    <lastmod>2025-03-12T20:14:45+01:00</lastmod>
+    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/gradio/</loc>
-    <lastmod>2025-03-12T20:45:01+01:00</lastmod>
+    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/machine-learning/</loc>
-    <lastmod>2025-03-12T20:14:45+01:00</lastmod>
+    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/api/</loc>
@@ -216,14 +224,6 @@
   </url><url>
     <loc>https://dataqubed.io/pyspark-module-5.1/</loc>
     <lastmod>2025-03-05T18:12:59+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/how-to-deploy-your-hugo-site-to-github-pages-a-simple-step-by-step-guide/</loc>
-    <lastmod>2024-08-19T18:57:18+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/hugo/</loc>
-    <lastmod>2024-08-19T18:57:18+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/pyspark-module-5.0/</loc>
