@@ -5,12 +5,100 @@
     <link>https://dataqubed.io/tags/rag/</link>
       <atom:link href="https://dataqubed.io/tags/rag/index.xml" rel="self" type="application/rss+xml" />
     <description>RAG</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 08 Apr 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url>
       <title>RAG</title>
       <link>https://dataqubed.io/tags/rag/</link>
     </image>
+    
+    <item>
+      <title>AI as System /#1 -  Smarter Search with RQ-RAG</title>
+      <link>https://dataqubed.io/ai-as-system-/%231-smarter-search-with-rq-rag/</link>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://dataqubed.io/ai-as-system-/%231-smarter-search-with-rq-rag/</guid>
+      <description>&lt;h2 id=&#34;about-ai-as-system&#34;&gt;About &lt;em&gt;AI as System&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;AI as System&lt;/em&gt; is a series about understanding artificial intelligence not as isolated models, but as components in larger systems.&lt;br&gt;
+Each post explores how AI behaves when embedded in real-world workflows—retrieving information, making decisions, adapting to context, or supporting human users.&lt;/p&gt;
+&lt;p&gt;Whether you&amp;rsquo;re working in logistics, education, product development, or research, this series helps you think in systems.&lt;br&gt;
+By following real examples across domains and AI subfields, we explore how intelligence emerges through structure, interaction, and feedback—not just through parameters.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-the-problem-why&#34;&gt;1. The Problem (&lt;em&gt;Why&lt;/em&gt;)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Why do some LLMs give half-right or vague answers even when they have access to search tools?&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Most Retrieval-Augmented Generation (RAG) systems take the user&amp;rsquo;s query and pass it &lt;em&gt;as-is&lt;/em&gt; to the retriever.&lt;br&gt;
+If the query is ambiguous, multi-hop, or under-specified, the retriever brings back noisy or irrelevant documents.&lt;br&gt;
+This ruins the quality of the final answer—even with powerful LLMs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-the-core-idea-what&#34;&gt;2. The Core Idea (&lt;em&gt;What&lt;/em&gt;)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don’t just retrieve. Refine the question first.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;RQ-RAG&lt;/strong&gt; (Refined Query RAG) teaches a model to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Rewrite ambiguous or complex queries&lt;/li&gt;
+&lt;li&gt;Decompose multi-hop questions into simpler ones&lt;/li&gt;
+&lt;li&gt;Disambiguate vague phrases&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This improves the retriever&amp;rsquo;s performance and leads to more grounded, accurate responses.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-a-running-example-how&#34;&gt;3. A Running Example (&lt;em&gt;How&lt;/em&gt;)&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Original Query:&lt;/strong&gt;&lt;br&gt;
+Who was the US president when the Berlin Wall fell, and what was his stance on the event?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Refined Sub-Queries:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;When did the Berlin Wall fall?&lt;/li&gt;
+&lt;li&gt;Who was the US president in November 1989?&lt;/li&gt;
+&lt;li&gt;What was George H. W. Bush&amp;rsquo;s stance on the fall of the Berlin Wall?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Each sub-question is focused and retrievable.&lt;br&gt;
+The model retrieves documents for each one, then generates a high-quality answer by composing them.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-under-the-hood&#34;&gt;4. Under the Hood&lt;/h2&gt;
+&lt;h3 id=&#34;training-the-refiner&#34;&gt;Training the Refiner&lt;/h3&gt;
+&lt;p&gt;The authors fine-tuned a language model (like LLaMA2-7B) on QA datasets such as HotpotQA and MuSiQue.&lt;/p&gt;
+&lt;p&gt;Each training sample looks like:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Where did the scientist who developed the polio vaccine study?&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;#34;output&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;Who developed the polio vaccine?&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;Where did Jonas Salk study?&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;rq-rag-pipeline&#34;&gt;RQ-RAG Pipeline&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;User Query&lt;/strong&gt; → passed to a Query Refiner&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Refined Queries&lt;/strong&gt; → used to retrieve documents&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Retrieved Docs&lt;/strong&gt; → passed to a Generator LLM&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Final Answer&lt;/strong&gt; → grounded in facts, clear and complete&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;5-try-it-yourself&#34;&gt;5. Try It Yourself&lt;/h2&gt;
+&lt;p&gt;You can test this workflow with OpenAI or LLaMA models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prompt Template:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Decompose the following question into simpler, factual sub-questions that can each be answered directly.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Question: Who was the US president when the Berlin Wall fell, and what was his stance on the event?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Decomposed Questions:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. When did the Berlin Wall fall?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. Who was the US president in November 1989?
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. What was George H. W. Bush&amp;#39;s stance on the fall of the Berlin Wall?
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Use the sub-questions to retrieve more precise documents.&lt;br&gt;
+Then synthesize the final answer using a language model.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-why-it-matters&#34;&gt;6. Why It Matters&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Makes your retrieval smarter, not just louder&lt;/li&gt;
+&lt;li&gt;Boosts accuracy in multi-hop QA&lt;/li&gt;
+&lt;li&gt;Works well even with smaller LLMs&lt;/li&gt;
+&lt;li&gt;Helps build systems that understand before they search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Next in AI as System:&lt;/strong&gt;&lt;br&gt;
+How agentic systems use memory, feedback, and tools to complete multi-step tasks in uncertain domains.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2402.07233&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Read the full paper here (arXiv:2402.07233)&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Optimizing Query Context Handling in RAG Systems- Embedding vs. LLM Rewriting</title>

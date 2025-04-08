@@ -6,12 +6,24 @@
     <lastmod>2024-08-14T16:26:02+02:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://dataqubed.io/series/ai-as-system/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/ai-as-system-/%231-smarter-search-with-rq-rag/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://dataqubed.io/tags/llm/</loc>
-    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://dataqubed.io/tags/rag/</loc>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/</loc>
-    <lastmod>2025-04-07T00:00:00+00:00</lastmod>
+    <lastmod>2025-04-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/transforming-mobility-intelligence-meet-transgpt/</loc>
@@ -23,19 +35,15 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/series/llms/</loc>
-    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
+    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/optimizing-query-context-handling-in-rag-systems-embedding-vs.-llm-rewriting/</loc>
-    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
+    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/query-context/</loc>
-    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://dataqubed.io/tags/rag/</loc>
-    <lastmod>2025-03-29T14:39:24+01:00</lastmod>
+    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/docker/</loc>
@@ -103,7 +111,7 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/agenticai/</loc>
-    <lastmod>2025-03-10T09:40:05+01:00</lastmod>
+    <lastmod>2025-03-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/series/</loc>
@@ -111,39 +119,39 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/building-agentic-ai-solutions-with-deepseek-r1-crewai-and-cloud-agnostic-deployment-on-ubuntu/</loc>
-    <lastmod>2025-03-10T09:40:05+01:00</lastmod>
+    <lastmod>2025-03-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/businessefficiency/</loc>
-    <lastmod>2025-03-10T09:40:05+01:00</lastmod>
+    <lastmod>2025-03-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/crewai/</loc>
-    <lastmod>2025-03-10T09:40:05+01:00</lastmod>
+    <lastmod>2025-03-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/deploying-deepseek-r1-locally-with-vllm-on-ubuntu/</loc>
-    <lastmod>2025-03-09T08:30:32+01:00</lastmod>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/decoding-a-million-emails-agentic-ai-for-analysis-of-elon-musks-challenge/</loc>
-    <lastmod>2025-03-07T13:10:17+01:00</lastmod>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/series/million-emails/</loc>
-    <lastmod>2025-03-07T13:10:17+01:00</lastmod>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/deepseek/</loc>
-    <lastmod>2025-03-07T13:10:17+01:00</lastmod>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/orchestrating-ai-agents-with-crewai-and-local-deepseek-api/</loc>
-    <lastmod>2025-03-07T13:10:17+01:00</lastmod>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/running-deepseek-r1-locally-with-vllm-ray-dashboard/</loc>
-    <lastmod>2025-03-07T13:10:17+01:00</lastmod>
+    <lastmod>2025-02-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://dataqubed.io/tags/links/</loc>
