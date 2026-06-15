@@ -1,189 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>H2O | Your Data Science Mentor - Mohsen Davarynejad</title>
-    <link>https://dataqubed.io/tags/h2o/</link>
-      <atom:link href="https://dataqubed.io/tags/h2o/index.xml" rel="self" type="application/rss+xml" />
-    <description>H2O</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url>
-      <title>H2O</title>
-      <link>https://dataqubed.io/tags/h2o/</link>
-    </image>
-    
-    <item>
-      <title>PySpark - Sparkling Water - Module 6.2</title>
-      <link>https://dataqubed.io/pyspark-sparkling-water-module-6.2/</link>
-      <pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/pyspark-sparkling-water-module-6.2/</guid>
-      <description>&lt;h2 id=&#34;installing-h2o-on-wsl-ubuntu-2204&#34;&gt;Installing H2O on WSL Ubuntu 22.04&lt;/h2&gt;
-&lt;p&gt;In this guide, I&amp;rsquo;ll walk you through the steps to install H2O on a WSL (Windows Subsystem for Linux) Ubuntu 22.04 environment. We assume you already have Java 11 and Jupyter Notebook installed and running. By the end, you&amp;rsquo;ll be able to access the H2O web UI directly from your Windows machine.&lt;/p&gt;
-&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;WSL running Ubuntu 22.04.&lt;/li&gt;
-&lt;li&gt;Java 11 installed (required for H2O).&lt;/li&gt;
-&lt;li&gt;Jupyter Notebook already installed and running.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;step-1-install-h2o-on-ubuntu&#34;&gt;Step 1: Install H2O on Ubuntu&lt;/h3&gt;
-&lt;p&gt;First, we need to install the H2O Python module, which will allow us to run H2O directly within our Jupyter Notebook and also access the H2O web interface. Follow these steps:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Update your system packages:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade -y
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Install Python dependencies:&lt;/strong&gt;
-Ensure &lt;code&gt;pip&lt;/code&gt; is installed and up-to-date:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install python3-pip -y
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip3 install --upgrade pip
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Install the H2O Python library:&lt;/strong&gt;
-Use the following commands to install the H2O Python library from the H2O repository:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip3 install h2o
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Verify the installation:&lt;/strong&gt;
-To verify that H2O was successfully installed, open Python in your terminal and run the following commands:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;h2o&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h2o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If the installation was successful, you should see a message indicating that H2O is running locally.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;step-2-configuring-h2o-web-ui-for-remote-access&#34;&gt;Step 2: Configuring H2O Web UI for Remote Access&lt;/h3&gt;
-&lt;p&gt;Now, let&amp;rsquo;s configure the H2O web interface to be accessible from your Windows machine. H2O’s web interface runs on a specific port (default is &lt;code&gt;54321&lt;/code&gt;), and we&amp;rsquo;ll expose this port so that you can access it via a browser on Windows.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Start H2O:&lt;/strong&gt;
-Open Python in your WSL terminal, and start H2O using:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;h2o&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h2o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bind_to_localhost&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;54321&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;bind_to_localhost=False&lt;/code&gt;: This ensures that H2O listens on all available interfaces.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;port=54321&lt;/code&gt;: This specifies the port on which H2O will run.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Check WSL Network Settings:&lt;/strong&gt;
-To find the IP address of your WSL instance, run:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hostname -I
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will return the IP address (e.g., &lt;code&gt;172.22.66.1&lt;/code&gt;) that we will use to access H2O from your Windows browser.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;step-3-accessing-h2o-web-ui-from-windows&#34;&gt;Step 3: Accessing H2O Web UI from Windows&lt;/h3&gt;
-&lt;p&gt;With H2O running, you can now access the H2O web interface from your Windows machine.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Open a browser on Windows (Chrome, Firefox, etc.).&lt;/li&gt;
-&lt;li&gt;Enter the following URL in your browser’s address bar, replacing &lt;code&gt;&amp;lt;WSL_IP&amp;gt;&lt;/code&gt; with the IP address you retrieved earlier:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://&amp;lt;WSL_IP&amp;gt;:54321
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;For example, if your WSL IP is &lt;code&gt;172.22.66.1&lt;/code&gt;, you would enter:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://172.22.66.1:54321
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should now see the H2O web interface, where you can manage models, datasets, and much more. Get yourself familiarized with the H2O web interface.&lt;/p&gt;
-&lt;p&gt;You might also want to explore the &lt;code&gt;H2O Wave&lt;/code&gt; Web App for building AI web based applications. See the Youtube video bellow.&lt;/p&gt;
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/5Ba6fE8WF8Q?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;p&gt;Or you might as well want to look into &lt;a href=&#34;https://github.com/h2oai/wave&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wave Git Repo&lt;/a&gt; if you have interest in bulding ML web application.&lt;/p&gt;
-&lt;h3 id=&#34;step-4-running-h2o-in-jupyter-notebooks&#34;&gt;Step 4: Running H2O in Jupyter Notebooks&lt;/h3&gt;
-&lt;p&gt;Now that H2O is installed and accessible via the web interface, you can also run it in your Jupyter Notebook.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Launch Jupyter Notebook from your WSL terminal:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;jupyter notebook
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;In a new notebook, use the following code to initialize H2O:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;h2o&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;h2o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;init&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will initialize H2O and you can start working with it within your Jupyter environment.&lt;/p&gt;
-&lt;p&gt;References:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;H2O Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>PySpark - Sparkling Water - Module 6.1</title>
-      <link>https://dataqubed.io/pyspark-sparkling-water-module-6.1/</link>
-      <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/pyspark-sparkling-water-module-6.1/</guid>
-      <description>&lt;h2 id=&#34;introduction-to-distributed-machine-learning-a-practical-approach-with-h2o-and-sparkling-water&#34;&gt;Introduction to Distributed Machine Learning: A Practical Approach with H2O and Sparkling Water&lt;/h2&gt;
-&lt;p&gt;As datasets continue to grow in size, the limitations of traditional machine learning systems become more apparent. The need to process, analyze, and train models on massive datasets calls for a new approach—&lt;strong&gt;Distributed Machine Learning&lt;/strong&gt;. In this module, we will explore the basics of distributed ML through analogies, architectures, real-world applications, and tools like H2O and Sparkling Water.&lt;/p&gt;
-&lt;h3 id=&#34;analogy-to-real-world-distributed-systems&#34;&gt;Analogy to Real-World Distributed Systems&lt;/h3&gt;
-&lt;p&gt;Imagine a large construction project. If one worker had to build an entire house alone, it would take months to complete. However, if you break the tasks into smaller chunks—one person working on the foundation, another on plumbing, another on roofing—the project is completed much faster. Each worker handles a piece of the puzzle simultaneously, and by working in parallel, the project progresses at a much quicker pace.&lt;/p&gt;
-&lt;p&gt;Distributed machine learning works in a similar way. Instead of asking a single machine to handle all computations for large datasets, the work is split across several machines (or nodes). Each node processes a smaller portion of the data, and together, they complete the task far more efficiently than a single machine ever could.&lt;/p&gt;
-&lt;h3 id=&#34;traditional-vs-distributed-ml-architectures&#34;&gt;Traditional vs. Distributed ML Architectures&lt;/h3&gt;
-&lt;p&gt;In a traditional machine learning architecture, everything happens on one machine. You load the dataset into memory, preprocess it, train your model, and make predictions—all on a single machine. This setup works perfectly well for small datasets and relatively simple models, but as your data grows, so do the problems. The dataset might be too large to fit into memory, and the computation might become so slow that it takes days or weeks to train a model.&lt;/p&gt;
-&lt;p&gt;In a distributed architecture, the dataset is partitioned across multiple machines. Each machine, or node, processes a subset of the data in parallel. The results are then aggregated to form a final model. The major difference here is the ability to scale horizontally. By adding more machines to the cluster, you can handle larger datasets and speed up computation.&lt;/p&gt;
-&lt;p&gt;Frameworks like &lt;strong&gt;Apache Spark&lt;/strong&gt; make this process easier by managing the distribution of data and computation across a cluster of machines. Machine learning libraries like &lt;strong&gt;H2O&lt;/strong&gt; build on this, offering powerful, distributed ML algorithms that can handle huge amounts of data without being limited by a single machine&amp;rsquo;s resources.&lt;/p&gt;
-&lt;h3 id=&#34;distributed-machine-learning-in-practice&#34;&gt;Distributed Machine Learning in Practice&lt;/h3&gt;
-&lt;p&gt;Distributed machine learning is already widely used in industries that deal with massive amounts of data. For instance, streaming services like &lt;strong&gt;Netflix&lt;/strong&gt; use distributed machine learning to recommend movies and shows based on billions of user interactions. Similarly, social media platforms like &lt;strong&gt;Facebook&lt;/strong&gt; use distributed models to detect spam, suggest friends, and show targeted advertisements—all while processing vast amounts of real-time data.&lt;/p&gt;
-&lt;p&gt;Take the example of a recommendation system at Netflix. When a user watches a movie or interacts with content, Netflix collects data to improve its recommendation engine. Since there are millions of users and countless data points, Netflix’s ML models need to process this data quickly. They rely on distributed systems to handle the training of these models, which would otherwise take an impractical amount of time on a single machine.&lt;/p&gt;
-&lt;p&gt;Distributed ML is the key to scaling machine learning across industries where data is constantly growing and demands for real-time insights are increasing.&lt;/p&gt;
-&lt;p&gt;Distributed machine learning offers several benefits that make it essential for handling large-scale data:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Scalability:&lt;/strong&gt; Distributed ML allows you to handle datasets that are too large to fit into the memory of a single machine. By distributing data and computations across multiple nodes, you can scale to whatever size your dataset requires.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Speed:&lt;/strong&gt; Processing data in parallel across multiple machines means that training times are significantly reduced. This is especially important for iterative algorithms like gradient boosting, which require repeated passes over the data.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Fault Tolerance:&lt;/strong&gt; Distributed systems are often designed to be fault-tolerant. If one machine in the cluster fails, the system can redistribute the task to another machine without losing any data or progress, ensuring robustness in large-scale applications.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Resource Optimization:&lt;/strong&gt; Distributed ML systems can dynamically allocate resources based on demand. For example, frameworks like Spark can add or remove nodes from a cluster, depending on the current computational load, making resource use more efficient.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;distributed-machine-learning-with-h2o-and-sparkling-water&#34;&gt;Distributed Machine Learning with H2O and Sparkling Water&lt;/h3&gt;
-&lt;p&gt;To implement distributed machine learning, you&amp;rsquo;ll need tools that abstract the complexity of working with multiple machines while providing robust ML capabilities. This is where &lt;strong&gt;H2O&lt;/strong&gt; and &lt;strong&gt;Sparkling Water&lt;/strong&gt; come in.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;H2O&lt;/strong&gt; is an open-source, distributed machine learning platform that provides a wide range of scalable ML algorithms such as Random Forest, Gradient Boosting Machines (GBM), and Generalized Linear Models (GLM). H2O is designed to be highly scalable, able to run across multiple nodes in a cluster, allowing for both efficient model training and inference on large datasets.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Sparkling Water&lt;/strong&gt; is an extension of H2O that integrates with &lt;strong&gt;Apache Spark&lt;/strong&gt;. It combines the strengths of both systems: the scalability of Spark for large-scale data processing and the advanced machine learning algorithms provided by H2O. Sparkling Water allows you to build machine learning models on top of Spark&amp;rsquo;s distributed data structures, making it easy to apply distributed ML to big data problems.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;By using H2O and Sparkling Water, you can take advantage of the best features of both platforms, enabling you to scale your machine learning models from your local machine to a distributed environment with minimal code changes. This makes it easier to handle the growing data demands of modern machine learning applications while leveraging the power of distributed systems.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>PySpark - Sparkling Water - Module 6.0</title>
-      <link>https://dataqubed.io/pyspark-sparkling-water-module-6.0/</link>
-      <pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/pyspark-sparkling-water-module-6.0/</guid>
-      <description>&lt;h2 id=&#34;scalable-machine-learning-with-h2o-and-sparkling-water&#34;&gt;Scalable Machine Learning with H2O and Sparkling Water&lt;/h2&gt;
-&lt;h3 id=&#34;1-introduction-to-distributed-machine-learning&#34;&gt;1. Introduction to Distributed Machine Learning&lt;/h3&gt;
-&lt;p&gt;We&amp;rsquo;ll begin by exploring the core concepts behind distributed machine learning. This includes a look at how H2O and Sparkling Water fit into this space. You&amp;rsquo;ll understand H2O’s role in scaling ML models and how it integrates with Spark for large-scale data processing.&lt;/p&gt;
-&lt;h4 id=&#34;2-dataset-selection&#34;&gt;2. Dataset Selection&lt;/h4&gt;
-&lt;p&gt;To test the power of distributed computing, ideally we’ll work with a sizable dataset, but since we are sitting on Community edition of DataBricks we will skip using large datasets.&lt;/p&gt;
-&lt;p&gt;We will load some dataset using H2O, and apply various data preprocessing techniques, exploring both traditional pandas/sklearn methods and H2O’s distributed capabilities.&lt;/p&gt;
-&lt;h4 id=&#34;3-module-breakdown&#34;&gt;3. Module Breakdown&lt;/h4&gt;
-&lt;h5 id=&#34;a-preprocessing&#34;&gt;a. &lt;strong&gt;Preprocessing:&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Begin by loading and exploring the dataset using H2O. From there, handle data cleaning, feature engineering, and scaling. Experiment with both local methods and H2O-specific techniques to compare workflows.&lt;/p&gt;
-&lt;h5 id=&#34;b-model-building-local&#34;&gt;b. &lt;strong&gt;Model Building (Local):&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Train machine learning models like Random Forests or Gradient Boosting Machines using H2O locally. Track performance metrics like accuracy and F1-score, along with the time it takes to train each model.&lt;/p&gt;
-&lt;h5 id=&#34;c-distributed-computing-with-sparkling-water&#34;&gt;c. &lt;strong&gt;Distributed Computing with Sparkling Water:&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Next, you’ll set up a Spark cluster, either locally or in the cloud, to train the same models on Sparkling Water. Compare the performance of your distributed models against those trained on your local machine, with an emphasis on training time and model accuracy.&lt;/p&gt;
-&lt;h5 id=&#34;d-hyperparameter-tuning&#34;&gt;d. &lt;strong&gt;Hyperparameter Tuning:&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Apply H2O’s grid search to tune hyperparameters for your models. Evaluate how well the tuning process scales when done in a distributed setting via Sparkling Water.&lt;/p&gt;
-&lt;h5 id=&#34;e-model-evaluation&#34;&gt;e. &lt;strong&gt;Model Evaluation:&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;Assess the performance of your models based on accuracy, precision, and training time. You&amp;rsquo;ll analyze how distributed computing impacts both the quality and speed of training, especially when working with larger datasets.&lt;/p&gt;
-&lt;h5 id=&#34;f-visualization--reporting&#34;&gt;f. &lt;strong&gt;Visualization &amp;amp; Reporting:&lt;/strong&gt;&lt;/h5&gt;
-&lt;p&gt;You’ll present your results through visualizations, comparing model performance between local and distributed setups. This will culminate in a final report summarizing your findings and reflecting on the advantages and challenges of distributed ML.&lt;/p&gt;
-&lt;h4 id=&#34;bonus-automl-and-cloud-deployment&#34;&gt;Bonus: AutoML and Cloud Deployment&lt;/h4&gt;
-&lt;p&gt;For those who want to dive deeper, you can experiment with H2O’s AutoML functionality, comparing its performance in both local and distributed environments. Additionally, deploying your Spark and H2O cluster on cloud platforms like Azure or GCP will give you a real-world glimpse into scalable machine learning.&lt;/p&gt;
-&lt;h3 id=&#34;what-youll-learn&#34;&gt;What You’ll Learn&lt;/h3&gt;
-&lt;p&gt;By the end of this project, you’ll have a practical understanding of distributed machine learning. You’ll not only develop scalable ML models using H2O and Sparkling Water, but also understand when to transition from local training to a distributed cluster for better efficiency.&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>H2O | Your Data Science Mentor - Mohsen Davarynejad</title><link>https://dataqubed.io/tags/h2o/</link><atom:link href="https://dataqubed.io/tags/h2o/index.xml" rel="self" type="application/rss+xml"/><description>H2O</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 08 Sep 2024 00:00:00 +0000</lastBuildDate><image><url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url><title>H2O</title><link>https://dataqubed.io/tags/h2o/</link></image><item><title>PySpark - Sparkling Water - Module 6.2</title><link>https://dataqubed.io/pyspark-h2o-sparkling-water-setup/</link><pubDate>Sun, 08 Sep 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-h2o-sparkling-water-setup/</guid><description>&lt;h2 id="setting-up-h2o-sparkling-water">Setting Up H2O Sparkling Water&lt;/h2>
+&lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
+&lt;span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
+&lt;svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/>&lt;/svg>
+&lt;/span>
+&lt;span class="dark:text-neutral-300">H2O Sparkling Water does not run on Databricks Free Edition. Free Edition gives you serverless compute (Spark Connect), which does not expose the &lt;code>SparkContext&lt;/code> and locks down the low-level JVM access that Sparkling Water relies on. We tested this directly: &lt;code>H2OContext.getOrCreate()&lt;/code> fails on serverless. To follow this module you need &lt;a href="https://docs.databricks.com/aws/en/compute/use-compute" target="_blank" rel="noopener">&lt;strong>classic&lt;/strong> Databricks compute&lt;/a>: a trial or paid workspace where you can create a standard cluster. The rest of the course runs on Free Edition, so treat this H2O track as an optional, advanced extra.&lt;/span>
+&lt;/div>
+&lt;p>Sparkling Water lets H2O run inside a Spark cluster, so you prepare data at Spark scale and train H2O models without moving it anywhere. On a workspace with classic compute, the setup is short.&lt;/p>
+&lt;h3 id="step-1-create-a-classic-cluster">Step 1: Create a classic cluster&lt;/h3>
+&lt;p>Create a standard (non-serverless) cluster and note its Databricks Runtime version. You will match the Sparkling Water build to its Spark version.&lt;/p>
+&lt;h3 id="step-2-install-the-sparkling-water-library">Step 2: Install the Sparkling Water library&lt;/h3>
+&lt;p>On the cluster, go to &lt;strong>Libraries → Install new → PyPI&lt;/strong> and install the build that matches your Spark version, for example &lt;code>h2o-pysparkling-3.5&lt;/code> for a Spark 3.5 runtime.&lt;/p>
+&lt;h3 id="step-3-start-the-h2o-context">Step 3: Start the H2O context&lt;/h3>
+&lt;p>In a notebook attached to the cluster:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">pysparkling&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">H2OContext&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">hc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">H2OContext&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">getOrCreate&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">hc&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This starts an H2O node inside the Spark executors and prints a summary of the H2O cluster: its name, the number of nodes, and the memory available.&lt;/p>
+&lt;h3 id="step-4-move-data-between-spark-and-h2o">Step 4: Move data between Spark and H2O&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">h2o_frame&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hc&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asH2OFrame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">spark_df&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># Spark DataFrame to H2O Frame&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">spark_df_again&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hc&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asSparkFrame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">h2o_frame&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># H2O Frame back to Spark DataFrame&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Prepare and clean your data with Spark, convert it to an H2O Frame, and train with H2O AutoML or its algorithms. Convert the predictions back to a Spark DataFrame when you want to write them out.&lt;/p>
+&lt;p>For the machine learning you can do on Free Edition itself, see the MLlib modules (6.3 onward), which run on serverless compute.&lt;/p>
+&lt;p>You might also want to explore the &lt;code>H2O Wave&lt;/code> web app framework for building AI web applications. See the video below.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5Ba6fE8WF8Q?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+&lt;/div>
+&lt;p>Or look into the &lt;a href="https://github.com/h2oai/wave" target="_blank" rel="noopener">Wave Git repo&lt;/a> if you are interested in building ML web applications.&lt;/p>
+&lt;p>References:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/index.html" target="_blank" rel="noopener">H2O Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.databricks.com/aws/en/compute/serverless/limitations" target="_blank" rel="noopener">Databricks serverless compute limitations&lt;/a> (why Sparkling Water needs classic compute)&lt;/li>
+&lt;li>&lt;a href="https://docs.databricks.com/aws/en/compute/use-compute" target="_blank" rel="noopener">Databricks compute types&lt;/a> (how to create classic compute)&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;!-- nav -->
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/" target="_blank" rel="noopener">Module 6.1: Introduction to Distributed Machine Learning&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-mllib-fundamentals/" target="_blank" rel="noopener">Module 6.3: MLlib Fundamentals&lt;/a>&lt;/p></description></item><item><title>PySpark - Sparkling Water - Module 6.1</title><link>https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/</link><pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/</guid><description>&lt;h2 id="introduction-to-distributed-machine-learning-a-practical-approach-with-h2o-and-sparkling-water">Introduction to Distributed Machine Learning: A Practical Approach with H2O and Sparkling Water&lt;/h2>
+&lt;p>As datasets continue to grow in size, the limitations of traditional machine learning systems become more apparent. The need to process, analyze, and train models on massive datasets calls for a new approach—&lt;strong>Distributed Machine Learning&lt;/strong>. In this module, we will explore the basics of distributed ML through analogies, architectures, real-world applications, and tools like H2O and Sparkling Water.&lt;/p>
+&lt;h3 id="analogy-to-real-world-distributed-systems">Analogy to Real-World Distributed Systems&lt;/h3>
+&lt;p>Imagine a large construction project. If one worker had to build an entire house alone, it would take months to complete. However, if you break the tasks into smaller chunks—one person working on the foundation, another on plumbing, another on roofing—the project is completed much faster. Each worker handles a piece of the puzzle simultaneously, and by working in parallel, the project progresses at a much quicker pace.&lt;/p>
+&lt;p>Distributed machine learning works in a similar way. Instead of asking a single machine to handle all computations for large datasets, the work is split across several machines (or nodes). Each node processes a smaller portion of the data, and together, they complete the task far more efficiently than a single machine ever could.&lt;/p>
+&lt;h3 id="traditional-vs-distributed-ml-architectures">Traditional vs. Distributed ML Architectures&lt;/h3>
+&lt;p>In a traditional machine learning architecture, everything happens on one machine. You load the dataset into memory, preprocess it, train your model, and make predictions—all on a single machine. This setup works perfectly well for small datasets and relatively simple models, but as your data grows, so do the problems. The dataset might be too large to fit into memory, and the computation might become so slow that it takes days or weeks to train a model.&lt;/p>
+&lt;p>In a distributed architecture, the dataset is partitioned across multiple machines. Each machine, or node, processes a subset of the data in parallel. The results are then aggregated to form a final model. The major difference here is the ability to scale horizontally. By adding more machines to the cluster, you can handle larger datasets and speed up computation.&lt;/p>
+&lt;p>Frameworks like &lt;strong>Apache Spark&lt;/strong> make this process easier by managing the distribution of data and computation across a cluster of machines. Machine learning libraries like &lt;strong>H2O&lt;/strong> build on this, offering powerful, distributed ML algorithms that can handle huge amounts of data without being limited by a single machine&amp;rsquo;s resources.&lt;/p>
+&lt;h3 id="distributed-machine-learning-in-practice">Distributed Machine Learning in Practice&lt;/h3>
+&lt;p>Distributed machine learning is already widely used in industries that deal with massive amounts of data. For instance, streaming services like &lt;strong>Netflix&lt;/strong> use distributed machine learning to recommend movies and shows based on billions of user interactions. Similarly, social media platforms like &lt;strong>Facebook&lt;/strong> use distributed models to detect spam, suggest friends, and show targeted advertisements—all while processing vast amounts of real-time data.&lt;/p>
+&lt;p>Take the example of a recommendation system at Netflix. When a user watches a movie or interacts with content, Netflix collects data to improve its recommendation engine. Since there are millions of users and countless data points, Netflix’s ML models need to process this data quickly. They rely on distributed systems to handle the training of these models, which would otherwise take an impractical amount of time on a single machine.&lt;/p>
+&lt;p>Distributed ML is the key to scaling machine learning across industries where data is constantly growing and demands for real-time insights are increasing.&lt;/p>
+&lt;p>Distributed machine learning offers several benefits that make it essential for handling large-scale data:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Scalability:&lt;/strong> Distributed ML allows you to handle datasets that are too large to fit into the memory of a single machine. By distributing data and computations across multiple nodes, you can scale to whatever size your dataset requires.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Speed:&lt;/strong> Processing data in parallel across multiple machines means that training times are significantly reduced. This is especially important for iterative algorithms like gradient boosting, which require repeated passes over the data.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Fault Tolerance:&lt;/strong> Distributed systems are often designed to be fault-tolerant. If one machine in the cluster fails, the system can redistribute the task to another machine without losing any data or progress, ensuring robustness in large-scale applications.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Resource Optimization:&lt;/strong> Distributed ML systems can dynamically allocate resources based on demand. For example, frameworks like Spark can add or remove nodes from a cluster, depending on the current computational load, making resource use more efficient.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="distributed-machine-learning-with-h2o-and-sparkling-water">Distributed Machine Learning with H2O and Sparkling Water&lt;/h3>
+&lt;p>To implement distributed machine learning, you&amp;rsquo;ll need tools that abstract the complexity of working with multiple machines while providing robust ML capabilities. This is where &lt;strong>H2O&lt;/strong> and &lt;strong>Sparkling Water&lt;/strong> come in.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>H2O&lt;/strong> is an open-source, distributed machine learning platform that provides a wide range of scalable ML algorithms such as Random Forest, Gradient Boosting Machines (GBM), and Generalized Linear Models (GLM). H2O is designed to be highly scalable, able to run across multiple nodes in a cluster, allowing for both efficient model training and inference on large datasets.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Sparkling Water&lt;/strong> is an extension of H2O that integrates with &lt;strong>Apache Spark&lt;/strong>. It combines the strengths of both systems: the scalability of Spark for large-scale data processing and the advanced machine learning algorithms provided by H2O. Sparkling Water allows you to build machine learning models on top of Spark&amp;rsquo;s distributed data structures, making it easy to apply distributed ML to big data problems.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>By using H2O and Sparkling Water, you can take advantage of the best features of both platforms, enabling you to scale your machine learning models from your local machine to a distributed environment with minimal code changes. This makes it easier to handle the growing data demands of modern machine learning applications while leveraging the power of distributed systems.&lt;/p>
+&lt;hr>
+&lt;!-- nav -->
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/" target="_blank" rel="noopener">Module 6.0: Scalable ML with H2O and Sparkling Water&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-h2o-sparkling-water-setup/" target="_blank" rel="noopener">Module 6.2: Running H2O Sparkling Water&lt;/a>&lt;/p></description></item><item><title>PySpark - Sparkling Water - Module 6.0</title><link>https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/</link><pubDate>Fri, 06 Sep 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/</guid><description>&lt;h2 id="scalable-machine-learning-with-h2o-and-sparkling-water">Scalable Machine Learning with H2O and Sparkling Water&lt;/h2>
+&lt;h3 id="1-introduction-to-distributed-machine-learning">1. Introduction to Distributed Machine Learning&lt;/h3>
+&lt;p>We&amp;rsquo;ll begin by exploring the core concepts behind distributed machine learning. This includes a look at how H2O and Sparkling Water fit into this space. You&amp;rsquo;ll understand H2O’s role in scaling ML models and how it integrates with Spark for large-scale data processing.&lt;/p>
+&lt;h4 id="2-dataset-selection">2. Dataset Selection&lt;/h4>
+&lt;p>To test the power of distributed computing we would ideally work with a sizable dataset, but since we are on a small free Databricks workspace we will skip using large datasets.&lt;/p>
+&lt;p>We will load some dataset using H2O, and apply various data preprocessing techniques, exploring both traditional pandas/sklearn methods and H2O’s distributed capabilities.&lt;/p>
+&lt;h4 id="3-module-breakdown">3. Module Breakdown&lt;/h4>
+&lt;h5 id="a-preprocessing">a. &lt;strong>Preprocessing:&lt;/strong>&lt;/h5>
+&lt;p>Begin by loading and exploring the dataset using H2O. From there, handle data cleaning, feature engineering, and scaling. Experiment with both local methods and H2O-specific techniques to compare workflows.&lt;/p>
+&lt;h5 id="b-model-building-local">b. &lt;strong>Model Building (Local):&lt;/strong>&lt;/h5>
+&lt;p>Train machine learning models like Random Forests or Gradient Boosting Machines using H2O locally. Track performance metrics like accuracy and F1-score, along with the time it takes to train each model.&lt;/p>
+&lt;h5 id="c-distributed-computing-with-sparkling-water">c. &lt;strong>Distributed Computing with Sparkling Water:&lt;/strong>&lt;/h5>
+&lt;p>Next, you’ll set up a Spark cluster, either locally or in the cloud, to train the same models on Sparkling Water. Compare the performance of your distributed models against those trained on your local machine, with an emphasis on training time and model accuracy.&lt;/p>
+&lt;h5 id="d-hyperparameter-tuning">d. &lt;strong>Hyperparameter Tuning:&lt;/strong>&lt;/h5>
+&lt;p>Apply H2O’s grid search to tune hyperparameters for your models. Evaluate how well the tuning process scales when done in a distributed setting via Sparkling Water.&lt;/p>
+&lt;h5 id="e-model-evaluation">e. &lt;strong>Model Evaluation:&lt;/strong>&lt;/h5>
+&lt;p>Assess the performance of your models based on accuracy, precision, and training time. You&amp;rsquo;ll analyze how distributed computing impacts both the quality and speed of training, especially when working with larger datasets.&lt;/p>
+&lt;h5 id="f-visualization--reporting">f. &lt;strong>Visualization &amp;amp; Reporting:&lt;/strong>&lt;/h5>
+&lt;p>You’ll present your results through visualizations, comparing model performance between local and distributed setups. This will culminate in a final report summarizing your findings and reflecting on the advantages and challenges of distributed ML.&lt;/p>
+&lt;h4 id="bonus-automl-and-cloud-deployment">Bonus: AutoML and Cloud Deployment&lt;/h4>
+&lt;p>For those who want to dive deeper, you can experiment with H2O’s AutoML functionality, comparing its performance in both local and distributed environments. Additionally, deploying your Spark and H2O cluster on cloud platforms like Azure or GCP will give you a real-world glimpse into scalable machine learning.&lt;/p>
+&lt;h3 id="what-youll-learn">What You’ll Learn&lt;/h3>
+&lt;p>By the end of this project, you’ll have a practical understanding of distributed machine learning. You’ll not only develop scalable ML models using H2O and Sparkling Water, but also understand when to transition from local training to a distributed cluster for better efficiency.&lt;/p>
+&lt;hr>
+&lt;!-- nav -->
+&lt;p>&lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/" target="_blank" rel="noopener">Module 6.1: Introduction to Distributed Machine Learning&lt;/a>&lt;/p></description></item></channel></rss>

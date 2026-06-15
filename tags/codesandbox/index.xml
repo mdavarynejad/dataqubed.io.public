@@ -1,77 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>CodeSandbox | Your Data Science Mentor - Mohsen Davarynejad</title>
-    <link>https://dataqubed.io/tags/codesandbox/</link>
-      <atom:link href="https://dataqubed.io/tags/codesandbox/index.xml" rel="self" type="application/rss+xml" />
-    <description>CodeSandbox</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url>
-      <title>CodeSandbox</title>
-      <link>https://dataqubed.io/tags/codesandbox/</link>
-    </image>
-    
-    <item>
-      <title>Building and Testing Gradio Apps with CodeSandbox</title>
-      <link>https://dataqubed.io/building-and-testing-gradio-apps-with-codesandbox/</link>
-      <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/building-and-testing-gradio-apps-with-codesandbox/</guid>
-      <description>&lt;p&gt;If you are looking to quickly prototype and test machine learning models or interactive Python applications, CodeSandbox is an excellent browser-based platform to consider. It allows you to run and deploy Python projects seamlessly without the hassle of local environment setup. When combined with Gradio, a popular open-source library for building user-friendly ML-powered web apps, CodeSandbox becomes a powerful tool for experimentation and learning.&lt;/p&gt;
-&lt;h2 id=&#34;why-use-codesandbox-for-gradio-apps&#34;&gt;Why Use CodeSandbox for Gradio Apps?&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;No Local Setup Hassle: Run your Python code in a cloud environment without needing to install dependencies manually.&lt;/li&gt;
-&lt;li&gt;Rapid Prototyping: Instantly create, modify, and test Gradio interfaces.&lt;/li&gt;
-&lt;li&gt;Collaboration: Share your app with peers or instructors via a simple URL.&lt;/li&gt;
-&lt;li&gt;Easy Deployment: Once tested, your app can be deployed and accessed from anywhere.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;getting-started-with-gradio-on-codesandbox&#34;&gt;Getting Started with Gradio on CodeSandbox&lt;/h2&gt;
-&lt;p&gt;Here’s a step-by-step guide to setting up a Gradio app in CodeSandbox:&lt;/p&gt;
-&lt;h3 id=&#34;1-create-a-new-codesandbox-project&#34;&gt;1. Create a New CodeSandbox Project&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Visit CodeSandbox and create a new Python sandbox.&lt;/li&gt;
-&lt;li&gt;You can choose the &amp;ldquo;Blank Python&amp;rdquo; template.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;2-install-gradio&#34;&gt;2. Install Gradio&lt;/h3&gt;
-&lt;p&gt;In the sandbox terminal, install Gradio using pip:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install gradio
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3-write-a-simple-gradio-app&#34;&gt;3. Write a Simple Gradio App&lt;/h3&gt;
-&lt;p&gt;Create a &lt;code&gt;app.py&lt;/code&gt; file and write a basic Gradio interface:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;gradio&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;gr&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;greet&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;!&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;iface&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Interface&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;greet&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inputs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;outputs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;iface&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;launch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;4-run-your-gradio-app&#34;&gt;4. Run Your Gradio App&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Start the app by running:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python app.py
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;If CodeSandbox provides a preview link, open it to see your interactive Gradio app in action.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;testing-and-debugging-in-codesandbox&#34;&gt;Testing and Debugging in CodeSandbox&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Use the preview pane to see real-time updates.&lt;/li&gt;
-&lt;li&gt;Modify the app, refresh the preview, and observe changes immediately.&lt;/li&gt;
-&lt;li&gt;If you encounter issues, check logs in the terminal for debugging.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;deploying-and-sharing-your-app&#34;&gt;Deploying and Sharing Your App&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;CodeSandbox allows you to fork and share projects with a single link.&lt;/li&gt;
-&lt;li&gt;Once satisfied, deploy the app using Gradio’s public hosting feature.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;iface&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;launch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;share&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;This generates a public Gradio link that you can share.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
-&lt;p&gt;Using CodeSandbox to build and test Gradio apps is an efficient way for students to explore machine learning and Python-based web apps. It eliminates installation issues, speeds up development, and allows for seamless collaboration. If you&amp;rsquo;re looking for a hassle-free way to prototype AI applications, give this setup a try!&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CodeSandbox | Your Data Science Mentor - Mohsen Davarynejad</title><link>https://dataqubed.io/tags/codesandbox/</link><atom:link href="https://dataqubed.io/tags/codesandbox/index.xml" rel="self" type="application/rss+xml"/><description>CodeSandbox</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 11 Mar 2025 00:00:00 +0000</lastBuildDate><image><url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url><title>CodeSandbox</title><link>https://dataqubed.io/tags/codesandbox/</link></image><item><title>Building and Testing Gradio Apps with CodeSandbox</title><link>https://dataqubed.io/building-and-testing-gradio-apps-with-codesandbox/</link><pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate><guid>https://dataqubed.io/building-and-testing-gradio-apps-with-codesandbox/</guid><description>&lt;p>If you are looking to quickly prototype and test machine learning models or interactive Python applications, CodeSandbox is an excellent browser-based platform to consider. It allows you to run and deploy Python projects seamlessly without the hassle of local environment setup. When combined with Gradio, a popular open-source library for building user-friendly ML-powered web apps, CodeSandbox becomes a powerful tool for experimentation and learning.&lt;/p>
+&lt;h2 id="why-use-codesandbox-for-gradio-apps">Why Use CodeSandbox for Gradio Apps?&lt;/h2>
+&lt;ul>
+&lt;li>No Local Setup Hassle: Run your Python code in a cloud environment without needing to install dependencies manually.&lt;/li>
+&lt;li>Rapid Prototyping: Instantly create, modify, and test Gradio interfaces.&lt;/li>
+&lt;li>Collaboration: Share your app with peers or instructors via a simple URL.&lt;/li>
+&lt;li>Easy Deployment: Once tested, your app can be deployed and accessed from anywhere.&lt;/li>
+&lt;/ul>
+&lt;h2 id="getting-started-with-gradio-on-codesandbox">Getting Started with Gradio on CodeSandbox&lt;/h2>
+&lt;p>Here’s a step-by-step guide to setting up a Gradio app in CodeSandbox:&lt;/p>
+&lt;h3 id="1-create-a-new-codesandbox-project">1. Create a New CodeSandbox Project&lt;/h3>
+&lt;ul>
+&lt;li>Visit CodeSandbox and create a new Python sandbox.&lt;/li>
+&lt;li>You can choose the &amp;ldquo;Blank Python&amp;rdquo; template.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-install-gradio">2. Install Gradio&lt;/h3>
+&lt;p>In the sandbox terminal, install Gradio using pip:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">pip install gradio
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="3-write-a-simple-gradio-app">3. Write a Simple Gradio App&lt;/h3>
+&lt;p>Create a &lt;code>app.py&lt;/code> file and write a basic Gradio interface:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">gradio&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">gr&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">greet&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="sa">f&lt;/span>&lt;span class="s2">&amp;#34;Hello, &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">iface&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">gr&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Interface&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">fn&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">greet&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">inputs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">outputs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;text&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">iface&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">launch&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="4-run-your-gradio-app">4. Run Your Gradio App&lt;/h3>
+&lt;ul>
+&lt;li>Start the app by running:&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">python app.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>If CodeSandbox provides a preview link, open it to see your interactive Gradio app in action.&lt;/li>
+&lt;/ul>
+&lt;h2 id="testing-and-debugging-in-codesandbox">Testing and Debugging in CodeSandbox&lt;/h2>
+&lt;ul>
+&lt;li>Use the preview pane to see real-time updates.&lt;/li>
+&lt;li>Modify the app, refresh the preview, and observe changes immediately.&lt;/li>
+&lt;li>If you encounter issues, check logs in the terminal for debugging.&lt;/li>
+&lt;/ul>
+&lt;h2 id="deploying-and-sharing-your-app">Deploying and Sharing Your App&lt;/h2>
+&lt;ul>
+&lt;li>CodeSandbox allows you to fork and share projects with a single link.&lt;/li>
+&lt;li>Once satisfied, deploy the app using Gradio’s public hosting feature.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">iface&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">launch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">share&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="kc">True&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>This generates a public Gradio link that you can share.&lt;/li>
+&lt;/ul>
+&lt;h2 id="summary">Summary&lt;/h2>
+&lt;p>Using CodeSandbox to build and test Gradio apps is an efficient way for students to explore machine learning and Python-based web apps. It eliminates installation issues, speeds up development, and allows for seamless collaboration. If you&amp;rsquo;re looking for a hassle-free way to prototype AI applications, give this setup a try!&lt;/p></description></item></channel></rss>

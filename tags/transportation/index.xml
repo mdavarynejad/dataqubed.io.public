@@ -1,60 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Transportation | Your Data Science Mentor - Mohsen Davarynejad</title>
-    <link>https://dataqubed.io/tags/transportation/</link>
-      <atom:link href="https://dataqubed.io/tags/transportation/index.xml" rel="self" type="application/rss+xml" />
-    <description>Transportation</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url>
-      <title>Transportation</title>
-      <link>https://dataqubed.io/tags/transportation/</link>
-    </image>
-    
-    <item>
-      <title>Transforming Mobility Intelligence - Meet TransGPT</title>
-      <link>https://dataqubed.io/transforming-mobility-intelligence-meet-transgpt/</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://dataqubed.io/transforming-mobility-intelligence-meet-transgpt/</guid>
-      <description>&lt;h1 id=&#34;transforming-mobility-intelligence-meet-transgpt&#34;&gt;Transforming Mobility Intelligence: Meet TransGPT&lt;/h1&gt;
-&lt;p&gt;Beautifully bridging structured transportation data with the power of large language models, TransGPT brings a fresh lens to the future of smart mobility systems. Developed by a team of researchers to align with domain-specific needs, TransGPT is a generative pre-trained transformer designed specifically for transportation and it&amp;rsquo;s changing how we think about transit data, insights, and automation.&lt;/p&gt;
-&lt;p&gt;Included in the growing ecosystem of domain-specialized LLMs, TransGPT stands out by grounding its training in real-world traffic, weather, GPS, and transit datasets, seamlessly converted into a language model-friendly format.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;from-traffic-tables-to-natural-language&#34;&gt;From Traffic Tables to Natural Language&lt;/h2&gt;
-&lt;p&gt;TransGPT introduces a pre-training approach where multimodal transport data is converted into natural language statements, capturing the nuance of space, time, and human movement.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;“A trip from Utrecht to Amsterdam at 08:00 AM during light rain took 45 minutes via car.”&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;Each line like this is generated from raw sensor or trip data and fed into the model—training it to understand traffic patterns, predict travel times, and even respond to complex transit-related questions.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;built-for-the-transit-challenges-of-today-and-tomorrow&#34;&gt;Built for the Transit Challenges of Today and Tomorrow&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“With its template-to-text conversion and instruction-tuning process, TransGPT not only offers continuity with traditional models, it expands upon them and provides reasoning capabilities tailored to mobility.”&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;Trained on a rich mix of:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Traffic sensor readings&lt;/li&gt;
-&lt;li&gt;Weather patterns&lt;/li&gt;
-&lt;li&gt;Public transport records&lt;/li&gt;
-&lt;li&gt;Route trajectories&lt;/li&gt;
-&lt;li&gt;Unstructured domain documents (e.g., policies, reports)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;TransGPT learns not just to &lt;em&gt;generate&lt;/em&gt; or &lt;em&gt;summarize&lt;/em&gt;—but to analyze and advise in real-world transport scenarios.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;instruction-tuned-for-smarter-answers&#34;&gt;Instruction-Tuned for Smarter Answers&lt;/h2&gt;
-&lt;p&gt;Powered by curated instruction-response datasets, TransGPT responds to queries like:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;“Estimate the trip duration for these conditions.”&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;“Classify this trip as business or leisure.”&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;“Explain why congestion occurred at 6 PM yesterday.”&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Whether empowering urban planners, mobility startups, or data scientists, TransGPT opens new doors to actionable insights and automation in transportation systems.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;toward-an-ai-native-transit-future&#34;&gt;Toward an AI-Native Transit Future&lt;/h2&gt;
-&lt;p&gt;Built with accessibility and domain alignment in mind, TransGPT moves us one step closer to an intelligent transport layer where data, models, and decisions are truly interoperable.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href=&#34;https://arxiv.org/pdf/2402.07233&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Read the full paper here (arXiv:2402.07233)&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Transportation | Your Data Science Mentor - Mohsen Davarynejad</title><link>https://dataqubed.io/tags/transportation/</link><atom:link href="https://dataqubed.io/tags/transportation/index.xml" rel="self" type="application/rss+xml"/><description>Transportation</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate><image><url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url><title>Transportation</title><link>https://dataqubed.io/tags/transportation/</link></image><item><title>Transforming Mobility Intelligence - Meet TransGPT</title><link>https://dataqubed.io/transforming-mobility-intelligence-meet-transgpt/</link><pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate><guid>https://dataqubed.io/transforming-mobility-intelligence-meet-transgpt/</guid><description>&lt;h1 id="transforming-mobility-intelligence-meet-transgpt">Transforming Mobility Intelligence: Meet TransGPT&lt;/h1>
+&lt;p>Beautifully bridging structured transportation data with the power of large language models, TransGPT brings a fresh lens to the future of smart mobility systems. Developed by a team of researchers to align with domain-specific needs, TransGPT is a generative pre-trained transformer designed specifically for transportation and it&amp;rsquo;s changing how we think about transit data, insights, and automation.&lt;/p>
+&lt;p>Included in the growing ecosystem of domain-specialized LLMs, TransGPT stands out by grounding its training in real-world traffic, weather, GPS, and transit datasets, seamlessly converted into a language model-friendly format.&lt;/p>
+&lt;hr>
+&lt;h2 id="from-traffic-tables-to-natural-language">From Traffic Tables to Natural Language&lt;/h2>
+&lt;p>TransGPT introduces a pre-training approach where multimodal transport data is converted into natural language statements, capturing the nuance of space, time, and human movement.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>“A trip from Utrecht to Amsterdam at 08:00 AM during light rain took 45 minutes via car.”&lt;/em>&lt;/p>&lt;/blockquote>
+&lt;p>Each line like this is generated from raw sensor or trip data and fed into the model—training it to understand traffic patterns, predict travel times, and even respond to complex transit-related questions.&lt;/p>
+&lt;hr>
+&lt;h2 id="built-for-the-transit-challenges-of-today-and-tomorrow">Built for the Transit Challenges of Today and Tomorrow&lt;/h2>
+&lt;blockquote>
+&lt;p>“With its template-to-text conversion and instruction-tuning process, TransGPT not only offers continuity with traditional models, it expands upon them and provides reasoning capabilities tailored to mobility.”&lt;/p>&lt;/blockquote>
+&lt;p>Trained on a rich mix of:&lt;/p>
+&lt;ul>
+&lt;li>Traffic sensor readings&lt;/li>
+&lt;li>Weather patterns&lt;/li>
+&lt;li>Public transport records&lt;/li>
+&lt;li>Route trajectories&lt;/li>
+&lt;li>Unstructured domain documents (e.g., policies, reports)&lt;/li>
+&lt;/ul>
+&lt;p>TransGPT learns not just to &lt;em>generate&lt;/em> or &lt;em>summarize&lt;/em>—but to analyze and advise in real-world transport scenarios.&lt;/p>
+&lt;hr>
+&lt;h2 id="instruction-tuned-for-smarter-answers">Instruction-Tuned for Smarter Answers&lt;/h2>
+&lt;p>Powered by curated instruction-response datasets, TransGPT responds to queries like:&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>“Estimate the trip duration for these conditions.”&lt;/em>&lt;/li>
+&lt;li>&lt;em>“Classify this trip as business or leisure.”&lt;/em>&lt;/li>
+&lt;li>&lt;em>“Explain why congestion occurred at 6 PM yesterday.”&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>Whether empowering urban planners, mobility startups, or data scientists, TransGPT opens new doors to actionable insights and automation in transportation systems.&lt;/p>
+&lt;hr>
+&lt;h2 id="toward-an-ai-native-transit-future">Toward an AI-Native Transit Future&lt;/h2>
+&lt;p>Built with accessibility and domain alignment in mind, TransGPT moves us one step closer to an intelligent transport layer where data, models, and decisions are truly interoperable.&lt;/p>
+&lt;hr>
+&lt;p>&lt;a href="https://arxiv.org/pdf/2402.07233" target="_blank" rel="noopener">Read the full paper here (arXiv:2402.07233)&lt;/a>&lt;/p></description></item></channel></rss>
