@@ -192,53 +192,19 @@
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="assessment">Assessment&lt;/h3>
+&lt;p>This is a pass or fail elective. You pass in one of two ways.&lt;/p>
+&lt;p>&lt;strong>Option A: Certification.&lt;/strong> Pass the &lt;a href="https://www.databricks.com/learn/training/certification" target="_blank" rel="noopener">Databricks Certified Associate Developer for Apache Spark&lt;/a> exam. This course is built to prepare you for it. The exam is optional and paid (about 200 USD), and a pass is a clear demonstration of mastery, so it earns a pass on its own.&lt;/p>
+&lt;p>&lt;strong>Option B: Capstone plus one deliverable.&lt;/strong> Complete the &lt;a href="https://dataqubed.io/pyspark-capstone-project/" target="_blank" rel="noopener">capstone project&lt;/a> on either the Data Science or Data Engineering track, together with one of these two pieces:&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>Quizzes&lt;/strong>
-&lt;ul>
-&lt;li>You will be provided with quizzes to reinforce learning&lt;/li>
+&lt;li>&lt;strong>A cheat sheet&lt;/strong> that summarises the key concepts and methods from the course. Submit it as a Jupyter notebook, a Databricks notebook, or a PDF of at most two pages. If you submit a PDF, include the source notebook as well.&lt;/li>
+&lt;li>&lt;strong>The &lt;a href="https://dataqubed.io/pyspark-review-an-ai-generated-pipeline/" target="_blank" rel="noopener">AI-review exercise&lt;/a>:&lt;/strong> fix the AI-generated pipeline and hand in the corrected notebook, the before and after run times, and a short diagnosis of each problem.&lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;li>&lt;strong>Capstone Project&lt;/strong>
-&lt;ul>
-&lt;li>Depending on your track you build a small project that takes at most a day to complete and deliver (see the full brief in &lt;a href="https://dataqubed.io/pyspark-capstone-project/" target="_blank" rel="noopener">Module 8: Capstone Project&lt;/a>):
-&lt;ul>
-&lt;li>&lt;strong>Data Science track:&lt;/strong> a distributed ML model trained and evaluated on a large dataset in Databricks.&lt;/li>
-&lt;li>&lt;strong>Data Engineering track:&lt;/strong> an end-to-end streaming pipeline from a Kafka topic into a Delta Lake table.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
+&lt;p>Option B costs nothing and is the standard route. Option A is there for anyone who also wants an industry credential.&lt;/p>
 &lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
 &lt;span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
 &lt;svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/>&lt;/svg>
 &lt;/span>
-&lt;span class="dark:text-neutral-300">Participation in quizzes is mandatory, and they contribute to your final score.&lt;/span>
-&lt;/div>
-&lt;p>You are offered the opportunity to earn extra credit through the following two deliverables, which are designed to reinforce and showcase your understanding of the material. Please pay close attention to the instructions and deadlines.&lt;/p>
-&lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
-&lt;span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
-&lt;svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/>&lt;/svg>
-&lt;/span>
-&lt;span class="dark:text-neutral-300">&lt;p>&lt;strong>Deliverable 1:&lt;/strong> Cheat Sheet on Material Covered Up to Module 5.&lt;/p>
-&lt;p>&lt;strong>Objective:&lt;/strong> Create a concise and well-organized cheat sheet that summarizes the key concepts, formulas, and methodologies you have learned up to and including Module 5.&lt;/p>
-&lt;p>&lt;strong>Format:&lt;/strong> You may submit your cheat sheet in one of the following formats:&lt;/p>
-&lt;ul>
-&lt;li>A Jupyter Notebook (.ipynb)&lt;/li>
-&lt;li>A Databricks Notebook&lt;/li>
-&lt;li>A well-structured PDF file (maximum of 2 pages).&lt;/li>
-&lt;/ul>
-&lt;p>If you choose to submit a PDF, you must also include the original file format (e.g., the source Jupyter Notebook or Databricks Notebook from which the PDF was generated).&lt;/p>
-&lt;p>&lt;strong>Deadline:&lt;/strong> Your cheat sheet must be submitted by October 11 at 23:59 CET. Please adhere strictly to this deadline.&lt;/p>
-&lt;/span>
-&lt;/div>
-&lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
-&lt;span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
-&lt;svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/>&lt;/svg>
-&lt;/span>
-&lt;span class="dark:text-neutral-300">&lt;p>&lt;strong>Deliverable 2:&lt;/strong> A second deliverable focused on your capstone track will be announced in the first week of the module.&lt;/p>
-&lt;p>&lt;strong>Details:&lt;/strong> It will not require more than a full day of work for a single individual.&lt;/p>
-&lt;/span>
+&lt;span class="dark:text-neutral-300">Quizzes and the &amp;ldquo;try it yourself&amp;rdquo; exercises through the modules are there to help you learn and check your own understanding. They are not graded.&lt;/span>
 &lt;/div>
 &lt;p>By the end of this material you will be able to provide answers to the questions bellow:&lt;/p>
 &lt;ol>
@@ -617,11 +583,9 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
 &lt;svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/>&lt;/svg>
 &lt;/span>
-&lt;span class="dark:text-neutral-300">&lt;p>&lt;strong>Assignment: Visualizations in Databricks notebooks&lt;/strong>&lt;/p>
-&lt;p>Databricks has built-in support for charts and visualizations in both Databricks SQL and in notebooks. Based on the data prepared in &lt;strong>01 - Data Prep&lt;/strong> make few visualizations.&lt;/p>
-&lt;p>&lt;strong>Details:&lt;/strong> I will provide you with a git repo and you will be tasked place your notebook there. The repo will not accept new entries after the deadline. Please deliver both the Databricks &lt;strong>.dbc&lt;/strong> archive file format and &lt;strong>.HTML&lt;/strong> format. Make sure to give them identical filenames. Also make sure to put the name of the team and team members in the first cell of the notebook.&lt;/p>
-&lt;p>&lt;strong>Deadline:&lt;/strong> Your notebook must be submitted by Sep 29 at 23:59 CET. Please adhere strictly to this deadline.&lt;/p>
-&lt;p>&lt;strong>Reading material&lt;/strong>: Need some reading materials? Visit &lt;a href="https://docs.databricks.com/en/visualizations/index.html" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;span class="dark:text-neutral-300">&lt;p>&lt;strong>Try it yourself: Visualizations in Databricks notebooks&lt;/strong>&lt;/p>
+&lt;p>Databricks has built-in charts and visualizations in both Databricks SQL and notebooks. Based on the data prepared in &lt;strong>01 - Data Prep&lt;/strong>, make a few visualizations. This is optional practice to reinforce the material, not a graded hand-in.&lt;/p>
+&lt;p>Need a reference? See the &lt;a href="https://docs.databricks.com/en/visualizations/index.html" target="_blank" rel="noopener">Databricks visualizations docs&lt;/a>.&lt;/p>
 &lt;/span>
 &lt;/div>
 &lt;hr>
@@ -997,8 +961,8 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;/details>
 &lt;h3 id="windowed-aggregations-performing-windowed-aggregations-on-streaming-data-from-kafka-using-pyspark">Windowed Aggregations: Performing windowed aggregations on streaming data from Kafka using PySpark&lt;/h3>
 &lt;p>Import &lt;a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065282/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook&lt;/a> to the same folder and rename in to &lt;code>Windowed Aggregations on Streaming Data&lt;/code>. Follow the content and try to understand what is going on there.&lt;/p>
-&lt;h3 id="assignment">Assignment&lt;/h3>
-&lt;p>Import &lt;a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065276/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook&lt;/a> to the same folder and look into the results. Can you explain what is the results you see in table &lt;code>windowed_aggregations&lt;/code>?&lt;/p>
+&lt;h3 id="try-it-yourself">Try it yourself&lt;/h3>
+&lt;p>Import &lt;a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065276/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook&lt;/a> to the same folder and look into the results. Can you explain the results you see in the &lt;code>windowed_aggregations&lt;/code> table? This is practice to check your understanding, not a graded hand-in.&lt;/p>
 &lt;p>&lt;strong>Whats next?&lt;/strong> Module 5.4 (for year 2025-2026) will be dedicated to the best practices for kafka in databricks! Do you absolutely want to have it this year? Write Mohsen and email.&lt;/p>
 &lt;hr>
 &lt;!-- nav -->
@@ -1218,7 +1182,7 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">auc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">BinaryClassificationEvaluator&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">labelCol&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;label&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">metricName&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;areaUnderROC&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">f1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">MulticlassClassificationEvaluator&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">labelCol&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;label&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">metricName&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;f1&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">model&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">fitted&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">items&lt;/span>&lt;span class="p">():&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span> &lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">model&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">fitted&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="n">items&lt;/span>&lt;span class="p">():&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">pred&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">model&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">transform&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">test&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="si">:&lt;/span>&lt;span class="s2">7s&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2"> AUC=&lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">auc&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">evaluate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pred&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="si">:&lt;/span>&lt;span class="s2">.3f&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2"> F1=&lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">f1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">evaluate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pred&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="si">:&lt;/span>&lt;span class="s2">.3f&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use &lt;code>BinaryClassificationEvaluator&lt;/code> (area under ROC or PR) for two-class problems, &lt;code>MulticlassClassificationEvaluator&lt;/code> (f1, accuracy) when there are more than two classes, and &lt;code>RegressionEvaluator&lt;/code> (RMSE, R2) when the label is a number.&lt;/p>
