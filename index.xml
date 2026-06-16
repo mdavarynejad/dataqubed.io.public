@@ -975,7 +975,7 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;p>Import &lt;a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065282/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook&lt;/a> to the same folder and rename in to &lt;code>Windowed Aggregations on Streaming Data&lt;/code>. Follow the content and try to understand what is going on there.&lt;/p>
 &lt;h3 id="try-it-yourself">Try it yourself&lt;/h3>
 &lt;p>Import &lt;a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2862089966922105/1635156367065276/4682920752598681/latest.html" target="_blank" rel="noopener">this notebook&lt;/a> to the same folder and look into the results. Can you explain the results you see in the &lt;code>windowed_aggregations&lt;/code> table? This is practice to check your understanding, not a graded hand-in.&lt;/p>
-&lt;p>&lt;strong>What&amp;rsquo;s next?&lt;/strong> Module 5.4 will be dedicated to the best practices for Kafka in Databricks! Do you absolutely want to have it this year? Write Mohsen an email.&lt;/p>
+&lt;p>This wraps up the streaming track. Next we move into machine learning with Spark.&lt;/p>
 &lt;hr>
 &lt;!-- nav -->
 &lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-kafka-python-producers-and-consumers/" target="_blank" rel="noopener">Module 5.2: Kafka Producers and Consumers&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-mllib-fundamentals/" target="_blank" rel="noopener">Module 6.3: MLlib Fundamentals&lt;/a>&lt;/p></description></item><item><title>PySpark - Sparkling Water - Module 6.0</title><link>https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/</link><pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/</guid><description>&lt;h2 id="scalable-machine-learning-with-h2o-and-sparkling-water">Scalable Machine Learning with H2O and Sparkling Water&lt;/h2>
@@ -3898,7 +3898,7 @@ data.head()
 &lt;p>Hugo Blox supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-928761435" class="chart">&lt;/div>
+&lt;div id="chart-781359426" class="chart">&lt;/div>
 &lt;script>
 async function fetchChartJSON() {
 console.debug('Hugo Blox fetching chart JSON...')
@@ -3914,7 +3914,7 @@ return;
 clearInterval( a );
 fetchChartJSON().then(chart => {
 console.debug('Plotting chart...')
-window.Plotly.newPlot('chart-928761435', chart.data, chart.layout, {responsive: true});
+window.Plotly.newPlot('chart-781359426', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
