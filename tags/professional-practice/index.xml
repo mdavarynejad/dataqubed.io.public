@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Professional Practice | Your Data Science Mentor - Mohsen Davarynejad</title><link>https://dataqubed.io/tags/professional-practice/</link><atom:link href="https://dataqubed.io/tags/professional-practice/index.xml" rel="self" type="application/rss+xml"/><description>Professional Practice</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 24 Aug 2024 00:00:00 +0000</lastBuildDate><image><url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url><title>Professional Practice</title><link>https://dataqubed.io/tags/professional-practice/</link></image><item><title>BRD for Successful Project Execution</title><link>https://dataqubed.io/brd-for-successful-project-execution/</link><pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/brd-for-successful-project-execution/</guid><description>&lt;p>Why I never say &lt;code>Yes&lt;/code> to a project without a BRD. I either drop it, or we have to agree to make one.&lt;/p>
+&lt;h2 id="importance-of-a-business-requirement-document-brd-for-successful-project-execution">Importance of a Business Requirement Document (BRD) for Successful Project Execution&lt;/h2>
+&lt;p>When working on data-heavy projects that involve developing machine learning models and directly interacting with key stakeholders, having a well-defined Business Requirement Document (BRD) is crucial. A BRD acts as a blueprint for the project, ensuring that all team members and stakeholders are aligned on the goals, scope, and deliverables. Without a BRD, projects can easily suffer from scope creep, miscommunication, and a lack of clear direction. This post will serve as a guideline for students on how to approach their projects using a BRD, which will be a critical tool throughout the year.&lt;/p>
+&lt;h2 id="why-a-brd-is-essential">Why a BRD is Essential&lt;/h2>
+&lt;h3 id="1-reduces-scope-creep">1. &lt;strong>Reduces Scope Creep&lt;/strong>&lt;/h3>
+&lt;p>A BRD helps to clearly define what is and isn&amp;rsquo;t part of the project. This clarity prevents additional, unplanned tasks from creeping into the project scope, which can derail timelines and resources.&lt;/p>
+&lt;h3 id="2-aligns-project-goals">2. &lt;strong>Aligns Project Goals&lt;/strong>&lt;/h3>
+&lt;p>By outlining the project goals and getting sign-off from all stakeholders, the BRD ensures that everyone involved has the same understanding of the project&amp;rsquo;s objectives. This alignment is crucial for the project&amp;rsquo;s success.&lt;/p>
+&lt;h3 id="3-formalizes-project-efforts">3. &lt;strong>Formalizes Project Efforts&lt;/strong>&lt;/h3>
+&lt;p>A BRD serves as a formal document that tracks the progress of the project. It provides a reference point for what has been agreed upon, making it easier to track milestones and hold team members accountable.&lt;/p>
+&lt;h2 id="steps-to-create-a-brd">Steps to Create a BRD&lt;/h2>
+&lt;h3 id="1-sign-off-grid">1. &lt;strong>Sign-off Grid&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Purpose:&lt;/strong> To document agreement from all team members on the project goals and timeline.&lt;/li>
+&lt;li>&lt;strong>Action:&lt;/strong> List each team member&amp;rsquo;s name, email, and the date they signed off on the BRD. This ensures that everyone is on the same page from the start.&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-problem-statement">2. &lt;strong>Problem Statement&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Purpose:&lt;/strong> To clearly define the focus of the project.&lt;/li>
+&lt;li>&lt;strong>Action:&lt;/strong> Write a concise statement that outlines the problem the project aims to solve.&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-background--context">3. &lt;strong>Background &amp;amp; Context&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Purpose:&lt;/strong> To provide the necessary background information and define the scope of the project.&lt;/li>
+&lt;li>&lt;strong>Action:&lt;/strong> Describe the context of the project, including what is in scope and what is not. This section should give all stakeholders a clear understanding of the project’s environment and limitations.&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-business-impact-metrics">4. &lt;strong>Business Impact Metrics&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Purpose:&lt;/strong> To set benchmarks and KPIs that will measure the project&amp;rsquo;s success.&lt;/li>
+&lt;li>&lt;strong>Action:&lt;/strong> Define the metrics that will be used to assess the project&amp;rsquo;s impact. These should be quantifiable and directly linked to the project&amp;rsquo;s goals.&lt;/li>
+&lt;/ul>
+&lt;h3 id="5-business-requirements">5. &lt;strong>Business Requirements&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Purpose:&lt;/strong> To list all the features and deliverables that the project will produce.&lt;/li>
+&lt;li>&lt;strong>Action:&lt;/strong> Document the key business requirements, prioritizing them based on their importance to the project&amp;rsquo;s success. Each requirement should have a clear description and rationale.&lt;/li>
+&lt;/ul>
+&lt;h3 id="6-key-dates">6. &lt;strong>Key Dates&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Purpose:&lt;/strong> To establish a timeline for the project.&lt;/li>
+&lt;li>&lt;strong>Action:&lt;/strong> Define the key phases of the project and the dates by which deliverables are expected. This timeline will help manage expectations and keep the project on track.&lt;/li>
+&lt;/ul>
+&lt;h3 id="7-resources">7. &lt;strong>Resources&lt;/strong>&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Purpose:&lt;/strong> To list any additional materials or references that are relevant to the project.&lt;/li>
+&lt;li>&lt;strong>Action:&lt;/strong> Include links to documents, code files, or other resources that team members may need throughout the project.&lt;/li>
+&lt;/ul>
+&lt;h2 id="suggested-template-for-your-brd">Suggested Template for Your BRD&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="gh"># Business Requirement Document (BRD)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gh">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Project Name:**&lt;/span> [Insert Project Name]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Status:**&lt;/span> [Draft/Final]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Last Updated:**&lt;/span> [Insert Date]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Authors:**&lt;/span> [Insert Author Names]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gs">**Collaborators:**&lt;/span> [Insert Collaborator Names]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Table of Contents
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">1.&lt;/span> [&lt;span class="nt">Sign-off Grid&lt;/span>](&lt;span class="na">#sign-off-grid&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">2.&lt;/span> [&lt;span class="nt">Problem Statement&lt;/span>](&lt;span class="na">#problem-statement&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">3.&lt;/span> [&lt;span class="nt">Background &amp;amp; Context&lt;/span>](&lt;span class="na">#background--context&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">4.&lt;/span> [&lt;span class="nt">Business Impact Metrics&lt;/span>](&lt;span class="na">#business-impact-metrics&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">5.&lt;/span> [&lt;span class="nt">Business Requirements&lt;/span>](&lt;span class="na">#business-requirements&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">6.&lt;/span> [&lt;span class="nt">Key Dates&lt;/span>](&lt;span class="na">#key-dates&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">7.&lt;/span> [&lt;span class="nt">Resources&lt;/span>](&lt;span class="na">#resources&lt;/span>)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Sign-off Grid
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| Team Member | Role | Date |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| ----------- | ---- | ---- |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| [Name] | [Role] | [Date] |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| [Name] | [Role] | [Date] |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Problem Statement
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[Insert Problem Statement]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[min 2 - 4 sentences]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Background &amp;amp; Context
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[Insert Background &lt;span class="err">&amp;amp;&lt;/span> Context]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[Min 2 - 4 paragraphs describing the project background and context. Detail what is in scope and not in scope]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Business Impact Metrics
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[Insert Business Impact Metrics]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[1 - 2 paragraphs describing the metrics and benchmark to gauge project success]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Business Requirements
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| Requirements | Priority | Notes |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| ------------ | -------- | ----- |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| [Requirement 1] | [P0/P1] | [Notes] |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| [Requirement 2] | [P0/P1] | [Notes] |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Key Dates
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| Phase | Artifact | Date | Owner | Status |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| ----- | -------- | ---- | ------ | ------ |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| [Phase 1] | [Artifact] | [Date] | [Owner] | [Status] |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| [Phase 2] | [Artifact] | [Date] | [Owner] | [Status] |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## Resources
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Technical Design Doc: &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Related Docs: &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">*&lt;/span> Artifacts: &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="an-example-of-business-requirements">An example of Business Requirements&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Requirements&lt;/th>
+&lt;th>Priority&lt;/th>
+&lt;th>Notes&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>BRD:&lt;/strong> Create a requirement doc that defines the business scope of the ML project&lt;/td>
+&lt;td>&lt;strong>P0&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Data Pipeline:&lt;/strong> Create a data pipeline that ingests, transforms, and loads data into the client’s data warehouse.&lt;/td>
+&lt;td>&lt;strong>P0&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>ML Model:&lt;/strong> Create a model the client can use for churn model scoring.&lt;/td>
+&lt;td>&lt;strong>P0&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>ML Score:&lt;/strong> Output churn scores across ~10M users in a daily batch.&lt;/td>
+&lt;td>&lt;strong>P0&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>ML Monitoring:&lt;/strong> Create a model monitoring service that checks for model drifts.&lt;/td>
+&lt;td>&lt;strong>P1&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>Feature Importance:&lt;/strong> Display features that are strong predictors for user churn.&lt;/td>
+&lt;td>&lt;strong>P1&lt;/strong>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="an-example-of-key-dates">An example of Key Dates&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Phase&lt;/th>
+&lt;th>Artifact&lt;/th>
+&lt;th>Date&lt;/th>
+&lt;th>Owner&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Problem Scoping&lt;/td>
+&lt;td>BRD, Feasibility Analysis&lt;/td>
+&lt;td>07/18/24&lt;/td>
+&lt;td>Mohsen, Elavendan&lt;/td>
+&lt;td>Done&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Data Preparation&lt;/td>
+&lt;td>Data Pipeline&lt;/td>
+&lt;td>07/30/24&lt;/td>
+&lt;td>Jan, Mohsen&lt;/td>
+&lt;td>In Progress&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Model Development&lt;/td>
+&lt;td>Benchmark Model&lt;/td>
+&lt;td>08/30/24&lt;/td>
+&lt;td>Frank, Arash&lt;/td>
+&lt;td>In Progress&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Productionization&lt;/td>
+&lt;td>Productionized Model with Batch Inference&lt;/td>
+&lt;td>09/15/24&lt;/td>
+&lt;td>Zhanna, Dean&lt;/td>
+&lt;td>Not Started&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Staging&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>09/30/24&lt;/td>
+&lt;td>Bram, Alican&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Launch&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>10/15/24&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>By following this guideline and using the provided template, students can ensure that their projects are well-structured and have a clear path to success. The BRD is not just a formality but a strategic tool that helps to drive the project forward with clarity and purpose.&lt;/p>
+&lt;p>Need to read more?&lt;br>
+Have a look at &lt;a href="https://uit.stanford.edu/pmo/business-requirements-doc" target="_blank" rel="noopener">this post&lt;/a> published on Stanford University&amp;rsquo;s website. It provides an in-depth guide on creating a Business Requirements Document (BRD), outlining the process, benefits, and tips for successful implementation. This resource is invaluable for project teams looking to enhance clarity, efficiency, and communication throughout their project development and delivery.&lt;/p></description></item><item><title>Unlocking Entrepreneurial Success</title><link>https://dataqubed.io/unlocking-entrepreneurial-success/</link><pubDate>Sat, 03 Aug 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/unlocking-entrepreneurial-success/</guid><description>&lt;p>As you prepare to have a head start in your third year, where you&amp;rsquo;ll dive into exciting projects with real companies, there&amp;rsquo;s no better time to get inspired by someone who&amp;rsquo;s mastered the art of entrepreneurship. Steven Bartlett’s podcast on Spotify features a conversation with Marc Randolph, the former CEO of Netflix, and it&amp;rsquo;s packed with insights that could reshape how you approach your own projects.&lt;/p>
+&lt;p>Marc Randolph has been through the highs and lows of building a business from the ground up. In this podcast, he shares his journey and the tough lessons he’s learned along the way. One of his core beliefs? Every idea is bad—until you prove otherwise. This mindset is not just about being skeptical; it’s about understanding that success comes from testing, refining, and relentlessly improving your ideas.&lt;/p>
+&lt;p>Listening to this podcast will give you a fresh perspective on how to tackle the challenges you&amp;rsquo;ll face this year. It’s a must-hear for anyone serious about turning ideas into reality. Get ready to learn from one of the best, and start your year with the motivation to make your projects truly exceptional.&lt;/p>
+&lt;iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1B2NLib3h8733YbcX5ofNm/video?utm_source=generator&amp;theme=0" width="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">&lt;/iframe>
+&lt;p>This is your
+&lt;span class="inline-block pr-1">
+&lt;svg style="height: 1em; transform: translateY(0.1em);" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="currentColor">&lt;path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/>&lt;/svg>
+&lt;/span> Python free day. So enjoy it!&lt;/p></description></item><item><title>Shaping Your Success and Impact</title><link>https://dataqubed.io/shaping-your-success-and-impact/</link><pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/shaping-your-success-and-impact/</guid><description>&lt;h2 id="the-power-of-civility-shaping-your-success-and-impact">The Power of Civility: Shaping Your Success and Impact&lt;/h2>
+&lt;p>As you prepare to step into the professional world and take on real projects with companies, there&amp;rsquo;s one question that will shape your success more than any other: Who do you want to be? This isn&amp;rsquo;t just about your skills or knowledge—it&amp;rsquo;s rather more about &lt;code>how you choose to show up every day&lt;/code>, &lt;code>how you treat the people around you&lt;/code>, and &lt;code>the environment you help create&lt;/code>.&lt;/p>
+&lt;p>Watch to bellow TedTalk and remind yourselves of the powerful impact of civility—or the lack of it—on everything from &lt;code>team performance&lt;/code> to &lt;code>personal well-being&lt;/code>. You&amp;rsquo;ll hear compelling research and real-world stories that reveal just how critical it is to be mindful of our interactions. In the workplace and within your small study group, incivility isn’t just unpleasant; &lt;code>it’s a productivity killer&lt;/code>. It drains motivation, diminishes creativity, and even puts lives at risk in critical situations. But the good news is that civility pays off—in your &lt;code>relationships&lt;/code>, your &lt;code>work&lt;/code>, and your &lt;code>overall success&lt;/code>.&lt;/p>
+&lt;p>As you watch, think about the culture you want to foster in your teams and the kind of leader you aspire to be. The insights you&amp;rsquo;ll gain here can make all the difference in how you approach your projects, your teammates, and your career. Let this be the foundation for the journey ahead—one where respect, empathy, and thoughtful communication set you apart and drive you forward.&lt;/p>
+&lt;p>&lt;a href="https://www.ted.com/talks/christine_porath_why_being_respectful_to_your_coworkers_is_good_for_business?utm_campaign=tedspread&amp;amp;utm_medium=referral&amp;amp;utm_source=tedcomshare" target="_blank" rel="noopener">Link to &lt;code>Why being respectful to your coworkers is good for business?&lt;/code>&lt;/a> on Ted.com,&lt;/p>
+&lt;p>Or just Watch (Listen) to the video bellow:&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kfcOK9yZkzs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+&lt;/div></description></item></channel></rss>
