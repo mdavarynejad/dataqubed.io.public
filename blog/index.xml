@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog | Your Data Science Mentor - Mohsen Davarynejad</title><link>https://dataqubed.io/blog/</link><atom:link href="https://dataqubed.io/blog/index.xml" rel="self" type="application/rss+xml"/><description>Blog</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url><title>Blog</title><link>https://dataqubed.io/blog/</link></image><item><title>AI as System /#1 - Smarter Search with RQ-RAG</title><link>https://dataqubed.io/ai-as-system-/%231-smarter-search-with-rq-rag/</link><pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate><guid>https://dataqubed.io/ai-as-system-/%231-smarter-search-with-rq-rag/</guid><description>&lt;h2 id="about-ai-as-system">About &lt;em>AI as System&lt;/em>&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog | Your Data Science Mentor - Mohsen Davarynejad</title><link>https://dataqubed.io/blog/</link><atom:link href="https://dataqubed.io/blog/index.xml" rel="self" type="application/rss+xml"/><description>Blog</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://dataqubed.io/media/icon_hu_913fe0962b0e757d.png</url><title>Blog</title><link>https://dataqubed.io/blog/</link></image><item><title>AI as System #1: Smarter Search with RQ-RAG</title><link>https://dataqubed.io/ai-as-system-smarter-search-with-rq-rag/</link><pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate><guid>https://dataqubed.io/ai-as-system-smarter-search-with-rq-rag/</guid><description>&lt;h2 id="about-ai-as-system">About &lt;em>AI as System&lt;/em>&lt;/h2>
 &lt;p>&lt;em>AI as System&lt;/em> is a series about understanding artificial intelligence not as isolated models, but as components in larger systems.&lt;br>
 Each post explores how AI behaves when embedded in real-world workflows—retrieving information, making decisions, adapting to context, or supporting human users.&lt;/p>
 &lt;p>Whether you&amp;rsquo;re working in logistics, education, product development, or research, this series helps you think in systems.&lt;br>
@@ -2138,7 +2138,7 @@ data.head()
 &lt;p>Hugo Blox supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-972413856" class="chart">&lt;/div>
+&lt;div id="chart-814695723" class="chart">&lt;/div>
 &lt;script>
 async function fetchChartJSON() {
 console.debug('Hugo Blox fetching chart JSON...')
@@ -2154,7 +2154,7 @@ return;
 clearInterval( a );
 fetchChartJSON().then(chart => {
 console.debug('Plotting chart...')
-window.Plotly.newPlot('chart-972413856', chart.data, chart.layout, {responsive: true});
+window.Plotly.newPlot('chart-814695723', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
