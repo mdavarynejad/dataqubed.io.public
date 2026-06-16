@@ -20,7 +20,7 @@
 &lt;li>&lt;strong>Fundamentals of PySpark&lt;/strong>: Learn the basics of PySpark, including its architecture, Resilient Distributed Datasets (RDDs), and DataFrames.&lt;/li>
 &lt;li>&lt;strong>Data Processing and SQL&lt;/strong>: Master the use of DataFrames and Spark SQL for data manipulation and querying.&lt;/li>
 &lt;li>&lt;strong>Streaming and Real-Time Data&lt;/strong>: Understand how to process real-time data using Spark Streaming.&lt;/li>
-&lt;li>&lt;strong>Machine Learning&lt;/strong>: Build and evaluate distributed models with Spark MLlib (Modules 6.3 to 6.6).&lt;/li>
+&lt;li>&lt;strong>Machine Learning&lt;/strong>: Build and evaluate distributed models with Spark MLlib (Modules 6.0 to 6.3).&lt;/li>
 &lt;li>&lt;strong>Capstone Project&lt;/strong>: Apply the full stack to a real-world problem on a Data Science or Data Engineering track.&lt;/li>
 &lt;/ul>
 &lt;h4 id="learning-outcomes">Learning Outcomes&lt;/h4>
@@ -51,7 +51,7 @@
 &lt;li>&lt;strong>Module 3: DataFrames and Spark SQL&lt;/strong>: 6 hours&lt;/li>
 &lt;li>&lt;strong>Module 4: Data Sources and Sinks&lt;/strong>: 4 hours&lt;/li>
 &lt;li>&lt;strong>Module 5: Spark Streaming&lt;/strong>: 12 hours&lt;/li>
-&lt;li>&lt;strong>Module 6: Machine Learning&lt;/strong>: available now, see Modules 6.0 to 6.6 (H2O Sparkling Water and MLlib)&lt;/li>
+&lt;li>&lt;strong>Module 6: Machine Learning&lt;/strong>: available now, see Modules 6.0 to 6.6 (MLlib and H2O Sparkling Water)&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>Total current content is roughly 35 hours across Modules 1 to 6 and the capstone project.&lt;/p>&lt;/blockquote>
@@ -155,19 +155,19 @@
 &lt;li>&lt;a href="https://dataqubed.io/pyspark-kafka-spark-structured-streaming/" target="_blank" rel="noopener">5.3 Kafka and Spark Structured Streaming&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h4 id="module-6-machine-learning-with-pyspark">Module 6: Machine Learning with PySpark&lt;/h4>
-&lt;p>Module 6 has two tracks. The H2O Sparkling Water track needs classic compute. The MLlib track runs on Free Edition with environment version 4.&lt;/p>
-&lt;p>H2O Sparkling Water (classic compute):&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/" target="_blank" rel="noopener">6.0 Scalable Machine Learning with H2O and Sparkling Water&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/" target="_blank" rel="noopener">6.1 Introduction to Distributed Machine Learning&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://dataqubed.io/pyspark-h2o-sparkling-water-setup/" target="_blank" rel="noopener">6.2 Running H2O Sparkling Water&lt;/a>&lt;/li>
-&lt;/ul>
+&lt;p>Module 6 has two tracks. The MLlib track is the main path and runs on Free Edition with environment version 4. The H2O Sparkling Water track is optional and needs classic compute.&lt;/p>
 &lt;p>MLlib (Free Edition, environment version 4):&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="https://dataqubed.io/pyspark-mllib-fundamentals/" target="_blank" rel="noopener">6.3 MLlib Fundamentals&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://dataqubed.io/pyspark-supervised-learning-at-scale/" target="_blank" rel="noopener">6.4 Supervised Learning at Scale&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/" target="_blank" rel="noopener">6.5 Unsupervised Learning and Recommendation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://dataqubed.io/pyspark-ml-pipelines-in-production/" target="_blank" rel="noopener">6.6 ML Pipelines in Production&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://dataqubed.io/pyspark-mllib-fundamentals/" target="_blank" rel="noopener">6.0 MLlib Fundamentals&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://dataqubed.io/pyspark-supervised-learning-at-scale/" target="_blank" rel="noopener">6.1 Supervised Learning at Scale&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/" target="_blank" rel="noopener">6.2 Unsupervised Learning and Recommendation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://dataqubed.io/pyspark-ml-pipelines-in-production/" target="_blank" rel="noopener">6.3 ML Pipelines in Production&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>H2O Sparkling Water (optional, classic compute):&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/" target="_blank" rel="noopener">6.4 Scalable Machine Learning with H2O and Sparkling Water&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/" target="_blank" rel="noopener">6.5 Introduction to Distributed Machine Learning&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://dataqubed.io/pyspark-h2o-sparkling-water-setup/" target="_blank" rel="noopener">6.6 Running H2O Sparkling Water&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h4 id="module-7-real-world-applications-and-capstone-project">&lt;a href="https://dataqubed.io/pyspark-capstone-project/" target="_blank" rel="noopener">Module 7: Real-World Applications and Capstone Project&lt;/a>&lt;/h4>
 &lt;p>The capstone brief is available now. Pick a Data Science or Data Engineering track and apply the full stack to a real problem.&lt;/p>
@@ -966,109 +966,7 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;p>This wraps up the streaming track. Next we move into machine learning with Spark.&lt;/p>
 &lt;hr>
 &lt;!-- nav -->
-&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-kafka-python-producers-and-consumers/" target="_blank" rel="noopener">Module 5.2: Kafka Producers and Consumers&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-mllib-fundamentals/" target="_blank" rel="noopener">Module 6.3: MLlib Fundamentals&lt;/a>&lt;/p></description></item><item><title>PySpark - Sparkling Water - Module 6.0</title><link>https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/</link><pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/</guid><description>&lt;h2 id="scalable-machine-learning-with-h2o-and-sparkling-water">Scalable Machine Learning with H2O and Sparkling Water&lt;/h2>
-&lt;h3 id="1-introduction-to-distributed-machine-learning">1. Introduction to Distributed Machine Learning&lt;/h3>
-&lt;p>We&amp;rsquo;ll begin by exploring the core concepts behind distributed machine learning. This includes a look at how H2O and Sparkling Water fit into this space. You&amp;rsquo;ll understand H2O’s role in scaling ML models and how it integrates with Spark for large-scale data processing.&lt;/p>
-&lt;h4 id="2-dataset-selection">2. Dataset Selection&lt;/h4>
-&lt;p>To test the power of distributed computing we would ideally work with a sizable dataset, but since we are on a small free Databricks workspace we will skip using large datasets.&lt;/p>
-&lt;p>We will load some dataset using H2O, and apply various data preprocessing techniques, exploring both traditional pandas/sklearn methods and H2O’s distributed capabilities.&lt;/p>
-&lt;h4 id="3-module-breakdown">3. Module Breakdown&lt;/h4>
-&lt;h5 id="a-preprocessing">a. &lt;strong>Preprocessing:&lt;/strong>&lt;/h5>
-&lt;p>Begin by loading and exploring the dataset using H2O. From there, handle data cleaning, feature engineering, and scaling. Experiment with both local methods and H2O-specific techniques to compare workflows.&lt;/p>
-&lt;h5 id="b-model-building-local">b. &lt;strong>Model Building (Local):&lt;/strong>&lt;/h5>
-&lt;p>Train machine learning models like Random Forests or Gradient Boosting Machines using H2O locally. Track performance metrics like accuracy and F1-score, along with the time it takes to train each model.&lt;/p>
-&lt;h5 id="c-distributed-computing-with-sparkling-water">c. &lt;strong>Distributed Computing with Sparkling Water:&lt;/strong>&lt;/h5>
-&lt;p>Next, you’ll set up a Spark cluster, either locally or in the cloud, to train the same models on Sparkling Water. Compare the performance of your distributed models against those trained on your local machine, with an emphasis on training time and model accuracy.&lt;/p>
-&lt;h5 id="d-hyperparameter-tuning">d. &lt;strong>Hyperparameter Tuning:&lt;/strong>&lt;/h5>
-&lt;p>Apply H2O’s grid search to tune hyperparameters for your models. Evaluate how well the tuning process scales when done in a distributed setting via Sparkling Water.&lt;/p>
-&lt;h5 id="e-model-evaluation">e. &lt;strong>Model Evaluation:&lt;/strong>&lt;/h5>
-&lt;p>Assess the performance of your models based on accuracy, precision, and training time. You&amp;rsquo;ll analyze how distributed computing impacts both the quality and speed of training, especially when working with larger datasets.&lt;/p>
-&lt;h5 id="f-visualization--reporting">f. &lt;strong>Visualization &amp;amp; Reporting:&lt;/strong>&lt;/h5>
-&lt;p>You’ll present your results through visualizations, comparing model performance between local and distributed setups. This will culminate in a final report summarizing your findings and reflecting on the advantages and challenges of distributed ML.&lt;/p>
-&lt;h4 id="bonus-automl-and-cloud-deployment">Bonus: AutoML and Cloud Deployment&lt;/h4>
-&lt;p>For those who want to dive deeper, you can experiment with H2O’s AutoML functionality, comparing its performance in both local and distributed environments. Additionally, deploying your Spark and H2O cluster on cloud platforms like Azure or GCP will give you a real-world glimpse into scalable machine learning.&lt;/p>
-&lt;h3 id="what-youll-learn">What You’ll Learn&lt;/h3>
-&lt;p>By the end of this project, you’ll have a practical understanding of distributed machine learning. You’ll not only develop scalable ML models using H2O and Sparkling Water, but also understand when to transition from local training to a distributed cluster for better efficiency.&lt;/p>
-&lt;hr>
-&lt;!-- nav -->
-&lt;p>&lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/" target="_blank" rel="noopener">Module 6.1: Introduction to Distributed Machine Learning&lt;/a>&lt;/p></description></item><item><title>PySpark - Sparkling Water - Module 6.1</title><link>https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/</link><pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/</guid><description>&lt;h2 id="introduction-to-distributed-machine-learning-a-practical-approach-with-h2o-and-sparkling-water">Introduction to Distributed Machine Learning: A Practical Approach with H2O and Sparkling Water&lt;/h2>
-&lt;p>As datasets continue to grow in size, the limitations of traditional machine learning systems become more apparent. The need to process, analyze, and train models on massive datasets calls for a new approach—&lt;strong>Distributed Machine Learning&lt;/strong>. In this module, we will explore the basics of distributed ML through analogies, architectures, real-world applications, and tools like H2O and Sparkling Water.&lt;/p>
-&lt;h3 id="analogy-to-real-world-distributed-systems">Analogy to Real-World Distributed Systems&lt;/h3>
-&lt;p>Imagine a large construction project. If one worker had to build an entire house alone, it would take months to complete. However, if you break the tasks into smaller chunks—one person working on the foundation, another on plumbing, another on roofing—the project is completed much faster. Each worker handles a piece of the puzzle simultaneously, and by working in parallel, the project progresses at a much quicker pace.&lt;/p>
-&lt;p>Distributed machine learning works in a similar way. Instead of asking a single machine to handle all computations for large datasets, the work is split across several machines (or nodes). Each node processes a smaller portion of the data, and together, they complete the task far more efficiently than a single machine ever could.&lt;/p>
-&lt;h3 id="traditional-vs-distributed-ml-architectures">Traditional vs. Distributed ML Architectures&lt;/h3>
-&lt;p>In a traditional machine learning architecture, everything happens on one machine. You load the dataset into memory, preprocess it, train your model, and make predictions—all on a single machine. This setup works perfectly well for small datasets and relatively simple models, but as your data grows, so do the problems. The dataset might be too large to fit into memory, and the computation might become so slow that it takes days or weeks to train a model.&lt;/p>
-&lt;p>In a distributed architecture, the dataset is partitioned across multiple machines. Each machine, or node, processes a subset of the data in parallel. The results are then aggregated to form a final model. The major difference here is the ability to scale horizontally. By adding more machines to the cluster, you can handle larger datasets and speed up computation.&lt;/p>
-&lt;p>Frameworks like &lt;strong>Apache Spark&lt;/strong> make this process easier by managing the distribution of data and computation across a cluster of machines. Machine learning libraries like &lt;strong>H2O&lt;/strong> build on this, offering powerful, distributed ML algorithms that can handle huge amounts of data without being limited by a single machine&amp;rsquo;s resources.&lt;/p>
-&lt;h3 id="distributed-machine-learning-in-practice">Distributed Machine Learning in Practice&lt;/h3>
-&lt;p>Distributed machine learning is already widely used in industries that deal with massive amounts of data. For instance, streaming services like &lt;strong>Netflix&lt;/strong> use distributed machine learning to recommend movies and shows based on billions of user interactions. Similarly, social media platforms like &lt;strong>Facebook&lt;/strong> use distributed models to detect spam, suggest friends, and show targeted advertisements—all while processing vast amounts of real-time data.&lt;/p>
-&lt;p>Take the example of a recommendation system at Netflix. When a user watches a movie or interacts with content, Netflix collects data to improve its recommendation engine. Since there are millions of users and countless data points, Netflix’s ML models need to process this data quickly. They rely on distributed systems to handle the training of these models, which would otherwise take an impractical amount of time on a single machine.&lt;/p>
-&lt;p>Distributed ML is the key to scaling machine learning across industries where data is constantly growing and demands for real-time insights are increasing.&lt;/p>
-&lt;p>Distributed machine learning offers several benefits that make it essential for handling large-scale data:&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>&lt;strong>Scalability:&lt;/strong> Distributed ML allows you to handle datasets that are too large to fit into the memory of a single machine. By distributing data and computations across multiple nodes, you can scale to whatever size your dataset requires.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Speed:&lt;/strong> Processing data in parallel across multiple machines means that training times are significantly reduced. This is especially important for iterative algorithms like gradient boosting, which require repeated passes over the data.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Fault Tolerance:&lt;/strong> Distributed systems are often designed to be fault-tolerant. If one machine in the cluster fails, the system can redistribute the task to another machine without losing any data or progress, ensuring robustness in large-scale applications.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Resource Optimization:&lt;/strong> Distributed ML systems can dynamically allocate resources based on demand. For example, frameworks like Spark can add or remove nodes from a cluster, depending on the current computational load, making resource use more efficient.&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;h3 id="distributed-machine-learning-with-h2o-and-sparkling-water">Distributed Machine Learning with H2O and Sparkling Water&lt;/h3>
-&lt;p>To implement distributed machine learning, you&amp;rsquo;ll need tools that abstract the complexity of working with multiple machines while providing robust ML capabilities. This is where &lt;strong>H2O&lt;/strong> and &lt;strong>Sparkling Water&lt;/strong> come in.&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>H2O&lt;/strong> is an open-source, distributed machine learning platform that provides a wide range of scalable ML algorithms such as Random Forest, Gradient Boosting Machines (GBM), and Generalized Linear Models (GLM). H2O is designed to be highly scalable, able to run across multiple nodes in a cluster, allowing for both efficient model training and inference on large datasets.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Sparkling Water&lt;/strong> is an extension of H2O that integrates with &lt;strong>Apache Spark&lt;/strong>. It combines the strengths of both systems: the scalability of Spark for large-scale data processing and the advanced machine learning algorithms provided by H2O. Sparkling Water allows you to build machine learning models on top of Spark&amp;rsquo;s distributed data structures, making it easy to apply distributed ML to big data problems.&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>By using H2O and Sparkling Water, you can take advantage of the best features of both platforms, enabling you to scale your machine learning models from your local machine to a distributed environment with minimal code changes. This makes it easier to handle the growing data demands of modern machine learning applications while leveraging the power of distributed systems.&lt;/p>
-&lt;hr>
-&lt;!-- nav -->
-&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/" target="_blank" rel="noopener">Module 6.0: Scalable ML with H2O and Sparkling Water&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-h2o-sparkling-water-setup/" target="_blank" rel="noopener">Module 6.2: Running H2O Sparkling Water&lt;/a>&lt;/p></description></item><item><title>PySpark - Sparkling Water - Module 6.2</title><link>https://dataqubed.io/pyspark-h2o-sparkling-water-setup/</link><pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-h2o-sparkling-water-setup/</guid><description>&lt;h2 id="setting-up-h2o-sparkling-water">Setting Up H2O Sparkling Water&lt;/h2>
-&lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
-&lt;span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
-&lt;svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/>&lt;/svg>
-&lt;/span>
-&lt;span class="dark:text-neutral-300">H2O Sparkling Water does not run on Databricks Free Edition. Free Edition gives you serverless compute (Spark Connect), which does not expose the &lt;code>SparkContext&lt;/code> and locks down the low-level JVM access that Sparkling Water relies on. We tested this directly: &lt;code>H2OContext.getOrCreate()&lt;/code> fails on serverless. To follow this module you need &lt;a href="https://docs.databricks.com/aws/en/compute/use-compute" target="_blank" rel="noopener">&lt;strong>classic&lt;/strong> Databricks compute&lt;/a>: a trial or paid workspace where you can create a standard cluster. The rest of the course runs on Free Edition, so treat this H2O track as an optional, advanced extra.&lt;/span>
-&lt;/div>
-&lt;p>Sparkling Water lets H2O run inside a Spark cluster, so you prepare data at Spark scale and train H2O models without moving it anywhere. On a workspace with classic compute, the setup is short.&lt;/p>
-&lt;h3 id="step-1-create-a-classic-cluster">Step 1: Create a classic cluster&lt;/h3>
-&lt;p>Create a standard (non-serverless) cluster and note its Databricks Runtime version. You will match the Sparkling Water build to its Spark version.&lt;/p>
-&lt;h3 id="step-2-install-the-sparkling-water-library">Step 2: Install the Sparkling Water library&lt;/h3>
-&lt;p>On the cluster, go to &lt;strong>Libraries → Install new → PyPI&lt;/strong> and install the build that matches your Spark version, for example &lt;code>h2o-pysparkling-3.5&lt;/code> for a Spark 3.5 runtime.&lt;/p>
-&lt;h3 id="step-3-start-the-h2o-context">Step 3: Start the H2O context&lt;/h3>
-&lt;p>In a notebook attached to the cluster:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">pysparkling&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">H2OContext&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">hc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">H2OContext&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">getOrCreate&lt;/span>&lt;span class="p">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">hc&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This starts an H2O node inside the Spark executors and prints a summary of the H2O cluster: its name, the number of nodes, and the memory available.&lt;/p>
-&lt;h3 id="step-4-move-data-between-spark-and-h2o">Step 4: Move data between Spark and H2O&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">h2o_frame&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hc&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asH2OFrame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">spark_df&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># Spark DataFrame to H2O Frame&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">spark_df_again&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hc&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asSparkFrame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">h2o_frame&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># H2O Frame back to Spark DataFrame&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Prepare and clean your data with Spark, convert it to an H2O Frame, and train with H2O AutoML or its algorithms. Convert the predictions back to a Spark DataFrame when you want to write them out.&lt;/p>
-&lt;p>For the machine learning you can do on Free Edition itself, see the MLlib modules (6.3 onward), which run on serverless compute.&lt;/p>
-&lt;p>You might also want to explore the &lt;code>H2O Wave&lt;/code> web app framework for building AI web applications. See the video below.&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5Ba6fE8WF8Q?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
-&lt;/div>
-&lt;p>Or look into the &lt;a href="https://github.com/h2oai/wave" target="_blank" rel="noopener">Wave Git repo&lt;/a> if you are interested in building ML web applications.&lt;/p>
-&lt;p>References:&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/index.html" target="_blank" rel="noopener">H2O Documentation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://docs.databricks.com/aws/en/compute/serverless/limitations" target="_blank" rel="noopener">Databricks serverless compute limitations&lt;/a> (why Sparkling Water needs classic compute)&lt;/li>
-&lt;li>&lt;a href="https://docs.databricks.com/aws/en/compute/use-compute" target="_blank" rel="noopener">Databricks compute types&lt;/a> (how to create classic compute)&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;!-- nav -->
-&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/" target="_blank" rel="noopener">Module 6.1: Introduction to Distributed Machine Learning&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-mllib-fundamentals/" target="_blank" rel="noopener">Module 6.3: MLlib Fundamentals&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 6.3</title><link>https://dataqubed.io/pyspark-mllib-fundamentals/</link><pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-mllib-fundamentals/</guid><description>&lt;h2 id="mllib-fundamentals">MLlib Fundamentals&lt;/h2>
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-kafka-python-producers-and-consumers/" target="_blank" rel="noopener">Module 5.2: Kafka Producers and Consumers&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-mllib-fundamentals/" target="_blank" rel="noopener">Module 6.0: MLlib Fundamentals&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 6.0</title><link>https://dataqubed.io/pyspark-mllib-fundamentals/</link><pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-mllib-fundamentals/</guid><description>&lt;h2 id="mllib-fundamentals">MLlib Fundamentals&lt;/h2>
 &lt;p>This is where the course turns from moving and shaping data to learning from it. MLlib is Spark&amp;rsquo;s machine learning library. The difference from scikit-learn is the same one you have met all course: scikit-learn trains on a single machine and the data has to fit in its memory, while MLlib trains across the cluster on a Spark DataFrame, so it keeps working when the data does not fit on one machine.&lt;/p>
 &lt;p>If you already know scikit-learn, the ideas carry over. You still split the data, fit a model, and score it. What changes is that every step becomes a stage in a Spark pipeline, and the work runs distributed.&lt;/p>
 &lt;h3 id="before-you-start-switch-to-environment-version-4">Before you start: switch to environment version 4&lt;/h3>
@@ -1146,9 +1044,9 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;/ul>
 &lt;hr>
 &lt;!-- nav -->
-&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-kafka-spark-structured-streaming/" target="_blank" rel="noopener">Module 5.3: Kafka and Structured Streaming&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-supervised-learning-at-scale/" target="_blank" rel="noopener">Module 6.4: Supervised Learning at Scale&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 6.4</title><link>https://dataqubed.io/pyspark-supervised-learning-at-scale/</link><pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-supervised-learning-at-scale/</guid><description>&lt;h2 id="supervised-learning-at-scale">Supervised Learning at Scale&lt;/h2>
-&lt;p>In Module 6.3 you built one pipeline with one model. Here you swap models, measure them properly, and let Spark search for good settings. The pipeline you already know does not change. You only replace the final stage and add a way to compare results.&lt;/p>
-&lt;p>This module assumes the feature pipeline from 6.3: a &lt;code>StringIndexer&lt;/code>, a &lt;code>OneHotEncoder&lt;/code>, and a &lt;code>VectorAssembler&lt;/code> that produce a &lt;code>features&lt;/code> column. Keep the same notebook on &lt;strong>environment version 4&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-kafka-spark-structured-streaming/" target="_blank" rel="noopener">Module 5.3: Kafka and Structured Streaming&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-supervised-learning-at-scale/" target="_blank" rel="noopener">Module 6.1: Supervised Learning at Scale&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 6.1</title><link>https://dataqubed.io/pyspark-supervised-learning-at-scale/</link><pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-supervised-learning-at-scale/</guid><description>&lt;h2 id="supervised-learning-at-scale">Supervised Learning at Scale&lt;/h2>
+&lt;p>In Module 6.0 you built one pipeline with one model. Here you swap models, measure them properly, and let Spark search for good settings. The pipeline you already know does not change. You only replace the final stage and add a way to compare results.&lt;/p>
+&lt;p>This module assumes the feature pipeline from 6.0: a &lt;code>StringIndexer&lt;/code>, a &lt;code>OneHotEncoder&lt;/code>, and a &lt;code>VectorAssembler&lt;/code> that produce a &lt;code>features&lt;/code> column. Keep the same notebook on &lt;strong>environment version 4&lt;/strong>.&lt;/p>
 &lt;h3 id="swapping-the-model">Swapping the model&lt;/h3>
 &lt;p>Every MLlib classifier takes the same &lt;code>featuresCol&lt;/code> and &lt;code>labelCol&lt;/code>, so moving from one to another is a one-line change to the last stage.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">pyspark.ml&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">Pipeline&lt;/span>
@@ -1192,7 +1090,7 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">forest&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">featureImportances&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tuning-with-crossvalidator">Tuning with CrossValidator&lt;/h3>
 &lt;p>Picking &lt;code>numTrees&lt;/code> or &lt;code>maxDepth&lt;/code> by hand is guessing. &lt;code>CrossValidator&lt;/code> trains every combination in a &lt;code>ParamGridBuilder&lt;/code> across several folds and keeps the best.&lt;/p>
-&lt;p>On serverless, CrossValidator needs a scratch location, so create a Unity Catalog Volume once and point Spark ML at it. This is also the Volume you will reuse in 6.6 to save models.&lt;/p>
+&lt;p>On serverless, CrossValidator needs a scratch location, so create a Unity Catalog Volume once and point Spark ML at it. This is also the Volume you will reuse in 6.3 to save models.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">os&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">cat&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">spark&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sql&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;SELECT current_catalog()&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">first&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>
@@ -1241,7 +1139,7 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;/ul>
 &lt;hr>
 &lt;!-- nav -->
-&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-mllib-fundamentals/" target="_blank" rel="noopener">Module 6.3: MLlib Fundamentals&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/" target="_blank" rel="noopener">Module 6.5: Unsupervised Learning and Recommendation&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 6.5</title><link>https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/</link><pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/</guid><description>&lt;h2 id="unsupervised-learning-and-recommendation">Unsupervised Learning and Recommendation&lt;/h2>
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-mllib-fundamentals/" target="_blank" rel="noopener">Module 6.0: MLlib Fundamentals&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/" target="_blank" rel="noopener">Module 6.2: Unsupervised Learning and Recommendation&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 6.2</title><link>https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/</link><pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/</guid><description>&lt;h2 id="unsupervised-learning-and-recommendation">Unsupervised Learning and Recommendation&lt;/h2>
 &lt;p>Not every problem comes with a label. Sometimes you want to group rows that look alike, and sometimes you want to predict what a person will like from what other people liked. MLlib covers both, and both keep the same pipeline shape you already know.&lt;/p>
 &lt;p>Keep working on &lt;strong>environment version 4&lt;/strong>.&lt;/p>
 &lt;h3 id="k-means-clustering">K-Means clustering&lt;/h3>
@@ -1305,9 +1203,9 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;/ul>
 &lt;hr>
 &lt;!-- nav -->
-&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-supervised-learning-at-scale/" target="_blank" rel="noopener">Module 6.4: Supervised Learning at Scale&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-ml-pipelines-in-production/" target="_blank" rel="noopener">Module 6.6: ML Pipelines in Production&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 6.6</title><link>https://dataqubed.io/pyspark-ml-pipelines-in-production/</link><pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-ml-pipelines-in-production/</guid><description>&lt;h2 id="ml-pipelines-in-production">ML Pipelines in Production&lt;/h2>
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-supervised-learning-at-scale/" target="_blank" rel="noopener">Module 6.1: Supervised Learning at Scale&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-ml-pipelines-in-production/" target="_blank" rel="noopener">Module 6.3: ML Pipelines in Production&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 6.3</title><link>https://dataqubed.io/pyspark-ml-pipelines-in-production/</link><pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-ml-pipelines-in-production/</guid><description>&lt;h2 id="ml-pipelines-in-production">ML Pipelines in Production&lt;/h2>
 &lt;p>A model that lives in the notebook where you trained it is a prototype. Production means four more things: save the model, load it somewhere else, score new data with it, and keep an eye on it as the world changes. MLlib and MLflow cover all four, and none of it leaves Databricks.&lt;/p>
-&lt;p>Keep working on &lt;strong>environment version 4&lt;/strong>, and reuse the Unity Catalog Volume from 6.4. On serverless, saving and loading models always goes through a Volume.&lt;/p>
+&lt;p>Keep working on &lt;strong>environment version 4&lt;/strong>, and reuse the Unity Catalog Volume from 6.1. On serverless, saving and loading models always goes through a Volume.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">os&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">cat&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">spark&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sql&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;SELECT current_catalog()&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">first&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>
@@ -1362,7 +1260,109 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;/ul>
 &lt;hr>
 &lt;!-- nav -->
-&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/" target="_blank" rel="noopener">Module 6.5: Unsupervised Learning and Recommendation&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-capstone-project/" target="_blank" rel="noopener">Module 7: Capstone Project&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 7: Capstone Project</title><link>https://dataqubed.io/pyspark-capstone-project/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-capstone-project/</guid><description>&lt;h2 id="capstone-project">Capstone Project&lt;/h2>
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/" target="_blank" rel="noopener">Module 6.2: Unsupervised Learning and Recommendation&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-capstone-project/" target="_blank" rel="noopener">Module 7: Capstone Project&lt;/a>&lt;/p></description></item><item><title>PySpark - Sparkling Water - Module 6.4</title><link>https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/</link><pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/</guid><description>&lt;h2 id="scalable-machine-learning-with-h2o-and-sparkling-water">Scalable Machine Learning with H2O and Sparkling Water&lt;/h2>
+&lt;h3 id="1-introduction-to-distributed-machine-learning">1. Introduction to Distributed Machine Learning&lt;/h3>
+&lt;p>We&amp;rsquo;ll begin by exploring the core concepts behind distributed machine learning. This includes a look at how H2O and Sparkling Water fit into this space. You&amp;rsquo;ll understand H2O’s role in scaling ML models and how it integrates with Spark for large-scale data processing.&lt;/p>
+&lt;h4 id="2-dataset-selection">2. Dataset Selection&lt;/h4>
+&lt;p>To test the power of distributed computing we would ideally work with a sizable dataset, but since we are on a small free Databricks workspace we will skip using large datasets.&lt;/p>
+&lt;p>We will load some dataset using H2O, and apply various data preprocessing techniques, exploring both traditional pandas/sklearn methods and H2O’s distributed capabilities.&lt;/p>
+&lt;h4 id="3-module-breakdown">3. Module Breakdown&lt;/h4>
+&lt;h5 id="a-preprocessing">a. &lt;strong>Preprocessing:&lt;/strong>&lt;/h5>
+&lt;p>Begin by loading and exploring the dataset using H2O. From there, handle data cleaning, feature engineering, and scaling. Experiment with both local methods and H2O-specific techniques to compare workflows.&lt;/p>
+&lt;h5 id="b-model-building-local">b. &lt;strong>Model Building (Local):&lt;/strong>&lt;/h5>
+&lt;p>Train machine learning models like Random Forests or Gradient Boosting Machines using H2O locally. Track performance metrics like accuracy and F1-score, along with the time it takes to train each model.&lt;/p>
+&lt;h5 id="c-distributed-computing-with-sparkling-water">c. &lt;strong>Distributed Computing with Sparkling Water:&lt;/strong>&lt;/h5>
+&lt;p>Next, you’ll set up a Spark cluster, either locally or in the cloud, to train the same models on Sparkling Water. Compare the performance of your distributed models against those trained on your local machine, with an emphasis on training time and model accuracy.&lt;/p>
+&lt;h5 id="d-hyperparameter-tuning">d. &lt;strong>Hyperparameter Tuning:&lt;/strong>&lt;/h5>
+&lt;p>Apply H2O’s grid search to tune hyperparameters for your models. Evaluate how well the tuning process scales when done in a distributed setting via Sparkling Water.&lt;/p>
+&lt;h5 id="e-model-evaluation">e. &lt;strong>Model Evaluation:&lt;/strong>&lt;/h5>
+&lt;p>Assess the performance of your models based on accuracy, precision, and training time. You&amp;rsquo;ll analyze how distributed computing impacts both the quality and speed of training, especially when working with larger datasets.&lt;/p>
+&lt;h5 id="f-visualization--reporting">f. &lt;strong>Visualization &amp;amp; Reporting:&lt;/strong>&lt;/h5>
+&lt;p>You’ll present your results through visualizations, comparing model performance between local and distributed setups. This will culminate in a final report summarizing your findings and reflecting on the advantages and challenges of distributed ML.&lt;/p>
+&lt;h4 id="bonus-automl-and-cloud-deployment">Bonus: AutoML and Cloud Deployment&lt;/h4>
+&lt;p>For those who want to dive deeper, you can experiment with H2O’s AutoML functionality, comparing its performance in both local and distributed environments. Additionally, deploying your Spark and H2O cluster on cloud platforms like Azure or GCP will give you a real-world glimpse into scalable machine learning.&lt;/p>
+&lt;h3 id="what-youll-learn">What You’ll Learn&lt;/h3>
+&lt;p>By the end of this project, you’ll have a practical understanding of distributed machine learning. You’ll not only develop scalable ML models using H2O and Sparkling Water, but also understand when to transition from local training to a distributed cluster for better efficiency.&lt;/p>
+&lt;hr>
+&lt;!-- nav -->
+&lt;p>&lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/" target="_blank" rel="noopener">Module 6.5: Introduction to Distributed Machine Learning&lt;/a>&lt;/p></description></item><item><title>PySpark - Sparkling Water - Module 6.5</title><link>https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/</link><pubDate>Thu, 04 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/</guid><description>&lt;h2 id="introduction-to-distributed-machine-learning-a-practical-approach-with-h2o-and-sparkling-water">Introduction to Distributed Machine Learning: A Practical Approach with H2O and Sparkling Water&lt;/h2>
+&lt;p>As datasets continue to grow in size, the limitations of traditional machine learning systems become more apparent. The need to process, analyze, and train models on massive datasets calls for a new approach—&lt;strong>Distributed Machine Learning&lt;/strong>. In this module, we will explore the basics of distributed ML through analogies, architectures, real-world applications, and tools like H2O and Sparkling Water.&lt;/p>
+&lt;h3 id="analogy-to-real-world-distributed-systems">Analogy to Real-World Distributed Systems&lt;/h3>
+&lt;p>Imagine a large construction project. If one worker had to build an entire house alone, it would take months to complete. However, if you break the tasks into smaller chunks—one person working on the foundation, another on plumbing, another on roofing—the project is completed much faster. Each worker handles a piece of the puzzle simultaneously, and by working in parallel, the project progresses at a much quicker pace.&lt;/p>
+&lt;p>Distributed machine learning works in a similar way. Instead of asking a single machine to handle all computations for large datasets, the work is split across several machines (or nodes). Each node processes a smaller portion of the data, and together, they complete the task far more efficiently than a single machine ever could.&lt;/p>
+&lt;h3 id="traditional-vs-distributed-ml-architectures">Traditional vs. Distributed ML Architectures&lt;/h3>
+&lt;p>In a traditional machine learning architecture, everything happens on one machine. You load the dataset into memory, preprocess it, train your model, and make predictions—all on a single machine. This setup works perfectly well for small datasets and relatively simple models, but as your data grows, so do the problems. The dataset might be too large to fit into memory, and the computation might become so slow that it takes days or weeks to train a model.&lt;/p>
+&lt;p>In a distributed architecture, the dataset is partitioned across multiple machines. Each machine, or node, processes a subset of the data in parallel. The results are then aggregated to form a final model. The major difference here is the ability to scale horizontally. By adding more machines to the cluster, you can handle larger datasets and speed up computation.&lt;/p>
+&lt;p>Frameworks like &lt;strong>Apache Spark&lt;/strong> make this process easier by managing the distribution of data and computation across a cluster of machines. Machine learning libraries like &lt;strong>H2O&lt;/strong> build on this, offering powerful, distributed ML algorithms that can handle huge amounts of data without being limited by a single machine&amp;rsquo;s resources.&lt;/p>
+&lt;h3 id="distributed-machine-learning-in-practice">Distributed Machine Learning in Practice&lt;/h3>
+&lt;p>Distributed machine learning is already widely used in industries that deal with massive amounts of data. For instance, streaming services like &lt;strong>Netflix&lt;/strong> use distributed machine learning to recommend movies and shows based on billions of user interactions. Similarly, social media platforms like &lt;strong>Facebook&lt;/strong> use distributed models to detect spam, suggest friends, and show targeted advertisements—all while processing vast amounts of real-time data.&lt;/p>
+&lt;p>Take the example of a recommendation system at Netflix. When a user watches a movie or interacts with content, Netflix collects data to improve its recommendation engine. Since there are millions of users and countless data points, Netflix’s ML models need to process this data quickly. They rely on distributed systems to handle the training of these models, which would otherwise take an impractical amount of time on a single machine.&lt;/p>
+&lt;p>Distributed ML is the key to scaling machine learning across industries where data is constantly growing and demands for real-time insights are increasing.&lt;/p>
+&lt;p>Distributed machine learning offers several benefits that make it essential for handling large-scale data:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>Scalability:&lt;/strong> Distributed ML allows you to handle datasets that are too large to fit into the memory of a single machine. By distributing data and computations across multiple nodes, you can scale to whatever size your dataset requires.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Speed:&lt;/strong> Processing data in parallel across multiple machines means that training times are significantly reduced. This is especially important for iterative algorithms like gradient boosting, which require repeated passes over the data.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Fault Tolerance:&lt;/strong> Distributed systems are often designed to be fault-tolerant. If one machine in the cluster fails, the system can redistribute the task to another machine without losing any data or progress, ensuring robustness in large-scale applications.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Resource Optimization:&lt;/strong> Distributed ML systems can dynamically allocate resources based on demand. For example, frameworks like Spark can add or remove nodes from a cluster, depending on the current computational load, making resource use more efficient.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="distributed-machine-learning-with-h2o-and-sparkling-water">Distributed Machine Learning with H2O and Sparkling Water&lt;/h3>
+&lt;p>To implement distributed machine learning, you&amp;rsquo;ll need tools that abstract the complexity of working with multiple machines while providing robust ML capabilities. This is where &lt;strong>H2O&lt;/strong> and &lt;strong>Sparkling Water&lt;/strong> come in.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>H2O&lt;/strong> is an open-source, distributed machine learning platform that provides a wide range of scalable ML algorithms such as Random Forest, Gradient Boosting Machines (GBM), and Generalized Linear Models (GLM). H2O is designed to be highly scalable, able to run across multiple nodes in a cluster, allowing for both efficient model training and inference on large datasets.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Sparkling Water&lt;/strong> is an extension of H2O that integrates with &lt;strong>Apache Spark&lt;/strong>. It combines the strengths of both systems: the scalability of Spark for large-scale data processing and the advanced machine learning algorithms provided by H2O. Sparkling Water allows you to build machine learning models on top of Spark&amp;rsquo;s distributed data structures, making it easy to apply distributed ML to big data problems.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>By using H2O and Sparkling Water, you can take advantage of the best features of both platforms, enabling you to scale your machine learning models from your local machine to a distributed environment with minimal code changes. This makes it easier to handle the growing data demands of modern machine learning applications while leveraging the power of distributed systems.&lt;/p>
+&lt;hr>
+&lt;!-- nav -->
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-scalable-machine-learning-h2o-sparkling-water/" target="_blank" rel="noopener">Module 6.4: Scalable ML with H2O and Sparkling Water&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-h2o-sparkling-water-setup/" target="_blank" rel="noopener">Module 6.6: Running H2O Sparkling Water&lt;/a>&lt;/p></description></item><item><title>PySpark - Sparkling Water - Module 6.6</title><link>https://dataqubed.io/pyspark-h2o-sparkling-water-setup/</link><pubDate>Wed, 03 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-h2o-sparkling-water-setup/</guid><description>&lt;h2 id="setting-up-h2o-sparkling-water">Setting Up H2O Sparkling Water&lt;/h2>
+&lt;div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
+&lt;span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
+&lt;svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">&lt;path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/>&lt;/svg>
+&lt;/span>
+&lt;span class="dark:text-neutral-300">H2O Sparkling Water does not run on Databricks Free Edition. Free Edition gives you serverless compute (Spark Connect), which does not expose the &lt;code>SparkContext&lt;/code> and locks down the low-level JVM access that Sparkling Water relies on. We tested this directly: &lt;code>H2OContext.getOrCreate()&lt;/code> fails on serverless. To follow this module you need &lt;a href="https://docs.databricks.com/aws/en/compute/use-compute" target="_blank" rel="noopener">&lt;strong>classic&lt;/strong> Databricks compute&lt;/a>: a trial or paid workspace where you can create a standard cluster. The rest of the course runs on Free Edition, so treat this H2O track as an optional, advanced extra.&lt;/span>
+&lt;/div>
+&lt;p>Sparkling Water lets H2O run inside a Spark cluster, so you prepare data at Spark scale and train H2O models without moving it anywhere. On a workspace with classic compute, the setup is short.&lt;/p>
+&lt;h3 id="step-1-create-a-classic-cluster">Step 1: Create a classic cluster&lt;/h3>
+&lt;p>Create a standard (non-serverless) cluster and note its Databricks Runtime version. You will match the Sparkling Water build to its Spark version.&lt;/p>
+&lt;h3 id="step-2-install-the-sparkling-water-library">Step 2: Install the Sparkling Water library&lt;/h3>
+&lt;p>On the cluster, go to &lt;strong>Libraries → Install new → PyPI&lt;/strong> and install the build that matches your Spark version, for example &lt;code>h2o-pysparkling-3.5&lt;/code> for a Spark 3.5 runtime.&lt;/p>
+&lt;h3 id="step-3-start-the-h2o-context">Step 3: Start the H2O context&lt;/h3>
+&lt;p>In a notebook attached to the cluster:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">pysparkling&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">H2OContext&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">hc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">H2OContext&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">getOrCreate&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">hc&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This starts an H2O node inside the Spark executors and prints a summary of the H2O cluster: its name, the number of nodes, and the memory available.&lt;/p>
+&lt;h3 id="step-4-move-data-between-spark-and-h2o">Step 4: Move data between Spark and H2O&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">h2o_frame&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hc&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asH2OFrame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">spark_df&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># Spark DataFrame to H2O Frame&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">spark_df_again&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">hc&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">asSparkFrame&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">h2o_frame&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="c1"># H2O Frame back to Spark DataFrame&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Prepare and clean your data with Spark, convert it to an H2O Frame, and train with H2O AutoML or its algorithms. Convert the predictions back to a Spark DataFrame when you want to write them out.&lt;/p>
+&lt;p>For the machine learning you can do on Free Edition itself, see the MLlib modules (6.0 onward), which run on serverless compute.&lt;/p>
+&lt;p>You might also want to explore the &lt;code>H2O Wave&lt;/code> web app framework for building AI web applications. See the video below.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5Ba6fE8WF8Q?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+&lt;/div>
+&lt;p>Or look into the &lt;a href="https://github.com/h2oai/wave" target="_blank" rel="noopener">Wave Git repo&lt;/a> if you are interested in building ML web applications.&lt;/p>
+&lt;p>References:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.h2o.ai/h2o/latest-stable/h2o-py/docs/index.html" target="_blank" rel="noopener">H2O Documentation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.databricks.com/aws/en/compute/serverless/limitations" target="_blank" rel="noopener">Databricks serverless compute limitations&lt;/a> (why Sparkling Water needs classic compute)&lt;/li>
+&lt;li>&lt;a href="https://docs.databricks.com/aws/en/compute/use-compute" target="_blank" rel="noopener">Databricks compute types&lt;/a> (how to create classic compute)&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;!-- nav -->
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-introduction-to-distributed-machine-learning/" target="_blank" rel="noopener">Module 6.5: Introduction to Distributed Machine Learning&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 7: Capstone Project</title><link>https://dataqubed.io/pyspark-capstone-project/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-capstone-project/</guid><description>&lt;h2 id="capstone-project">Capstone Project&lt;/h2>
 &lt;p>The capstone is where the separate pieces become one piece of work. You take a real problem and carry it the whole way: get the data in, shape it, model it or stream it, and produce something a colleague could use. It is an individual or pair deliverable, scoped to about one day. The point is not size. It is whether you can join the stages together and explain your choices.&lt;/p>
 &lt;p>Pick one of the two tracks.&lt;/p>
 &lt;h3 id="track-a-data-science">Track A: Data Science&lt;/h3>
@@ -1370,11 +1370,11 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;p>&lt;strong>What you deliver.&lt;/strong> One Databricks notebook that:&lt;/p>
 &lt;ul>
 &lt;li>reads the raw data,&lt;/li>
-&lt;li>engineers features with the MLlib pipeline tools from Module 6.3,&lt;/li>
+&lt;li>engineers features with the MLlib pipeline tools from Module 6.0,&lt;/li>
 &lt;li>trains and evaluates a model, with the metric chosen to fit the problem,&lt;/li>
 &lt;li>and scores a fresh batch with the saved model.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>Platform.&lt;/strong> This track uses MLlib, so run it on serverless environment version 4 and save your model to a Unity Catalog Volume, as shown in Modules 6.3 to 6.6.&lt;/p>
+&lt;p>&lt;strong>Platform.&lt;/strong> This track uses MLlib, so run it on serverless environment version 4 and save your model to a Unity Catalog Volume, as shown in Modules 6.0 to 6.3.&lt;/p>
 &lt;p>&lt;strong>Suggested datasets.&lt;/strong> NYC Taxi trips, OpenAQ air quality, Yelp reviews, or data from your own company if you can share it. Pick something where a prediction would actually be useful.&lt;/p>
 &lt;p>&lt;strong>You are assessed on:&lt;/strong> whether the pipeline runs end to end, whether the evaluation is a fair measure of how good the model really is, the clarity of the code, and how well you explain each choice.&lt;/p>
 &lt;h3 id="track-b-data-engineering">Track B: Data Engineering&lt;/h3>
@@ -1398,7 +1398,7 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;/ul>
 &lt;hr>
 &lt;!-- nav -->
-&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-ml-pipelines-in-production/" target="_blank" rel="noopener">Module 6.6: ML Pipelines in Production&lt;/a>&lt;/p></description></item><item><title>PySpark - Exercise: Reviewing AI-Generated Code</title><link>https://dataqubed.io/pyspark-review-an-ai-generated-pipeline/</link><pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-review-an-ai-generated-pipeline/</guid><description>&lt;h2 id="reviewing-ai-generated-code">Reviewing AI-Generated Code&lt;/h2>
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-ml-pipelines-in-production/" target="_blank" rel="noopener">Module 6.3: ML Pipelines in Production&lt;/a>&lt;/p></description></item><item><title>PySpark - Exercise: Reviewing AI-Generated Code</title><link>https://dataqubed.io/pyspark-review-an-ai-generated-pipeline/</link><pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-review-an-ai-generated-pipeline/</guid><description>&lt;h2 id="reviewing-ai-generated-code">Reviewing AI-Generated Code&lt;/h2>
 &lt;p>By now you can write Spark, and so can an AI assistant. The skill that pays the rent is reading what it produces and knowing when it will hurt you. This exercise hands you a pipeline that an assistant might give you: it runs, and on a sample the answer is correct. Your job is to make it correct and fast on the full table, and to explain every change.&lt;/p>
 &lt;h3 id="the-setup">The setup&lt;/h3>
 &lt;p>Run this first. It builds an &lt;code>orders&lt;/code> table and a &lt;code>customers&lt;/code> table so the exercise is self-contained.&lt;/p>
@@ -1506,15 +1506,7 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;li>What is partition pruning, and how does &lt;code>partitionBy&lt;/code> on write enable it?&lt;/li>
 &lt;li>Why would you cache a DataFrame, and where can you actually do it?&lt;/li>
 &lt;li>Where do you look first when a query on serverless is slow?&lt;/li>
-&lt;/ul></description></item><item><title>Shaping Your Success and Impact</title><link>https://dataqubed.io/shaping-your-success-and-impact/</link><pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/shaping-your-success-and-impact/</guid><description>&lt;h2 id="the-power-of-civility-shaping-your-success-and-impact">The Power of Civility: Shaping Your Success and Impact&lt;/h2>
-&lt;p>As you prepare to step into the professional world and take on real projects with companies, there&amp;rsquo;s one question that will shape your success more than any other: Who do you want to be? This isn&amp;rsquo;t just about your skills or knowledge—it&amp;rsquo;s rather more about &lt;code>how you choose to show up every day&lt;/code>, &lt;code>how you treat the people around you&lt;/code>, and &lt;code>the environment you help create&lt;/code>.&lt;/p>
-&lt;p>Watch to bellow TedTalk and remind yourselves of the powerful impact of civility—or the lack of it—on everything from &lt;code>team performance&lt;/code> to &lt;code>personal well-being&lt;/code>. You&amp;rsquo;ll hear compelling research and real-world stories that reveal just how critical it is to be mindful of our interactions. In the workplace and within your small study group, incivility isn’t just unpleasant; &lt;code>it’s a productivity killer&lt;/code>. It drains motivation, diminishes creativity, and even puts lives at risk in critical situations. But the good news is that civility pays off—in your &lt;code>relationships&lt;/code>, your &lt;code>work&lt;/code>, and your &lt;code>overall success&lt;/code>.&lt;/p>
-&lt;p>As you watch, think about the culture you want to foster in your teams and the kind of leader you aspire to be. The insights you&amp;rsquo;ll gain here can make all the difference in how you approach your projects, your teammates, and your career. Let this be the foundation for the journey ahead—one where respect, empathy, and thoughtful communication set you apart and drive you forward.&lt;/p>
-&lt;p>&lt;a href="https://www.ted.com/talks/christine_porath_why_being_respectful_to_your_coworkers_is_good_for_business?utm_campaign=tedspread&amp;amp;utm_medium=referral&amp;amp;utm_source=tedcomshare" target="_blank" rel="noopener">Link to &lt;code>Why being respectful to your coworkers is good for business?&lt;/code>&lt;/a> on Ted.com,&lt;/p>
-&lt;p>Or just Watch (Listen) to the video bellow:&lt;/p>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kfcOK9yZkzs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
-&lt;/div></description></item><item><title>BRD for Successful Project Execution</title><link>https://dataqubed.io/brd-for-successful-project-execution/</link><pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/brd-for-successful-project-execution/</guid><description>&lt;p>Why I never say &lt;code>Yes&lt;/code> to a project without a BRD. I either drop it, or we have to agree to make one.&lt;/p>
+&lt;/ul></description></item><item><title>BRD for Successful Project Execution</title><link>https://dataqubed.io/brd-for-successful-project-execution/</link><pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/brd-for-successful-project-execution/</guid><description>&lt;p>Why I never say &lt;code>Yes&lt;/code> to a project without a BRD. I either drop it, or we have to agree to make one.&lt;/p>
 &lt;h2 id="importance-of-a-business-requirement-document-brd-for-successful-project-execution">Importance of a Business Requirement Document (BRD) for Successful Project Execution&lt;/h2>
 &lt;p>When working on data-heavy projects that involve developing machine learning models and directly interacting with key stakeholders, having a well-defined Business Requirement Document (BRD) is crucial. A BRD acts as a blueprint for the project, ensuring that all team members and stakeholders are aligned on the goals, scope, and deliverables. Without a BRD, projects can easily suffer from scope creep, miscommunication, and a lack of clear direction. This post will serve as a guideline for students on how to approach their projects using a BRD, which will be a critical tool throughout the year.&lt;/p>
 &lt;h2 id="why-a-brd-is-essential">Why a BRD is Essential&lt;/h2>
@@ -1727,4 +1719,12 @@ Have a look at &lt;a href="https://uit.stanford.edu/pmo/business-requirements-do
 &lt;p>This is your
 &lt;span class="inline-block pr-1">
 &lt;svg style="height: 1em; transform: translateY(0.1em);" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="currentColor">&lt;path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/>&lt;/svg>
-&lt;/span> Python free day. So enjoy it!&lt;/p></description></item></channel></rss>
+&lt;/span> Python free day. So enjoy it!&lt;/p></description></item><item><title>Shaping Your Success and Impact</title><link>https://dataqubed.io/shaping-your-success-and-impact/</link><pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate><guid>https://dataqubed.io/shaping-your-success-and-impact/</guid><description>&lt;h2 id="the-power-of-civility-shaping-your-success-and-impact">The Power of Civility: Shaping Your Success and Impact&lt;/h2>
+&lt;p>As you prepare to step into the professional world and take on real projects with companies, there&amp;rsquo;s one question that will shape your success more than any other: Who do you want to be? This isn&amp;rsquo;t just about your skills or knowledge—it&amp;rsquo;s rather more about &lt;code>how you choose to show up every day&lt;/code>, &lt;code>how you treat the people around you&lt;/code>, and &lt;code>the environment you help create&lt;/code>.&lt;/p>
+&lt;p>Watch to bellow TedTalk and remind yourselves of the powerful impact of civility—or the lack of it—on everything from &lt;code>team performance&lt;/code> to &lt;code>personal well-being&lt;/code>. You&amp;rsquo;ll hear compelling research and real-world stories that reveal just how critical it is to be mindful of our interactions. In the workplace and within your small study group, incivility isn’t just unpleasant; &lt;code>it’s a productivity killer&lt;/code>. It drains motivation, diminishes creativity, and even puts lives at risk in critical situations. But the good news is that civility pays off—in your &lt;code>relationships&lt;/code>, your &lt;code>work&lt;/code>, and your &lt;code>overall success&lt;/code>.&lt;/p>
+&lt;p>As you watch, think about the culture you want to foster in your teams and the kind of leader you aspire to be. The insights you&amp;rsquo;ll gain here can make all the difference in how you approach your projects, your teammates, and your career. Let this be the foundation for the journey ahead—one where respect, empathy, and thoughtful communication set you apart and drive you forward.&lt;/p>
+&lt;p>&lt;a href="https://www.ted.com/talks/christine_porath_why_being_respectful_to_your_coworkers_is_good_for_business?utm_campaign=tedspread&amp;amp;utm_medium=referral&amp;amp;utm_source=tedcomshare" target="_blank" rel="noopener">Link to &lt;code>Why being respectful to your coworkers is good for business?&lt;/code>&lt;/a> on Ted.com,&lt;/p>
+&lt;p>Or just Watch (Listen) to the video bellow:&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kfcOK9yZkzs?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video">&lt;/iframe>
+&lt;/div></description></item></channel></rss>
