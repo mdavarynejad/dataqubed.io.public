@@ -181,7 +181,7 @@
 &lt;li>&lt;a href="https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/" target="_blank" rel="noopener">6.5 Unsupervised Learning and Recommendation&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://dataqubed.io/pyspark-ml-pipelines-in-production/" target="_blank" rel="noopener">6.6 ML Pipelines in Production&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h4 id="module-8-real-world-applications-and-capstone-project">&lt;a href="https://dataqubed.io/pyspark-capstone-project/" target="_blank" rel="noopener">Module 8: Real-World Applications and Capstone Project&lt;/a>&lt;/h4>
+&lt;h4 id="module-7-real-world-applications-and-capstone-project">&lt;a href="https://dataqubed.io/pyspark-capstone-project/" target="_blank" rel="noopener">Module 7: Real-World Applications and Capstone Project&lt;/a>&lt;/h4>
 &lt;p>The capstone brief is available now. Pick a Data Science or Data Engineering track and apply the full stack to a real problem.&lt;/p>
 &lt;h3 id="learning-resources">Learning Resources&lt;/h3>
 &lt;ul>
@@ -1374,7 +1374,7 @@ How to write processed data back to Kafka topics using PySpark? This is a topic 
 &lt;/ul>
 &lt;hr>
 &lt;!-- nav -->
-&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/" target="_blank" rel="noopener">Module 6.5: Unsupervised Learning and Recommendation&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-capstone-project/" target="_blank" rel="noopener">Module 8: Capstone Project&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 8: Capstone Project</title><link>https://dataqubed.io/pyspark-capstone-project/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-capstone-project/</guid><description>&lt;h2 id="capstone-project">Capstone Project&lt;/h2>
+&lt;p>&lt;strong>Previous:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-unsupervised-learning-and-recommendation/" target="_blank" rel="noopener">Module 6.5: Unsupervised Learning and Recommendation&lt;/a> | &lt;strong>Next:&lt;/strong> &lt;a href="https://dataqubed.io/pyspark-capstone-project/" target="_blank" rel="noopener">Module 7: Capstone Project&lt;/a>&lt;/p></description></item><item><title>PySpark - Module 7: Capstone Project</title><link>https://dataqubed.io/pyspark-capstone-project/</link><pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-capstone-project/</guid><description>&lt;h2 id="capstone-project">Capstone Project&lt;/h2>
 &lt;p>The capstone is where the separate pieces become one piece of work. You take a real problem and carry it the whole way: get the data in, shape it, model it or stream it, and produce something a colleague could use. It is an individual or pair deliverable, scoped to about one day. The point is not size. It is whether you can join the stages together and explain your choices.&lt;/p>
 &lt;p>Pick one of the two tracks.&lt;/p>
 &lt;h3 id="track-a-data-science">Track A: Data Science&lt;/h3>
@@ -3898,7 +3898,7 @@ data.head()
 &lt;p>Hugo Blox supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-781359426" class="chart">&lt;/div>
+&lt;div id="chart-735482619" class="chart">&lt;/div>
 &lt;script>
 async function fetchChartJSON() {
 console.debug('Hugo Blox fetching chart JSON...')
@@ -3914,7 +3914,7 @@ return;
 clearInterval( a );
 fetchChartJSON().then(chart => {
 console.debug('Plotting chart...')
-window.Plotly.newPlot('chart-781359426', chart.data, chart.layout, {responsive: true});
+window.Plotly.newPlot('chart-735482619', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
