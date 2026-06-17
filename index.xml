@@ -54,7 +54,7 @@
 &lt;li>&lt;strong>Module 6: Machine Learning (MLlib)&lt;/strong>: 10 hours (Modules 6.0 to 6.3)&lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;p>Roughly 41 to 46 hours end to end: about 31 across Modules 1 to 6, plus 10 to 15 for the capstone project. The optional H2O Sparkling Water track (6.4 to 6.6) adds 3 to 4 hours and needs classic compute.&lt;/p>&lt;/blockquote>
+&lt;p>Roughly 40 hours end to end: about 31 across Modules 1 to 6, plus 9 for the capstone project. The optional H2O Sparkling Water track (6.4 to 6.6) adds 3 to 4 hours and needs classic compute.&lt;/p>&lt;/blockquote>
 &lt;h4 id="getting-started">Getting Started&lt;/h4>
 &lt;p>To begin, make sure you can install and configure PySpark. Familiarize yourself with the course materials, including the recommended readings and online resources. Each module might contain practical assignments and quizzes to reinforce your learning, so take your time to complete these exercises when available.&lt;/p>
 &lt;h3 id="course-outline-pyspark-fundamentals-and-advanced-topics">Course Outline: &lt;a href="https://dataqubed.io/pyspark-fundamentals-and-advanced-topics/" target="_blank" rel="noopener">PySpark Fundamentals and Advanced Topics&lt;/a>&lt;/h3>
@@ -3898,7 +3898,7 @@ data.head()
 &lt;p>Hugo Blox supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-941567328" class="chart">&lt;/div>
+&lt;div id="chart-751846923" class="chart">&lt;/div>
 &lt;script>
 async function fetchChartJSON() {
 console.debug('Hugo Blox fetching chart JSON...')
@@ -3914,7 +3914,7 @@ return;
 clearInterval( a );
 fetchChartJSON().then(chart => {
 console.debug('Plotting chart...')
-window.Plotly.newPlot('chart-941567328', chart.data, chart.layout, {responsive: true});
+window.Plotly.newPlot('chart-751846923', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
