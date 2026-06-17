@@ -12,7 +12,7 @@
 &lt;/ul>
 &lt;h4 id="course-objective">Course Objective&lt;/h4>
 &lt;p>Here is the situation this course is built around. Your pandas script ran fine on a sample, but on the full dataset it has been running for six hours, the kernel just died on an out-of-memory error, and the deadline is tomorrow. The point where the data no longer fits in one machine&amp;rsquo;s memory is where distributed computing begins. PySpark lets you keep writing familiar DataFrame code while Spark spreads the work across a cluster, so the same job finishes in minutes instead of hours. I teach it on Databricks because that is where most teams actually run Spark, and because it lets you spend your hours on the ideas instead of debugging a local install.&lt;/p>
-&lt;p>The published material is roughly 38 hours of distributed computing concepts and hands-on exercises across Modules 1 to 6, built around free online resources and Databricks notebooks.&lt;/p>
+&lt;p>The published material is roughly 31 hours of distributed computing concepts and hands-on exercises across Modules 1 to 6, built around free online resources and Databricks notebooks.&lt;/p>
 &lt;h4 id="how-this-course-uses-ai">How this course uses AI&lt;/h4>
 &lt;p>You will use an AI assistant in this course, and you are expected to. It can write a join, a window function, or a streaming job faster than you can type. What it cannot see is your cluster, your data skew, or your cost per query. So it will hand you code that looks correct and runs slowly, or runs fine on a sample and falls over on the full dataset. Your job is to read what it produces, run it, and judge it: trace how it actually ran, find the stage that is costing you, and know why. Every module here is built to give you that judgment. The syntax is the easy part now. Knowing when the generated answer is wrong for the data in front of you is the part that is actually hard. You will practise exactly that in the exercise &lt;a href="https://dataqubed.io/pyspark-review-an-ai-generated-pipeline/" target="_blank" rel="noopener">Reviewing AI-Generated Code&lt;/a>.&lt;/p>
 &lt;h4 id="course-highlights">Course Highlights&lt;/h4>
@@ -44,17 +44,17 @@
 &lt;/ul>&lt;/span>
 &lt;/div>
 &lt;h4 id="time-commitment">Time Commitment&lt;/h4>
-&lt;p>The published material is about 38 hours of self-paced study across Modules 1 to 6:&lt;/p>
+&lt;p>The estimate below is total self-paced study across Modules 1 to 6: the module pages, the code you run on Databricks, the in-page exercises, and the linked readings and notebooks each module is built around. It comes to about 31 hours, weighted toward streaming and machine learning, where most of the hands-on work is.&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>Module 1: Introduction to Big Data and Apache Spark&lt;/strong>: 3 hours&lt;/li>
-&lt;li>&lt;strong>Module 2: Spark Architecture and RDDs&lt;/strong>: 5 hours&lt;/li>
-&lt;li>&lt;strong>Module 3: DataFrames and Spark SQL&lt;/strong>: 6 hours&lt;/li>
-&lt;li>&lt;strong>Module 4: Data Sources and Sinks&lt;/strong>: 4 hours&lt;/li>
-&lt;li>&lt;strong>Module 5: Spark Streaming&lt;/strong>: 12 hours&lt;/li>
-&lt;li>&lt;strong>Module 6: Machine Learning (MLlib)&lt;/strong>: 8 hours (Modules 6.0 to 6.3; the optional H2O track, 6.4 to 6.6, is extra and needs classic compute)&lt;/li>
+&lt;li>&lt;strong>Module 1: Introduction to Big Data and Apache Spark&lt;/strong>: 2 hours&lt;/li>
+&lt;li>&lt;strong>Module 2: Spark Architecture and RDDs&lt;/strong>: 3 hours&lt;/li>
+&lt;li>&lt;strong>Module 3: DataFrames and Spark SQL&lt;/strong>: 5 hours&lt;/li>
+&lt;li>&lt;strong>Module 4: Data Sources and Sinks&lt;/strong>: 2 hours&lt;/li>
+&lt;li>&lt;strong>Module 5: Spark Streaming&lt;/strong>: 9 hours (Modules 5.0 to 5.3)&lt;/li>
+&lt;li>&lt;strong>Module 6: Machine Learning (MLlib)&lt;/strong>: 10 hours (Modules 6.0 to 6.3)&lt;/li>
 &lt;/ul>
 &lt;blockquote>
-&lt;p>Total current content is roughly 44 hours across Modules 1 to 6 and the capstone project.&lt;/p>&lt;/blockquote>
+&lt;p>Roughly 41 to 46 hours end to end: about 31 across Modules 1 to 6, plus 10 to 15 for the capstone project. The optional H2O Sparkling Water track (6.4 to 6.6) adds 3 to 4 hours and needs classic compute.&lt;/p>&lt;/blockquote>
 &lt;h4 id="getting-started">Getting Started&lt;/h4>
 &lt;p>To begin, make sure you can install and configure PySpark. Familiarize yourself with the course materials, including the recommended readings and online resources. Each module might contain practical assignments and quizzes to reinforce your learning, so take your time to complete these exercises when available.&lt;/p>
 &lt;h3 id="course-outline-pyspark-fundamentals-and-advanced-topics">Course Outline: &lt;a href="https://dataqubed.io/pyspark-fundamentals-and-advanced-topics/" target="_blank" rel="noopener">PySpark Fundamentals and Advanced Topics&lt;/a>&lt;/h3>
@@ -3898,7 +3898,7 @@ data.head()
 &lt;p>Hugo Blox supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-275841936" class="chart">&lt;/div>
+&lt;div id="chart-941567328" class="chart">&lt;/div>
 &lt;script>
 async function fetchChartJSON() {
 console.debug('Hugo Blox fetching chart JSON...')
@@ -3914,7 +3914,7 @@ return;
 clearInterval( a );
 fetchChartJSON().then(chart => {
 console.debug('Plotting chart...')
-window.Plotly.newPlot('chart-275841936', chart.data, chart.layout, {responsive: true});
+window.Plotly.newPlot('chart-941567328', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
