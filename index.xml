@@ -233,7 +233,7 @@
 &lt;li>Explain how checkpointing works in PySpark.&lt;/li>
 &lt;li>What is delta lake? Look at &lt;a href="https://www.youtube.com/watch?v=0GhFAzN4qs4&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=20" target="_blank" rel="noopener">here&lt;/a> and &lt;a href="https://www.youtube.com/watch?v=xYtU6fpsS3M&amp;amp;list=PLkz1SCf5iB4dXiPdFD4hXwheRGRwhmd6K&amp;amp;index=21" target="_blank" rel="noopener">here&lt;/a>!&lt;/li>
 &lt;li>What is data lakehouse architecture.&lt;/li>
-&lt;/ol></description></item><item><title>PySpark - Module 0.1: Getting Started on Databricks</title><link>https://dataqubed.io/pyspark-module-0.1-getting-started-on-databricks/</link><pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-module-0.1-getting-started-on-databricks/</guid><description>&lt;h2 id="getting-started-your-databricks-account">Getting Started: Your Databricks Account&lt;/h2>
+&lt;/ol></description></item><item><title>PySpark - Module 0.1: Getting Started on Databricks</title><link>https://dataqubed.io/pyspark-getting-started-on-databricks/</link><pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate><guid>https://dataqubed.io/pyspark-getting-started-on-databricks/</guid><description>&lt;h2 id="getting-started-your-databricks-account">Getting Started: Your Databricks Account&lt;/h2>
 &lt;p>This course runs on Databricks Free Edition. It is free, runs in your browser, and needs no local installation. There is no Java or PATH to configure. Do this before the first session so we can start with Spark, not setup.&lt;/p>
 &lt;h3 id="step-1-sign-up-and-choose-free-edition">Step 1: Sign up and choose Free Edition&lt;/h3>
 &lt;p>Start the sign-up at databricks.com. You will be asked what you will use Databricks for. Pick &lt;strong>For personal use&lt;/strong> and click &lt;strong>Get Free Edition&lt;/strong>.&lt;/p>
@@ -242,10 +242,10 @@
 &lt;figure >
 &lt;div class="flex justify-center ">
 &lt;div class="w-100" >&lt;img alt="Choose For personal use, then Get Free Edition" srcset="
-/pyspark-module-0.1-getting-started-on-databricks/01-choose-free-edition_hu_11bd5b827bf7d77b.webp 400w,
-/pyspark-module-0.1-getting-started-on-databricks/01-choose-free-edition_hu_225a648257581717.webp 760w,
-/pyspark-module-0.1-getting-started-on-databricks/01-choose-free-edition_hu_14699331e581153c.webp 1200w"
-src="https://dataqubed.io/pyspark-module-0.1-getting-started-on-databricks/01-choose-free-edition_hu_11bd5b827bf7d77b.webp"
+/pyspark-getting-started-on-databricks/01-choose-free-edition_hu_11bd5b827bf7d77b.webp 400w,
+/pyspark-getting-started-on-databricks/01-choose-free-edition_hu_225a648257581717.webp 760w,
+/pyspark-getting-started-on-databricks/01-choose-free-edition_hu_14699331e581153c.webp 1200w"
+src="https://dataqubed.io/pyspark-getting-started-on-databricks/01-choose-free-edition_hu_11bd5b827bf7d77b.webp"
 width="760"
 height="475"
 loading="lazy" data-zoomable />&lt;/div>
@@ -257,10 +257,10 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;figure >
 &lt;div class="flex justify-center ">
 &lt;div class="w-100" >&lt;img alt="Onboarding question, safe to skip" srcset="
-/pyspark-module-0.1-getting-started-on-databricks/02-onboarding-skip_hu_b75c4b08e1116dbe.webp 400w,
-/pyspark-module-0.1-getting-started-on-databricks/02-onboarding-skip_hu_d0bbea06bb2e5682.webp 760w,
-/pyspark-module-0.1-getting-started-on-databricks/02-onboarding-skip_hu_f5288e02259b0a8e.webp 1200w"
-src="https://dataqubed.io/pyspark-module-0.1-getting-started-on-databricks/02-onboarding-skip_hu_b75c4b08e1116dbe.webp"
+/pyspark-getting-started-on-databricks/02-onboarding-skip_hu_b75c4b08e1116dbe.webp 400w,
+/pyspark-getting-started-on-databricks/02-onboarding-skip_hu_d0bbea06bb2e5682.webp 760w,
+/pyspark-getting-started-on-databricks/02-onboarding-skip_hu_f5288e02259b0a8e.webp 1200w"
+src="https://dataqubed.io/pyspark-getting-started-on-databricks/02-onboarding-skip_hu_b75c4b08e1116dbe.webp"
 width="760"
 height="475"
 loading="lazy" data-zoomable />&lt;/div>
@@ -272,10 +272,10 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;figure >
 &lt;div class="flex justify-center ">
 &lt;div class="w-100" >&lt;img alt="The Databricks Free Edition workspace" srcset="
-/pyspark-module-0.1-getting-started-on-databricks/03-free-edition-workspace_hu_9c5ffce34ada4d7.webp 400w,
-/pyspark-module-0.1-getting-started-on-databricks/03-free-edition-workspace_hu_c3f51c0b9f180daf.webp 760w,
-/pyspark-module-0.1-getting-started-on-databricks/03-free-edition-workspace_hu_1132b1a010b51e7a.webp 1200w"
-src="https://dataqubed.io/pyspark-module-0.1-getting-started-on-databricks/03-free-edition-workspace_hu_9c5ffce34ada4d7.webp"
+/pyspark-getting-started-on-databricks/03-free-edition-workspace_hu_9c5ffce34ada4d7.webp 400w,
+/pyspark-getting-started-on-databricks/03-free-edition-workspace_hu_c3f51c0b9f180daf.webp 760w,
+/pyspark-getting-started-on-databricks/03-free-edition-workspace_hu_1132b1a010b51e7a.webp 1200w"
+src="https://dataqubed.io/pyspark-getting-started-on-databricks/03-free-edition-workspace_hu_9c5ffce34ada4d7.webp"
 width="760"
 height="475"
 loading="lazy" data-zoomable />&lt;/div>
@@ -3898,7 +3898,7 @@ data.head()
 &lt;p>Hugo Blox supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive data visualizations. With Plotly, you can design almost any kind of visualization you can imagine!&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-637481295" class="chart">&lt;/div>
+&lt;div id="chart-264387591" class="chart">&lt;/div>
 &lt;script>
 async function fetchChartJSON() {
 console.debug('Hugo Blox fetching chart JSON...')
@@ -3914,7 +3914,7 @@ return;
 clearInterval( a );
 fetchChartJSON().then(chart => {
 console.debug('Plotting chart...')
-window.Plotly.newPlot('chart-637481295', chart.data, chart.layout, {responsive: true});
+window.Plotly.newPlot('chart-264387591', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();

@@ -2,7 +2,8 @@
 # Automatically generated
 # Documentation: https://docs.netlify.com/routing/redirects/
 /pyspark-module-0/ /pyspark-fundamentals-and-advanced-topics/
-/pyspark-module-1-1/ /pyspark-module-0.1-getting-started-on-databricks/
+/pyspark-module-1-1/ /pyspark-getting-started-on-databricks/
+/pyspark-module-0.1-getting-started-on-databricks/ /pyspark-getting-started-on-databricks/
 /pyspark-module-1/ /pyspark-introduction-to-big-data-and-apache-spark/
 /pyspark-module-2/ /pyspark-spark-architecture-and-rdds/
 /pyspark-module-3/ /pyspark-dataframes-and-spark-sql/
